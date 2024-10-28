@@ -4,7 +4,8 @@
   "description": "Une petite boutique de vente en 11ty",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx @11ty/eleventy",
+    "build-ghpages": "npx @11ty/eleventy && gh-pages -d _site"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   }
 }

@@ -17,8 +17,9 @@ Pour le moment, aucune fonctionnalité n'est terminée.
 ### En cours de développement
 
 - US-01 Faire une page
-- [ ] faire un header
-- [ ] faire un footer
+- [x] faire un header
+- [x] faire un footer
+- [x] déployer sur gh-pages
 
 ## Pour faire fonctionner le site sur son ordi
 
