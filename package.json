@@ -1,0 +1,28 @@
+{
+  "name": "boutique-11ty",
+  "version": "1.0.0",
+  "description": "Une petite boutique de vente en 11ty",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "build-ghpages": "npx @11ty/eleventy && gh-pages -d _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brutdethe/boutique-11ty.git"
+  },
+  "keywords": [],
+  "author": "pntbr",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/brutdethe/boutique-11ty/issues"
+  },
+  "homepage": "https://github.com/brutdethe/boutique-11ty#readme",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
+  }
+}
