@@ -12,14 +12,13 @@ Pour le moment, aucune fonctionnalité n'est terminée.
 
 ### Terminées
 
-
-
-### En cours de développement
-
 - US-01 Faire une page
 - [x] faire un header
 - [x] faire un footer
 - [x] déployer sur gh-pages
+
+### En cours de développement
+
 
 ## Pour faire fonctionner le site sur son ordi
 
