@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
     push:
         branches:
-            - main
+            - i18n
     pull_request:
 
 jobs:

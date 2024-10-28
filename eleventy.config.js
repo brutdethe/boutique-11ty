@@ -3,6 +3,7 @@ export const config = {
   htmlTemplateEngine: "njk",
   dataTemplateEngine: "njk",
   templateFormats: ["njk", "md", "html"],
+  pathPrefix: "/boutique-11ty/",
 }
 
 export default function(eleventyConfig) {
