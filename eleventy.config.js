@@ -20,8 +20,11 @@ export default function(eleventyConfig) {
     defaultLanguage: "fr",
   })
 
-  eleventyConfig.addFilter("removeLocalePrefix", function(filePathStem) {
-    return filePathStem.replace(/^\/(fr|en|es)/, "");
+  eleventyConfig.addFilter("customLocaleUrl", function(path, lang) {
+    if (lang === 'fr') {
+      return path.replace(/^\/(fr|en)/, "")
+    }
+    return `${path}${lang}`
   })
 }
 

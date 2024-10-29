@@ -1,0 +1,24 @@
+{
+    "about": {
+        "title": {
+            "fr": "à-propos",
+            "en": "about"
+        },
+        "url": {
+            "fr": "https://www.gongfucha.fr/pages/faq-boutique",
+            "en": "https://www.gongfucha.fr/pages/faq-boutique"
+        }
+    },
+    "shop": {
+        "title": {
+            "fr": "boutique",
+            "en": "shop"
+        }
+    },
+    "basket": {
+        "title": {
+            "fr": "panier",
+            "en": "basket"
+        }
+    }
+}
