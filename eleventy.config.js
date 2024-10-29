@@ -18,7 +18,6 @@ export default function(eleventyConfig) {
   
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: "fr",
-    errorMode: "strict",
   })
 
   eleventyConfig.addFilter("removeLocalePrefix", function(filePathStem) {

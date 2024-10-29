@@ -5,7 +5,3 @@ lang: fr
 ---
 
 Ici plein de thé
-
-{{ 2 + 3 }} 
-
-test
