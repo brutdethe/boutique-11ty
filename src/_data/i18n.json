@@ -15,10 +15,22 @@
             "en": "shop"
         }
     },
-    "basket": {
+    "cart": {
         "title": {
             "fr": "panier",
-            "en": "basket"
+            "en": "cart"
+        }
+    },
+    "privacy": {
+        "title": {
+            "fr": "confidentialité",
+            "en": "privacy notice"
+        }
+    },
+    "legal": {
+        "title": {
+            "fr": "mentions légales",
+            "en": "legal notice"
         }
     }
 }
