@@ -6,9 +6,9 @@
     </h1>
     <nav class="column col-7 col-md-9 col-sm-12">
         <ul>
-            <li><a href="/" class="nav-link">boutique</a></li>
-            <li><a href="https://www.gongfucha.fr/pages/faq-boutique" target="blank" class="nav-link">à propos</a></li>
-            <li><a href="/" class="nav-link"><span class="badge" data-badge="0" data-initial="YZ">panier</span></a></li>
+            <li><a href=" {{ '/' | url }}" class="nav-link">{{ i18n.shop.title[page.lang] }}</a></li>
+            <li><a href=" {{ i18n.about.url[page.lang] }}" class="nav-link">{{ i18n.about.title[page.lang] }}</a></li>
+            <li><a href="/" class="nav-link"><span class="badge" data-badge="0" data-initial="YZ">{{ i18n.cart.title[page.lang] }}</span></a></li>
         </ul>
     </nav>
     <div class="i18n columns col-gapless column">
@@ -18,7 +18,7 @@
         </div>
         <div class="language column col-6">
             <a href="/" class="btn btn-sm bg-secondary">FR</a>
-            <a href="/" class="btn btn-sm bg-secondary">EN</a>
+            <a href="/en" class="btn btn-sm">EN</a>
         </div>
     </div>
 </header>

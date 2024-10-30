@@ -17,10 +17,10 @@
             <footer class="section section-footer">
                 <ul class="container grid-lg">
                     <li>
-                        <a href="/" class="nav-link">confidentialité</a>
+                        <a href="{{ '/privacy' | url }}" class="nav-link">{{ i18n.privacy.title[page.lang] }}</a>
                     </li>
                     <li>
-                        <a href="/" class="nav-link">mentions légales</a>
+                        <a href="{{ '/legacy' | url }}" class="nav-link">{{ i18n.legal.title[page.lang] }}</a>
                     </li>
                 </ul>
             </footer>
