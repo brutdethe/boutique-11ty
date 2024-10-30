@@ -1,0 +1,12 @@
+![{{ photos[0] }}]({{ settings.dirs.img_products | url }}{{ photos[0] }})  
+[{{ photos[1] }}]({{ settings.dirs.img_products | url }}{{ photos[1] }}
+) 
+
+---
+
+{{ description }}  
+
+
+{% for key, value in options %}
+    {{ key }} : {{ value }}
+{% endfor %}

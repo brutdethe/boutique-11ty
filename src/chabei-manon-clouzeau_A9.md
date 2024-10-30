@@ -11,17 +11,10 @@ photos:
 options:
     dimension: 7 cm x 3 cm
     capacité: 40 ml
-    poids: 135 g
+    poids: 15 g
     stock: il reste 1 article
 ---
 
-![{{ photos[0] }}]({{ settings.dirs.img_products | url }}{{ photos[0] }})  
-[{{ photos[1] }}]({{ settings.dirs.img_products | url }}{{ photos[1] }})  
-{{ description }}  
----
-{% for key, value in options %}
-{{ key }} : {{ value }}  
-{% endfor %}
-
+{% include "product.njk" %}
 
 
