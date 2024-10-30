@@ -1,48 +1,63 @@
 # Boutique-11ty
 
-Une petite boutique de vente en 11ty
+Une petite boutique en ligne construite avec [11ty](https://www.11ty.dev/).
 
 ## Objectif
 
-Construire une boutique simple, minimaliste pour permettre de vendre des objets ou des prestations facilement.
+Créer une boutique simple et minimaliste pour vendre des objets ou des prestations sans complexité.
 
 ## Les fonctionnalités
 
-Pour le moment, aucune fonctionnalité n'est terminée.
-
 ### Terminées
 
-- US-01 Faire une page
-- [x] faire un header
-- [x] faire un footer
-- [x] déployer sur gh-pages
+- US-01 Création de pages
+  - [x] Header
+  - [x] Footer
+  - [x] Déploiement sur GitHub Pages
 
-### En cours de développement
+- US-02 Gestion de l'i18n
+  - [x] Organisation des fichiers
+  - [x] Menu de sélection de la langue
+  - [x] Pages traduites
+  - [x] Traduction de l'interface
 
+### À venir
 
-## Pour faire fonctionner le site sur son ordi
+- US-03 Fiche produit
+- US-04 Présentation des produits
+- US-05 Gestion du panier
+- US-06 Paiement
+- US-07 Gestion des frais de transport
 
-Ouvrir un terminal :
+## Outils utilisés
 
-``` bash
+Pour garder les choses simples, nous utilisons le minimum d'outils nécessaire.
+
+- [Eleventy](https://www.11ty.dev/), un [générateur de site statique](https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9rateur_de_site_statique).
+
+Le site fonctionne côté client, directement dans le navigateur, et peut être hébergé gratuitement sur des plateformes comme [GitLab](https://gitlab.com) ou [GitHub](https://github.com).
+
+## Installation
+
+Ouvrez un terminal et assurez-vous que **Node.js** est installé :
+
+```bash
 $ mkdir boutique-11ty
 $ cd boutique-11ty
 $ git clone git@github.com:brutdethe/boutique-11ty.git .
 $ npm install @11ty/eleventy
-$ npx @11ty/eleventy --serve 
+$ npx @11ty/eleventy --serve
 ```
 
-Si tout se passe bien, un message vous indique un lien :  
-[http://localhost:8080/](http://localhost:8080/)
-en le suivant, vous pouvez consulter le site
+Le site sera accessible à l'adresse suivante : [http://localhost:8080/](http://localhost:8080/)
 
 ## Contribuer
 
-Si vous souhaitez contribuer à ce projet, n'hésitez pas à nous contacter, nous serons ravi·e·s d'examiner vos suggestions et améliorations.
+Si vous souhaitez contribuer, contactez-nous, nous serons ravis d'examiner vos suggestions. Consultez aussi [CONTRIBUTING.md](./CONTRIBUTING.md) pour plus de détails.
 
 ## Licence
 
-Ce projet est sous licence Creative Commons Legal Code - [CC0 1.0 Universal](./LICENSE). Cela signifie que vous êtes libre de l'utiliser, de le modifier et de le distribuer sans aucune restriction.
+Ce projet est sous licence [CC0 1.0 Universal](./LICENSE). Utilisez, modifiez, et distribuez sans restriction.
 
 ## Contact
 
