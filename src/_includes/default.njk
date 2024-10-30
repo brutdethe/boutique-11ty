@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ '/bundle.css' | url }}">
         <link rel="alternate" hreflang="fr" href="{{ page.filePathStem | customLocaleUrl("fr") | url }}">
-        <link rel="alternate" hreflang="en" href="{{ page.filePathStem | locale_url("en") | url }}">
+        <link rel="alternate" hreflang="en" href="{{ page.filePathStem | customLocaleUrl("en") | url }}">
         <title>{{ title }}</title>
     </head>
     <main class="wrapper">
@@ -14,13 +14,14 @@
         <section>
             {{ content | safe }}
         </section>
+        {{ '/privacy' | customLocaleUrl(page.lang) }}
         <footer class="section section-footer">
             <ul class="container grid-lg">
                 <li>
-                    <a href="/">{{ i18n.privacy.title[page.lang] }}</a>
+                    <a href="{{ '/privacy' | customLocaleUrl(page.lang) | url }}">{{ i18n.privacy.title[page.lang] }}</a>
                 </li>
                 <li>
-                    <a href="/">{{ i18n.legal.title[page.lang] }}</a>
+                    <a href="{{ '/legacy' | customLocaleUrl(page.lang) | url }}">{{ i18n.legal.title[page.lang] }}</a>
                 </li>
             </ul>
         </footer>

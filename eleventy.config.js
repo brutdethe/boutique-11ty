@@ -11,6 +11,7 @@ export const config = {
   dataTemplateEngine: "njk",
   templateFormats: ["njk", "md", "html"],
   pathPrefix: "/boutique-11ty/",
+  langs: { default: 'fr', others: ['en']},
 }
 
 export default function(eleventyConfig) {
@@ -22,10 +23,19 @@ export default function(eleventyConfig) {
   })
 
   eleventyConfig.addFilter("customLocaleUrl", function(path, lang) {
-    if (lang === 'fr') {
+   
+    if (lang === config.langs.default) {
       return path.replace(/^\/(fr|en)/, "")
     }
-    return `${path}${lang}`
+  
+    for (let otherLang of config.langs.others) {
+      const langPattern = new RegExp(`^/${otherLang}`)
+  
+      if (langPattern.test(path)) {
+        return path
+      }
+    }
+  
+    return `/${lang}${path}`
   })
 }
-
