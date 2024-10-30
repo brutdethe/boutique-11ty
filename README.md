@@ -19,6 +19,11 @@ Pour le moment, aucune fonctionnalité n'est terminée.
 
 ### En cours de développement
 
+- US-02 Gérer l'i18n
+- [x] l'organisation des fichiers
+- [x] le menu langue
+- [x] les pages
+- [x] traduire l'interface
 
 ## Pour faire fonctionner le site sur son ordi
 
