@@ -3,11 +3,12 @@ layout: default.njk
 title: Legal Notice
 ---
 
-## Legal Notice
+# Legal Notice
 
 The website [https://boutique.brutdethé.fr](https://boutique.brutdethé.fr) is published by Stéphane Langlois, Yalin Cheng, Brut de thé, and hosted by [GitHub](https://github.com/about).
 
-The company is registered under number 899 032 494 and APE code 94.99Z with the registry of the court of Foix, with its head office located at 15 rue de la montagne, 09320 Massat.
+The company is registered under number 899 032 494 and APE code 94.99Z with the registry of the court of Foix,  
+with its head office located at 15 rue de la montagne, 09320 Massat.
 
 Payments are processed via [Stripe: Legal Notice](https://stripe.com/fr/legal/france-legal-notice).
 
