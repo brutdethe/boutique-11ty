@@ -47,4 +47,4 @@ jobs:
               uses: peaceiris/actions-gh-pages@v4 # Mettre à jour à la version compatible avec Node 20
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./_site
+                  publish_dir: ./dist
