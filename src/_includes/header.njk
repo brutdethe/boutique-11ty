@@ -1,12 +1,12 @@
 <header class="header columns">
     <h1 class="title column col-3 col-md-12">
-        <a href="/">
+        <a href="{{ '/' | customLocaleUrl(page.lang) | url }}">
             <img src="https://www.gongfucha.fr/assets/sceau-the.svg" alt="logo boutique" class="logo">
         </a>
     </h1>
     <nav class="column col-7 col-md-9 col-sm-12">
         <ul>
-            <li><a href=" {{ '/' | url }}" class="nav-link">{{ i18n.shop.title[page.lang] }}</a></li>
+            <li><a href=" {{ '/' | customLocaleUrl(page.lang) | url }}" class="nav-link">{{ i18n.shop.title[page.lang] }}</a></li>
             <li><a href=" {{ i18n.about.url[page.lang] }}" class="nav-link">{{ i18n.about.title[page.lang] }}</a></li>
             <li><a href="/" class="nav-link"><span class="badge" data-badge="0" data-initial="YZ">{{ i18n.cart.title[page.lang] }}</span></a></li>
         </ul>
@@ -17,8 +17,8 @@
             <button class="btn btn-sm " value="USD">$</button>
         </div>
         <div class="language column col-6">
-            <a href="/" class="btn btn-sm bg-secondary">FR</a>
-            <a href="/en" class="btn btn-sm">EN</a>
+            <a href="{{ page.filePathStem | customLocaleUrl("fr") | url }}" class="btn btn-sm {% if page.lang == 'fr' %}bg-secondary{% endif %}" {% if page.lang == 'fr' %} aria-current="page" {% endif %}>FR</a>
+            <a href="{{ page.url | locale_url('en') | url }}" class="btn btn-sm {% if page.lang == 'en' %}bg-secondary{% endif %}" {% if page.lang == 'en' %} aria-current="page" {% endif %}>EN</a>
         </div>
     </div>
 </header>
