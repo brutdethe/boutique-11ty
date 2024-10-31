@@ -12,30 +12,31 @@
     </head>
     <body>
         <main class="wrapper">
-            <header class="header columns">
+            <header class="header columns" role="banner">
     <h1 class="title column col-3 col-md-12">
         <a href="/boutique-11ty/" class="logo-link">
-            <img src="https://www.gongfucha.fr/assets/sceau-the.svg" alt="logo boutique" class="logo">
+            <img src="https://www.gongfucha.fr/assets/sceau-the.svg" alt="Logo de la boutique Gong Fu Cha" class="logo">
         </a>
     </h1>
-    <nav class="column col-7 col-md-9 col-sm-12">
-        <ul>
-            <li><a href=" /boutique-11ty/" class="nav-link">boutique</a></li>
-            <li><a href=" https://www.gongfucha.fr/pages/faq-boutique" class="nav-link">à-propos</a></li>
+    <nav class="column col-7 col-md-9 col-sm-12" aria-label="Navigation principale">
+        <ul class="nav-list">
+            <li><a href="/boutique-11ty/" class="nav-link">boutique</a></li>
+            <li><a href="https://www.gongfucha.fr/pages/faq-boutique" class="nav-link">à-propos</a></li>
             <li><a href="/" class="nav-link"><span class="badge" data-badge="0" data-initial="YZ">panier</span></a></li>
         </ul>
     </nav>
-    <div class="i18n columns col-gapless column col-2 col-md-3 col-sm-12">
+    <div class="i18n columns col-gapless column col-2 col-md-3 col-sm-12" role="complementary" aria-label="Sélection de la devise et de la langue">
         <div class="currency column col-6">
-            <button class="btn btn-sm bg-secondary" value="EUR">€</button>
-            <button class="btn btn-sm " value="USD">$</button>
+            <button class="btn btn-sm bg-secondary" value="EUR" aria-label="Changer la monnaie en euros">€</button>
+            <button class="btn btn-sm" value="USD" aria-label="Changer la monnaie en dollars">$</button>
         </div>
         <div class="language column col-6">
-            <a href="/boutique-11ty/legacy" class="btn btn-sm bg-secondary"  aria-current="page" >FR</a>
-            <a href="/boutique-11ty/en/legacy/" class="btn btn-sm " >EN</a>
+            <a href="/boutique-11ty/legacy" class="btn btn-sm bg-secondary"  aria-current="page"  aria-label="Changer la langue en français">FR</a>
+            <a href="/boutique-11ty/en/legacy/" class="btn btn-sm "  aria-label="Changer la langue en anglais">EN</a>
         </div>
     </div>
 </header>
+
             <section>
                 <h1>Mentions légales</h1>
 <p>Le site <a href="https://boutique.xn--brutdeth-i1a.fr">https://boutique.brutdethé.fr</a> est édité par Stéphane Langlois, Yalin Cheng, Brut de thé et hébergé par <a href="https://github.com/about">Github</a>.</p>
