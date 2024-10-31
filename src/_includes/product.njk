@@ -1,15 +1,43 @@
 ---
 layout: default.njk
+card:
+  en: add to basket
+  fr: ajouter au panier
+eleventyComputed:
+  title: "Fiche produit : {{ titre }}"
+  card_title: "{{ titre }}"
 ---
 
-<img src="{{ settings.dirs.img_products | url }}{{ photos[0] }}" alt="{{ photos[0] }}" />
-<br>
-<a href="{{ settings.dirs.img_products | url }}{{ photos[1] }}">{{ photos[1] }}</a>
-
-<hr>
-
-<h2>{{ description }}</h2> 
-
-{% for key, value in options %}
-    <p>{{ key }} : {{ value }}</p>
-{% endfor %}
+<div class="columns">
+    <div class="card column col-8 col-xs-12 card-carousel">
+        <div class="card-image carousel">
+            <div class="carousel-container">
+                <figure class="carousel-item">
+                    <img class="img-responsive" src="{{ settings.dirs.img_products | url }}{{ photos[0] }}" alt="{{ photos[0] }}" />
+                </figure>
+            </div>  
+        </div>
+    </div>
+    <div class="card column col-4 col-xs-12">
+        <div class="card-header">
+            <div class="card-title h4">{{ card_title }}</div>
+        </div>
+        <div class="card-body">
+            <p>{{ description }}</p>
+            <dl>
+                {% for key, value in options %}
+                    <dt>{{ key }}{% if page.lang === 'fr' %}&nbsp;{% endif %}:&nbsp;</dt>
+                    <dd>{{ value }}</dd>
+                {% endfor %}
+            </dl>
+        </div>
+        <div class="card-footer">
+            <h3 class="card-title h1 price">
+                {{ price }}
+            </h3>
+            <button class="btn btn-primary float-right">
+                {{ i18n.button_cart.title[page.lang] }}
+            </button>
+        </div>
+    </div>
+</div>

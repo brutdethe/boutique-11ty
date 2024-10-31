@@ -1,16 +1,15 @@
 ---
 layout: product.njk
-title: >
-    Product Card - 茶杯 - CháBēi (little Tea Cup) - 
-    Manon Clouzeau - A9
+titre: 茶杯 - CháBēi (small tea bowl)
 description: >
-    茶杯 - CháBēi in ceramic, 1250°C.
+    Ceramic 茶杯 - CháBēi. Unique piece.
 photos:
     - manon_tasse_A29-b.jpg
     - manon_tasse_A29-a.jpg
+price: 15.00 €
 options:
-    dimension: 2 inch x 3 inch
-    capacity: 20 Oz
+    dimension: 7 cm x 3 cm
+    capacity: 40 ml
     weight: 135 g
-    stock: rest 1 piece
+    stock: 1 item left
 ---

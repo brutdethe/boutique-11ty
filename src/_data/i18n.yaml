@@ -1,27 +1,32 @@
 about:
     title:
-        fr: 'à-propos'
-        en: 'about'
+        fr: à-propos
+        en: about
     url:
-        fr: 'https://www.gongfucha.fr/pages/faq-boutique'
-        en: 'https://www.gongfucha.fr/pages/faq-boutique'
+        fr: https://www.gongfucha.fr/pages/faq-boutique
+        en: https://www.gongfucha.fr/pages/faq-boutique
 
 shop:
     title:
-        fr: 'boutique'
-        en: 'shop'
+        fr: boutique
+        en: shop
 
 cart:
     title:
-        fr: 'panier'
-        en: 'cart'
+        fr: panier
+        en: cart
 
 privacy:
     title:
-        fr: 'confidentialité'
-        en: 'privacy notice'
+        fr: confidentialité
+        en: privacy notice
 
 legal:
     title:
-        fr: 'mentions légales'
-        en: 'legal notice'
+        fr: mentions légales
+        en: legal notice
+
+button_cart:
+    title:
+        fr: ajouter au panier
+        en: add to cart

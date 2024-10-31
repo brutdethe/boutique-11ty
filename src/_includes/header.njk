@@ -1,6 +1,6 @@
 <header class="header columns">
     <h1 class="title column col-3 col-md-12">
-        <a href="{{ '/' | customLocaleUrl(page.lang) | url }}">
+        <a href="{{ '/' | customLocaleUrl(page.lang) | url }}" class="logo-link">
             <img src="https://www.gongfucha.fr/assets/sceau-the.svg" alt="logo boutique" class="logo">
         </a>
     </h1>
@@ -11,7 +11,7 @@
             <li><a href="/" class="nav-link"><span class="badge" data-badge="0" data-initial="YZ">{{ i18n.cart.title[page.lang] }}</span></a></li>
         </ul>
     </nav>
-    <div class="i18n columns col-gapless column">
+    <div class="i18n columns col-gapless column col-2 col-md-3 col-sm-12">
         <div class="currency column col-6">
             <button class="btn btn-sm bg-secondary" value="EUR">€</button>
             <button class="btn btn-sm " value="USD">$</button>
