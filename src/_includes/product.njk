@@ -1,12 +1,15 @@
-![{{ photos[0] }}]({{ settings.dirs.img_products | url }}{{ photos[0] }})  
-[{{ photos[1] }}]({{ settings.dirs.img_products | url }}{{ photos[1] }}
-) 
-
+---
+layout: default.njk
 ---
 
-{{ description }}  
+<img src="{{ settings.dirs.img_products | url }}{{ photos[0] }}" alt="{{ photos[0] }}" />
+<br>
+<a href="{{ settings.dirs.img_products | url }}{{ photos[1] }}">{{ photos[1] }}</a>
 
+<hr>
+
+<h2>{{ description }}</h2> 
 
 {% for key, value in options %}
-    {{ key }} : {{ value }}
+    <p>{{ key }} : {{ value }}</p>
 {% endfor %}

@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: product.njk
 title: >
     Product Card - 茶杯 - CháBēi (little Tea Cup) - 
     Manon Clouzeau - A9
@@ -14,5 +14,3 @@ options:
     weight: 135 g
     stock: rest 1 piece
 ---
-
-{% include "product.njk" %}

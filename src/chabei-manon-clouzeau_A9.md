@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: product.njk
 title: >
     Fiche produit - 茶杯 - CháBēi (petit bol à thé) - 
     Manon Clouzeau - A9
@@ -14,7 +14,5 @@ options:
     poids: 15 g
     stock: il reste 1 article
 ---
-
-{% include "product.njk" %}
 
 
