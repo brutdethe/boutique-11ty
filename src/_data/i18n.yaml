@@ -1,32 +1,56 @@
-about:
-    title:
-        fr: à-propos
-        en: about
-    url:
-        fr: https://www.gongfucha.fr/pages/faq-boutique
-        en: https://www.gongfucha.fr/pages/faq-boutique
+aboutTitle:
+    fr: à-propos
+    en: about
 
-shop:
-    title:
-        fr: boutique
-        en: shop
+aboutUrl:
+    fr: https://www.gongfucha.fr/pages/faq-boutique
+    en: https://www.gongfucha.fr/pages/faq-boutique
 
-cart:
-    title:
-        fr: panier
-        en: cart
+shopTitle:
+    fr: boutique
+    en: shop
 
-privacy:
-    title:
-        fr: confidentialité
-        en: privacy notice
+cartTitle:
+    fr: panier
+    en: cart
 
-legal:
-    title:
-        fr: mentions légales
-        en: legal notice
+privacyTitle:
+    fr: confidentialité
+    en: privacy notice
 
-button_cart:
-    title:
-        fr: ajouter au panier
-        en: add to cart
+legalTitle:
+    fr: mentions légales
+    en: legal notice
+
+buttonCartTitle:
+    fr: ajouter au panier
+    en: add to cart
+
+logoAlt:
+    fr: Logo de la boutique Gong Fu Cha
+    en: Logo of Gong Fu Cha shop
+
+aria:
+    navigationMain:
+        fr: Navigation principale
+        en: Main navigation
+
+    selectionCurrencyLanguage:
+        fr: Sélection de la devise et de la langue
+        en: Currency and language selection
+
+    changeLanguageFr:
+        fr: Changer la langue en français
+        en: Change language to French
+
+    changeLanguageEn:
+        fr: Changer la langue en anglais
+        en: Change language to English
+
+    currencyEur:
+        fr: Changer la monnaie en euros
+        en: Change currency to euros
+
+    currencyUsd:
+        fr: Changer la monnaie en dollars
+        en: Change currency to dollars
