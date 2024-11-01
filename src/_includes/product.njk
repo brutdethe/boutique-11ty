@@ -27,7 +27,7 @@ eleventyComputed:
             <p>{{ description }}</p>
             <dl>
                 {% for key, value in options %}
-                    <dt role="term">{{ key }}:</dt>
+                    <dt role="term">{{ key }}{% if page.lang == 'fr'%}&nbsp;{% endif %}:&nbsp;</dt>
                     <dd role="definition">{{ value }}</dd>
                 {% endfor %}
             </dl>
