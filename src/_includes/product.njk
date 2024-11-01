@@ -8,20 +8,16 @@ eleventyComputed:
   card_title: "{{ titre }}"
 ---
 
-<div class="columns"><div class="columns">
-    <article class="card column col-8 col-xs-12 card-carousel">
-        <figure class="card-image carousel">
-            <div class="carousel-container">
-                <div class="carousel-item">
-                    <img class="img-responsive" src="{{ settings.dirs.img_products | url }}{{ photos[0] }}" alt="{{ i18n.photoAlt[page.lang] | default(photos[0]) }}" />
-                    <figcaption class="img-caption" aria-label="{{ card_title }} - {{ i18n.aria.productImageCaption[page.lang] }}">{{ card_title }}</figcaption>
-                </div>  
-            </div>
+<div class="columns">
+    <article class="card column col-8 col-xs-12">
+        <figure class="card-image column col-8 col-xs-12">
+            <img class="img-responsive" src="{{ settings.dirs.img_products | url }}{{ photos[0] }}" alt="{{ i18n.photoAlt[page.lang] | default(photos[0]) }}" />
+            <figcaption class="img-caption" aria-label="{{ card_title }} - {{ i18n.aria.productImageCaption[page.lang] }}">{{ card_title }}</figcaption>
         </figure>
     </article>
     <article class="card column col-4 col-xs-12">
         <header class="card-header">
-            <h2 class="card-title h4">{{ card_title }}</h2>
+            <h2 class="card-title">{{ card_title }}</h2>
         </header>
         <section class="card-body">
             <p>{{ description }}</p>
