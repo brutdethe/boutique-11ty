@@ -30,6 +30,19 @@ logoAlt:
     fr: Logo de la boutique Gong Fu Cha
     en: Logo of Gong Fu Cha shop
 
+mainContent:
+    fr: Contenu principal
+    en: Main content
+
+meta:
+    description:
+        fr: Découvrez notre boutique Gong Fu Cha et trouvez des produits uniques pour vos dégustations de thé.
+        en: Discover our Gong Fu Cha shop and find unique products for your tea tasting experience.
+
+photoAlt:
+    fr: Image du produit
+    en: Product image
+
 aria:
     navigationMain:
         fr: Navigation principale
@@ -54,3 +67,15 @@ aria:
     currencyUsd:
         fr: Changer la monnaie en dollars
         en: Change currency to dollars
+
+    productPrice:
+        fr: Prix du produit
+        en: Product price
+
+    addToCartButton:
+        fr: Ajouter au panier
+        en: Add to cart
+
+    productImageCaption:
+        fr: '- Image du produit'
+        en: '- Product image'
