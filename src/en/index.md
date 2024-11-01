@@ -1,6 +1,6 @@
 ---
 layout: default.njk
-title: Échoppe de thés de culture chinoise
+title: Chinese Tea House Shop
 ---
-EN
-Ici plein de thé
+
+[chabei-manon-clouzeau_A9]({{ '/en/chabei-manon-clouzeau_A9/' | url }})

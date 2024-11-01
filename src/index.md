@@ -3,8 +3,4 @@ layout: default.njk
 title: Échoppe de thés de culture chinoise
 ---
 
-Ici plein de thé
-
-{{ 2 + 3 }} 
-
-test
+[chabei-manon-clouzeau_A9]({{ '/chabei-manon-clouzeau_A9/' | url }})

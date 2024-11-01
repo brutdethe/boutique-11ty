@@ -1,0 +1,81 @@
+aboutTitle:
+    fr: à-propos
+    en: about
+
+aboutUrl:
+    fr: https://www.gongfucha.fr/pages/faq-boutique
+    en: https://www.gongfucha.fr/pages/faq-boutique
+
+shopTitle:
+    fr: boutique
+    en: shop
+
+cartTitle:
+    fr: panier
+    en: cart
+
+privacyTitle:
+    fr: confidentialité
+    en: privacy notice
+
+legalTitle:
+    fr: mentions légales
+    en: legal notice
+
+buttonCartTitle:
+    fr: ajouter au panier
+    en: add to cart
+
+logoAlt:
+    fr: Logo de la boutique Gong Fu Cha
+    en: Logo of Gong Fu Cha shop
+
+mainContent:
+    fr: Contenu principal
+    en: Main content
+
+meta:
+    description:
+        fr: Découvrez notre boutique Gong Fu Cha et trouvez des produits uniques pour vos dégustations de thé.
+        en: Discover our Gong Fu Cha shop and find unique products for your tea tasting experience.
+
+photoAlt:
+    fr: Image du produit
+    en: Product image
+
+aria:
+    navigationMain:
+        fr: Navigation principale
+        en: Main navigation
+
+    selectionCurrencyLanguage:
+        fr: Sélection de la devise et de la langue
+        en: Currency and language selection
+
+    changeLanguageFr:
+        fr: Changer la langue en français
+        en: Change language to French
+
+    changeLanguageEn:
+        fr: Changer la langue en anglais
+        en: Change language to English
+
+    currencyEur:
+        fr: Changer la monnaie en euros
+        en: Change currency to euros
+
+    currencyUsd:
+        fr: Changer la monnaie en dollars
+        en: Change currency to dollars
+
+    productPrice:
+        fr: Prix du produit
+        en: Product price
+
+    addToCartButton:
+        fr: Ajouter au panier
+        en: Add to cart
+
+    productImageCaption:
+        fr: '- Image du produit'
+        en: '- Product image'

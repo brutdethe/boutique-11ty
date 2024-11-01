@@ -4,25 +4,34 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <link href="{{ '/_assets/favicon.ico' | url }}" rel="icon" type="image/ico">
         <link rel="stylesheet" href="{{ '/bundle.css' | url }}">
         <link rel="alternate" hreflang="fr" href="{{ page.filePathStem | customLocaleUrl("fr") | url }}">
         <link rel="alternate" hreflang="en" href="{{ page.filePathStem | customLocaleUrl("en") | url }}">
+
+        <meta name="description" content="{{ i18n.meta.description[page.lang] }}">
+
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ i18n.meta.description[page.lang] }}">
+        <meta property="og:url" content="{{ page.url | url }}">
+        <meta property="og:type" content="website">
+
         <title>{{ title }}</title>
     </head>
     <body>
-        <main class="wrapper">
+        <main class="wrapper" role="main">
             {% include "header.njk" %}
-            <section>
+            <section aria-labelledby="content-title">
                 {{ content | safe }}
             </section>
-            <footer class="section section-footer">
+            <footer class="section section-footer" role="contentinfo">
                 <ul class="container grid-lg">
                     <li>
-                        <a href="{{ '/privacy' | customLocaleUrl(page.lang) | url }}" class="nav-link">{{ i18n.privacy.title[page.lang] }}</a>
+                        <a href="{{ '/privacy' | customLocaleUrl(page.lang) | url }}" class="nav-link">{{ i18n.privacyTitle[page.lang] }}</a>
                     </li>
                     <li>
-                        <a href="{{ '/legacy' | customLocaleUrl(page.lang) | url }}" class="nav-link">{{ i18n.legal.title[page.lang] }}</a>
+                        <a href="{{ '/legacy' | customLocaleUrl(page.lang) | url }}" class="nav-link">{{ i18n.legalTitle[page.lang] }}</a>
                     </li>
                 </ul>
             </footer>
