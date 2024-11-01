@@ -21,13 +21,22 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
   - [x] Pages traduites
   - [x] Traduction de l'interface
 
+- US-03 Fiche produit
+  - [x] Reprend une fiche produit
+  - [x] Affiche les données
+  - [x] Ajout une 404 et un favicon
+  - [x] Améliore l'accessibilité Aria
+  - [x] Gère l'i18n
+  - [x] Simplifie le CSS
+
 ### À venir
 
-- US-03 Fiche produit
-- US-04 Présentation des produits
-- US-05 Gestion du panier
-- US-06 Paiement
-- US-07 Gestion des frais de transport
+- US-04 Carrousel
+- US-05 Migration des fiches
+- US-06 Présentation des produits
+- US-07 Gestion du panier
+- US-08 Paiements
+- US-09 Gestion des frais de transport
 
 ## Outils utilisés
 
