@@ -3,4 +3,4 @@ layout: default.njk
 title: Chinese Tea House Shop
 ---
 
-[chabei-manon-clouzeau_A9]({{ '/en/chabei-manon-clouzeau_A9/' | url }})
+[manontasA31]({{ '/produits/manontasA31_cha-bei-petit-bol-a-the/' | url }})

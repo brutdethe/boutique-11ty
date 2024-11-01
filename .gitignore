@@ -22,3 +22,7 @@ dist/
 # Ignore test files
 .cache
 test/stubs-layout-cache/_includes/*.js
+
+img_products/
+produits/
+output/
