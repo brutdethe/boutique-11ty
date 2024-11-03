@@ -425,6 +425,39 @@ footer ul {
     font-size: 1.5rem;
 }
 
+ul.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.tags-list li {
+    display: inline-block;
+    border: 1px solid var(--main-color);
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+    color: var(--main-color);
+    background-color: transparent;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+ul.tags-list li:hover {
+    background-color: var(--main-color);
+    color: var(--secondary-bg);
+}
+
+ul.tags-list li.current {
+    border: 1px solid var(--main-color);
+    color: var(--secondary-bg);
+    background-color: var(--main-color);
+}
+
 @media (min-width: 1400px) {
     section {
         max-width: 90em;
