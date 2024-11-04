@@ -1,0 +1,12 @@
+---
+layout: default.njk
+pagination:
+  data: i18n_categories
+  size: 1
+  alias: tag
+permalink: "category/{{ tag.label | slugify }}/"
+---
+
+{% set label = tag.label %}
+{% include "products_list.njk" %}
+
