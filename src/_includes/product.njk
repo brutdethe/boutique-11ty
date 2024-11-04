@@ -3,21 +3,18 @@ layout: default.njk
 card:
   en: add to basket
   fr: ajouter au panier
-eleventyComputed:
-  title: "Fiche produit : {{ title }}"
-  card_title: "{{ title }}"
 ---
 
 <div class="columns">
     <article class="card column col-8 col-xs-12">
         <figure class="card-image column col-8 col-xs-12">
             <img class="img-responsive" src="{{ settings.dirs.img_products | url }}{{ photos[0] }}" alt="{{ i18n.photoAlt[page.lang] | default(photos[0]) }}" />
-            <figcaption class="img-caption" aria-label="{{ card_title }} - {{ i18n.aria.productImageCaption[page.lang] }}">{{ card_title }}</figcaption>
+            <figcaption class="img-caption" aria-label="{{ title }} - {{ i18n.aria.productImageCaption[page.lang] }}">{{ title }}</figcaption>
         </figure>
     </article>
     <article class="card column col-4 col-xs-12">
         <header class="card-header">
-            <h2 class="card-title">{{ card_title }}</h2>
+            <h2 class="card-title">{{ title }}</h2>
         </header>
         <section class="card-body">
             <p>{{ description }}</p>
@@ -30,7 +27,7 @@ eleventyComputed:
         </section>
         <footer class="card-footer">
             <h3 class="card-title h1 price" aria-label="{{ i18n.aria.productPrice[page.lang] }}">{{ price }}</h3>
-            <button class="btn btn-primary float-right" aria-label="{{ i18n.aria.addToCartButton[page.lang] }} - {{ card_title }}">
+            <button class="btn btn-primary float-right" aria-label="{{ i18n.aria.addToCartButton[page.lang] }} - {{ title }}">
                 {{ i18n.buttonCartTitle[page.lang] }}
             </button>
         </footer>
