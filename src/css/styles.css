@@ -92,6 +92,14 @@ img {
     width: 16.66666667%;
 }
 
+h5 {
+    font-size: 1rem;
+}
+
+.text-gray {
+    color: #bcc3ce !important;
+}
+
 .card {
     border: .05rem solid var(--border-color);
     border-radius: .1rem;
@@ -99,6 +107,7 @@ img {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
+    box-shadow: 0 .25rem 1rem #30374226;
 }
 
 .card .card-body {
@@ -135,6 +144,54 @@ img {
 .card .card-image:first-child img {
     border-top-left-radius: .1rem;
     border-top-right-radius: .1rem;
+}
+
+.card .card-body:last-child,
+.card .card-footer:last-child,
+.card .card-header:last-child {
+    padding-bottom: .8rem;
+}
+
+.card .card-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.1rem 0.1rem 0 0;
+}
+
+.column-products-list {
+    padding-left: .4rem;
+    padding-right: .4rem;
+}
+
+.products-list .card-image {
+    padding-top: .8rem;
+}
+
+.products-list {
+    height: calc(100% - 1rem);
+    margin-bottom: 1rem;
+}
+
+.products-list .btn {
+    flex: 1 0 0;
+}
+
+.products-list .card-body,
+.products-list .card-footer,
+.products-list .card-header {
+    padding: .8rem;
+    padding-bottom: 0;
+}
+
+.products-list .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.products-list .card-footer {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -426,7 +483,15 @@ footer ul {
     font-size: 1.5rem;
 }
 
-ul.tags-list {
+.category-description {
+    padding: .8rem;
+    margin-bottom: .8rem;
+    box-shadow: 0 .25rem 1rem #30374226;
+    background: var(--main-color);
+    color: var(--secondary-bg);
+}
+
+.tags-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -436,12 +501,12 @@ ul.tags-list {
     list-style-type: none;
 }
 
-ul.tags-list li {
+.tags-list li {
     padding: 0;
     /* Retire le padding ici et le déplace vers l'élément <a> */
 }
 
-ul.tags-list li a {
+.tags-list li a {
     display: block;
     border: 1px solid var(--main-color);
     padding: 0.1rem 0.2rem;
@@ -454,13 +519,15 @@ ul.tags-list li a {
     text-decoration: none;
 }
 
-ul.tags-list li a:hover {
+.tags-list li a:hover {
     background-color: var(--border-color);
 }
 
-ul.tags-list .selected a {
+.tags-list .selected a {
     background-color: var(--border-color);
 }
+
+
 
 @media (min-width: 1400px) {
     section {

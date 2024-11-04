@@ -1,60 +1,39 @@
-<style>
-    .columns {
-      margin-top: 20px;
-    }
-  
-    .card {
-      margin-bottom: 20px;
-      max-width: 300px;
-    }
-  
-    .card .card-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 0.1rem 0.1rem 0 0;
-    }
-  
-    .card-body h3 {
-      font-size: .5rem;
-      margin: 0.5rem 0;
-      color: var(--text-color);
-    }
-
-    .category-description {
-      padding: .8rem;
-      margin-bottom: .8rem;
-      box-shadow: 0 .25rem 1rem #30374226;
-      background: var(--main-color);
-      color: var(--secondary-bg);
-    }
-</style>
-
 <header>
-<section class="category-description">
-  <h2 id="{{ tag.title[page.lang] }}">{{ tag.title[page.lang] }}</h2>
-  <p>{{ tag.description[page.lang] }}</p>
-</section>
-<ul class="tags-list">
-  {% for category in i18n_categories %}
-    {% set url_tag = '/category/' + category.label %}
-    <li class="{% if (category.label == tag.label) %}selected{% endif %}">
-      <a href="{{ url_tag | customLocaleUrl(page.lang) | url }}#{{ category.title[page.lang] }}">{{ category.title[page.lang] }}</a>
-    </li>
-  {% endfor %}
-</ul>
+  <section class="category-description">
+    <h2 id="{{ tag.title[page.lang] }}">{{ tag.title[page.lang] }}</h2>
+    <p>{{ tag.description[page.lang] }}</p>
+  </section>
+  <ul class="tags-list">
+    {% for category in i18n_categories %}
+      {% set url_tag = '/category/' + category.label %}
+      <li class="{% if (category.label == tag.label) %}selected{% endif %}">
+        <a href="{{ url_tag | customLocaleUrl(page.lang) | url }}#{{ category.title[page.lang] }}">{{ category.title[page.lang] }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 </header>
+
+<hr>
 
 <div class="columns">
   {%- for post in collections[tag.label] -%}
     {%- if post.data.page.lang == 'en' -%}
-      <div class="column col-4">
-        <div class="card">
+      <div class="column column-products-list col-4 col-xs-12">
+        <div class="card products-list">
+          <div class="card-header">
+            <h5 class="card-title">{{ post.data.title }}</h5>
+            <div class="card-subtitle text-gray">{{post.data.tags }} {{ post.data.options.type }}</div>
+          </div>
           <div class="card-image">
             <img src="{{ '/boutique-11ty/_assets/img_products/' + post.data.photos[0] | customLocaleUrl("fr") | url }}" alt="{{ post.data.title }}">
           </div>
           <div class="card-body">
-            <h3>{{ post.data.title }}</h3>
-            <a href="{{ post.url | url }}" class="btn btn-primary">Lire plus</a>
+            <p class="description">{{ post.data.description }}</p>
+            <h3 class="price">{{ post.data.price }}</h3>
+          </div>
+          <div class="card-footer">
+              <a href="{{ post.data.permalink | customLocaleUrl(page.lang) | url }}" class="detail btn btn-secondary" data-product="{{ post.data.id }}">détail</a>
+              <a class="btn btn-primary float-right">ajouter au panier</a>
           </div>
         </div>
       </div>
