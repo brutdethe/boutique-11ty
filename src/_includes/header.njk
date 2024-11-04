@@ -16,9 +16,9 @@
             <button class="btn btn-sm bg-secondary" value="EUR" aria-label="{{ i18n.aria.currencyEur[page.lang] }}">€</button>
             <button class="btn btn-sm" value="USD" aria-label="{{ i18n.aria.currencyUsd[page.lang] }}">$</button>
         </div>
-        <div class="language column col-6">
-            <a href="{{ page.filePathStem | customLocaleUrl("fr") | url }}" class="btn btn-sm {% if page.lang == 'fr' %}bg-secondary{% endif %}" {% if page.lang == 'fr' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.changeLanguageFr[page.lang] }}">FR</a>
-            <a href="{{ page.url | locale_url('en') | url }}" class="btn btn-sm {% if page.lang == 'en' %}bg-secondary{% endif %}" {% if page.lang == 'en' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.changeLanguageEn[page.lang] }}">EN</a>
-        </div>
+        <ul class="language column col-6">
+            <li><a href="{{ page.url | customLocaleUrl("fr") | url }}" class="btn btn-sm {% if page.lang == 'fr' %}bg-secondary{% endif %}" {% if page.lang == 'fr' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.changeLanguageFr[page.lang] }}">FR</a></li>
+            <li><a href="{{ page.url | locale_url('en') | url }}" class="btn btn-sm {% if page.lang == 'en' %}bg-secondary{% endif %}" {% if page.lang == 'en' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.changeLanguageEn[page.lang] }}">EN</a></li>
+        </ul>
     </div>
 </header>

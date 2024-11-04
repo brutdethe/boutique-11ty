@@ -416,6 +416,7 @@ footer ul {
     justify-content: flex-end;
     line-height: 4em;
     text-align: right;
+    gap: .2rem;
 }
 
 .price {
@@ -442,7 +443,6 @@ ul.tags-list li {
 
 ul.tags-list li a {
     display: block;
-    /* Rend le <a> comme un bloc pour occuper tout l'espace du <li> */
     border: 1px solid var(--main-color);
     padding: 0.1rem 0.2rem;
     border-radius: 0.2rem;
@@ -452,17 +452,14 @@ ul.tags-list li a {
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
     text-decoration: none;
-    /* Enlève la soulignure par défaut des liens */
 }
 
 ul.tags-list li a:hover {
     background-color: var(--border-color);
-    color: var(--main-color);
 }
 
 ul.tags-list .selected a {
-    background-color: var(--main-color);
-    color: var(--secondary-bg);
+    background-color: var(--border-color);
 }
 
 @media (min-width: 1400px) {
