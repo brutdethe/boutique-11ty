@@ -19,14 +19,14 @@
 
         <title>{{ title }}</title>
     </head>
-    <body>
+    <body class="no-margin">
         <main class="wrapper" role="main">
             {% include "header.njk" %}
             <section aria-labelledby="content-title">
                 {{ content | safe }}
             </section>
             <footer class="section section-footer" role="contentinfo">
-                <ul class="container grid-lg">
+                <ul class="container grid-lg no-padding no-margin">
                     <li>
                         <a href="{{ '/privacy' | customLocaleUrl(page.lang) | url }}" class="nav-link">{{ i18n.privacyTitle[page.lang] }}</a>
                     </li>

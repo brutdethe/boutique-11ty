@@ -7,25 +7,25 @@ card:
 
 <div class="columns">
     <article class="card column col-8 col-xs-12">
-        <figure class="card-image column col-8 col-xs-12">
+        <figure class="card-image no-padding no-margin column col-8 col-xs-12">
             <img class="img-responsive" src="{{ settings.dirs.img_products | url }}{{ photos[0] }}" alt="{{ i18n.photoAlt[page.lang] | default(photos[0]) }}" />
             <figcaption class="img-caption" aria-label="{{ title }} - {{ i18n.aria.productImageCaption[page.lang] }}">{{ title }}</figcaption>
         </figure>
     </article>
     <article class="card column col-4 col-xs-12">
-        <header class="card-header">
+        <header class="card-header no-margin">
             <h2 class="card-title">{{ title }}</h2>
         </header>
-        <section class="card-body">
+        <section class="card-body no-margin">
             <p>{{ description }}</p>
             <dl>
                 {% for key, value in options %}
-                    <dt role="term">{{ key }}{% if page.lang == 'fr'%}&nbsp;{% endif %}:&nbsp;</dt>
-                    <dd role="definition">{{ value }}</dd>
+                    <dt role="term no-margin">{{ key }}{% if page.lang == 'fr'%}&nbsp;{% endif %}:&nbsp;</dt>
+                    <dd role="definition no-margin">{{ value }}</dd>
                 {% endfor %}
             </dl>
         </section>
-        <footer class="card-footer">
+        <footer class="card-footer no-margin">
             <h3 class="card-title h1 price" aria-label="{{ i18n.aria.productPrice[page.lang] }}">{{ price }}</h3>
             <button class="btn btn-primary float-right" aria-label="{{ i18n.aria.addToCartButton[page.lang] }} - {{ title }}">
                 {{ i18n.buttonCartTitle[page.lang] }}

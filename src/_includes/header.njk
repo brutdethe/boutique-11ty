@@ -1,11 +1,11 @@
 <header class="header columns" role="banner">
-    <h1 class="title column col-3 col-md-12">
+    <h1 class="title no-padding column col-3 col-md-12">
         <a href="{{ '/' | customLocaleUrl(page.lang) | url }}" class="logo-link">
             <img src="https://www.gongfucha.fr/assets/sceau-the.svg" alt="{{ i18n.logoAlt[page.lang] }}" class="logo">
         </a>
     </h1>
     <nav class="column col-7 col-md-9 col-sm-12" aria-label="{{ i18n.aria.navigationMain[page.lang] }}">
-        <ul class="nav-list">
+        <ul class="nav-list no-padding no-margin">
             <li><a href="{{ '/' | customLocaleUrl(page.lang) | url }}" class="nav-link">{{ i18n.shopTitle[page.lang] }}</a></li>
             <li><a href="{{ i18n.aboutUrl[page.lang] }}" class="nav-link">{{ i18n.aboutTitle[page.lang] }}</a></li>
             <li><a href="/" class="nav-link"><span class="badge" data-badge="0" data-initial="YZ">{{ i18n.cartTitle[page.lang] }}</span></a></li>
@@ -16,7 +16,7 @@
             <button class="btn btn-sm bg-secondary" value="EUR" aria-label="{{ i18n.aria.currencyEur[page.lang] }}">€</button>
             <button class="btn btn-sm" value="USD" aria-label="{{ i18n.aria.currencyUsd[page.lang] }}">$</button>
         </div>
-        <ul class="language column col-6">
+        <ul class="language column col-6 no-padding no-margin">
             <li><a href="{{ page.url | customLocaleUrl("fr") | url }}" class="btn btn-sm {% if page.lang == 'fr' %}bg-secondary{% endif %}" {% if page.lang == 'fr' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.changeLanguageFr[page.lang] }}">FR</a></li>
             <li><a href="{{ page.url | locale_url('en') | url }}" class="btn btn-sm {% if page.lang == 'en' %}bg-secondary{% endif %}" {% if page.lang == 'en' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.changeLanguageEn[page.lang] }}">EN</a></li>
         </ul>

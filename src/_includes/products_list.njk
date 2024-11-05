@@ -3,7 +3,7 @@
     <h2 id="{{ tag.title[page.lang] }}">{{ tag.title[page.lang] }}</h2>
     <p>{{ tag.description[page.lang] }}</p>
   </section>
-  <ul class="tags-list">
+  <ul class="tags-list no-padding no-margin">
     {% for category in i18n_categories %}
       {% set url_tag = '/category/' + category.label %}
       <li class="{% if (category.label == tag.label) %}selected{% endif %}">
@@ -20,18 +20,18 @@
     {%- if post.data.page.lang == 'en' -%}
       <div class="column column-products-list col-4 col-xs-12">
         <div class="card products-list">
-          <div class="card-header">
+          <div class="card-header no-margin">
             <h5 class="card-title">{{ post.data.title }}</h5>
             <div class="card-subtitle text-gray">{{post.data.tags }} {{ post.data.options.type }}</div>
           </div>
-          <div class="card-image">
+          <div class="card-image no-padding no-margin">
             <img src="{{ '/boutique-11ty/_assets/img_products/' + post.data.photos[0] | customLocaleUrl("fr") | url }}" alt="{{ post.data.title }}">
           </div>
-          <div class="card-body">
+          <div class="card-body no-margin">
             <p class="description">{{ post.data.description }}</p>
             <h3 class="price">{{ post.data.price }}</h3>
           </div>
-          <div class="card-footer">
+          <div class="card-footer no-margin">
               <a href="{{ post.data.permalink | customLocaleUrl(page.lang) | url }}" class="detail btn btn-secondary" data-product="{{ post.data.id }}">détail</a>
               <a class="btn btn-primary float-right">ajouter au panier</a>
           </div>
