@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link href="{{ '/_assets/favicon.ico' | url }}" rel="icon" type="image/ico">
+        <link href="{{ '/_assets/favicon.ico' | url }}" rel="icon" type="image/x-icon">
         <link rel="stylesheet" href="{{ '/bundle.css' | url }}">
         <link rel="alternate" hreflang="fr" href="{{ page.filePathStem | customLocaleUrl("fr") | url }}">
         <link rel="alternate" hreflang="en" href="{{ page.filePathStem | customLocaleUrl("en") | url }}">
@@ -25,8 +25,8 @@
             <section aria-labelledby="content-title">
                 {{ content | safe }}
             </section>
-            <footer class="section section-footer" role="contentinfo">
-                <ul class="container grid-lg no-padding no-margin">
+            <footer class="footer-section" role="contentinfo">
+                <ul class="footer-list no-padding no-margin">
                     <li>
                         <a href="{{ '/privacy' | customLocaleUrl(page.lang) | url }}" class="nav-link">{{ i18n.privacyTitle[page.lang] }}</a>
                     </li>

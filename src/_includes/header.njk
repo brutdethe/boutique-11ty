@@ -1,24 +1,22 @@
-<header class="header columns" role="banner">
-    <h1 class="title no-padding column col-3 col-md-12">
-        <a href="{{ '/' | customLocaleUrl(page.lang) | url }}" class="logo-link">
-            <img src="https://www.gongfucha.fr/assets/sceau-the.svg" alt="{{ i18n.logoAlt[page.lang] }}" class="logo">
-        </a>
-    </h1>
-    <nav class="column col-7 col-md-9 col-sm-12" aria-label="{{ i18n.aria.navigationMain[page.lang] }}">
-        <ul class="nav-list no-padding no-margin">
+<header class="header" role="banner">
+    <a href="{{ '/' | customLocaleUrl(page.lang) | url }}" class="logo-link" aria-label="Accueil - Gong Fu Cha">
+        <img src="https://www.gongfucha.fr/assets/sceau-the.svg" alt="{{ i18n.logoAlt[page.lang] }}">
+    </a>
+    <nav aria-label="{{ i18n.aria.navigationMain[page.lang] }}" class="nav-header">
+        <ul class="nav-list">
             <li><a href="{{ '/' | customLocaleUrl(page.lang) | url }}" class="nav-link">{{ i18n.shopTitle[page.lang] }}</a></li>
             <li><a href="{{ i18n.aboutUrl[page.lang] }}" class="nav-link">{{ i18n.aboutTitle[page.lang] }}</a></li>
             <li><a href="/" class="nav-link"><span class="badge" data-badge="0" data-initial="YZ">{{ i18n.cartTitle[page.lang] }}</span></a></li>
         </ul>
     </nav>
-    <div class="i18n columns col-gapless column col-2 col-md-3 col-sm-12" role="complementary" aria-label="{{ i18n.aria.selectionCurrencyLanguage[page.lang] }}">
-        <div class="currency column col-6">
-            <button class="btn btn-sm bg-secondary" value="EUR" aria-label="{{ i18n.aria.currencyEur[page.lang] }}">€</button>
-            <button class="btn btn-sm" value="USD" aria-label="{{ i18n.aria.currencyUsd[page.lang] }}">$</button>
-        </div>
-        <ul class="language column col-6 no-padding no-margin">
-            <li><a href="{{ page.url | customLocaleUrl("fr") | url }}" class="btn btn-sm {% if page.lang == 'fr' %}bg-secondary{% endif %}" {% if page.lang == 'fr' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.changeLanguageFr[page.lang] }}">FR</a></li>
-            <li><a href="{{ page.url | locale_url('en') | url }}" class="btn btn-sm {% if page.lang == 'en' %}bg-secondary{% endif %}" {% if page.lang == 'en' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.changeLanguageEn[page.lang] }}">EN</a></li>
+    <section class="language-currency" role="complementary" aria-label="{{ i18n.aria.selectionCurrencyLanguage[page.lang] }}">
+        <ul class="currency-list">
+            <li><a href="" class="btn-nav selected" value="EUR" aria-label="{{ i18n.aria.currencyEur[page.lang] }}" aria-current="page" >€</a></li>
+            <li><a href="" class="btn-nav" value="USD" aria-label="{{ i18n.aria.currencyUsd[page.lang] }}">$</a></li>
         </ul>
-    </div>
+        <ul class="language-list">
+            <li><a href="{{ page.url | customLocaleUrl("fr") | url }}" class="btn-nav {% if page.lang == 'fr' %}selected{% endif %}" {% if page.lang == 'fr' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.changeLanguageFr[page.lang] }}">FR</a></li>
+            <li><a href="{{ page.url | locale_url('en') | url }}" class="btn-nav {% if page.lang == 'en' %}selected{% endif %}" {% if page.lang == 'en' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.changeLanguageEn[page.lang] }}">EN</a></li>
+        </ul>
+    </section>
 </header>

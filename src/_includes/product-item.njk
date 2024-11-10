@@ -1,0 +1,15 @@
+<article class="product-item">
+    <header class="product-header">
+        <h2 id="{{ post.data.title }}" class="product-title">{{ post.data.title }} truc</h2>
+        <h3 class="product-subtitle">{{post.data.tags }} {{ post.data.options.type }}</h3>
+    </header>
+    <figure class="product-figure">
+        <img src="{{ '/boutique-11ty/_assets/thumb_products/' + post.data.photos[0] | customLocaleUrl("fr") | url }}" alt="{{ post.data.title }}" alt="蓋碗 - GàiWǎn">
+    </figure>
+    <p class="product-description">{{ post.data.description }}</p>
+    <p class="price">{{ post.data.price }}</p>
+    <footer class="product-footer">
+        <a href="{{ post.data.permalink | customLocaleUrl(page.lang) | url }}" class="btn btn-details">détail</a>
+        <a href="#" class="btn btn-card" data-product="{{ post.data.id }}">ajouter au panier</a>
+    </footer>
+  </article>
