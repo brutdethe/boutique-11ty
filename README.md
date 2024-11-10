@@ -10,6 +10,11 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 ### Terminées
 
+- US-06 Présentation des produits
+  - [x] Affiche les données des produits
+  - [x] Gère les styles
+  - [x] reprend le html et les styles 
+
 - US-05 Migration des fiches
   - [x] Générer des fiches .md à partir du JSON de la boutique
   - [x] Adapter les titres des fiches
@@ -39,10 +44,10 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 ### À venir
 
 - US-04 Carrousel
-- US-06 Présentation des produits
 - US-07 Gestion du panier
 - US-08 Paiements
 - US-09 Gestion des frais de transport
+- US-10 Gestion du responsive
 
 ## Outils utilisés
 
