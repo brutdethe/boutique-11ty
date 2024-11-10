@@ -8,7 +8,7 @@ card:
 <section aria-labelledby="card-title"></section>
     <article class="card-details">
         <figure class="card-figure">
-            <img src="{{ settings.dirs.img_products | url }}{{ photos[0] }}" alt="{{ i18n.photoAlt[page.lang] | default(photos[0]) }}" />
+            <img src="{{ settings.dirs.img_products | url }}{{ photos[0] }}" class="card-image" alt="{{ i18n.photoAlt[page.lang] | default(photos[0]) }}" />
             <figcaption class="card-caption" aria-label="{{ title }} - {{ i18n.aria.productImageCaption[page.lang] }}">{{ title }}</figcaption>
         </figure>
         <section class="card-info">

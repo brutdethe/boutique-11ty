@@ -228,7 +228,7 @@ body {
     position: relative;
 }
 
-.card-figure img {
+.card-image {
     max-width: 100%;
 }
 
@@ -253,13 +253,23 @@ body {
     margin: 0;
 }
 
-.card-description dl {
-    display: flex;
-    gap: var(--gap-small);
+.card-description dt,
+.card-description dd {
+    display: inline;
 }
 
 .card-description dt {
     font-weight: bold;
+    text-transform: capitalize;
+}
+
+.card-description dd {
+    margin: 0;
+}
+
+.card-description dd::after {
+    content: "";
+    display: block;
 }
 
 .card-footer {
