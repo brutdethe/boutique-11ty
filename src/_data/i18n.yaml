@@ -60,6 +60,10 @@ aria:
         fr: Voir les clauses de confidentialités
         en: Go to privacy
 
+    category:
+        fr: Lister les produits de
+        en: List products of
+
     card_detail:
         fr: Consulter la fiche produit
         en: View card
