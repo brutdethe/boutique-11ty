@@ -2,10 +2,9 @@
 <html lang="{{ page.lang }}">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link href="{{ '/_assets/favicon.ico' | url }}" rel="icon" type="image/ico">
+        <link href="{{ '/_assets/favicon.ico' | url }}" rel="icon" type="image/x-icon">
         <link rel="stylesheet" href="{{ '/bundle.css' | url }}">
         <link rel="alternate" hreflang="fr" href="{{ page.filePathStem | customLocaleUrl("fr") | url }}">
         <link rel="alternate" hreflang="en" href="{{ page.filePathStem | customLocaleUrl("en") | url }}">
@@ -20,18 +19,18 @@
         <title>{{ title }}</title>
     </head>
     <body>
-        <main class="wrapper" role="main">
+        <main class="wrapper">
             {% include "header.njk" %}
-            <section aria-labelledby="content-title">
+            <section>
                 {{ content | safe }}
             </section>
-            <footer class="section section-footer" role="contentinfo">
-                <ul class="container grid-lg">
+            <footer class="footer-section" role="contentinfo">
+                <ul class="footer-list">
                     <li>
-                        <a href="{{ '/privacy' | customLocaleUrl(page.lang) | url }}" class="nav-link">{{ i18n.privacyTitle[page.lang] }}</a>
+                        <a href="{{ '/privacy' | customLocaleUrl(page.lang) | url }}" class="nav-link" aria-label="{{ i18n.aria.privacy[page.lang] }}">{{ i18n.privacy_title[page.lang] }}</a>
                     </li>
                     <li>
-                        <a href="{{ '/legacy' | customLocaleUrl(page.lang) | url }}" class="nav-link">{{ i18n.legalTitle[page.lang] }}</a>
+                        <a href="{{ '/legacy' | customLocaleUrl(page.lang) | url }}" class="nav-link" aria-label="{{ i18n.aria.legacy[page.lang] }}">{{ i18n.legacy_title[page.lang] }}</a>
                     </li>
                 </ul>
             </footer>

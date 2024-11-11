@@ -6,7 +6,7 @@ function normalizeString(str) {
     return str
         .toLowerCase() // Convertir en minuscules
         .normalize('NFD') // Décomposer les caractères accentués
-        .replace(/[\u0300-\u036f]/g, '') // Supprimer les marques de diacritiques
+        .replace(/[̀-ͯ]/g, '') // Supprimer les marques de diacritiques
         .replace(/[€]/g, '') // Supprimer le symbole euro
         .replace(/[^\w\s-]/g, '') // Supprimer les caractères non alphanumériques sauf les tirets
         .replace(/\s+/g, '-') // Remplacer les espaces par des tirets
@@ -18,31 +18,31 @@ function normalizeString(str) {
 // Fonction pour transformer le pinyin
 function transformPinyin(pinyin) {
     return pinyin
-        .normalize('NFD') // Normalise les caractères accentués
-        .replace(/[\u0300-\u036f]/g, '') // Supprime les marques de diacritiques
-        .replace(/([A-Z])/g, '-$1') // Ajoute un tiret devant chaque majuscule
-        .replace(/^-/, '') // Supprime un tiret au début s'il y en a un
-        .toLowerCase() // Convertit tout en minuscules
-        .replace(/\s+/g, '-') // Remplace les espaces par des tirets
-        .replace(/[^\w\s-]/g, '') // Supprime les caractères non alphanumériques sauf les tirets
+        .normalize('NFD') // Normaliser les caractères accentués
+        .replace(/[̀-ͯ]/g, '') // Supprimer les marques de diacritiques
+        .replace(/([A-Z])/g, '-$1') // Ajouter un tiret devant chaque majuscule
+        .replace(/^-/, '') // Supprimer un tiret au début s'il y en a un
+        .toLowerCase() // Convertir tout en minuscules
+        .replace(/\s+/g, '-') // Remplacer les espaces par des tirets
+        .replace(/[^\w\s-]/g, '') // Supprimer les caractères non alphanumériques sauf les tirets
         .replace(/--+/g, '-') // Remplacer plusieurs tirets consécutifs par un seul
-        .replace(/_-+/g, '_') // Remplace _- par _
-        .replace(/^-+|-+$/g, '') // Supprime les tirets en début et fin
-        .trim() // Supprime les espaces en début et fin
+        .replace(/_-+/g, '_') // Remplacer _- par _
+        .replace(/^-+|-+$/g, '') // Supprimer les tirets en début et fin
+        .trim() // Supprimer les espaces en début et fin
 }
 
 // Obtient le chemin du répertoire courant
-const __filename = new URL('', import.meta.url).pathname // Chemin absolu du fichier
-const __dirname = path.dirname(__filename) // Répertoire du fichier courant
+const __filename = new URL('', import.meta.url).pathname
+const __dirname = path.dirname(__filename)
 
-const dataFilePath = path.join(__dirname, 'produits.json') // Chemin vers le fichier JSON
+const dataFilePath = path.join(__dirname, 'produits.json')
 const outputFrDir = path.join(__dirname, 'output/fr')
 const outputEnDir = path.join(__dirname, 'output/en')
 
 fs.mkdirSync(outputFrDir, { recursive: true })
 fs.mkdirSync(outputEnDir, { recursive: true })
 
-// Lecture du fichier JSON
+// Lecture du fichier JSON et traitement des produits
 fs.readFile(dataFilePath, 'utf8', (err, data) => {
     if (err) {
         console.error('Erreur de lecture du fichier JSON:', err)
@@ -52,113 +52,161 @@ fs.readFile(dataFilePath, 'utf8', (err, data) => {
     const products = JSON.parse(data)
 
     products.forEach((product, index) => {
-        // Vérification de la structure de l'objet produit
-        if (!product.titre || !product.description || !product.catégorie) {
+        if (!product.titre || !product.description || !product.tags) {
             console.error(
                 `Produit à l'index ${index} est manquant des propriétés nécessaires:`,
                 product
             )
-            return // Ignorez ce produit
+            return
         }
 
         const {
             id,
             titre,
-            catégorie,
+            tags,
             description,
+            prix,
+            poids,
+            quantité_produite,
+            photos,
+            producteur,
+            ...rest
+        } = product
+        delete rest.modification
+        delete rest.création
+
+        const titleSlugFr = /[^\x00-\x7F]/.test(titre.fr)
+            ? transformPinyin(titre.fr)
+            : normalizeString(titre.fr)
+        const frFileName = path.join(outputFrDir, `${id}_${titleSlugFr}.md`)
+        const enFileName = path.join(outputEnDir, `${id}_${titleSlugFr}.md`)
+
+        const frOptions = getOptions(rest, producteur?.fr, false)
+        const enOptions = getOptions(rest, producteur?.en, true)
+
+        // Utilisation du nom de fichier sans l'extension .md comme permalink
+        const permalinkFr = `products/${path.basename(frFileName, '.md')}/`
+        const permalinkEn = `en/products/${path.basename(enFileName, '.md')}/`
+
+        let frContent = createMarkdownContent(
+            'product.njk',
+            id,
+            titre.fr,
+            tags,
+            description.fr,
+            photos,
             prix,
             quantité_produite,
             poids,
-            capacité,
-            dimension,
-            photos
-        } = product
+            frOptions,
+            permalinkFr,
+            false
+        )
 
-        let frFileName
-        let enFileName
+        let enContent = createMarkdownContent(
+            'product.njk',
+            id,
+            titre.en,
+            tags,
+            description.en,
+            photos,
+            prix,
+            quantité_produite,
+            poids,
+            enOptions,
+            permalinkEn,
+            true
+        )
 
-        // Gestion des titres chinois
-        if (/[^\x00-\x7F]/.test(titre.fr)) {
-            // Si le titre contient des caractères chinois
-            frFileName = path.join(
-                outputFrDir,
-                `${id}_${transformPinyin(titre.fr)}.md`
-            )
-            enFileName = path.join(
-                outputEnDir,
-                `${id}_${transformPinyin(titre.fr)}.md`
-            ) // Utiliser le titre français
-        } else {
-            // Normalisation pour les titres français normaux
-            const titleSlug = normalizeString(titre.fr)
-            frFileName = path.join(outputFrDir, `${id}_${titleSlug}.md`)
+        // Suppression des lignes vides superflues avant d'écrire les fichiers
+        frContent = frContent.replace(/\n{2,}(?=---)/g, '\n---')
+        enContent = enContent.replace(/\n{2,}(?=---)/g, '\n---')
 
-            // Utiliser le titre français pour le fichier anglais
-            enFileName = path.join(outputEnDir, `${id}_${titleSlug}.md`)
-        }
-
-        // Contenu en français
-        const frOptions = []
-        if (dimension) frOptions.push(`    dimension: ${dimension}`)
-        if (capacité) frOptions.push(`    capacité: ${capacité}`)
-        if (poids) frOptions.push(`    poids: ${Math.round(poids * 1000)} g`)
-        if (quantité_produite)
-            frOptions.push(
-                `    stock: il reste ${quantité_produite} article${
-                    quantité_produite > 1 ? 's' : ''
-                }`
-            )
-
-        // Générer la section photos
-        const frPhotos = photos.map((photo) => `    - ${photo}`).join('\n')
-
-        const frContent = `---
-layout: product.njk
-titre: ${titre.fr}
-catégorie: ${catégorie}
-description: >
-    ${description.fr}
-photos:
-${frPhotos}
-price: ${prix.toFixed(2)} €
-options:
-${frOptions.join('\n')}
----
-`
-
-        // Contenu en anglais
-        const enOptions = []
-        if (dimension) enOptions.push(`    dimension: ${dimension}`)
-        if (capacité) enOptions.push(`    capacity: ${capacité}`)
-        if (poids) enOptions.push(`    weight: ${Math.round(poids * 1000)} g`)
-        if (quantité_produite)
-            enOptions.push(
-                `    stock: ${quantité_produite} item${
-                    quantité_produite > 1 ? 's' : ''
-                } left`
-            )
-
-        // Générer la section photos en anglais
-        const enPhotos = photos.map((photo) => `    - ${photo}`).join('\n')
-
-        const enContent = `---
-layout: product.njk
-titre: ${titre.en}
-category: ${catégorie}
-description: >
-    ${description.en}
-photos:
-${enPhotos}
-price: ${prix.toFixed(2)} €
-options:
-${enOptions.join('\n')}
----
-`
-
-        // Écriture des fichiers Markdown
         fs.writeFileSync(frFileName, frContent.trim(), 'utf8')
         fs.writeFileSync(enFileName, enContent.trim(), 'utf8')
     })
 
     console.log('Fichiers Markdown créés avec succès.')
 })
+
+// Fonction pour obtenir les options traduites
+function getOptions(rest, producteur, isEnglish) {
+    const options = []
+    for (const [key, value] of Object.entries(rest)) {
+        if (key !== 'photos' && value) {
+            const translatedKey = isEnglish ? translateKey(key) : key
+            options.push(`  ${translatedKey}: ${value}`)
+        }
+    }
+    if (producteur)
+        options.push(
+            `  ${isEnglish ? 'producer' : 'producteur'}: ${producteur}`
+        )
+    return options
+}
+
+// Fonction pour traduire les clés
+function translateKey(key) {
+    return key
+        .replace('récolte', 'harvest')
+        .replace('producteur', 'producer')
+        .replace('village', 'village')
+        .replace('province', 'province')
+        .replace('capacité', 'capacity')
+}
+
+// Fonction pour créer le contenu du fichier Markdown
+function createMarkdownContent(
+    layout,
+    id,
+    title,
+    tags,
+    description,
+    photos,
+    prix,
+    quantité_produite,
+    poids,
+    options,
+    permalink,
+    isEnglish
+) {
+    const stock = quantité_produite
+        ? `stock: ${
+              isEnglish
+                  ? quantité_produite +
+                    ' item' +
+                    (quantité_produite > 1 ? 's' : '') +
+                    ' left'
+                  : 'il reste ' +
+                    quantité_produite +
+                    ' article' +
+                    (quantité_produite > 1 ? 's' : '')
+          }`
+        : ''
+    const weight = poids ? `weight: ${Math.round(poids * 1000)} g` : ''
+    const photosContent =
+        photos?.map((photo) => `  - ${photo}`).join('\n') || ''
+
+    return `---
+layout: ${layout}
+id: ${id}
+name: ${title}
+tags: ${tags}
+permalink: /${permalink}
+description: >
+  ${description}
+photos:
+${photosContent}
+price: ${prix.toFixed(2)} €
+${stock ? stock : ''}
+${weight ? weight : ''}
+${
+    options.length > 0
+        ? `options:
+${options.join('\n')}`
+        : ''
+}
+eleventyComputed:
+  title: "{{ tags }} - {{ name }}"
+---`
+}
