@@ -190,7 +190,7 @@ function createMarkdownContent(
     return `---
 layout: ${layout}
 id: ${id}
-title: ${title}
+name: ${title}
 tags: ${tags}
 permalink: /${permalink}
 description: >
@@ -206,5 +206,7 @@ ${
 ${options.join('\n')}`
         : ''
 }
+eleventyComputed:
+  title: "{{ tags }} - {{ name }}"
 ---`
 }
