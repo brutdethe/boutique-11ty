@@ -1,22 +1,22 @@
-<header class="header" role="banner">
-    <a href="{{ '/' | customLocaleUrl(page.lang) | url }}" class="logo-link" aria-label="Accueil - Gong Fu Cha">
-        <img src="https://www.gongfucha.fr/assets/sceau-the.svg" alt="{{ i18n.logoAlt[page.lang] }}">
+<header class="header">
+    <a href="{{ '/' | customLocaleUrl(page.lang) | url }}" class="logo-link" aria-label="{{ i18n.aria.home[page.lang] }}">
+        <img src="https://www.gongfucha.fr/assets/sceau-the.svg" alt="{{ i18n.alt_logo[page.lang] }}">
     </a>
-    <nav aria-label="{{ i18n.aria.navigationMain[page.lang] }}" class="nav-header">
+    <nav class="nav-header">
         <ul class="nav-list">
-            <li><a href="{{ '/' | customLocaleUrl(page.lang) | url }}" class="nav-link">{{ i18n.shopTitle[page.lang] }}</a></li>
-            <li><a href="{{ i18n.aboutUrl[page.lang] }}" class="nav-link">{{ i18n.aboutTitle[page.lang] }}</a></li>
-            <li><a href="/" class="nav-link"><span class="badge" data-badge="0" data-initial="YZ">{{ i18n.cartTitle[page.lang] }}</span></a></li>
+            <li><a href="{{ '/' | customLocaleUrl(page.lang) | url }}" class="nav-link" class="btn-nav {% if page.lang == 'fr' %}selected{% endif %}" {% if page.lang == 'fr' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.home[page.lang] }}">{{ i18n.shop_title[page.lang] }}</a></li>
+            <li><a href="{{ i18n.about_url[page.lang] }}" class="nav-link" class="btn-nav {% if page.lang == 'fr' %}selected{% endif %}" {% if page.lang == 'fr' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.about[page.lang] }}">{{ i18n.about_title[page.lang] }}</a></li>
+            <li><a href="/" class="nav-link" class="btn-nav {% if page.lang == 'fr' %}selected{% endif %}" {% if page.lang == 'fr' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.cart[page.lang] }}"><span class="badge" data-badge="0" data-initial="YZ">{{ i18n.cart_title[page.lang] }}</span></a></li>
         </ul>
     </nav>
-    <section class="language-currency" role="complementary" aria-label="{{ i18n.aria.selectionCurrencyLanguage[page.lang] }}">
+    <section class="language-currency">
         <ul class="currency-list">
-            <li><a href="" class="btn-nav selected" value="EUR" aria-label="{{ i18n.aria.currencyEur[page.lang] }}" aria-current="page" >€</a></li>
-            <li><a href="" class="btn-nav" value="USD" aria-label="{{ i18n.aria.currencyUsd[page.lang] }}">$</a></li>
+            <li><a href="" class="btn-nav selected" value="EUR" aria-label="{{ i18n.aria.currency_eur[page.lang] }}" aria-current="page" >€</a></li>
+            <li><a href="" class="btn-nav" value="USD" aria-label="{{ i18n.aria.currency_usd[page.lang] }}">$</a></li>
         </ul>
         <ul class="language-list">
-            <li><a href="{{ page.url | customLocaleUrl("fr") | url }}" class="btn-nav {% if page.lang == 'fr' %}selected{% endif %}" {% if page.lang == 'fr' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.changeLanguageFr[page.lang] }}">FR</a></li>
-            <li><a href="{{ page.url | locale_url('en') | url }}" class="btn-nav {% if page.lang == 'en' %}selected{% endif %}" {% if page.lang == 'en' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.changeLanguageEn[page.lang] }}">EN</a></li>
+            <li><a href="{{ page.url | customLocaleUrl("fr") | url }}" class="btn-nav {% if page.lang == 'fr' %}selected{% endif %}" {% if page.lang == 'fr' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.lang_fr[page.lang] }}">FR</a></li>
+            <li><a href="{{ page.url | locale_url('en') | url }}" class="btn-nav {% if page.lang == 'en' %}selected{% endif %}" {% if page.lang == 'en' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.lang_en[page.lang] }}">EN</a></li>
         </ul>
     </section>
 </header>

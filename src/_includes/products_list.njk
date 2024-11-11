@@ -4,7 +4,7 @@
     <p>{{ tag.description[page.lang] }}</p>
   </section>
 
-  <ul class="tags-list">
+  <ul class="tags-list" aria-labelledby="category-title">
     {% for category in i18n_categories %}
       {% set url_tag = '/category/' + category.label %}
       <li>

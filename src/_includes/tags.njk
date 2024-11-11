@@ -5,6 +5,8 @@ pagination:
   size: 1
   alias: tag
 permalink: "category/{{ tag.label | slugify }}/"
+eleventyComputed:
+  title: "Liste les produits pour {{ tag.title[page.lang] }}"
 ---
 
 {% include "products_list.njk" %}

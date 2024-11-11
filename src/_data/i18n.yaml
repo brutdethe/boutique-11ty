@@ -1,81 +1,89 @@
-aboutTitle:
+about_title:
     fr: à-propos
     en: about
 
-aboutUrl:
+about_url:
     fr: https://www.gongfucha.fr/pages/faq-boutique
     en: https://www.gongfucha.fr/pages/faq-boutique
 
-shopTitle:
+shop_title:
     fr: boutique
     en: shop
 
-cartTitle:
+cart_title:
     fr: panier
     en: cart
 
-privacyTitle:
+privacy_title:
     fr: confidentialité
     en: privacy notice
 
-legalTitle:
+legacy_title:
     fr: mentions légales
     en: legal notice
 
-buttonCartTitle:
+card_detail:
+    fr: détail
+    en: detail
+
+add_to_cart_title:
     fr: ajouter au panier
     en: add to cart
-
-logoAlt:
-    fr: Logo de la boutique Gong Fu Cha
-    en: Logo of Gong Fu Cha shop
-
-mainContent:
-    fr: Contenu principal
-    en: Main content
 
 meta:
     description:
         fr: Découvrez notre boutique Gong Fu Cha et trouvez des produits uniques pour vos dégustations de thé.
         en: Discover our Gong Fu Cha shop and find unique products for your tea tasting experience.
 
-photoAlt:
+alt_logo:
+    fr: Logo de la boutique Gong Fu Cha
+    en: Logo of Gong Fu Cha shop
+
+alt_photo:
     fr: Image du produit
     en: Product image
 
 aria:
-    navigationMain:
-        fr: Navigation principale
-        en: Main navigation
+    home:
+        fr: Aller à la page d'accueil
+        en: Go to home
 
-    selectionCurrencyLanguage:
-        fr: Sélection de la devise et de la langue
-        en: Currency and language selection
+    about:
+        fr: Aller sur la page à-propos
+        en: Go to about
 
-    changeLanguageFr:
+    legacy:
+        fr: Consulter les mentions légales
+        en: Go to legacy
+
+    privacy:
+        fr: Voir les clauses de confidentialités
+        en: Go to privacy
+
+    card_detail:
+        fr: Consulter la fiche produit
+        en: View card
+
+    cart:
+        fr: Aller à la page d'accueil
+        en: Go to home
+
+    lang_fr:
         fr: Changer la langue en français
         en: Change language to French
 
-    changeLanguageEn:
+    lang_en:
         fr: Changer la langue en anglais
         en: Change language to English
 
-    currencyEur:
+    currency_eur:
         fr: Changer la monnaie en euros
         en: Change currency to euros
 
-    currencyUsd:
+    currency_usd:
         fr: Changer la monnaie en dollars
         en: Change currency to dollars
 
-    productPrice:
+    product_price:
         fr: Prix du produit
         en: Product price
-
-    addToCartButton:
-        fr: Ajouter au panier
-        en: Add to cart
-
-    productImageCaption:
-        fr: '- Image du produit'
-        en: '- Product image'

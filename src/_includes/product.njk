@@ -1,19 +1,16 @@
 ---
 layout: default.njk
-card:
-  en: add to basket
-  fr: ajouter au panier
 ---
 
 <section aria-labelledby="card-title"></section>
     <article class="card-details">
         <figure class="card-figure">
-            <img src="{{ settings.dirs.img_products | url }}{{ photos[0] }}" class="card-image" alt="{{ i18n.photoAlt[page.lang] | default(photos[0]) }}" />
-            <figcaption class="card-caption" aria-label="{{ title }} - {{ i18n.aria.productImageCaption[page.lang] }}">{{ title }}</figcaption>
+            <img src="{{ settings.dirs.img_products | url }}{{ photos[0] }}" class="card-image" alt="{{ i18n.alt_photo[page.lang] }} - {{ name }}" />
+            <figcaption class="card-caption">{{ name }}</figcaption>
         </figure>
         <section class="card-info">
             <header>
-                <h1 id="content-title" class="card-title">{{ title }}</h1>
+                <h1 id="content-title" class="card-title">{{ name }}</h1>
             </header>
             <section class="card-description">
                 <p>{{ description }}</p>
@@ -25,9 +22,10 @@ card:
                 </dl>
             </section>
             <footer class="card-footer">
-                <h3 class="price" aria-label="{{ i18n.aria.productPrice[page.lang] }}">{{ price }}</h3>
-                <a href="#" class="btn btn-card" aria-label="{{ i18n.aria.addToCartButton[page.lang] }} - {{ title }}">
-                    {{ i18n.buttonCartTitle[page.lang] }}   </a>
+                <h3 class="price" aria-label="{{ i18n.aria.product_price[page.lang] }}">{{ price }}</h3>
+                <a href="#" class="btn btn-card"  aria-label="{{ i18n.add_to_cart_title[page.lang] }}">
+                    {{ i18n.add_to_cart_title[page.lang] }}
+                </a>
             </footer>
         </section>
     </article>
