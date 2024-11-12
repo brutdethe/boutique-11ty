@@ -23,7 +23,4 @@ dist/
 .cache
 test/stubs-layout-cache/_includes/*.js
 
-img_products/
-thumb_products/
-products/
 output/
