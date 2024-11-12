@@ -1,3 +1,7 @@
+{%- if not tag -%}
+  {% set tag = i18n_categories[0] %}
+{%- endif -%}
+
 <header>
   <section class="category-description">
     <h1 id="{{ tag.title[page.lang] }}">{{ tag.title[page.lang] }}</h1>
