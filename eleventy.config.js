@@ -4,8 +4,7 @@ import yaml from 'js-yaml'
 export const config = {
     dir: {
         input: 'src',
-        output: 'dist',
-        img_products: '_assets/products'
+        output: 'dist'
     },
 
     markdownTemplateEngine: 'njk',
