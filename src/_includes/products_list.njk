@@ -19,7 +19,7 @@
 <section class="products-list">
   {%- for post in collections[tag.label] -%}
     {%- if post.data.page.lang == page.lang -%}
-      {% include "product-item.njk" %}
+      {% include "product_item.njk" %}
     {%- endif -%}
   {%- endfor -%}
 </section>
