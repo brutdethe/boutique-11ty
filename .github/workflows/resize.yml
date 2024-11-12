@@ -14,6 +14,6 @@ jobs:
                   git status
                   git config --global user.name 'pntbr'
                   git config --global user.email 'stephane@scopyleft.fr'
-                  git add -f thumbs carousels
+                  git add -f src/_assets/thumbs src/_assets/carousels_images src/_assets/carousels_thumbs
                   git commit -m "Formate les photos pour les vignettes et les carrousels" --allow-empty
                   git push
