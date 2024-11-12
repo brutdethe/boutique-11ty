@@ -8,7 +8,7 @@ jobs:
             - name: Install npm
               run: npm install
             - name: Create thumbs and carousels
-              run: node ./scripts/resize/resize.js
+              run: node ./script/resize/resize.js
             - name: Commit report
               run: |
                   git status
