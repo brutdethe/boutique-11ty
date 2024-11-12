@@ -52,13 +52,12 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	}
 </style>
 
-
 <div id="main-slider" class="splide">
   <section class="splide__track">
 		<ul class="splide__list">
 			{%- for photo in photos -%}
 			<li class="splide__slide">
-				<img src="{{ settings.dirs.img_products | url }}{{ photo }}">
+				<img src="{{ settings.dirs.carousels_images | url }}{{ photo }}">
 			</li>
 			{%- endfor -%}
 		</ul>
@@ -70,7 +69,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		<ul class="splide__list">
 			{%- for photo in photos -%}
 			<li class="splide__slide">
-				<img src="{{ settings.dirs.thumb_products | url }}{{ photo }}">
+				<img src="{{ settings.dirs.carousels_thumbs | url }}{{ photo }}">
 			</li>
 			{%- endfor -%}
 		</ul>
