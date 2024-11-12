@@ -9,6 +9,8 @@
         <link rel="alternate" hreflang="fr" href="{{ page.filePathStem | customLocaleUrl("fr") | url }}">
         <link rel="alternate" hreflang="en" href="{{ page.filePathStem | customLocaleUrl("en") | url }}">
 
+        <script src="{{ '/bundle.js' | url }}"></script>
+
         <meta name="description" content="{{ i18n.meta.description[page.lang] }}">
 
         <meta property="og:title" content="{{ title }}">

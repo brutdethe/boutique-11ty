@@ -1,32 +1,78 @@
 ---
 layout: default.njk
+title: Test Slide par défaut
 ---
 
-<section aria-labelledby="card-title"></section>
-    <article class="card-details">
-        <figure class="card-figure">
-            <img src="{{ settings.dirs.img_products | url }}{{ photos[0] }}" class="card-image" alt="{{ i18n.alt_photo[page.lang] }} - {{ name }}" />
-            <figcaption class="card-caption">{{ name }}</figcaption>
-        </figure>
-        <section class="card-info">
-            <header>
-                <h1 id="content-title" class="card-title">{{ name }}</h1>
-            </header>
-            <section class="card-description">
-                <p>{{ description }}</p>
-                <dl>
-                    {% for key, value in options %}
-                        <dt>{{ key }}{% if page.lang == 'fr'%}&nbsp;{% endif %}:&nbsp;</dt>
-                        <dd>{{ value }}</dd>
-                    {% endfor %}
-                </dl>
-            </section>
-            <footer class="card-footer">
-                <h3 class="price" aria-label="{{ i18n.aria.product_price[page.lang] }}">{{ price }}</h3>
-                <a href="#" class="btn btn-card"  aria-label="{{ i18n.add_to_cart_title[page.lang] }}">
-                    {{ i18n.add_to_cart_title[page.lang] }}
-                </a>
-            </footer>
-        </section>
-    </article>
-</section>
+<script>
+document.addEventListener( 'DOMContentLoaded', function () {
+
+	var main = new Splide( '#main-slider', {
+		type      : 'fade',
+		rewind    : true,
+		pagination: false,
+		arrows    : false,
+	} );
+
+	var thumbnails = new Splide( '#thumbnail-slider', {
+		fixedWidth  : 100,
+		fixedHeight : 60,
+		gap         : 10,
+		rewind      : true,
+		pagination  : false,
+		cover       : true,
+		isNavigation: true,
+		focus       : 'center',
+		breakpoints : {
+			600: {
+				fixedWidth : 60,
+				fixedHeight: 44,
+			},
+		},
+	});
+
+	main.sync( thumbnails );
+	main.mount();
+	thumbnails.mount();
+} );
+</script>
+
+
+<style>
+    .splide__slide img {
+        width: 90%;
+        height: auto;
+    }
+
+	.splide__slide {
+		opacity: 0.3;
+	}
+
+	.splide__slide.is-active {
+		opacity: 1;
+	}
+</style>
+
+
+<div id="main-slider" class="splide">
+  <section class="splide__track">
+		<ul class="splide__list">
+			{%- for photo in photos -%}
+			<li class="splide__slide">
+				<img src="{{ settings.dirs.img_products | url }}{{ photo }}">
+			</li>
+			{%- endfor -%}
+		</ul>
+    </section>
+</div>
+
+<div id="thumbnail-slider" class="splide">
+  <section class="splide__track">
+		<ul class="splide__list">
+			{%- for photo in photos -%}
+			<li class="splide__slide">
+				<img src="{{ settings.dirs.thumb_products | url }}{{ photo }}">
+			</li>
+			{%- endfor -%}
+		</ul>
+    </section>
+</div>
