@@ -1,11 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Sélectionne tous les boutons "Ajouter au panier"
-    const addToCartButtons = document.querySelectorAll('.add-to-cart')
+    updateCartBadge()
 
-    // Récupérer le panier actuel depuis Local Storage
-    let cart = localStorage.getItem('cart')
-        ? JSON.parse(localStorage.getItem('cart'))
-        : []
+    const addToCartButtons = document.querySelectorAll('.add-to-cart')
+    const cart = storage.getCart()
 
     // Marquer les produits déjà présents dans le panier
     addToCartButtons.forEach((button) => {
@@ -46,6 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function addToCart(product) {
         // Mettre à jour le panier dans Local Storage
         cart.push(product)
-        localStorage.setItem('cart', JSON.stringify(cart))
+        storage.setCart(cart)
     }
 })

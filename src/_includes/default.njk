@@ -9,7 +9,7 @@
         <link rel="alternate" hreflang="en" href="{{ page.filePathStem | customLocaleUrl("en") | url }}">
         
         <link rel="stylesheet" href="{{ '/bundle.css' | url }}">
-        <script src="{{ '/bundle.js' | url }}"></script>
+        <script type="module" src="{{ '/bundle.js' | url }}"></script>
         
         {% if include_slide_bundle %}
         <link rel="stylesheet" href="{{ '/bundle-slide.css' | url }}">
