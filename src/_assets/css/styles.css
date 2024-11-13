@@ -161,10 +161,31 @@ button:focus {
     border: var(--border-thin);
 }
 
+.card-thumbnails {
+    display: flex;
+    padding: 0;
+    gap: var(--gap-small);
+    margin-bottom: auto;
+}
+
+.card-thumbnail {
+    width: 4rem;
+    cursor: pointer;
+    opacity: 0.4;
+    margin: 0;
+}
+
+.card-thumbnail.is-active {
+    opacity: 1;
+}
+
+.card-thumbnail img {
+    width: 100%;
+}
+
 .card-caption {
     background-color: var(--background-color);
     bottom: 0.2rem;
-    color: var(--hover-color);
     font-size: 0.8rem;
     left: 0.2rem;
     opacity: 0.6;
@@ -207,7 +228,6 @@ button:focus {
 }
 
 .card-footer {
-    align-items: center;
     margin-top: auto;
 }
 
@@ -332,7 +352,7 @@ button:focus {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0rem;
-    padding: .5rem 1rem;
+    padding: .5rem;
     text-align: right;
 }
 

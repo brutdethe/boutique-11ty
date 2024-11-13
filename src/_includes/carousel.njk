@@ -1,0 +1,58 @@
+<div id="card-carousel" class="splide" aria-label="">
+    <section class="splide__track">
+        <ul class="splide__list">
+            {%- for photo in photos -%}
+                <li class="splide__slide">
+                    <figure class="card-figure">
+                        <img src="{{ settings.dirs.carousels_images | url }}{{ photo }}" class="card-image" alt="{{ i18n.alt_photo[page.lang] }} - {{ name }}">
+                        <figcaption class="card-caption">{{ name }}</figcaption>
+                    </figure>
+                </li>
+            {%- endfor -%}
+        </ul>
+    </section>
+
+    <ul id="card-thumbnails" class="card-thumbnails">
+        {%- for photo in photos -%}
+            <li class="card-thumbnail">
+            	<img src="{{ settings.dirs.carousels_thumbs | url }}{{ photo }}">
+            </li>
+        {%- endfor -%}
+    </ul>
+</div>
+
+<script>
+document.addEventListener( 'DOMContentLoaded', function () {
+	const splide = new Splide( '#card-carousel', {
+		pagination: false,
+	} )
+
+	const thumbnails = document.getElementsByClassName('card-thumbnail')
+	let current
+
+	for ( let i = 0; i < thumbnails.length; i++ ) {
+		initThumbnail( thumbnails[ i ], i )
+	}
+
+	function initThumbnail( thumbnail, index ) {
+		thumbnail.addEventListener('click', function () {
+			splide.go( index )
+		})
+	}
+
+	splide.on( 'mounted move', function () {
+		const thumbnail = thumbnails[ splide.index ]
+
+		if ( thumbnail ) {
+			if ( current ) {
+				current.classList.remove( 'is-active' )
+			}
+
+			thumbnail.classList.add( 'is-active' )
+			current = thumbnail
+		}
+	})
+
+	splide.mount()
+})
+</script>
