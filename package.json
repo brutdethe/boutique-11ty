@@ -4,6 +4,8 @@
   "description": "Une petite boutique de vente en 11ty",
   "main": "index.js",
   "scripts": {
+    "import": "node ./script/import/generateMD.js",
+    "resize": "node ./script/resize/resize.js",
     "build": "npx @11ty/eleventy",
     "build-ghpages": "npx @11ty/eleventy && gh-pages -d _site"
   },
@@ -24,6 +26,9 @@
   },
   "devDependencies": {
     "gh-pages": "^6.2.0",
-    "js-yaml": "^4.1.0"
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "sharp": "^0.33.5",
+    "@splidejs/splide": "^4.1.4"
   }
 }

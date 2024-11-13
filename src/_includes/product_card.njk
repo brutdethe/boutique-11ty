@@ -1,0 +1,29 @@
+---
+layout: default.njk
+---
+
+<section aria-labelledby="card-title">
+    <article class="card-details">
+        {%- include('carousel.njk') -%}
+        <section class="card-info">
+            <header>
+                <h1 id="content-title" class="card-title">{{ name }}</h1>
+            </header>
+            <section class="card-description">
+                <p>{{ description }}</p>
+                <dl>
+                    {% for key, value in options %}
+                        <dt>{{ key }}{% if page.lang == 'fr'%}&nbsp;{% endif %}:&nbsp;</dt>
+                        <dd>{{ value }}</dd>
+                    {% endfor %}
+                </dl>
+            </section>
+            <footer class="card-footer">
+                <h3 class="price" aria-label="{{ i18n.aria.product_price[page.lang] }}">{{ price }}</h3>
+                <a href="#" class="btn btn-card"  aria-label="{{ i18n.add_to_cart_title[page.lang] }}">
+                    {{ i18n.add_to_cart_title[page.lang] }}
+                </a>
+            </footer>
+        </section>
+    </article>
+</section>

@@ -89,7 +89,7 @@ fs.readFile(dataFilePath, 'utf8', (err, data) => {
         const permalinkEn = `en/products/${path.basename(enFileName, '.md')}/`
 
         let frContent = createMarkdownContent(
-            'product.njk',
+            'product_card.njk',
             id,
             titre.fr,
             tags,
@@ -104,7 +104,7 @@ fs.readFile(dataFilePath, 'utf8', (err, data) => {
         )
 
         let enContent = createMarkdownContent(
-            'product.njk',
+            'product_card.njk',
             id,
             titre.en,
             tags,

@@ -1,0 +1,23 @@
+name: Resize photos
+on:
+    push:
+        paths:
+            - 'photos/**' # Déclenche le workflow uniquement si des fichiers dans /photos changent
+
+jobs:
+    report:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3 # Mise à jour vers la version 3 pour Node.js 16
+            - name: Install npm
+              run: npm install
+            - name: Create thumbs and carousels
+              run: node ./script/resize/resize.js
+            - name: Commit report
+              run: |
+                  git status
+                  git config --global user.name 'pntbr'
+                  git config --global user.email 'stephane@scopyleft.fr'
+                  git add -f src/_assets/thumbs src/_assets/carousels_images src/_assets/carousels_thumbs
+                  git commit -m "Formate les photos pour les vignettes et les carrousels" --allow-empty
+                  git push

@@ -91,3 +91,11 @@ aria:
     product_price:
         fr: Prix du produit
         en: Product price
+
+    slide:
+        fr: Galerie des photos de
+        en: Pictures gallery of
+
+    slide_thumb:
+        fr: Afficher l'image
+        en: Go to slide
