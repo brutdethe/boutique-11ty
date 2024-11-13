@@ -13,8 +13,8 @@
             <li><a href="" class="btn btn-nav" value="USD" aria-label="{{ i18n.aria.currency_usd[page.lang] }}">$</a></li>
         </ul>
         <ul class="language-list">
-            <li><a href="{{ page.url | customLocaleUrl("fr") | url }}" class="btn btn-nav {% if page.lang == 'fr' %}selected{% endif %}" {% if page.lang == 'fr' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.lang_fr[page.lang] }}">FR</a></li>
-            <li><a href="{{ page.url | locale_url('en') | url }}" class="btn btn-nav {% if page.lang == 'en' %}selected{% endif %}" {% if page.lang == 'en' %} aria-current="page" {% endif %} aria-label="{{ i18n.aria.lang_en[page.lang] }}">EN</a></li>
+            <li><a href="{{ page.url | customLocaleUrl("fr") | url }}" class="btn btn-nav {% if page.lang == 'fr' %}selected{% endif %}" {% if page.lang == 'fr' %} aria-current="true" {% endif %} aria-label="{{ i18n.aria.lang_fr[page.lang] }}">FR</a></li>
+            <li><a href="{{ page.url | locale_url('en') | url }}" class="btn btn-nav {% if page.lang == 'en' %}selected{% endif %}" {% if page.lang == 'en' %} aria-current="true" {% endif %} aria-label="{{ i18n.aria.lang_en[page.lang] }}">EN</a></li>
         </ul>
     </nav>
 </header>

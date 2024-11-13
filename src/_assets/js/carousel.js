@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const splide = new Splide('#card-carousel', {
-        pagination: false
+        pagination: false,
+        keyboard: true
     })
 
     const thumbnails = document.getElementsByClassName('card-thumbnail')
