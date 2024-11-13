@@ -240,6 +240,11 @@ button:focus {
     margin: .5rem 0;
 }
 
+.add-to-cart.buyed {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
 /* Product List Elements */
 .products-list {
     display: grid;
