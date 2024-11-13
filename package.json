@@ -22,13 +22,13 @@
   "homepage": "https://github.com/brutdethe/boutique-11ty#readme",
   "type": "module",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@splidejs/splide": "^4.1.4"
+    "@11ty/eleventy": "^3.0.0"
   },
   "devDependencies": {
     "gh-pages": "^6.2.0",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "@splidejs/splide": "^4.1.4"
   }
 }
