@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: melles-ceramiquega1
 name: 蓋碗 - GàiWǎn
-tags: mademoiselles-ceramique
+tags: ["produit", "mademoiselles-ceramique"]
 permalink: /products/melles-ceramiquega1_gai-wan/
 description: >
   GàiWǎn en porcelaine blanche. Fabriqué à Montpellier

@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: ga2
 name: GàiWǎn basique
-tags: gaiwan
+tags: ["produit", "gaiwan"]
 permalink: /products/ga2_gai-wan-basique/
 description: >
   GàiWǎn basique en porcelaine blanche.

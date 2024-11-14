@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: Don100
 name: Don de 100 €
-tags: dons
+tags: ["produit", "dons"]
 permalink: /products/Don100_don-de-100/
 description: >
   Faire un don de 100 € et recevoir un kit de dégustation et l'affiche du festival.

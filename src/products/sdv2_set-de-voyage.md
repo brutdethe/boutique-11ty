@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: sdv2
 name: Set de voyage
-tags: gaiwan
+tags: ["produit", "gaiwan"]
 permalink: /products/sdv2_set-de-voyage/
 description: >
   Ce kit de démarrage comprend les éléments essentiels à la préparation du thé authentique : un 蓋碗 - GàiWǎn, un 茶海 - CháHǎi et trois bols à thé (茶杯 - CháBēi). C'est aussi le compagnon de voyage idéal grâce à sa housse de protection.

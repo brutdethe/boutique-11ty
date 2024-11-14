@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: th9
 name: Théière 三足乳鼎 - SānZúRǔDǐng
-tags: chahu
+tags: ["produit", "chahu"]
 permalink: /products/th9_theiere-san-zu-ru-ding/
 description: >
   Cette théière de forme 三足乳鼎 - SānZúRǔDǐng fabriquée à 臺灣 - Táiwān en mode 半手工 - BànShǒuGōng, c'est à dire semi-manuelle, à l'aide de moules. Elle porte une inscription liée à la culture bouddhiste : 觀自在 - GuānZìZài qui invite à être en paix avec la nature.

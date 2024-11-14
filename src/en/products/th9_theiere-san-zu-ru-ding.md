@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: th9
 name: 三足乳鼎 - SānZúRǔDǐng teapot
-tags: chahu
+tags: ["product", "chahu"]
 permalink: /en/products/th9_theiere-san-zu-ru-ding/
 description: >
   This 三足乳鼎 - SānZúRǔDǐng shaped teapot was made in 臺灣 - Táiwān in 半手工 - BànShǒuGōng mode, which means semi-manual, using molds. It bears an inscription related to Buddhist culture: 觀自在 - GuānZìZài which invites to be at peace with nature.

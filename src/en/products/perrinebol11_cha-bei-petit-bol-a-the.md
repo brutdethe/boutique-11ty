@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: perrinebol11
 name: 茶杯 - CháBēi (small tea bowl)
-tags: perrine-pottiez
+tags: ["product", "perrine-pottiez"]
 permalink: /en/products/perrinebol11_cha-bei-petit-bol-a-the/
 description: >
   Ceramic 茶杯 - CháBēi. Unique piece.

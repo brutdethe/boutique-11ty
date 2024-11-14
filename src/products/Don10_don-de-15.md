@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: Don10
 name: Don de 15 €
-tags: dons
+tags: ["produit", "dons"]
 permalink: /products/Don10_don-de-15/
 description: >
   Faire un don de 15 €

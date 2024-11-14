@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: perrinebol11
 name: 茶杯 - CháBēi (petit bol à thé)
-tags: perrine-pottiez
+tags: ["produit", "perrine-pottiez"]
 permalink: /products/perrinebol11_cha-bei-petit-bol-a-the/
 description: >
   茶杯 - CháBēi en céramique, 1250°C. Pièce unique.

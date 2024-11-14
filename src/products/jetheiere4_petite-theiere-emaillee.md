@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: jetheiere4
 name: Petite théière émaillée
-tags: je-le-potier
+tags: ["produit", "je-le-potier"]
 permalink: /products/jetheiere4_petite-theiere-emaillee/
 description: >
   Pièce unique. Petite théière émaillée. L'émail présent à l'intérieur, confère à cette théière une certaine polyvalence. La verse et rapide et fluide.

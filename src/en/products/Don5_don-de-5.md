@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: Don5
 name: 5 € donation
-tags: dons
+tags: ["product", "dons"]
 permalink: /en/products/Don5_don-de-5/
 description: >
   Donate 5 € and get a huge thank you from us.

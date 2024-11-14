@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: manontasA29
 name: 茶杯 - CháBēi (small tea bowl)
-tags: manon-clouzeau
+tags: ["product", "manon-clouzeau"]
 permalink: /en/products/manontasA29_cha-bei-petit-bol-a-the/
 description: >
   Ceramic 茶杯 - CháBēi. Unique piece.

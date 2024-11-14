@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: manontasA29
 name: 茶杯 - CháBēi (petit bol à thé)
-tags: manon-clouzeau
+tags: ["produit", "manon-clouzeau"]
 permalink: /products/manontasA29_cha-bei-petit-bol-a-the/
 description: >
   茶杯 - CháBēi en céramique, 1250°C. Pièce unique.

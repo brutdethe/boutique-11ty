@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: hongA1
 name: 蜜香红茶 - MìXiāng HóngChá
-tags: cha
+tags: ["produit", "cha"]
 permalink: /products/hongA1_mi-xiang-hong-cha/
 description: >
   Ce 红茶 - HóngChá aux notes de miel caractéristiques est réalisé avec le cultivar endémique 青心柑仔 - QīngXīnGānZǐ de 三峡 - SānXiá. La famille de Monsieur 李 - Lǐ cultive le thé depuis trois générations. Il possède deux jardins de thé à 三峡 - SānXiá, à la périphérie de Taipei et à 南投 - Nántóu, dans le centre de 臺灣 - Táiwān. Je le connais depuis dix ans, et il a toujours fidèlement conservé son sérieux et sa sincérité dans la préparation du thé.

@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: jetheiere3
 name: Petite théière en terre brute
-tags: je-le-potier
+tags: ["produit", "je-le-potier"]
 permalink: /products/jetheiere3_petite-theiere-en-terre-brute/
 description: >
   Pièce unique. Petite théière fabriquée en grès de Treigny, une argile naturelle assez tendre. Cette théière n'est pas émaillée et se patinera avec le temps. La verse est fluide et rapide.

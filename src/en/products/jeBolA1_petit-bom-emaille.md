@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: jeBolA1
 name: Small glazed tea bowl
-tags: je-le-potier
+tags: ["product", "je-le-potier"]
 permalink: /en/products/jeBolA1_petit-bom-emaille/
 description: >
   Ceramic 茶杯 - CháBēi. Unique piece.

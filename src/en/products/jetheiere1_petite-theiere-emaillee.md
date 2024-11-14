@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: jetheiere1
 name: Small glazed teapot
-tags: je-le-potier
+tags: ["product", "je-le-potier"]
 permalink: /en/products/jetheiere1_petite-theiere-emaillee/
 description: >
   Unique piece. Small glazed teapot. The glaze inside gives this teapot a certain versatility. The pouring is fast and fluid.

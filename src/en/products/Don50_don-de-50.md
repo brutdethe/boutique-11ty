@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: Don50
 name: 50 € donation
-tags: dons
+tags: ["product", "dons"]
 permalink: /en/products/Don50_don-de-50/
 description: >
   Donate 50 € and receive a tea bowl made by Manon Clouzeau and the festival poster.

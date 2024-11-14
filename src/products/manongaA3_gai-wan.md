@@ -2,7 +2,7 @@
 layout: product_card.njk
 id: manongaA3
 name: 蓋碗 - GàiWǎn
-tags: manon-clouzeau
+tags: ["produit", "manon-clouzeau"]
 permalink: /products/manongaA3_gai-wan/
 description: >
   GàiWǎn émaillé. Pièce unique.
