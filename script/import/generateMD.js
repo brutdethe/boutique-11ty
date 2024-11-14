@@ -191,7 +191,7 @@ function createMarkdownContent(
 layout: ${layout}
 id: ${id}
 name: ${title}
-tags: ${tags}
+tags: ["${isEnglish ? 'product' : 'produit'}", "${tags}"]
 permalink: /${permalink}
 description: >
   ${description}
