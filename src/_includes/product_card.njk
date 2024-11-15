@@ -4,7 +4,14 @@ include_slide_bundle: true
 ---
 
 <section aria-labelledby="card-title">
-    <article class="card-details product-infos" data-id="{{ id }}" data-title="{{ name }}" data-price="{{ price }}" data-image="photos[0]" data-link="{{ permalink }}">
+    <article
+        class="card-details product-infos"
+        data-id="{{ id }}"
+        data-title="{{ name }}"
+        data-price="{{ price }}"
+        data-image="photos[0]"
+        data-link="{{ permalink }}"
+    >
         {%- include('carousel.njk') -%}
         <section class="card-info">
             <header>
@@ -14,14 +21,29 @@ include_slide_bundle: true
                 <p>{{ description }}</p>
                 <dl>
                     {% for key, value in options %}
-                        <dt>{{ key }}{% if page.lang == 'fr'%}&nbsp;{% endif %}:&nbsp;</dt>
-                        <dd>{{ value }}</dd>
+                    <dt>
+                        {{ key }}{% if page.lang == 'fr'%}&nbsp;{% endif
+                        %}:&nbsp;
+                    </dt>
+                    <dd>{{ value }}</dd>
                     {% endfor %}
                 </dl>
             </section>
             <footer class="card-footer">
-                <h3 class="price" aria-label="{{ i18n.aria.product_price[page.lang] }}">{{ price }}</h3>
-                <a href="#" class="btn btn-card add-to-cart"  aria-label="{{ i18n.add_to_cart_title[page.lang] }}">
+                <data
+                    class="price"
+                    value="{{ price }}"
+                    itemprop="price"
+                    aria-label="{{ i18n.aria.product_price[page.lang] }}"
+                >
+                    {{ price }}
+                </data>
+                <meta itemprop="priceCurrency" content="EUR" />
+                <a
+                    href="#"
+                    class="btn btn-card add-to-cart"
+                    aria-label="{{ i18n.add_to_cart_title[page.lang] }}"
+                >
                     {{ i18n.add_to_cart_title[page.lang] }}
                 </a>
             </footer>

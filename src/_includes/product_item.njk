@@ -16,7 +16,10 @@
         />
     </figure>
     <p class="product-description">{{ post.data.description }}</p>
-    <p class="price">{{ post.data.price }}</p>
+    <data class="price" value="{{ post.data.price }}" itemprop="price">
+        {{ post.data.price }}
+    </data>
+    <meta itemprop="priceCurrency" content="EUR" />
     <footer class="product-footer">
         <a
             href="{{ post.data.permalink | customLocaleUrl(page.lang) | url }}"
