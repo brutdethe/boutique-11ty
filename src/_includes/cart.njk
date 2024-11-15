@@ -1,77 +1,63 @@
 <style>
-    /* Root Inherit Variables */
+    input[type='number'] {
+        appearance: textfield;
+    }
+
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .visually-hidden {
+        display: none;
+    }
+
+    #cart-content {
+        padding: 2rem 0;
+    }
+
+    #cart-content .price {
+        text-align: center;
+    }
+
+    .qty-input,
+    .product-item .item-details,
+    .cart-summary {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 0;
+    }
+
+    .qty-input .product-qty,
+    .qty-input .qty-count {
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 1.3rem;
+        border: var(--border-thin);
+    }
+
+    .qty-input .product-qty {
+        width: 2rem;
+        text-align: center;
+    }
+
+    .qty-input .qty-count {
+        width: 2.5rem;
+        cursor: pointer;
+    }
+
+    .qty-input .qty-count--add:after {
+        transform: rotate(90deg);
+    }
+
+    /* Section du ticket */
     :root {
         --cart-item-padding: 1rem;
         --cart-gap: 1.5rem;
-        --cart-border-radius: 0.3rem;
+        --padding-standard: 1rem;
     }
 
-    /* Cart Container */
-    #cart-content {
-        display: grid;
-        gap: var(--cart-gap);
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        margin-bottom: var(--gap-large);
-    }
-
-    /* Individual Cart Item Styling */
-    .cart-item {
-        display: grid;
-        grid-template-rows: auto auto auto 1fr;
-        padding: var(--cart-item-padding);
-        background-color: var(--background-color);
-        border: var(--border-thin);
-        border-radius: var(--cart-border-radius);
-        box-shadow: var(--card-shadow);
-    }
-
-    .cart-item .item-thumbnail {
-        width: 100%;
-        border-radius: var(--cart-border-radius);
-        object-fit: cover;
-        margin-bottom: var(--gap-small);
-    }
-
-    .cart-item .item-details {
-        display: flex;
-        flex-direction: column;
-        gap: var(--gap-small);
-    }
-
-    .cart-item h3 {
-        font-size: 1.2rem;
-        color: var(--primary-color);
-        margin: 0 0 var(--gap-small) 0;
-    }
-
-    .cart-item .item-qty {
-        width: 4rem;
-        padding: 0.3rem;
-        border: var(--border-thin);
-        border-radius: var(--cart-border-radius);
-    }
-
-    .cart-item .item-total-price {
-        color: var(--hover-color);
-        font-weight: bold;
-        margin-top: var(--gap-small);
-    }
-
-    .cart-item .remove-from-cart {
-        margin-top: var(--gap-small);
-        background-color: var(--hover-color);
-        color: var(--background-color);
-        border: none;
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .cart-item .remove-from-cart:hover {
-        background-color: #555; /* Une couleur un peu plus foncée pour indiquer l'effet de survol */
-    }
-
-    /* Ticket Section */
     #cart-ticket {
         margin-top: var(--gap-large);
         padding: var(--cart-item-padding);
@@ -80,59 +66,9 @@
         border-radius: var(--cart-border-radius);
         box-shadow: var(--card-shadow);
     }
-
-    #cart-ticket h2 {
-        font-size: 1.5rem;
-        color: var(--primary-color);
-        margin-bottom: var(--gap-large);
-    }
-
-    #shipping-country {
-        width: 100%;
-        padding: 0.5rem;
-        margin-bottom: var(--gap-large);
-        border: var(--border-thin);
-        border-radius: var(--cart-border-radius);
-    }
-
-    .cart-summary {
-        display: flex;
-        justify-content: space-between;
-        font-weight: bold;
-        padding: 0.5rem 0;
-        border-top: var(--border-thin);
-    }
-
-    .cart-summary span {
-        color: var(--primary-color);
-    }
-
-    .total-amount {
-        font-size: 1.6rem;
-        color: var(--hover-color);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        #cart-content {
-            grid-template-columns: 1fr;
-        }
-
-        .cart-item {
-            text-align: center;
-        }
-
-        .cart-item .item-details {
-            align-items: center;
-        }
-    }
 </style>
 
 <h1>Basket</h1>
-
-<div id="cart-content">
-    <!-- Les articles du panier seront chargés ici -->
-</div>
 
 <div id="cart-ticket">
     <h2>Ticket</h2>
@@ -163,3 +99,5 @@
         <strong>Total :</strong> <span class="total-amount">0.00 €</span>
     </div>
 </div>
+
+<section id="cart-content" class="products-list"></section>

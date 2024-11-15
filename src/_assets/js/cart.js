@@ -6,11 +6,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const shippingElement = document.querySelector('.shipping-amount')
     const totalElement = document.querySelector('.total-amount')
 
-    // Charger la langue actuelle et la base URL depuis le localStorage
-    const currentLang = localStorage.getItem('lang') || 'en'
+    const currentLang = getActiveLanguage()
     const baseUrl = localStorage.getItem('baseUrl') || '/boutique-11ty'
 
-    // Charger les données des produits à partir du fichier JSON approprié
     let productsData = []
     try {
         const response = await fetch(`${baseUrl}/products_${currentLang}.json`)
@@ -25,41 +23,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         updateTicket(0, getShippingCost())
     } else {
         cartItems.forEach((cartItem) => {
-            // Rechercher les informations du produit dans les données chargées
             const productData = productsData.find(
                 (product) => product.id === cartItem.id
             )
             if (productData) {
-                const itemElement = document.createElement('div')
-                itemElement.classList.add('cart-item')
-                itemElement.innerHTML = `
-                    <a href="${productData.link}">
-                        <img src="${productData.image}" alt="${
-                    productData.title
-                }" class="item-thumbnail">
-                    </a>
-                    <div class="item-details">
-                        <h3>${productData.title}</h3>
-                        <p>Prix unitaire : ${productData.price}</p>
-                        <label for="qty-${cartItem.id}">Quantité :</label>
-                        <input type="number" id="qty-${
-                            cartItem.id
-                        }" class="item-qty" data-id="${cartItem.id}" value="${
-                    cartItem.qty
-                }" min="1">
-                        <p class="item-total-price">Prix total : ${(
-                            parseFloat(productData.price) * cartItem.qty
-                        ).toFixed(2)} €</p>
-                        <button class="remove-from-cart" data-id="${
-                            cartItem.id
-                        }">Supprimer</button>
-                    </div>
-                `
+                const itemElement = createCartItemElement(productData, cartItem)
                 cartContent.appendChild(itemElement)
             }
         })
 
-        // Ajouter les écouteurs pour la suppression des articles
         document.querySelectorAll('.remove-from-cart').forEach((button) => {
             button.addEventListener('click', (event) => {
                 event.preventDefault()
@@ -68,29 +40,113 @@ document.addEventListener('DOMContentLoaded', async () => {
             })
         })
 
-        // Ajouter les écouteurs pour les changements de quantité
         document.querySelectorAll('.item-qty').forEach((input) => {
             input.addEventListener('change', (event) => {
-                const productId = input.dataset.id
-                const newQty = parseInt(input.value)
-                if (newQty > 0) {
-                    updateCartItemQuantity(productId, newQty)
-                } else {
-                    removeFromCart(productId)
-                }
+                handleQuantityChange(input)
             })
         })
 
-        // Calculer et afficher le sous-total au chargement de la page
+        document.querySelectorAll('.qty-count').forEach((button) => {
+            button.addEventListener('click', (event) => {
+                handleButtonQuantityChange(button)
+            })
+        })
+
         calculateCartTotal()
     }
 
-    // Mettre à jour les frais de transport en fonction du pays sélectionné
     shippingSelect.addEventListener('change', () => {
         calculateCartTotal()
     })
 
-    // Fonction pour supprimer un article du panier
+    function createCartItemElement(productData, cartItem) {
+        const itemElement = document.createElement('article')
+        itemElement.classList.add('product-item')
+        itemElement.innerHTML = `
+<header class="product-header">
+    <h2 id="${productData.title}" class="product-title">
+        ${productData.title}
+    </h2>
+</header>
+<figure class="product-figure">
+    <img src="${productData.image}" class="product-image" alt="${
+            productData.title
+        }"/>
+</figure>
+<section class="item-details">
+    <data class="price" value="${productData.price}" itemprop="price">${
+            productData.price
+        }</data>
+    <meta itemprop="priceCurrency" content="EUR" />
+    <div class="qty-input">
+        <button class="qty-count qty-count--minus ${
+            cartItem.qty === 1 ? 'disabled' : ''
+        }" data-action="minus" type="button">-</button>
+        <label for="qty-${cartItem.id}" class="visually-hidden">Quantité</label>
+        <input id="qty-${
+            cartItem.id
+        }" class="product-qty item-qty" type="number" name="product-qty" data-id="${
+            cartItem.id
+        }" min="1" max="10" value="${cartItem.qty}" >
+        <button class="qty-count qty-count--add ${
+            cartItem.qty === 10 ? 'disabled' : ''
+        }" data-action="add" type="button">+</button>
+    </div>
+    <data class="item-total-price price" value="${(
+        parseFloat(productData.price) * cartItem.qty
+    ).toFixed(2)}" itemprop="price">${(
+            parseFloat(productData.price) * cartItem.qty
+        ).toFixed(2)} €</data>
+    <meta itemprop="priceCurrency" content="EUR" />
+</section>
+<footer class="product-footer">
+    <a href="${
+        productData.link
+    }" class="btn btn-details" aria-label="Revoir l'article">Revoir l'article</a>
+    <a href="#" class="btn btn-card add-to-cart remove-from-cart" data-id="${
+        cartItem.id
+    }" aria-label="Supprimer l'article">Supprimer l'article</a>
+</footer>`
+        return itemElement
+    }
+
+    function handleQuantityChange(input) {
+        const productId = input.dataset.id
+        let newQty = parseInt(input.value)
+        const min = parseInt(input.getAttribute('min'))
+        const max = parseInt(input.getAttribute('max'))
+
+        if (newQty < min) {
+            newQty = min
+        } else if (newQty > max) {
+            newQty = max
+        }
+
+        input.value = newQty
+        updateCartItemQuantity(productId, newQty)
+        updateItemTotalPrice(productId, newQty)
+        updateButtonState(productId, newQty, min, max)
+    }
+
+    function handleButtonQuantityChange(button) {
+        const input = button.closest('.qty-input').querySelector('.item-qty')
+        const productId = input.dataset.id
+        let currentQty = parseInt(input.value)
+        const min = parseInt(input.getAttribute('min'))
+        const max = parseInt(input.getAttribute('max'))
+
+        if (button.dataset.action === 'add' && currentQty < max) {
+            currentQty++
+        } else if (button.dataset.action === 'minus' && currentQty > min) {
+            currentQty--
+        }
+
+        input.value = currentQty
+        updateCartItemQuantity(productId, currentQty)
+        updateItemTotalPrice(productId, currentQty)
+        updateButtonState(productId, currentQty, min, max)
+    }
+
     function removeFromCart(productId) {
         let cart = storage.getCart()
         cart = cart.filter((item) => item.id !== productId)
@@ -98,7 +154,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         location.reload()
     }
 
-    // Fonction pour mettre à jour la quantité d'un article dans le panier
     function updateCartItemQuantity(productId, newQty) {
         let cart = storage.getCart()
         cart = cart.map((item) => {
@@ -114,7 +169,35 @@ document.addEventListener('DOMContentLoaded', async () => {
         calculateCartTotal()
     }
 
-    // Fonction pour calculer le total du panier
+    function updateItemTotalPrice(productId, newQty) {
+        const productData = productsData.find(
+            (product) => product.id === productId
+        )
+        if (productData) {
+            const itemTotalElement = document
+                .querySelector(`#qty-${productId}`)
+                .closest('.item-details')
+                .querySelector('.item-total-price')
+            itemTotalElement.textContent = `${(
+                parseFloat(productData.price) * newQty
+            ).toFixed(2)} €`
+        }
+    }
+
+    function updateButtonState(productId, currentQty, min, max) {
+        const minusButton = document
+            .querySelector(`#qty-${productId}`)
+            .closest('.qty-input')
+            .querySelector('.qty-count--minus')
+        const addButton = document
+            .querySelector(`#qty-${productId}`)
+            .closest('.qty-input')
+            .querySelector('.qty-count--add')
+
+        minusButton.classList.toggle('disabled', currentQty <= min)
+        addButton.classList.toggle('disabled', currentQty >= max)
+    }
+
     function calculateCartTotal() {
         const cartItems = storage.getCart()
         let subtotal = 0
@@ -126,12 +209,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (productData) {
                 subtotal += parseFloat(productData.price) * cartItem.qty
 
-                // Mettre à jour le prix total de chaque article dans l'affichage
                 const itemTotalElement = document
                     .querySelector(`#qty-${cartItem.id}`)
                     .closest('.item-details')
                     .querySelector('.item-total-price')
-                itemTotalElement.textContent = `Prix total : ${(
+                itemTotalElement.textContent = `${(
                     parseFloat(productData.price) * cartItem.qty
                 ).toFixed(2)} €`
             }
@@ -140,18 +222,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         const shippingCost = getShippingCost()
         const total = subtotal + shippingCost
 
-        // Mettre à jour les éléments HTML du ticket
         updateTicket(subtotal, shippingCost, total)
     }
 
-    // Fonction pour obtenir le coût de transport en fonction du pays sélectionné
     function getShippingCost() {
         const selectedOption =
             shippingSelect.options[shippingSelect.selectedIndex]
         return parseFloat(selectedOption.dataset.cost)
     }
 
-    // Fonction pour mettre à jour l'affichage du ticket
     function updateTicket(
         subtotal,
         shippingCost,
@@ -160,5 +239,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         subtotalElement.textContent = `${subtotal.toFixed(2)} €`
         shippingElement.textContent = `${shippingCost.toFixed(2)} €`
         totalElement.textContent = `${total.toFixed(2)} €`
+    }
+
+    function getActiveLanguage() {
+        const selectedLangElement = document.querySelector(
+            '.language-list .btn-nav.selected'
+        )
+        return selectedLangElement
+            ? selectedLangElement.textContent.trim().toLowerCase()
+            : 'fr'
     }
 })
