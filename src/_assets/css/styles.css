@@ -39,6 +39,12 @@ ul {
     max-width: 90%;
 }
 
+.disabled {
+    opacity: .5;
+    cursor: not-allowed !important;
+    border-color: transparent !important;
+}
+
 /* Links */
 a,
 .tags-list a {
@@ -233,6 +239,7 @@ button:focus {
 
 .card-footer .price {
     text-align: left;
+    display: block;
 }
 
 .card-footer .btn-card {
@@ -314,8 +321,6 @@ button:focus {
 
 /* Buttons */
 .btn {
-    border: var(--border-thin);
-    border-radius: .1rem;
     padding: 0.8rem 1.2rem;
     text-align: center;
     text-decoration: none;
@@ -327,11 +332,13 @@ button:focus {
     color: var(--background-color);
 }
 
-.btn-nav,
-.btn-details {
+.btn-nav {
     background: transparent;
     border: var(--border-thin);
-    border-radius: .1rem;
+}
+
+.btn-details {
+    border-top: var(--border-thin);
 }
 
 .btn-nav {
