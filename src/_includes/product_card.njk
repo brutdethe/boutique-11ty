@@ -30,22 +30,8 @@ include_slide_bundle: true
                 </dl>
             </section>
             <footer class="card-footer">
-                <data
-                    class="price"
-                    value="{{ price }}"
-                    itemprop="price"
-                    aria-label="{{ i18n.aria.product_price[page.lang] }}"
-                >
-                    {{ price }}
-                </data>
-                <meta itemprop="priceCurrency" content="EUR" />
-                <a
-                    href="#"
-                    class="btn btn-card add-to-cart"
-                    aria-label="{{ i18n.add_to_cart_title[page.lang] }}"
-                >
-                    {{ i18n.add_to_cart_title[page.lang] }}
-                </a>
+                {% include 'price.njk'}
+                {% include 'button_add.njk' %}
             </footer>
         </section>
     </article>
