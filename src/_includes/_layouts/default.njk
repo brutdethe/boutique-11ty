@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link href="{{ '/_assets/favicon.ico' | url }}" rel="icon" type="image/x-icon">
-        <link rel="alternate" hreflang="fr" href="{{ page.filePathStem | customLocaleUrl("fr") | url }}">
-        <link rel="alternate" hreflang="en" href="{{ page.filePathStem | customLocaleUrl("en") | url }}">
-        
-        <link rel="stylesheet" href="{{ '/bundle.css' | url }}">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link
+            href="{{ '/_assets/favicon.ico' | url }}"
+            rel="icon"
+            type="image/x-icon"
+        />
+        <link rel="alternate" hreflang="fr" href="{{ page.filePathStem | customLocaleUrl("fr") | url
+        }}"> <link rel="alternate" hreflang="en" href="{{ page.filePathStem | customLocaleUrl("en") | url
+        }}">
+
+        <link rel="stylesheet" href="{{ '/bundle.css' | url }}" />
         <script type="module" src="{{ '/bundle.js' | url }}"></script>
-        
+
         {% if include_slide_bundle %}
-        <link rel="stylesheet" href="{{ '/bundle-slide.css' | url }}">
+        <link rel="stylesheet" href="{{ '/bundle-slide.css' | url }}" />
         <script src="{{ '/bundle-slide.js' | url }}"></script>
         {% endif %}
 
-        <meta name="description" content="{{ i18n.meta.description[page.lang] }}">
+        <meta
+            name="description"
+            content="{{ i18n.meta.description[page.lang] }}"
+        />
 
-        <meta property="og:title" content="{{ title }}">
-        <meta property="og:description" content="{{ i18n.meta.description[page.lang] }}">
-        <meta property="og:url" content="{{ page.url | url }}">
-        <meta property="og:type" content="website">
+        <meta property="og:title" content="{{ title }}" />
+        <meta
+            property="og:description"
+            content="{{ i18n.meta.description[page.lang] }}"
+        />
+        <meta property="og:url" content="{{ page.url | url }}" />
+        <meta property="og:type" content="website" />
 
         <title>{{ title }}</title>
     </head>
     <body>
         <main class="wrapper">
-            {% include "header.njk" %}
+            {% include 'header.njk' %}
             {{ content | safe }}
-            <footer class="footer-section" role="contentinfo">
-                <ul class="footer-list">
-                    <li>
-                        <a href="{{ '/privacy' | customLocaleUrl(page.lang) | url }}" class="nav-link" aria-label="{{ i18n.aria.privacy[page.lang] }}">{{ i18n.privacy_title[page.lang] }}</a>
-                    </li>
-                    <li>
-                        <a href="{{ '/legacy' | customLocaleUrl(page.lang) | url }}" class="nav-link" aria-label="{{ i18n.aria.legacy[page.lang] }}">{{ i18n.legacy_title[page.lang] }}</a>
-                    </li>
-                </ul>
-            </footer>
+            {% include 'footer.njk' %}
         </main>
     </body>
 </html>
