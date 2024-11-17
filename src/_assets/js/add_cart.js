@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function disableButton(button) {
         button.classList.add('disabled')
-        button.setAttribute('disabled', 'disabled')
-        button.textContent = 'Déjà ajouté'
+        button.textContent = button.dataset.addedText
     }
 })

@@ -26,6 +26,10 @@ card_detail:
     fr: détail
     en: detail
 
+added_to_cart_title:
+    fr: déjà ajouté
+    en: already added
+
 add_to_cart_title:
     fr: ajouter au panier
     en: add to cart
