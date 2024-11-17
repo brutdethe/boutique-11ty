@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: th9
 name: 三足乳鼎 - SānZúRǔDǐng teapot
 tags: ["product", "chahu"]

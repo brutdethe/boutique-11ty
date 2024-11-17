@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: jeBolA1
 name: Small glazed tea bowl
 tags: ["product", "je-le-potier"]

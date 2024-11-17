@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: jetheiere3
 name: Petite théière en terre brute
 tags: ["produit", "je-le-potier"]

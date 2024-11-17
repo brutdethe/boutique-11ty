@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: melles-ceramiquetheiere1
 name: Small teapot in raw clay
 tags: ["product", "mademoiselles-ceramique"]

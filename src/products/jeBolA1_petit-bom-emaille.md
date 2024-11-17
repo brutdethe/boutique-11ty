@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: jeBolA1
 name: Petit bom émaillé
 tags: ["produit", "je-le-potier"]

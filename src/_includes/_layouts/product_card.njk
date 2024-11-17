@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: _layouts/default.njk
 include_slide_bundle: true
 ---
 
@@ -12,7 +12,7 @@ include_slide_bundle: true
         data-image="photos[0]"
         data-link="{{ permalink }}"
     >
-        {%- include('carousel.njk') -%}
+        {%- include 'carousel.njk' -%}
         <section class="card-info">
             <header>
                 <h1 id="content-title" class="card-title">{{ name }}</h1>
@@ -30,8 +30,7 @@ include_slide_bundle: true
                 </dl>
             </section>
             <footer class="card-footer">
-                {% include 'price.njk'}
-                {% include 'button_add.njk' %}
+                {% include 'price.njk' %} {% include 'button_add.njk' %}
             </footer>
         </section>
     </article>

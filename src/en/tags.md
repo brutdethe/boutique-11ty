@@ -1,3 +1,3 @@
 ---
-layout: tags_en.njk
+layout: _layouts/tags_en.njk
 ---

@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: ga2
 name: GàiWǎn basique
 tags: ["produit", "gaiwan"]

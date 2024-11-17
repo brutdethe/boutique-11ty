@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: manontasA29
 name: 茶杯 - CháBēi (petit bol à thé)
 tags: ["produit", "manon-clouzeau"]

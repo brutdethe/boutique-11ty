@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: affiches2
 name: Deux affiches originales du festival GongFuCha
 tags: ["produit", "benhito"]

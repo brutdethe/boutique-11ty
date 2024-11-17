@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: wuA2
 name: 凍頂烏龍 - DòngDǐng WūLóng
 tags: ["product", "cha"]

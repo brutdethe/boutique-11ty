@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: luA3
 name: 白鹿綠茶 - BáiLù LǜChá
 tags: ["produit", "cha"]

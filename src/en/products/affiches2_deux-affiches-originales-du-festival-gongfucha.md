@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: affiches2
 name: Two posters of the GongFuCha festival
 tags: ["product", "benhito"]

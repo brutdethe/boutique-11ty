@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: serigraphie1
 name: Sérigraphie - tirage limité 100 exemplaires
 tags: ["produit", "benhito"]

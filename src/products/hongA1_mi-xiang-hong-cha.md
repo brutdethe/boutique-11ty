@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: hongA1
 name: 蜜香红茶 - MìXiāng HóngChá
 tags: ["produit", "cha"]

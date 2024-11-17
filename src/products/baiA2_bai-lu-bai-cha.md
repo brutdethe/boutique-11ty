@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: baiA2
 name: 白鹿白茶 - BáiLù BáiChá
 tags: ["produit", "cha"]

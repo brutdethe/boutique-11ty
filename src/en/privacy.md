@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: _layouts/default.njk
 title: Privacy
 ---
 

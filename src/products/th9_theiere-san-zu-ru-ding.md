@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: th9
 name: Théière 三足乳鼎 - SānZúRǔDǐng
 tags: ["produit", "chahu"]

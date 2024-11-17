@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: jetheiere1
 name: Small glazed teapot
 tags: ["product", "je-le-potier"]

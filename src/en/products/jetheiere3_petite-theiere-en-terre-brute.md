@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: jetheiere3
 name: Small teapot in raw clay
 tags: ["product", "je-le-potier"]

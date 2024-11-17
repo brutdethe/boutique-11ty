@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: Don100
 name: Don de 100 €
 tags: ["produit", "dons"]

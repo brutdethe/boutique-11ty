@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: luA1
 name: 碧螺春 - BìLuóChūn
 tags: ["produit", "cha"]

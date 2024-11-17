@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: melles-ceramiquega1
 name: 蓋碗 - GàiWǎn
 tags: ["product", "mademoiselles-ceramique"]

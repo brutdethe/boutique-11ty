@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: serigraphie1
 name: Silk-screen printing - limited edition 100 copies
 tags: ["product", "benhito"]

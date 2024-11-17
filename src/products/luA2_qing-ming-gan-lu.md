@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: luA2
 name: 清明甘露 - QīngMíng GānLù
 tags: ["produit", "cha"]

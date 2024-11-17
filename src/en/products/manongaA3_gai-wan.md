@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: manongaA3
 name: 蓋碗 - GàiWǎn
 tags: ["product", "manon-clouzeau"]

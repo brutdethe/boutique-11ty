@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: sdv2
 name: Set de voyage
 tags: ["produit", "gaiwan"]

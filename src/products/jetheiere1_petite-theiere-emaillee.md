@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: jetheiere1
 name: Petite théière émaillée
 tags: ["produit", "je-le-potier"]

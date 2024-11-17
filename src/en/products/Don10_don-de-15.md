@@ -1,5 +1,5 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: Don10
 name: 15 € donation
 tags: ["product", "dons"]
