@@ -12,6 +12,17 @@
     --gap-large: 1rem;
 }
 
+
+input[type='number'] {
+    appearance: textfield;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 /* Global Elements */
 html {
     -webkit-tap-highlight-color: transparent;
@@ -370,6 +381,44 @@ button:focus {
     margin: 0rem;
     padding: .5rem;
     text-align: right;
+}
+
+#cart-content {
+    padding: 2rem 0;
+}
+
+#cart-content .price {
+    text-align: center;
+}
+
+.qty-input,
+.product-item .item-details,
+.cart-summary {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.qty-input .product-qty,
+.qty-input .qty-count {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+    border: var(--border-thin);
+}
+
+.qty-input .product-qty {
+    width: 2rem;
+    text-align: center;
+}
+
+.qty-input .qty-count {
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.qty-input .qty-count--add:after {
+    transform: rotate(90deg);
 }
 
 /* Footer */

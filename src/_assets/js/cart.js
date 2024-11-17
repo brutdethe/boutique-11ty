@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }" data-action="minus" type="button">-</button>
                     <label for="qty-${
                         cartItem.id
-                    }" class="visually-hidden">Quantité</label>
+                    }" class="hidden">Quantité</label>
                     <input id="qty-${
                         cartItem.id
                     }" class="product-qty item-qty" type="number" name="product-qty" data-id="${

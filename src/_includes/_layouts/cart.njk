@@ -1,62 +1,10 @@
 ---
 layout: _layouts/default.njk
 eleventyComputed:
-  title: "{{ i18n.cart_title[page.lang] | safe }}"
+    title: '{{ i18n.cart_title[page.lang] | safe }}'
 ---
 
 <style>
-    input[type='number'] {
-        appearance: textfield;
-    }
-
-    input[type='number']::-webkit-outer-spin-button,
-    input[type='number']::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    .visually-hidden {
-        display: none;
-    }
-
-    #cart-content {
-        padding: 2rem 0;
-    }
-
-    #cart-content .price {
-        text-align: center;
-    }
-
-    .qty-input,
-    .product-item .item-details,
-    .cart-summary {
-        display: flex;
-        align-items: center;
-        padding: 1.5rem 0;
-    }
-
-    .qty-input .product-qty,
-    .qty-input .qty-count {
-        color: var(--primary-color);
-        font-weight: bold;
-        font-size: 1.3rem;
-        border: var(--border-thin);
-    }
-
-    .qty-input .product-qty {
-        width: 2rem;
-        text-align: center;
-    }
-
-    .qty-input .qty-count {
-        width: 2.5rem;
-        cursor: pointer;
-    }
-
-    .qty-input .qty-count--add:after {
-        transform: rotate(90deg);
-    }
-
     /* Section du ticket */
     :root {
         --cart-item-padding: 1rem;
@@ -112,5 +60,7 @@ eleventyComputed:
 
 <section id="no-cart" class="hidden">
     <p>{{ i18.no_items[page.lang] }}</p>
-    <a href="{{ '/' | customLocaleUrl(page.lang) | url }}">{{ i18n.no_item_link[page.lang] }}</a>
+    <a href="{{ '/' | customLocaleUrl(page.lang) | url }}">{{
+        i18n.no_item_link[page.lang]
+    }}</a>
 </section>
