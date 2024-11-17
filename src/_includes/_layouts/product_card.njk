@@ -4,14 +4,7 @@ include_slide_bundle: true
 ---
 
 <section aria-labelledby="card-title">
-    <article
-        class="card-details product-infos"
-        data-id="{{ id }}"
-        data-title="{{ name }}"
-        data-price="{{ price }}"
-        data-image="photos[0]"
-        data-link="{{ permalink }}"
-    >
+    <article class="card-details product-infos" data-id="{{ id }}">
         {%- include 'carousel.njk' -%}
         <section class="card-info">
             <header>
@@ -30,7 +23,8 @@ include_slide_bundle: true
                 </dl>
             </section>
             <footer class="card-footer">
-                {% include 'price.njk' %} {% include 'button_add.njk' %}
+                {% include 'price.njk' %}
+                {% include 'button_add.njk' %}
             </footer>
         </section>
     </article>

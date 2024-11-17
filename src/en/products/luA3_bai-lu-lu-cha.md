@@ -9,7 +9,7 @@ description: >
 photos:
   - BaiLu-LuCha_1-a.jpg
   - BaiLu-LuCha_1-b.jpg
-price: 15.00 €
+price: 15.00
 stock: 10 items left
 weight: 125 g
 options:

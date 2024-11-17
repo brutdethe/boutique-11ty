@@ -9,7 +9,7 @@ description: >
 photos:
   - DongDing-WuLong_1-a.jpg
   - DongDing-WuLong_1-b.jpg
-price: 15.00 €
+price: 15.00
 stock: il reste 9 articles
 weight: 125 g
 options:

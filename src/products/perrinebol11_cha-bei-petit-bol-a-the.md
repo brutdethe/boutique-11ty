@@ -10,7 +10,7 @@ photos:
   - perrine_tasse_11-a.jpg
   - perrine_tasse_11-b.jpg
   - perrine_tasse_11-c.jpg
-price: 20.00 €
+price: 20.00
 stock: il reste 1 article
 weight: 125 g
 options:

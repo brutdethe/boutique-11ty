@@ -8,7 +8,7 @@ description: >
   Faire un don de 5 €.
 photos:
   - ticket-gongfucha.jpg
-price: 5.00 €
+price: 5.00
 stock: il reste 30 articles
 
 

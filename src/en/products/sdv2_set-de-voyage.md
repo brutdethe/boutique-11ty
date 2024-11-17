@@ -11,7 +11,7 @@ photos:
   - set-de-voyage_1-b.jpg
   - set-de-voyage_1-c.jpg
   - set-de-voyage_1-d.jpg
-price: 45.00 €
+price: 45.00
 stock: 16 items left
 weight: 550 g
 options:

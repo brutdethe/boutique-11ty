@@ -9,7 +9,7 @@ description: >
 photos:
   - gaiwan_2-a.jpg
   - gaiwan_2-b.jpg
-price: 8.00 €
+price: 8.00
 stock: 8 items left
 weight: 220 g
 options:

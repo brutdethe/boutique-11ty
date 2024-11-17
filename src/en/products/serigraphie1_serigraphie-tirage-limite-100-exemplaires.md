@@ -10,7 +10,7 @@ photos:
   - serigraphie_b2t_a.jpg
   - serigraphie_b2t_b.jpg
   - serigraphie_b2t_c.jpg
-price: 45.00 €
+price: 45.00
 stock: 77 items left
 weight: 125 g
 

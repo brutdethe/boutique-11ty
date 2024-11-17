@@ -8,7 +8,7 @@ description: >
   Donate 5 € and get a huge thank you from us.
 photos:
   - ticket-gongfucha.jpg
-price: 5.00 €
+price: 5.00
 stock: 30 items left
 
 

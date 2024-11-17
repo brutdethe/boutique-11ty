@@ -9,7 +9,7 @@ description: >
 photos:
   - manon_tasse_A31-a.jpg
   - manon_tasse_A31-b.jpg
-price: 15.00 €
+price: 15.00
 stock: il reste 1 article
 weight: 135 g
 options:

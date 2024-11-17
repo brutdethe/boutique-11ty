@@ -8,7 +8,7 @@ description: >
   Faire un don de 50 € et recevoir un bol à thé de Manon Clouzeau et l'affiche du festival.
 photos:
   - ticket-gongfucha.jpg
-price: 50.00 €
+price: 50.00
 stock: il reste 30 articles
 
 

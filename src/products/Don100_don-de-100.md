@@ -8,7 +8,7 @@ description: >
   Faire un don de 100 € et recevoir un kit de dégustation et l'affiche du festival.
 photos:
   - ticket-gongfucha.jpg
-price: 100.00 €
+price: 100.00
 stock: il reste 30 articles
 
 

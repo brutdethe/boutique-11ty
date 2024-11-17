@@ -9,7 +9,7 @@ description: >
 photos:
   - jerome_bol_A1-a.jpg
   - jerome_bol_A1-b.jpg
-price: 18.00 €
+price: 18.00
 stock: 28 items left
 weight: 170 g
 options:

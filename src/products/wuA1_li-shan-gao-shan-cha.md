@@ -9,7 +9,7 @@ description: >
 photos:
   - LiShan-GaoShan_1-a.jpg
   - LiShan-GaoShan_1-b.jpg
-price: 15.00 €
+price: 15.00
 stock: il reste 2 articles
 weight: 125 g
 options:

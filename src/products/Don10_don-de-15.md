@@ -8,7 +8,7 @@ description: >
   Faire un don de 15 €
 photos:
   - ticket-gongfucha.jpg
-price: 15.00 €
+price: 15.00
 stock: il reste 29 articles
 
 

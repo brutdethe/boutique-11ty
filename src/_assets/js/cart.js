@@ -74,9 +74,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         }"/>
 </figure>
 <section class="item-details">
-    <data class="price" value="${productData.price}" itemprop="price">${
-            productData.price
-        }</data>
+    <data class="price" value="${productData.price}" itemprop="price">
+    ${parseFloat(productData.price).toFixed(2)} €</data>
     <meta itemprop="priceCurrency" content="EUR" />
     <div class="qty-input">
         <button class="qty-count qty-count--minus ${

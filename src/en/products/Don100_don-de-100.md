@@ -8,7 +8,7 @@ description: >
   Donate 100 € and receive a tasting kit and the festival poster.
 photos:
   - ticket-gongfucha.jpg
-price: 100.00 €
+price: 100.00
 stock: 30 items left
 
 

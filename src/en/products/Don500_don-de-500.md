@@ -8,7 +8,7 @@ description: >
   Donate 500 € and exchange with us for presents.
 photos:
   - ticket-gongfucha.jpg
-price: 500.00 €
+price: 500.00
 stock: 30 items left
 
 

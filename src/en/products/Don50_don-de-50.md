@@ -8,7 +8,7 @@ description: >
   Donate 50 € and receive a tea bowl made by Manon Clouzeau and the festival poster.
 photos:
   - ticket-gongfucha.jpg
-price: 50.00 €
+price: 50.00
 stock: 30 items left
 
 

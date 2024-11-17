@@ -13,7 +13,7 @@ photos:
   - theiere_9-d.jpg
   - theiere_9-e.jpg
   - theiere_9-f.jpg
-price: 80.00 €
+price: 80.00
 stock: il reste 1 article
 weight: 235 g
 options:

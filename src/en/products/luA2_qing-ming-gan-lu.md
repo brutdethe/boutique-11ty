@@ -9,7 +9,7 @@ description: >
 photos:
   - QingMing-GanLu_1-a.jpg
   - QingMing-GanLu_1-b.jpg
-price: 15.00 €
+price: 15.00
 stock: 10 items left
 weight: 125 g
 options:

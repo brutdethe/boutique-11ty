@@ -197,7 +197,7 @@ description: >
   ${description}
 photos:
 ${photosContent}
-price: ${prix.toFixed(2)} €
+price: ${prix.toFixed(2)}
 ${stock ? stock : ''}
 ${weight ? weight : ''}
 ${

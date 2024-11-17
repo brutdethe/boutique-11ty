@@ -9,7 +9,7 @@ description: >
 photos:
   - BiLuoChun_1-a.jpg
   - BiLuoChun_1-b.jpg
-price: 15.00 €
+price: 15.00
 stock: il reste 10 articles
 weight: 125 g
 options:

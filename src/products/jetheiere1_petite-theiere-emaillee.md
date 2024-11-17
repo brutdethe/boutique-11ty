@@ -12,7 +12,7 @@ photos:
   - jerome_theiere_1-c.jpg
   - jerome_theiere_1-d.jpg
   - jerome_theiere_1-e.jpg
-price: 142.00 €
+price: 142.00
 stock: il reste 1 article
 weight: 220 g
 options:

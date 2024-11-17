@@ -10,7 +10,7 @@ photos:
   - HongCha_MiXiang_1-a.jpg
   - HongCha_MiXiang_1-b.jpg
   - conserve_1-c.jpg
-price: 15.00 €
+price: 15.00
 stock: 10 items left
 weight: 125 g
 options:

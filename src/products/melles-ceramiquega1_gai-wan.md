@@ -11,7 +11,7 @@ photos:
   - melles-ceramique_gaiwan_1-b.jpg
   - melles-ceramique_gaiwan_1-c.jpg
   - melles-ceramique_gaiwan_1-d.jpg
-price: 60.00 €
+price: 60.00
 stock: il reste 3 articles
 weight: 315 g
 options:

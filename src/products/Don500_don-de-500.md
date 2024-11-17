@@ -8,7 +8,7 @@ description: >
   Faire un don de 500 € et échanger avec nous pour imaginer ensemble une contre-partie.
 photos:
   - ticket-gongfucha.jpg
-price: 500.00 €
+price: 500.00
 stock: il reste 30 articles
 
 
