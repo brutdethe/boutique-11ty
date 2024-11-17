@@ -45,6 +45,10 @@ ul {
     border-color: transparent !important;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Links */
 a,
 .tags-list a {

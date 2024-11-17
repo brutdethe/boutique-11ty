@@ -1,5 +1,7 @@
 ---
 layout: _layouts/default.njk
+eleventyComputed:
+  title: "{{ i18n.cart_title[page.lang] | safe }}"
 ---
 
 <style>
@@ -72,36 +74,43 @@ layout: _layouts/default.njk
     }
 </style>
 
-<h1>Basket</h1>
+<h1>{{ title }}</h1>
 
-<div id="cart-ticket">
-    <h2>Ticket</h2>
+<section id="cart" class="hidden">
+    <div id="cart-ticket">
+        <h2>Ticket</h2>
 
-    <label for="shipping-country">Pays de livraison :</label>
-    <select id="shipping-country">
-        <option value="FR" data-cost="5">
-            France (5 € de frais de transport)
-        </option>
-        <option value="BE" data-cost="10">
-            Belgique (10 € de frais de transport)
-        </option>
-        <option value="LU" data-cost="12">
-            Luxembourg (12 € de frais de transport)
-        </option>
-        <!-- Ajoutez d'autres options de pays ici -->
-    </select>
+        <label for="shipping-country">Pays de livraison :</label>
+        <select id="shipping-country">
+            <option value="FR" data-cost="5">
+                France (5 € de frais de transport)
+            </option>
+            <option value="BE" data-cost="10">
+                Belgique (10 € de frais de transport)
+            </option>
+            <option value="LU" data-cost="12">
+                Luxembourg (12 € de frais de transport)
+            </option>
+            <!-- Ajoutez d'autres options de pays ici -->
+        </select>
 
-    <div id="cart-subtotal" class="cart-summary">
-        <strong>Sous-total :</strong>
-        <span class="subtotal-amount">0.00</span>
+        <div id="cart-subtotal" class="cart-summary">
+            <strong>Sous-total :</strong>
+            <span class="subtotal-amount">0.00</span>
+        </div>
+        <div id="cart-shipping" class="cart-summary">
+            <strong>Frais de transport :</strong>
+            <span class="shipping-amount">5.00</span>
+        </div>
+        <div id="cart-total" class="cart-summary">
+            <strong>Total :</strong> <span class="total-amount">0.00</span>
+        </div>
     </div>
-    <div id="cart-shipping" class="cart-summary">
-        <strong>Frais de transport :</strong>
-        <span class="shipping-amount">5.00</span>
-    </div>
-    <div id="cart-total" class="cart-summary">
-        <strong>Total :</strong> <span class="total-amount">0.00</span>
-    </div>
-</div>
 
-<section id="cart-content" class="products-list"></section>
+    <section id="cart-content" class="products-list"></section>
+</section>
+
+<section id="no-cart" class="hidden">
+    <p>{{ i18.no_items[page.lang] }}</p>
+    <a href="{{ '/' | customLocaleUrl(page.lang) | url }}">{{ i18n.no_item_link[page.lang] }}</a>
+</section>
