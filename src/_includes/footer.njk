@@ -1,0 +1,20 @@
+<footer class="footer-section" role="contentinfo">
+    <ul class="footer-list">
+        <li>
+            <a
+                href="{{ '/privacy' | customLocaleUrl(page.lang) | url }}"
+                class="nav-link"
+                aria-label="{{ i18n.aria.privacy[page.lang] }}"
+                >{{ i18n.privacy_nav[page.lang] }}</a
+            >
+        </li>
+        <li>
+            <a
+                href="{{ '/legacy' | customLocaleUrl(page.lang) | url }}"
+                class="nav-link"
+                aria-label="{{ i18n.aria.legacy[page.lang] }}"
+                >{{ i18n.legacy_nav[page.lang] }}</a
+            >
+        </li>
+    </ul>
+</footer>
