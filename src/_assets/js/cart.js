@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const totalElement = document.querySelector('.total-amount')
     const cartLink = document.getElementById('cart-link')
 
+    const isCartPage = sectionCart && sectionNoCart
+
+    let productsData
+
     // Récupération des données du panier et de la langue
     const cartItems = storage.getCart()
     const currentLang = getActiveLanguage()
@@ -16,18 +20,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Mise à jour initiale du lien du panier et de la visibilité du panier
     updateCartLink()
-    updateCartVisibility()
 
-    // Chargement des données produits
-    let productsData = await fetchProductsData(baseUrl, currentLang)
+    if (isCartPage) {
+        updateCartVisibility()
 
-    // Si des produits sont présents dans le panier, initialiser l'affichage
-    if (cartItems.length !== 0) {
-        initializeCart()
+        productsData = await fetchProductsData(baseUrl, currentLang)
+
+        if (cartItems.length !== 0) {
+            initializeCart()
+        }
+        shippingSelect.addEventListener('change', calculateCartTotal)
     }
-
-    // Écouteur pour le changement du pays de livraison
-    shippingSelect.addEventListener('change', calculateCartTotal)
 
     /**
      * Fonction pour charger les données produits
@@ -210,7 +213,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         calculateCartTotal()
-        updateCartVisibility()
         updateCartLink()
     }
 

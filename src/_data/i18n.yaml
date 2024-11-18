@@ -38,9 +38,9 @@ add_to_cart_title:
     fr: ajouter au panier
     en: add to cart
 
-no_items:
-    fr: Il n'y a pas encore d'article dans votre panier.
-    en: There are no items in your shopping cart yet.
+no_item:
+    fr: Il n'y a pas encore d'article dans votre panier
+    en: There are no items in your shopping cart yet
 
 no_item_link:
     fr: retour à la boutique

@@ -20,6 +20,14 @@ eleventyComputed:
         border-radius: var(--cart-border-radius);
         box-shadow: var(--card-shadow);
     }
+
+    #no-cart {
+        background: #f7f8f9;
+        border-radius: 0.1rem;
+        color: hsl(216, 16%, 47%);
+        padding: 3.2rem 1.6rem;
+        text-align: center;
+    }
 </style>
 
 <h1>{{ title }}</h1>
@@ -59,8 +67,6 @@ eleventyComputed:
 </section>
 
 <section id="no-cart" class="hidden">
-    <p>{{ i18.no_items[page.lang] }}</p>
-    <a href="{{ '/' | customLocaleUrl(page.lang) | url }}">{{
-        i18n.no_item_link[page.lang]
-    }}</a>
+    <p>{{ i18n.no_item[page.lang] }}</p>
+    <a href="{{ '/' | customLocaleUrl(page.lang) | url }}">‹ {{ i18n.no_item_link[page.lang] }}</a>
 </section>

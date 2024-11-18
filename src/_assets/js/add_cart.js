@@ -2,13 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartBadge()
     updateCartLink()
 
-    const cart = storage.getCart()
-
     document.querySelectorAll('.add-to-cart').forEach((button) => {
         const productElement = button.closest('.product-infos')
         const productId = productElement.dataset.id
 
-        if (cart.some((item) => item.id === productId)) {
+        if (isProductInCart(productId)) {
             disableButton(button)
         } else {
             button.addEventListener('click', (event) => {
@@ -20,10 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     function addToCart(product) {
-        cart.push(product)
-        storage.setCart(cart)
-        updateCartBadge()
-        updateCartLink() // Mettre à jour le lien du panier après l'ajout
+        const cart = storage.getCart() // Récupère le panier mis à jour
+        if (!cart.some((item) => item.id === product.id)) {
+            cart.push(product)
+            storage.setCart(cart)
+            updateCartBadge()
+            updateCartLink()
+        }
     }
 
     function disableButton(button) {
@@ -41,5 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 cartLink.classList.remove('disabled')
             }
         }
+    }
+
+    function isProductInCart(productId) {
+        const cart = storage.getCart()
+        return cart.some((item) => item.id === productId)
     }
 })
