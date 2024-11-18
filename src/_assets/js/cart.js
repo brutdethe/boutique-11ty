@@ -1,4 +1,35 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    const translations = {
+        button_remove: {
+            fr: "supprimer l'article",
+            en: 'remove item'
+        },
+        button_detail: {
+            fr: "revoir l'article",
+            en: 'item detail'
+        },
+        button_add_qty: {
+            fr: 'augmenter la quantité',
+            en: 'increase the quantity'
+        },
+        button_remove_qty: {
+            fr: 'diminuer la quantité',
+            en: 'reduce the quantity'
+        },
+        quantity: {
+            fr: 'quantité',
+            en: 'quantity'
+        }
+    }
+
+    function t(key) {
+        const currentLang = getActiveLanguage()
+
+        return translations[key] && translations[key][currentLang]
+            ? translations[key][currentLang]
+            : key
+    }
+
     // Initialisation des variables
     const sectionCart = document.getElementById('cart')
     const sectionNoCart = document.getElementById('no-cart')
@@ -12,6 +43,24 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const isCartPage = sectionCart && sectionNoCart
 
+    // Déclaration de l'objet storage avec les méthodes getCart et setCart
+    const storage = {
+        getCart: () => JSON.parse(localStorage.getItem('cart') || '[]'),
+        setCart: (cart) => {
+            localStorage.setItem('cart', JSON.stringify(cart))
+            updateCartBadge()
+        }
+    }
+
+    // Fonction pour mettre à jour le badge du panier
+    const updateCartBadge = () => {
+        const cart = storage.getCart()
+        const badgeElement = document.querySelector('.badge[data-badge]')
+        if (badgeElement) {
+            badgeElement.setAttribute('data-badge', cart.length)
+        }
+    }
+
     let productsData
 
     // Récupération des données du panier et de la langue
@@ -21,6 +70,60 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Mise à jour initiale du lien du panier et de la visibilité du panier
     updateCartLink()
+    updateCartBadge()
+
+    // Vérifier l'existence de .add-to-cart pour éviter les erreurs
+    const addToCartButtons = document.querySelectorAll('.add-to-cart')
+    if (addToCartButtons.length > 0) {
+        // Utilisation de la délégation d'événements
+        document.addEventListener('click', (event) => {
+            if (event.target.matches('.add-to-cart')) {
+                const button = event.target
+                const productElement = button.closest('.product-infos')
+                if (!productElement) return
+
+                const productId = String(productElement.dataset.id)
+
+                if (isProductInCart(productId)) {
+                    disableButton(button)
+                } else {
+                    event.preventDefault()
+                    addToCart({ id: productId, qty: 1 })
+                    disableButton(button)
+                }
+            }
+        })
+    }
+
+    function addToCart(product) {
+        const cart = storage.getCart()
+        if (!cart.some((item) => item.id === product.id)) {
+            cart.push(product)
+            storage.setCart(cart)
+            updateCartLink()
+        }
+    }
+
+    function disableButton(button) {
+        button.classList.add('disabled')
+        button.textContent = button.dataset.addedText
+        button.disabled = true // Amélioration de l'accessibilité
+    }
+
+    function updateCartLink() {
+        const cartItems = storage.getCart()
+        if (cartLink) {
+            cartLink.classList.toggle('disabled', cartItems.length === 0)
+        }
+        if (cartFloatLink) {
+            cartFloatLink.classList.toggle('hidden', cartItems.length === 0)
+        }
+    }
+
+    function isProductInCart(productId) {
+        const cart = storage.getCart()
+        return cart.some((item) => item.id === productId)
+    }
 
     if (isCartPage) {
         updateCartVisibility()
@@ -30,7 +133,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (cartItems.length !== 0) {
             initializeCart()
         }
-        shippingSelect.addEventListener('change', calculateCartTotal)
+        if (shippingSelect) {
+            shippingSelect.addEventListener('change', calculateCartTotal)
+        }
     }
 
     /**
@@ -41,6 +146,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             const response = await fetch(
                 `${baseUrl}/products_${currentLang}.json`
             )
+            if (!response.ok) {
+                throw new Error('Network response was not ok')
+            }
             return await response.json()
         } catch (error) {
             console.error(
@@ -57,7 +165,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     function initializeCart() {
         cartItems.forEach((cartItem) => {
             const productData = productsData.find(
-                (product) => product.id === cartItem.id
+                (product) => String(product.id) === String(cartItem.id)
             )
             if (productData) {
                 const itemElement = createCartItemElement(productData, cartItem)
@@ -104,57 +212,81 @@ document.addEventListener('DOMContentLoaded', async () => {
     function createCartItemElement(productData, cartItem) {
         const itemElement = document.createElement('article')
         itemElement.classList.add('product-item')
+
+        // Utilisation de templates littéraux pour une meilleure lisibilité
         itemElement.innerHTML = `
-            <header class="product-header">
-                <h2 id="${productData.title}" class="product-title">
-                    ${productData.title}
-                </h2>
-            </header>
-            <figure class="product-figure">
-                <img src="${productData.image}" class="product-image" alt="${
-            productData.title
-        }" />
-            </figure>
-            <section class="item-details">
-                <data class="price" value="${
-                    productData.price
-                }" itemprop="price">
-                    ${parseFloat(productData.price).toFixed(2)} €
-                </data>
-                <meta itemprop="priceCurrency" content="EUR" />
-                <div class="qty-input">
-                    <button class="qty-count qty-count--minus ${
-                        cartItem.qty === 1 ? 'disabled' : ''
-                    }" data-action="minus" type="button">-</button>
-                    <label for="qty-${
-                        cartItem.id
-                    }" class="display-none">Quantité</label>
-                    <input id="qty-${
-                        cartItem.id
-                    }" class="product-qty item-qty" type="number" name="product-qty" data-id="${
-            cartItem.id
-        }" min="1" max="10" value="${cartItem.qty}" />
-                    <button class="qty-count qty-count--add ${
-                        cartItem.qty === 10 ? 'disabled' : ''
-                    }" data-action="add" type="button">+</button>
-                </div>
-                <data class="item-total-price price" value="${(
-                    parseFloat(productData.price) * cartItem.qty
-                ).toFixed(2)}" itemprop="price">
-                    ${(parseFloat(productData.price) * cartItem.qty).toFixed(
-                        2
-                    )} €
-                </data>
-                <meta itemprop="priceCurrency" content="EUR" />
-            </section>
-            <footer class="product-footer">
-                <a href="${
-                    productData.link
-                }" class="btn btn-details" aria-label="Revoir l'article">Revoir l'article</a>
-                <a href="#" class="btn btn-card remove-from-cart" data-id="${
-                    cartItem.id
-                }" aria-label="Supprimer l'article">Supprimer l'article</a>
-            </footer>`
+<header class="product-header">
+  <h2 id="${productData.title}" class="product-title">${productData.title}</h2>
+</header>
+<figure class="product-figure">
+  <img 
+      src="${productData.image}"
+      class="product-image" 
+      alt="${productData.title}" 
+  />
+</figure>
+<section class="item-details">
+  <data class="price" value="${productData.price}" itemprop="price">
+    ${parseFloat(productData.price).toFixed(2)} €
+  </data>
+  <meta itemprop="priceCurrency" content="EUR" />
+  <div class="qty-input">
+    <button 
+      class="qty-count qty-count--minus
+       ${cartItem.qty === 1 ? 'disabled' : ''}" 
+      data-action="minus"
+      type="button"
+      aria-label="t(${'button_remove_qty'}">
+    -
+    </button>
+    <label for="qty-${cartItem.id}" class="display-none">
+      ${t('quantity')}
+    </label>
+    <input
+      id="qty-${cartItem.id}"
+      class="product-qty item-qty"
+      type="number"
+      name="product-qty"
+      data-id="${cartItem.id}"
+      min="1"
+      max="10"
+      value="${cartItem.qty}"
+    />
+    <button 
+      class="qty-count qty-count--add
+        ${cartItem.qty === 10 ? 'disabled' : ''}" 
+      data-action="add"
+      type="button"
+      aria-label="${t('button_add_qty')}"
+    >
+    +
+    </button>
+  </div>
+  <data 
+    class="item-total-price price" 
+    value="${(parseFloat(productData.price) * cartItem.qty).toFixed(2)}"
+    itemprop="price"
+  >
+  ${(parseFloat(productData.price) * cartItem.qty).toFixed(2)} €
+  </data>
+  <meta itemprop="priceCurrency" content="EUR" />
+</section>
+<footer class="product-footer">
+  <a
+    href="${productData.link}"
+    class="btn btn-details" 
+    aria-label="${t('button_detail')}">
+    ${t('button_detail')}
+  </a>
+  <a 
+    href="#"
+    class="btn btn-card remove-from-cart"
+    data-id="${cartItem.id}" 
+    aria-label="${t('button_remove')}">
+    ${t('button_remove')}
+  </a>
+</footer>`
+
         return itemElement
     }
 
@@ -162,8 +294,24 @@ document.addEventListener('DOMContentLoaded', async () => {
      * Gestion de la modification de quantité via l'input
      */
     function handleQuantityChange(input) {
+        updateQuantity(input)
+    }
+
+    /**
+     * Gestion de la modification de quantité via les boutons
+     */
+    function handleButtonQuantityChange(button) {
+        const input = button.closest('.qty-input').querySelector('.item-qty')
+        const delta = button.dataset.action === 'add' ? 1 : -1
+        updateQuantity(input, delta)
+    }
+
+    /**
+     * Mise à jour de la quantité
+     */
+    function updateQuantity(input, delta = 0) {
         const productId = input.dataset.id
-        let newQty = parseInt(input.value)
+        let newQty = parseInt(input.value) + delta
         const min = parseInt(input.min)
         const max = parseInt(input.max)
 
@@ -176,28 +324,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     /**
-     * Gestion de la modification de quantité via les boutons
-     */
-    function handleButtonQuantityChange(button) {
-        const input = button.closest('.qty-input').querySelector('.item-qty')
-        const productId = input.dataset.id
-        let currentQty = parseInt(input.value)
-        const min = parseInt(input.min)
-        const max = parseInt(input.max)
-
-        if (button.dataset.action === 'add' && currentQty < max) {
-            currentQty++
-        } else if (button.dataset.action === 'minus' && currentQty > min) {
-            currentQty--
-        }
-
-        input.value = currentQty
-        updateCartItemQuantity(productId, currentQty)
-        updateItemTotalPrice(productId, currentQty)
-        updateButtonState(productId, currentQty, min, max)
-    }
-
-    /**
      * Suppression d'un produit du panier
      */
     function removeFromCart(productId) {
@@ -206,11 +332,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         storage.setCart(cart)
 
         // Supprimer l'élément du DOM
-        const itemElement = document
-            .querySelector(`#qty-${productId}`)
-            .closest('.product-item')
-        if (itemElement) {
-            itemElement.remove()
+        const qtyInput = document.querySelector(`#qty-${productId}`)
+        if (qtyInput) {
+            const itemElement = qtyInput.closest('.product-item')
+            if (itemElement) {
+                itemElement.remove()
+            }
         }
 
         calculateCartTotal()
@@ -237,16 +364,19 @@ document.addEventListener('DOMContentLoaded', async () => {
      */
     function updateItemTotalPrice(productId, newQty) {
         const productData = productsData.find(
-            (product) => product.id === productId
+            (product) => String(product.id) === String(productId)
         )
         if (productData) {
-            const itemTotalElement = document
-                .querySelector(`#qty-${productId}`)
-                .closest('.item-details')
-                .querySelector('.item-total-price')
-            itemTotalElement.textContent = `${(
-                parseFloat(productData.price) * newQty
-            ).toFixed(2)} €`
+            const qtyInput = document.querySelector(`#qty-${productId}`)
+            if (qtyInput) {
+                const itemTotalElement = qtyInput
+                    .closest('.item-details')
+                    .querySelector('.item-total-price')
+                if (itemTotalElement) {
+                    const itemTotal = parseFloat(productData.price) * newQty
+                    itemTotalElement.textContent = `${itemTotal.toFixed(2)} €`
+                }
+            }
         }
     }
 
@@ -254,14 +384,16 @@ document.addEventListener('DOMContentLoaded', async () => {
      * Mise à jour de l'état des boutons de quantité
      */
     function updateButtonState(productId, currentQty, min, max) {
-        const qtyInput = document
-            .querySelector(`#qty-${productId}`)
-            .closest('.qty-input')
-        const minusButton = qtyInput.querySelector('.qty-count--minus')
-        const addButton = qtyInput.querySelector('.qty-count--add')
+        const qtyInput = document.querySelector(`#qty-${productId}`)
+        if (qtyInput) {
+            const qtyInputContainer = qtyInput.closest('.qty-input')
+            const minusButton =
+                qtyInputContainer.querySelector('.qty-count--minus')
+            const addButton = qtyInputContainer.querySelector('.qty-count--add')
 
-        minusButton.classList.toggle('disabled', currentQty <= min)
-        addButton.classList.toggle('disabled', currentQty >= max)
+            minusButton.classList.toggle('disabled', currentQty <= min)
+            addButton.classList.toggle('disabled', currentQty >= max)
+        }
     }
 
     /**
@@ -273,17 +405,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         cartItems.forEach((cartItem) => {
             const productData = productsData.find(
-                (product) => product.id === cartItem.id
+                (product) => String(product.id) === String(cartItem.id)
             )
             if (productData) {
                 const itemTotal = parseFloat(productData.price) * cartItem.qty
                 subtotal += itemTotal
 
-                const itemTotalElement = document
-                    .querySelector(`#qty-${cartItem.id}`)
-                    .closest('.item-details')
-                    .querySelector('.item-total-price')
-                itemTotalElement.textContent = `${itemTotal.toFixed(2)} €`
+                const qtyInput = document.querySelector(`#qty-${cartItem.id}`)
+                if (qtyInput) {
+                    const itemTotalElement = qtyInput
+                        .closest('.item-details')
+                        .querySelector('.item-total-price')
+                    if (itemTotalElement) {
+                        itemTotalElement.textContent = `${itemTotal.toFixed(
+                            2
+                        )} €`
+                    }
+                }
             }
         })
 
@@ -297,6 +435,7 @@ document.addEventListener('DOMContentLoaded', async () => {
      * Récupération du coût de livraison
      */
     function getShippingCost() {
+        if (!shippingSelect) return 0
         const selectedOption =
             shippingSelect.options[shippingSelect.selectedIndex]
         return parseFloat(selectedOption.dataset.cost) || 0
@@ -306,9 +445,15 @@ document.addEventListener('DOMContentLoaded', async () => {
      * Mise à jour du ticket récapitulatif
      */
     function updateTicket(subtotal, shippingCost, total) {
-        subtotalElement.textContent = `${subtotal.toFixed(2)} €`
-        shippingElement.textContent = `${shippingCost.toFixed(2)} €`
-        totalElement.textContent = `${total.toFixed(2)} €`
+        if (subtotalElement) {
+            subtotalElement.textContent = `${subtotal.toFixed(2)} €`
+        }
+        if (shippingElement) {
+            shippingElement.textContent = `${shippingCost.toFixed(2)} €`
+        }
+        if (totalElement) {
+            totalElement.textContent = `${total.toFixed(2)} €`
+        }
     }
 
     /**
@@ -328,23 +473,14 @@ document.addEventListener('DOMContentLoaded', async () => {
      */
     function updateCartVisibility() {
         const cartItems = storage.getCart()
-        if (cartItems.length === 0) {
-            sectionCart.classList.add('display-none')
-            sectionNoCart.classList.remove('display-none')
-        } else {
-            sectionCart.classList.remove('display-none')
-            sectionNoCart.classList.add('display-none')
+        if (sectionCart && sectionNoCart) {
+            if (cartItems.length === 0) {
+                sectionCart.classList.add('display-none')
+                sectionNoCart.classList.remove('display-none')
+            } else {
+                sectionCart.classList.remove('display-none')
+                sectionNoCart.classList.add('display-none')
+            }
         }
-    }
-
-    /**
-     * Mise à jour du lien du panier
-     */
-    function updateCartLink() {
-        const cartItems = storage.getCart()
-        if (cartLink) {
-            cartLink.classList.toggle('disabled', cartItems.length === 0)
-        }
-        cartFloatLink.classList.toggle('hidden', cartItems.length === 0)
     }
 })
