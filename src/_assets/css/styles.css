@@ -430,6 +430,11 @@ button:focus {
     transform: rotate(90deg);
 }
 
+.item-details .price {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
 /* Footer */
 .footer-section {
     border-top: var(--border-thin);
