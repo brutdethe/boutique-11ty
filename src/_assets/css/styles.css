@@ -33,6 +33,11 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
     text-rendering: optimizeLegibility;
+    margin: 0 auto;
+    max-width: 80%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 h1,
@@ -45,10 +50,7 @@ ul {
     list-style: none;
 }
 
-.wrapper {
-    margin: 0 auto;
-    max-width: 90%;
-}
+.wrapper {}
 
 .disabled {
     opacity: .5;

@@ -10,7 +10,9 @@
             type="image/x-icon"
         />
         <link rel="alternate" hreflang="fr" href="{{ page.filePathStem | customLocaleUrl("fr") | url
+
         }}"> <link rel="alternate" hreflang="en" href="{{ page.filePathStem | customLocaleUrl("en") | url
+
         }}">
 
         <link rel="stylesheet" href="{{ '/bundle.css' | url }}" />
@@ -37,10 +39,10 @@
         <title>{{ title }}</title>
     </head>
     <body>
+        {% include 'header.njk' %}
         <main class="wrapper">
-            {% include 'header.njk' %}
             {{ content | safe }}
-            {% include 'footer.njk' %}
         </main>
+        {% include 'footer.njk' %}
     </body>
 </html>
