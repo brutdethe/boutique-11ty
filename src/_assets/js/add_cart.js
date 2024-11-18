@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     function addToCart(product) {
-        const cart = storage.getCart() // Récupère le panier mis à jour
+        const cart = storage.getCart()
         if (!cart.some((item) => item.id === product.id)) {
             cart.push(product)
             storage.setCart(cart)
@@ -35,11 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateCartLink() {
         const cartItems = storage.getCart()
         const cartLink = document.getElementById('cart-link')
+        const cartFloatLink = document.getElementById('floating-cart')
         if (cartLink) {
             if (cartItems.length === 0) {
                 cartLink.classList.add('disabled')
+                cartFloatLink.classList.add('hidden')
             } else {
                 cartLink.classList.remove('disabled')
+                cartFloatLink.classList.remove('hidden')
             }
         }
     }

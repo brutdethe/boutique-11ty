@@ -58,8 +58,15 @@ ul {
     border-color: transparent !important;
 }
 
+.display-none {
+    display: none !important;
+}
+
 .hidden {
-    display: none;
+    opacity: 0 !important;
+    visibility: visible !important;
+    transform: scale(0.8) !important;
+    pointer-events: none !important;
 }
 
 /* Links */
@@ -433,4 +440,34 @@ button:focus {
     display: inline-flex;
     gap: var(--gap-large);
     padding: 0;
+}
+
+#floating-cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--focus-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+#floating-cart a {
+    color: var(--secondary-bg);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+#floating-cart:hover {
+    background-color: var(--hover-color);
+    color: var(--secondary-bg);
+
 }

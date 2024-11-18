@@ -32,7 +32,7 @@ eleventyComputed:
 
 <h1>{{ title }}</h1>
 
-<section id="cart" class="hidden">
+<section id="cart" class="display-none">
     <div id="cart-ticket">
         <h2>Ticket</h2>
 
@@ -66,7 +66,9 @@ eleventyComputed:
     <section id="cart-content" class="products-list"></section>
 </section>
 
-<section id="no-cart" class="hidden">
+<section id="no-cart" class="display-none">
     <p>{{ i18n.no_item[page.lang] }}</p>
-    <a href="{{ '/' | customLocaleUrl(page.lang) | url }}">‹ {{ i18n.no_item_link[page.lang] }}</a>
+    <a href="{{ '/' | customLocaleUrl(page.lang) | url }}"
+        >‹ {{ i18n.no_item_link[page.lang] }}</a
+    >
 </section>

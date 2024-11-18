@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const shippingElement = document.querySelector('.shipping-amount')
     const totalElement = document.querySelector('.total-amount')
     const cartLink = document.getElementById('cart-link')
+    const cartFloatLink = document.getElementById('floating-cart')
 
     const isCartPage = sectionCart && sectionNoCart
 
@@ -127,7 +128,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }" data-action="minus" type="button">-</button>
                     <label for="qty-${
                         cartItem.id
-                    }" class="hidden">Quantité</label>
+                    }" class="display-none">Quantité</label>
                     <input id="qty-${
                         cartItem.id
                     }" class="product-qty item-qty" type="number" name="product-qty" data-id="${
@@ -214,6 +215,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         calculateCartTotal()
         updateCartLink()
+        updateCartVisibility()
     }
 
     /**
@@ -327,11 +329,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     function updateCartVisibility() {
         const cartItems = storage.getCart()
         if (cartItems.length === 0) {
-            sectionCart.classList.add('hidden')
-            sectionNoCart.classList.remove('hidden')
+            sectionCart.classList.add('display-none')
+            sectionNoCart.classList.remove('display-none')
         } else {
-            sectionCart.classList.remove('hidden')
-            sectionNoCart.classList.add('hidden')
+            sectionCart.classList.remove('display-none')
+            sectionNoCart.classList.add('display-none')
         }
     }
 
@@ -343,5 +345,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (cartLink) {
             cartLink.classList.toggle('disabled', cartItems.length === 0)
         }
+        cartFloatLink.classList.toggle('hidden', cartItems.length === 0)
     }
 })

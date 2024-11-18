@@ -9,11 +9,8 @@
             rel="icon"
             type="image/x-icon"
         />
-        <link rel="alternate" hreflang="fr" href="{{ page.filePathStem | customLocaleUrl("fr") | url
-
-        }}"> <link rel="alternate" hreflang="en" href="{{ page.filePathStem | customLocaleUrl("en") | url
-
-        }}">
+        <link rel="alternate" hreflang="fr" href="{{ page.filePathStem | customLocaleUrl("fr") | url }}">
+        <link rel="alternate" hreflang="en" href="{{ page.filePathStem | customLocaleUrl("en") | url }}">
 
         <link rel="stylesheet" href="{{ '/bundle.css' | url }}" />
         <script type="module" src="{{ '/bundle.js' | url }}"></script>
@@ -44,5 +41,7 @@
             {{ content | safe }}
         </main>
         {% include 'footer.njk' %}
+
+        <a href="{{ '/cart' | customLocaleUrl(page.lang) | url }}" id="floating-cart" class="hidden">P</a>
     </body>
 </html>
