@@ -1,4 +1,4 @@
-about_title:
+about_nav:
     fr: à-propos
     en: about
 
@@ -6,29 +6,45 @@ about_url:
     fr: https://www.gongfucha.fr/pages/faq-boutique
     en: https://www.gongfucha.fr/pages/faq-boutique
 
-shop_title:
+shop_nav:
     fr: boutique
     en: shop
 
-cart_title:
+cart_nav:
     fr: panier
     en: cart
 
-privacy_title:
+privacy_nav:
     fr: confidentialité
     en: privacy notice
 
-legacy_title:
+legacy_nav:
     fr: mentions légales
     en: legal notice
+
+cart_title:
+    fr: Récapitulatif des achats
+    en: Your shopping cart
 
 card_detail:
     fr: détail
     en: detail
 
+added_to_cart_title:
+    fr: déjà ajouté
+    en: already added
+
 add_to_cart_title:
     fr: ajouter au panier
     en: add to cart
+
+no_item:
+    fr: Il n'y a pas encore d'article dans votre panier
+    en: There are no items in your shopping cart yet
+
+no_item_link:
+    fr: retour à la boutique
+    en: back to the store
 
 meta:
     description:

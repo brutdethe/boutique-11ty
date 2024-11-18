@@ -1,0 +1,74 @@
+---
+layout: _layouts/default.njk
+eleventyComputed:
+    title: '{{ i18n.cart_title[page.lang] | safe }}'
+---
+
+<style>
+    /* Section du ticket */
+    :root {
+        --cart-item-padding: 1rem;
+        --cart-gap: 1.5rem;
+        --padding-standard: 1rem;
+    }
+
+    #cart-ticket {
+        margin-top: var(--gap-large);
+        padding: var(--cart-item-padding);
+        background-color: var(--secondary-bg);
+        border: var(--border-thin);
+        border-radius: var(--cart-border-radius);
+        box-shadow: var(--card-shadow);
+    }
+
+    #no-cart {
+        background: #f7f8f9;
+        border-radius: 0.1rem;
+        color: hsl(216, 16%, 47%);
+        padding: 3.2rem 1.6rem;
+        text-align: center;
+    }
+</style>
+
+<h1>{{ title }}</h1>
+
+<section id="cart" class="display-none">
+    <div id="cart-ticket">
+        <h2>Ticket</h2>
+
+        <label for="shipping-country">Pays de livraison :</label>
+        <select id="shipping-country">
+            <option value="FR" data-cost="5">
+                France (5 € de frais de transport)
+            </option>
+            <option value="BE" data-cost="10">
+                Belgique (10 € de frais de transport)
+            </option>
+            <option value="LU" data-cost="12">
+                Luxembourg (12 € de frais de transport)
+            </option>
+            <!-- Ajoutez d'autres options de pays ici -->
+        </select>
+
+        <div id="cart-subtotal" class="cart-summary">
+            <strong>Sous-total :</strong>
+            <span class="subtotal-amount">0.00</span>
+        </div>
+        <div id="cart-shipping" class="cart-summary">
+            <strong>Frais de transport :</strong>
+            <span class="shipping-amount">5.00</span>
+        </div>
+        <div id="cart-total" class="cart-summary">
+            <strong>Total :</strong> <span class="total-amount">0.00</span>
+        </div>
+    </div>
+
+    <section id="cart-content" class="products-list"></section>
+</section>
+
+<section id="no-cart" class="display-none">
+    <p>{{ i18n.no_item[page.lang] }}</p>
+    <a href="{{ '/' | customLocaleUrl(page.lang) | url }}"
+        >‹ {{ i18n.no_item_link[page.lang] }}</a
+    >
+</section>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link
+            href="{{ '/_assets/favicon.ico' | url }}"
+            rel="icon"
+            type="image/x-icon"
+        />
+        <link rel="alternate" hreflang="fr" href="{{ page.filePathStem | customLocaleUrl("fr") | url }}">
+        <link rel="alternate" hreflang="en" href="{{ page.filePathStem | customLocaleUrl("en") | url }}">
+
+        <link rel="stylesheet" href="{{ '/bundle.css' | url }}" />
+        <script type="module" src="{{ '/bundle.js' | url }}"></script>
+
+        {% if include_slide_bundle %}
+        <link rel="stylesheet" href="{{ '/bundle-slide.css' | url }}" />
+        <script src="{{ '/bundle-slide.js' | url }}"></script>
+        {% endif %}
+
+        <meta
+            name="description"
+            content="{{ i18n.meta.description[page.lang] }}"
+        />
+
+        <meta property="og:title" content="{{ title }}" />
+        <meta
+            property="og:description"
+            content="{{ i18n.meta.description[page.lang] }}"
+        />
+        <meta property="og:url" content="{{ page.url | url }}" />
+        <meta property="og:type" content="website" />
+
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        {% include 'header.njk' %}
+        <main class="wrapper">
+            {{ content | safe }}
+        </main>
+        {% include 'footer.njk' %}
+
+        <a href="{{ '/cart' | customLocaleUrl(page.lang) | url }}" id="floating-cart" class="hidden">P</a>
+    </body>
+</html>

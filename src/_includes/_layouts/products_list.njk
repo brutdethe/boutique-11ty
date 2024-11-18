@@ -1,0 +1,36 @@
+---
+layout: _layouts/default.njk
+---
+
+{%- if not tag -%} {% set tag = i18n_categories[0] %} {%- endif -%}
+
+<header>
+    <section class="category-description">
+        <h1 id="{{ tag.title[page.lang] }}">{{ tag.title[page.lang] }}</h1>
+        <p>{{ tag.description[page.lang] }}</p>
+    </section>
+
+    <ul class="tags-list" aria-labelledby="category-title">
+        {% for category in i18n_categories %} {% set url_tag = '/category/' +
+        category.label %}
+        <li>
+            <a
+                href="{{ url_tag | customLocaleUrl(page.lang) | url }}#{{
+                    category.title[page.lang]
+                }}"
+                class="btn btn-nav {% if (category.label == tag.label) %}selected{% endif %}"
+                aria-label="{{ i18n.aria.category[page.lang] }} {{
+                    category.title[page.lang]
+                }}"
+            >
+                {{ category.title[page.lang] }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</header>
+
+<section class="products-list">
+    {%- for post in collections[tag.label] -%} {%- if post.data.page.lang ==
+    page.lang -%} {% include "product_item.njk" %} {%- endif -%} {%- endfor -%}
+</section>

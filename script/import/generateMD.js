@@ -188,16 +188,16 @@ function createMarkdownContent(
         photos?.map((photo) => `  - ${photo}`).join('\n') || ''
 
     return `---
-layout: ${layout}
+layout: _layouts/${layout}
 id: ${id}
 name: ${title}
-tags: ${tags}
+tags: ["${isEnglish ? 'product' : 'produit'}", "${tags}"]
 permalink: /${permalink}
 description: >
   ${description}
 photos:
 ${photosContent}
-price: ${prix.toFixed(2)} €
+price: ${prix.toFixed(2)}
 ${stock ? stock : ''}
 ${weight ? weight : ''}
 ${

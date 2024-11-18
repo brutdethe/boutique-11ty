@@ -1,8 +1,8 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: perrinebol2
 name: 茶杯 - CháBēi (small tea bowl)
-tags: perrine-pottiez
+tags: ["product", "perrine-pottiez"]
 permalink: /en/products/perrinebol2_cha-bei-petit-bol-a-the/
 description: >
   Ceramic 茶杯 - CháBēi. Unique piece.
@@ -10,7 +10,7 @@ photos:
   - perrine_tasse_2-a.jpg
   - perrine_tasse_2-b.jpg
   - perrine_tasse_2-c.jpg
-price: 20.00 €
+price: 20.00
 stock: 1 item left
 weight: 125 g
 options:

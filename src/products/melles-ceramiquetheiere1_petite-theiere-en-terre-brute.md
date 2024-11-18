@@ -1,8 +1,8 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: melles-ceramiquetheiere1
 name: Petite théière en terre brute
-tags: mademoiselles-ceramique
+tags: ["produit", "mademoiselles-ceramique"]
 permalink: /products/melles-ceramiquetheiere1_petite-theiere-en-terre-brute/
 description: >
   Théière 井蘭 - JǐngLán en 紅泥 - HóngNí (argile rouge) de Yixing, tournée à la main à Montpellier. Pièce unique.
@@ -13,7 +13,7 @@ photos:
   - melles-ceramique_theiere_1-d.jpg
   - melles-ceramique_theiere_1-e.jpg
   - melles-ceramique_theiere_1-f.jpg
-price: 200.00 €
+price: 200.00
 stock: il reste 1 article
 weight: 335 g
 options:

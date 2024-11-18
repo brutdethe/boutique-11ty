@@ -1,0 +1,8 @@
+---
+permalink: /products_fr.json
+---
+[ 
+{% for product in collections.produit -%}
+{%- include 'products_json.njk' -%}
+{% endfor -%}
+]

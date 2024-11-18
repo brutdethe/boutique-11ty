@@ -1,0 +1,9 @@
+<data
+    class="price"
+    value="{{ price }}"
+    itemprop="price"
+    aria-label="{{ i18n.price[page.lang] }}"
+>
+    {{ price | float | round(2) }} €
+</data>
+<meta itemprop="priceCurrency" content="EUR" />

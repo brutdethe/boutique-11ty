@@ -1,14 +1,14 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: Don10
 name: Don de 15 €
-tags: dons
+tags: ["produit", "dons"]
 permalink: /products/Don10_don-de-15/
 description: >
   Faire un don de 15 €
 photos:
   - ticket-gongfucha.jpg
-price: 15.00 €
+price: 15.00
 stock: il reste 29 articles
 
 

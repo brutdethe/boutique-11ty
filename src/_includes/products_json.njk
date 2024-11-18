@@ -1,0 +1,9 @@
+{
+  "id": "{{ product.data.id }}",
+  "title": "{{ product.data.name }}",
+  "price": "{{ product.data.price }}",
+  "link": "{{ product.url | url }}",
+  {%- set imagePath = settings.dirs['thumbs'] + product.data.photos[0] %}
+  "image": "{{ imagePath | url }}",
+  "stock": "{{ product.data.stock }}"
+}{%- if not loop.last -%},{%- endif %}

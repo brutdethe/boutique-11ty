@@ -1,15 +1,15 @@
 ---
-layout: product_card.njk
+layout: _layouts/product_card.njk
 id: ga2
 name: GàiWǎn basique
-tags: gaiwan
+tags: ["produit", "gaiwan"]
 permalink: /products/ga2_gai-wan-basique/
 description: >
   GàiWǎn basique en porcelaine blanche.
 photos:
   - gaiwan_2-a.jpg
   - gaiwan_2-b.jpg
-price: 8.00 €
+price: 8.00
 stock: il reste 8 articles
 weight: 220 g
 options:

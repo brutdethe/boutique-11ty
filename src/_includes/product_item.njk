@@ -1,16 +1,30 @@
-<article class="product-item">
+<article class="product-item product-infos" data-id="{{ post.data.id }}">
     <header class="product-header">
-        <h2 id="{{ post.data.name }}" class="product-title">{{ post.data.name }}</h2>
-        <h3 class="product-subtitle">{{post.data.tags }} {{ post.data.options.type }}</h3>
+        <h2 id="{{ post.data.name }}" class="product-title">
+            {{ post.data.name }}
+        </h2>
+        <h3 class="product-subtitle">
+            {{ post.data.tags }} {{ post.data.options.type }}
+        </h3>
     </header>
     <figure class="product-figure">
         {%- set thumbs_url = settings.dirs.thumbs + post.data.photos[0] -%}
-        <img src="{{ thumbs_url | url }}" class="product-image" alt="{{ post.data.name }}">
+        <img
+            src="{{ thumbs_url | url }}"
+            class="product-image"
+            alt="{{ post.data.name }}"
+        />
     </figure>
     <p class="product-description">{{ post.data.description }}</p>
-    <p class="price">{{ post.data.price }}</p>
+    {% set price = post.data.price %}
+    {% include 'price.njk' %}
     <footer class="product-footer">
-        <a href="{{ post.data.permalink | customLocaleUrl(page.lang) | url }}" class="btn btn-details" aria-label="{{ i18n.card_detail[page.lang] }}">{{ i18n.card_detail[page.lang] }}</a>
-        <a href="#" class="btn btn-card" data-product="{{ post.data.id }}" aria-label="{{ i18n.add_to_cart_title[page.lang] }}">{{ i18n.add_to_cart_title[page.lang] }}</a>
+        <a
+            href="{{ post.data.permalink | customLocaleUrl(page.lang) | url }}"
+            class="btn btn-details"
+            aria-label="{{ i18n.card_detail[page.lang] }}"
+            >{{ i18n.card_detail[page.lang] }}</a
+        >
+        {% include 'button_add.njk' %}
     </footer>
-  </article>
+</article>
