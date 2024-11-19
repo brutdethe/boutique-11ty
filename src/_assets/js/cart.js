@@ -417,9 +417,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         .closest('.item-details')
                         .querySelector('.item-total-price')
                     if (itemTotalElement) {
-                        itemTotalElement.textContent = `${itemTotal.toFixed(
-                            2
-                        )} €`
+                        itemTotalElement.textContent = `${itemTotal.toFixed(2)} €`
                     }
                 }
             }
