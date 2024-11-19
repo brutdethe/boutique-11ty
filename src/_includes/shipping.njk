@@ -1,4 +1,4 @@
-<label for="destination">Destination :</label>
+<label for="destination" class="display-none">Destination :</label>
 <select id="destination" name="destination">
   {% for zone, data in shipping.grille_tarifs %}
     {% for country in data.pays[page.lang] %}
@@ -15,7 +15,8 @@
 </p>
 
 <script>
-  const shippingWeight = 241; // Poids en grammes des objets
+  const shippingPoint = 9; // Points d'encombrement des objets
+  const shippingWeight = 1000; // Poids en grammes des objets
   const shippingType = 'colis_base'; // Type de colis sélectionné
   const shippingData = {{ shipping | dump | safe }}; // Injection des données YAML
 
@@ -32,12 +33,29 @@
         return;
       }
 
-      // Récupère le poids de l'emballage du type de colis
-      const colisData = shippingData.types_colis[shippingType];
-      const colisWeight = colisData ? colisData.poids_emballage : 0;
+      // Gère le cas du type de colis "sans_envois"
+      if (shippingType === 'sans_envoi') {
+        destinationSelect.classList.add('display-none');
+        shippingCostElement.textContent = '0';
+        
+        return;
+      }
 
-      // Ajoute le poids du colis au poids des objets
-      const totalWeight = shippingWeight + colisWeight;
+      // Récupère les données du type de colis
+      const colisData = shippingData.types_colis[shippingType];
+      if (!colisData) {
+        shippingCostElement.textContent = '--';
+        return;
+      }
+      const colisWeight = colisData.poids_emballage; // Poids d'un colis vide
+      const colisCapacity = colisData.capacite_points; // Capacité maximale en points
+
+      // Calcule le nombre de colis nécessaires
+      const numberOfColis = Math.ceil(shippingPoint / colisCapacity);
+
+      // Calcule le poids total (objets + poids des colis), en s'assurant qu'il ne peut pas être négatif
+      let totalWeight = shippingWeight + (numberOfColis * colisWeight);
+      totalWeight = Math.max(totalWeight, 0); // Évite les poids négatifs
 
       // Récupère les tarifs de la zone sélectionnée
       const tarifs = shippingData.grille_tarifs[selectedZone].tarifs;

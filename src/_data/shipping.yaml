@@ -118,4 +118,5 @@ types_colis:
   tube:
     poids_emballage: 120
     capacite_points: 5
+  sans_envoi:
 
