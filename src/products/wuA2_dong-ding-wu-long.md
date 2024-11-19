@@ -10,7 +10,7 @@ photos:
   - DongDing-WuLong_1-a.jpg
   - DongDing-WuLong_1-b.jpg
 price: 15.00
-stock: il reste 9 articles
+stock: 9
 weight: 125 g
 options:
   récolte: printemps 2023

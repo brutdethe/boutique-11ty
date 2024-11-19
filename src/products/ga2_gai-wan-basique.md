@@ -10,7 +10,7 @@ photos:
   - gaiwan_2-a.jpg
   - gaiwan_2-b.jpg
 price: 8.00
-stock: il reste 8 articles
+stock: 8
 weight: 220 g
 options:
   capacité: 70 ml

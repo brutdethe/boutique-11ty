@@ -11,7 +11,7 @@ photos:
   - perrine_tasse_2-b.jpg
   - perrine_tasse_2-c.jpg
 price: 20.00
-stock: il reste 1 article
+stock: 1 article
 weight: 125 g
 options:
   dimension: 7 cm x 3 cm

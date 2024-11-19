@@ -10,7 +10,7 @@ photos:
   - manon_tasse_A29-a.jpg
   - manon_tasse_A29-b.jpg
 price: 15.00
-stock: il reste 1 article
+stock: 1 article
 weight: 135 g
 options:
   dimension: 7 cm x 3 cm

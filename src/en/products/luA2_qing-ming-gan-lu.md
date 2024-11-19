@@ -10,7 +10,7 @@ photos:
   - QingMing-GanLu_1-a.jpg
   - QingMing-GanLu_1-b.jpg
 price: 15.00
-stock: 10 items left
+stock: 10
 weight: 125 g
 options:
   harvest: printemps 2023

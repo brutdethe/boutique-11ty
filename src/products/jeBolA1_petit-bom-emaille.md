@@ -10,7 +10,7 @@ photos:
   - jerome_bol_A1-a.jpg
   - jerome_bol_A1-b.jpg
 price: 18.00
-stock: il reste 28 articles
+stock: 28
 weight: 170 g
 options:
   capacité: 50 ml

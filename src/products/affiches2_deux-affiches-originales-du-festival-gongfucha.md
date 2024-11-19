@@ -9,8 +9,10 @@ description: >
 photos:
   - gongfucha_affiches_a.jpg
 price: 20.00
-stock: il reste 70 articles
+stock: 70
 weight: 125 g
+shipping_type: tube
+shipping_point: 1
 
 eleventyComputed:
   title: "{{ tags }} - {{ name }}"

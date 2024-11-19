@@ -11,8 +11,10 @@ photos:
   - serigraphie_b2t_b.jpg
   - serigraphie_b2t_c.jpg
 price: 45.00
-stock: 77 items left
+stock: 77
 weight: 125 g
+shipping_type: tube
+shipping_point: 1
 
 eleventyComputed:
   title: "{{ tags }} - {{ name }}"

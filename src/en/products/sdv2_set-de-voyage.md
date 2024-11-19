@@ -12,7 +12,7 @@ photos:
   - set-de-voyage_1-c.jpg
   - set-de-voyage_1-d.jpg
 price: 45.00
-stock: 16 items left
+stock: 16
 weight: 550 g
 options:
   capacity: 110 ml

@@ -10,7 +10,7 @@ photos:
   - LiShan-GaoShan_1-a.jpg
   - LiShan-GaoShan_1-b.jpg
 price: 15.00
-stock: 2 items left
+stock: 2
 weight: 125 g
 options:
   harvest: printemps 2023

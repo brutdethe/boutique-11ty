@@ -12,7 +12,7 @@ photos:
   - melles-ceramique_gaiwan_1-c.jpg
   - melles-ceramique_gaiwan_1-d.jpg
 price: 60.00
-stock: il reste 3 articles
+stock: 3
 weight: 315 g
 options:
   capacité: 90 ml
