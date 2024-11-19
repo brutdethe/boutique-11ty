@@ -10,63 +10,66 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 ### Terminées
 
--   US-07 Gestion du panier
+- US-07 Gestion du panier
+  - [x] ajouter un produit
+  - [x] gère les badges du panier
+  - [x] récupérer les données sur la page panier
+  - [x] changer la quantité et supprimer
+  - [x] mettre en page
+  - [x] gérer les boutons "déjà ajouté"
+  - [x] mettre en forme aucun produit dans le panier et panier désactivé
+  - [x] signaler le panier avec un bouton lors du premier article
+  - [x] i18n pour le panier
 
-    -   [x] ajouter un produit
-    -   [x] gère les badges du panier
-    -   [x] récupérer les données sur la page panier
-    -   [x] changer la quantité et supprimer
-    -   [x] mettre en page
-    -   [x] gérer les boutons "déjà ajouté"
-    -   [x] mettre en forme aucun produit dans le panier et panier désactivé
-    -   [x] signaler le panier avec un bouton lors du premier article
-    -   [x] i18n pour le panier
+- US-04 Carrousel
+  - [x] retailler les photos automatiquement
+  - [x] splide-core.min.css
+  - [x] intégrer le slider dans la fiche
+  - [x] gestion aria et tabindex
+  - [x] utilisation de [Splide.js](https://splidejs.com/) pour les carrousels
 
--   US-04 Carrousel
-    -   [x] retailler les photos automatiquement
-    -   [x] splide-core.min.css
-    -   [x] intégrer le slider dans la fiche
-    -   [x] gestion aria et tabindex
-    -   [x] utilisation de [Splide.js](https://splidejs.com/) pour les carrousels
--   US-06 Présentation des produits
+- US-06 Présentation des produits
+  - [x] Affiche les données des produits
+  - [x] Gère les styles
+  - [x] reprend le html et les styles
 
-    -   [x] Affiche les données des produits
-    -   [x] Gère les styles
-    -   [x] reprend le html et les styles
+- US-05 Migration des fiches
+  - [x] Générer des fiches .md à partir du JSON de la boutique
+  - [x] Adapter les titres des fiches
+  - [x] Adapter le .gitignore pour ne pas enregistrer tous les produits
+  - [x] Tester l'import
+  - [x] Documenter le script de migration
 
--   US-05 Migration des fiches
+- US-03 Fiche produit
+  - [x] Reprend une fiche produit
+  - [x] Affiche les données
+  - [x] Ajout une 404 et un favicon
+  - [x] Améliore l'accessibilité Aria
+  - [x] Gère l'i18n
+  - [x] Simplifie le CSS
 
-    -   [x] Générer des fiches .md à partir du JSON de la boutique
-    -   [x] Adapter les titres des fiches
-    -   [x] Adapter le .gitignore pour ne pas enregistrer tous les produits
-    -   [x] Tester l'import
-    -   [x] Documenter le script de migration
+- US-02 Gestion de l'i18n
+  - [x] Organisation des fichiers
+  - [x] Menu de sélection de la langue
+  - [x] Pages traduites
+  - [x] Traduction de l'interface
 
--   US-03 Fiche produit
-    -   [x] Reprend une fiche produit
-    -   [x] Affiche les données
-    -   [x] Ajout une 404 et un favicon
-    -   [x] Améliore l'accessibilité Aria
-    -   [x] Gère l'i18n
-    -   [x] Simplifie le CSS
--   US-02 Gestion de l'i18n
-
-    -   [x] Organisation des fichiers
-    -   [x] Menu de sélection de la langue
-    -   [x] Pages traduites
-    -   [x] Traduction de l'interface
-
--   US-01 Création de pages
-    -   [x] Header
-    -   [x] Footer
-    -   [x] Déploiement sur GitHub Pages
+- US-01 Création de pages
+  - [x] Header
+  - [x] Footer
+  - [x] Déploiement sur GitHub Pages
 
 ### À venir
 
--   US-07 Gestion du panier
--   US-08 Paiements
--   US-09 Gestion des frais de transport
--   US-10 Gestion du responsive
+- US-09 Gestion des frais de transport
+
+- US-08 Paiement
+- US-12 responsive
+- US-14 gérer les stocks
+- US-10 passer en plugin
+- US-11 currencies
+- US-13 page accueil
+
 
 ## Outils utilisés
 
