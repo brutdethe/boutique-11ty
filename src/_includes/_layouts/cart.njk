@@ -36,19 +36,7 @@ eleventyComputed:
     <div id="cart-ticket">
         <h2>Ticket</h2>
 
-        <label for="shipping-country">Pays de livraison :</label>
-        <select id="shipping-country">
-            <option value="FR" data-cost="5">
-                France (5 € de frais de transport)
-            </option>
-            <option value="BE" data-cost="10">
-                Belgique (10 € de frais de transport)
-            </option>
-            <option value="LU" data-cost="12">
-                Luxembourg (12 € de frais de transport)
-            </option>
-            <!-- Ajoutez d'autres options de pays ici -->
-        </select>
+       {% include 'shipping.njk' %}
 
         <div id="cart-subtotal" class="cart-summary">
             <strong>Sous-total :</strong>
