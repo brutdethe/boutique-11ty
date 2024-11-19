@@ -76,7 +76,7 @@ grille_tarifs:
     pays: 
       fr: ['Europe de l’Est', 'Norvège', 'Maghreb']
       en: ['Eastern Europe', 'Norway', 'Maghreb']
-    tarif:
+    tarifs:
       - poids_max: 500
         tarif: 22.70
       - poids_max: 1000
@@ -95,7 +95,7 @@ grille_tarifs:
     pays:
       fr: ['Reste du monde']
       en: ['Rest of the World']
-    tarif:
+    tarifs:
       - poids_max: 500
         tarif: 33.50
       - poids_max: 1000
