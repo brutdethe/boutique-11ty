@@ -13,3 +13,38 @@
   Frais de transport : 
   <span id="shipping-cost">--</span> €
 </p>
+
+<script>
+  const shippingWeight = 100; // Poids en grammes
+  const shippingData = {{ shipping | dump | safe }}; // Injection des données YAML
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const destinationSelect = document.getElementById('destination');
+    const shippingCostElement = document.getElementById('shipping-cost');
+
+    function calculateShippingCost() {
+      const selectedZone = destinationSelect.value;
+console.log('selectedZone', selectedZone)
+      // Vérifie si une zone est sélectionnée
+      if (!selectedZone || !shippingData.grille_tarifs[selectedZone]) {
+        shippingCostElement.textContent = '--';
+        return;
+      }
+
+      // Récupère les tarifs de la zone sélectionnée
+      const tarifs = shippingData.grille_tarifs[selectedZone].tarifs;
+
+      // Trouve le tarif correspondant au poids total
+      const tarif = tarifs.find(t => shippingWeight <= t.poids_max);
+
+      // Affiche le tarif ou "--" si non trouvé
+      shippingCostElement.textContent = tarif ? `${tarif.tarif}` : '--';
+    }
+
+    // Ajoute un écouteur pour recalculer les frais à chaque changement de destination
+    destinationSelect.addEventListener('change', calculateShippingCost);
+
+    // Calcul initial au chargement de la page
+    calculateShippingCost();
+  });
+</script>
