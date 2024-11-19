@@ -10,12 +10,13 @@
 </select>
 
 <p>
-  Frais de transport : 
+  Frais de transport (colissimo la Poste) : 
   <span id="shipping-cost">--</span> €
 </p>
 
 <script>
-  const shippingWeight = 100; // Poids en grammes
+  const shippingWeight = 241; // Poids en grammes des objets
+  const shippingType = 'colis_base'; // Type de colis sélectionné
   const shippingData = {{ shipping | dump | safe }}; // Injection des données YAML
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -24,18 +25,25 @@
 
     function calculateShippingCost() {
       const selectedZone = destinationSelect.value;
-console.log('selectedZone', selectedZone)
+
       // Vérifie si une zone est sélectionnée
       if (!selectedZone || !shippingData.grille_tarifs[selectedZone]) {
         shippingCostElement.textContent = '--';
         return;
       }
 
+      // Récupère le poids de l'emballage du type de colis
+      const colisData = shippingData.types_colis[shippingType];
+      const colisWeight = colisData ? colisData.poids_emballage : 0;
+
+      // Ajoute le poids du colis au poids des objets
+      const totalWeight = shippingWeight + colisWeight;
+
       // Récupère les tarifs de la zone sélectionnée
       const tarifs = shippingData.grille_tarifs[selectedZone].tarifs;
 
       // Trouve le tarif correspondant au poids total
-      const tarif = tarifs.find(t => shippingWeight <= t.poids_max);
+      const tarif = tarifs.find(t => totalWeight <= t.poids_max);
 
       // Affiche le tarif ou "--" si non trouvé
       shippingCostElement.textContent = tarif ? `${tarif.tarif}` : '--';
