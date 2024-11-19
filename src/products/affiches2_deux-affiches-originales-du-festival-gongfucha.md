@@ -13,7 +13,6 @@ stock: 70
 weight: 125
 shipping_type: tube
 shipping_point: 1
-
 eleventyComputed:
   title: "{{ tags }} - {{ name }}"
 ---

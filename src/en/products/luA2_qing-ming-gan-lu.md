@@ -12,6 +12,8 @@ photos:
 price: 15.00
 stock: 10
 weight: 125
+shipping_type: colis_base
+shipping_point: 2
 options:
   harvest: printemps 2023
   altitude: 900m

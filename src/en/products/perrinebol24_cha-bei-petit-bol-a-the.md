@@ -10,8 +10,10 @@ photos:
   - perrine_tasse_24-a.jpg
   - perrine_tasse_24-b.jpg
 price: 20.00
-stock: 1 item left
+stock: 1
 weight: 125
+shipping_type: colis_base
+shipping_point: 2
 options:
   dimension: 7 cm x 3 cm
   capacity: 30 ml

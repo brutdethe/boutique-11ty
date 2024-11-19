@@ -15,6 +15,8 @@ photos:
 price: 142.00
 stock: 1 article
 weight: 220
+shipping_type: colis_base
+shipping_point: 5
 options:
   capacité: 80 ml
 eleventyComputed:

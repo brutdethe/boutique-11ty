@@ -12,6 +12,8 @@ photos:
 price: 50.00
 stock: 1 article
 weight: 193
+shipping_type: colis_base
+shipping_point: 3
 options:
   capacité: 70
 eleventyComputed:

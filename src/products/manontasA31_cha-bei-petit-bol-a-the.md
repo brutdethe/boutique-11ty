@@ -12,6 +12,8 @@ photos:
 price: 15.00
 stock: 1 article
 weight: 135
+shipping_type: colis_base
+shipping_point: 2
 options:
   dimension: 7 cm x 3 cm
   capacité: 40 ml

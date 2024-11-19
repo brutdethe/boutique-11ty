@@ -14,6 +14,8 @@ photos:
 price: 60.00
 stock: 3
 weight: 315
+shipping_type: colis_base
+shipping_point: 5
 options:
   capacity: 90 ml
 eleventyComputed:
