@@ -1,0 +1,15 @@
+<label for="destination">Destination :</label>
+<select id="destination" name="destination">
+  {% for zone, data in shipping.grille_tarifs %}
+    {% for country in data.pays[page.lang] %}
+      <option value="{{ zone }}">
+        {{ country }}
+      </option>
+    {% endfor %}
+  {% endfor %}
+</select>
+
+<p>
+  Frais de transport : 
+  <span id="shipping-cost">--</span> €
+</p>
