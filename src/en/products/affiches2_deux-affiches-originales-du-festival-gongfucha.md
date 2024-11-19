@@ -10,7 +10,7 @@ photos:
   - gongfucha_affiches_a.jpg
 price: 20.00
 stock: 70
-weight: 125 g
+weight: 125
 shipping_type: tube
 shipping_point: 1
 

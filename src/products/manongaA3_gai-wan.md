@@ -11,7 +11,7 @@ photos:
   - manon_gaiwan_A3-b.jpg
 price: 50.00
 stock: 1 article
-weight: 193 g
+weight: 193
 options:
   capacité: 70
 eleventyComputed:

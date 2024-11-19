@@ -13,7 +13,7 @@ photos:
   - melles-ceramique_gaiwan_1-d.jpg
 price: 60.00
 stock: 3
-weight: 315 g
+weight: 315
 options:
   capacité: 90 ml
 eleventyComputed:

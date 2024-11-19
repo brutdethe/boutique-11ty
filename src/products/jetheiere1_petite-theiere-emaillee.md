@@ -14,7 +14,7 @@ photos:
   - jerome_theiere_1-e.jpg
 price: 142.00
 stock: 1 article
-weight: 220 g
+weight: 220
 options:
   capacité: 80 ml
 eleventyComputed:

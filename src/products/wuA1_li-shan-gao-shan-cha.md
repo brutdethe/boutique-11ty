@@ -11,7 +11,7 @@ photos:
   - LiShan-GaoShan_1-b.jpg
 price: 15.00
 stock: 2
-weight: 125 g
+weight: 125
 options:
   récolte: printemps 2023
   type: 青茶 - QīngChá

@@ -10,6 +10,7 @@ photos:
   - ticket-gongfucha.jpg
 price: 5.00
 stock: 30
+shipping_type: sans_envoi
 
 
 eleventyComputed:

@@ -11,7 +11,7 @@ photos:
   - jerome_bol_A1-b.jpg
 price: 18.00
 stock: 28
-weight: 170 g
+weight: 170
 options:
   capacité: 50 ml
 eleventyComputed:

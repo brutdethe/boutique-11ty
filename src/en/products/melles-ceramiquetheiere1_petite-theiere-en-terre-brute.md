@@ -15,7 +15,7 @@ photos:
   - melles-ceramique_theiere_1-f.jpg
 price: 200.00
 stock: 1 item left
-weight: 335 g
+weight: 335
 options:
   capacity: 100 ml
 eleventyComputed:

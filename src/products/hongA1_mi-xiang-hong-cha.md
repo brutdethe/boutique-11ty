@@ -12,7 +12,7 @@ photos:
   - conserve_1-c.jpg
 price: 15.00
 stock: 10
-weight: 125 g
+weight: 125
 options:
   récolte: printemps 2023
   type: 红茶 - HóngChá

@@ -15,7 +15,7 @@ photos:
   - theiere_9-f.jpg
 price: 80.00
 stock: 1 article
-weight: 235 g
+weight: 235
 options:
   origine: 臺灣 - Táiwān
   capacité: 220 ml

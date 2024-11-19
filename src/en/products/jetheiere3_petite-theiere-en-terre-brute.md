@@ -15,7 +15,7 @@ photos:
   - jerome_theiere_3-f.jpg
 price: 132.00
 stock: 1 item left
-weight: 230 g
+weight: 230
 options:
   capacity: 100 ml
 eleventyComputed:

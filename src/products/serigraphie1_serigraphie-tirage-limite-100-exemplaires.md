@@ -12,7 +12,7 @@ photos:
   - serigraphie_b2t_c.jpg
 price: 45.00
 stock: 77
-weight: 125 g
+weight: 125
 shipping_type: tube
 shipping_point: 1
 
