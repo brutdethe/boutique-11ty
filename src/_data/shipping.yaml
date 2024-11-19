@@ -12,7 +12,7 @@ grille_tarifs:
       - poids_max: 750
         tarif: 8.65
       - poids_max: 1000
-        tarif: 9,40
+        tarif: 9.40
       - poids_max: 2000
         tarif: 10.70
       - poids_max: 5000
@@ -118,5 +118,5 @@ types_colis:
   tube:
     poids_emballage: 120
     capacite_points: 5
-  sans_envoi:
+  sans_envoi: null
 

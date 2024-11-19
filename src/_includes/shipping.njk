@@ -1,4 +1,4 @@
-<label for="destination" class="display-none">Destination :</label>
+<label for="destination" id="destination-label" class="display-none">Destination :</label>
 <select id="destination" name="destination">
   {% for zone, data in shipping.grille_tarifs %}
     {% for country in data.pays[page.lang] %}
@@ -15,62 +15,81 @@
 </p>
 
 <script>
-  const shippingPoint = 9; // Points d'encombrement des objets
-  const shippingWeight = 1000; // Poids en grammes des objets
-  const shippingType = 'colis_base'; // Type de colis sélectionné
-  const shippingData = {{ shipping | dump | safe }}; // Injection des données YAML
-
   document.addEventListener('DOMContentLoaded', function () {
-    const destinationSelect = document.getElementById('destination');
-    const shippingCostElement = document.getElementById('shipping-cost');
+  const destinationSelect = document.getElementById('destination');
+  const shippingCostElement = document.getElementById('shipping-cost');
 
-    function calculateShippingCost() {
-      const selectedZone = destinationSelect.value;
+  const items = [
+    { type: 'colis_base', weight: 250, points: 11 },
+    { type: 'tube', weight: 100, points: 2 },
+    { type: 'sans_envoi', weight: 0, points: 0 },
+  ];
 
-      // Vérifie si une zone est sélectionnée
-      if (!selectedZone || !shippingData.grille_tarifs[selectedZone]) {
-        shippingCostElement.textContent = '--';
-        return;
-      }
+  const shippingData = {{ shipping | dump | safe }};
 
-      // Gère le cas du type de colis "sans_envois"
-      if (shippingType === 'sans_envoi') {
-        destinationSelect.classList.add('display-none');
-        shippingCostElement.textContent = '0';
-        
-        return;
-      }
+  /**
+   * Calcul le nombre de colis nécessaires pour un objet donné.
+   */
+  function calculateColisCount(item, colisData) {
+    if (!colisData) return 0;
+    const colisCapacity = colisData.capacite_points;
+    return item.points <= colisCapacity ? 1 : Math.ceil(item.points / colisCapacity);
+  }
 
-      // Récupère les données du type de colis
-      const colisData = shippingData.types_colis[shippingType];
-      if (!colisData) {
-        shippingCostElement.textContent = '--';
-        return;
-      }
-      const colisWeight = colisData.poids_emballage; // Poids d'un colis vide
-      const colisCapacity = colisData.capacite_points; // Capacité maximale en points
+  /**
+   * Calcule le poids total pour un objet donné.
+   */
+  function calculateItemWeight(item, numberOfColis, colisData) {
+    return item.weight + (numberOfColis * colisData.poids_emballage);
+  }
 
-      // Calcule le nombre de colis nécessaires
-      const numberOfColis = Math.ceil(shippingPoint / colisCapacity);
+  /**
+   * Calcule les frais pour un type de colis dans une zone.
+   */
+  function calculateCostForColis(totalWeight, selectedZone) {
+    const tarifs = shippingData.grille_tarifs[selectedZone].tarifs;
+    const tarif = tarifs.find(t => totalWeight <= t.poids_max);
+    return tarif ? tarif.tarif : 0;
+  }
 
-      // Calcule le poids total (objets + poids des colis), en s'assurant qu'il ne peut pas être négatif
-      let totalWeight = shippingWeight + (numberOfColis * colisWeight);
-      totalWeight = Math.max(totalWeight, 0); // Évite les poids négatifs
+  /**
+   * Calcule les frais de transport pour la zone sélectionnée.
+   */
+  function calculateShippingCost(selectedZone) {
+    if (!selectedZone || !shippingData.grille_tarifs[selectedZone]) return 0;
 
-      // Récupère les tarifs de la zone sélectionnée
-      const tarifs = shippingData.grille_tarifs[selectedZone].tarifs;
+    let totalCost = 0;
 
-      // Trouve le tarif correspondant au poids total
-      const tarif = tarifs.find(t => totalWeight <= t.poids_max);
+    items.forEach(item => {
+      if (item.type === 'sans_envoi') return; // Ignorer les objets sans envoi
 
-      // Affiche le tarif ou "--" si non trouvé
-      shippingCostElement.textContent = tarif ? `${tarif.tarif}` : '--';
-    }
+      const colisData = shippingData.types_colis[item.type];
+      const numberOfColis = calculateColisCount(item, colisData);
+      const totalWeight = calculateItemWeight(item, numberOfColis, colisData);
 
-    // Ajoute un écouteur pour recalculer les frais à chaque changement de destination
-    destinationSelect.addEventListener('change', calculateShippingCost);
+      console.log(`Type : ${item.type}, Points : ${item.points}, Colis : ${numberOfColis}, Poids : ${totalWeight}`);
+      
+      // Calcule le coût pour cet objet et l'ajoute au total
+      const cost = calculateCostForColis(totalWeight, selectedZone);
+      totalCost += cost;
+    });
 
-    // Calcul initial au chargement de la page
-    calculateShippingCost();
-  });
+    return totalCost;
+  }
+
+  /**
+   * Met à jour l'interface utilisateur avec les frais de transport calculés.
+   */
+  function updateShippingCost() {
+    const selectedZone = destinationSelect.value;
+    const shippingCost = calculateShippingCost(selectedZone);
+
+    shippingCostElement.textContent = shippingCost.toFixed(2);
+  }
+
+  destinationSelect.addEventListener('change', updateShippingCost);
+  updateShippingCost();
+});
+
+
 </script>
