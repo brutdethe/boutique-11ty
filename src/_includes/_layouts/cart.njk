@@ -4,133 +4,15 @@ eleventyComputed:
     title: '{{ i18n.cart_title[page.lang] | safe }}'
 ---
 
-<style>
-    :root {
-        --cart-item-padding: 1rem;
-        --padding-standard: 1rem;
-    }
+<h1 id="cart-title">{{ title }}</h1>
 
-    #cart {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: var(--gap-large);
-        width: 100%;
-    }
-
-    #cart-content {
-        grid-column: span 3;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: var(--gap-large);
-        padding: 0;
-        opacity: .8;
-    }
-    cart-sum
-    #cart-content .product-title {
-        font-size: 1.2rem;
-        font-weight: 500;
-    }
-
-    #cart-content .price,
-    #cart-ticket .subtotal-amount,
-    #cart-ticket .shipping-amount {
-        font-size: 1.2rem;
-    }
-
-    #cart-content .product-image {
-        filter: grayscale(.7);
-    }
-
-    #cart-ticket {
-        grid-column: span 1;
-        padding: var(--cart-item-padding);
-        background-color: var(--secondary-bg);
-        border: var(--border-thin);
-        box-shadow: var(--shadow);
-    }
-
-    #cart-ticket .cart-ticket-title {
-        margin: 0;
-        font-weight: bold;
-        padding-bottom: 2rem;
-        text-transform: uppercase;
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    #cart-ticket strong {
-        font-size: 1.2rem;
-    }
-
-    #no-cart {
-        background: var(--secondary-bg);
-        border: var(--border-thin);
-        color: var(--primary-color);
-        padding: 3.2rem 1.6rem;
-        text-align: center;
-    }
-
-    select {
-        border: var(--border-thin);
-        flex: 1;
-        padding: 0 1em;
-        cursor: pointer;
-        font-size: 1rem;
-    }
-
-    select::-ms-expand {
-        display: none;
-    }
-
-    .select {
-        position: relative;
-        display: flex;
-        width: 100%;
-        height: 2rem;
-        overflow: hidden;
-        margin: .5rem 0 2rem;
-    }
-
-    .select::after {
-        content: '\25BC';
-        position: absolute;
-        right: 0;
-        padding: .3rem 1em;
-        background-color: var(--border-color);
-        transition: .25s all ease;
-        pointer-events: none;
-    }
-
-    .select:hover::after {
-        color: var(--primary-color);
-    }
-
-    .select:has(> .disabled)::after {
-        color: var(--primary-color);
-        cursor: not-allowed !important;
-    }
-
-    .cart-summary {
-        display: flex;
-        justify-content: space-between;
-        padding: var(--cart-item-padding) 0;
-        padding:0;
-    }
-
-    .summary-total {
-       padding: 2rem 0; 
-    }
-</style>
-
-<h1>{{ title }}</h1>
-
-<section id="cart" class="">
+<section id="cart" class="" aria-labelledby="cart-title">
     <div id="cart-content" class="products-list"></div>
-    <div id="cart-ticket">
+    <div id="cart-ticket" aria-live="polite">
         <h2 class="cart-ticket-title">{{ i18n.receipt[page.lang] }}</h2>
         <label for="destination" id="destination-label">{{ i18n.destination[page.lang] }}</label>
         <div class="select">
-            <select id="destination" name="destination">
+            <select id="destination" name="destination" aria-labelledby="destination-label" aria-required="true" role="combobox">
             {% for zone, data in shipping.grille_tarifs %}
                 {% for country in data.pays[page.lang] %}
                 <option value="{{ zone }}">
@@ -141,29 +23,29 @@ eleventyComputed:
             </select>
         </div>
 
-        <div class="cart-summary">
-            <strong>{{ i18n.subtotal_amount[page.lang] }}</strong>
-            <data class="price subtotal-amount" value="${productData.price}" itemprop="price">0.00</data>
+        <div class="cart-summary" aria-labelledby="subtotal-label" aria-describedby="subtotal-amount">
+            <strong id="subtotal-label">{{ i18n.subtotal_amount[page.lang] }}</strong>
+            <data id="subtotal-amount" class="price subtotal-amount" value="${productData.price}" itemprop="price">0.00</data>
             <meta itemprop="priceCurrency" content="EUR" />
         </div>
-        <div class="cart-summary">
-            <strong>{{ i18n.shipping_amount[page.lang] }}</strong>
-            <data class="price shipping-amount" value="${productData.price}" itemprop="price">0.00</data>
+        <div class="cart-summary" aria-labelledby="shipping-label" aria-describedby="shipping-amount">
+            <strong id="shipping-label">{{ i18n.shipping_amount[page.lang] }}</strong>
+            <data id="shipping-amount" class="price shipping-amount" value="${productData.price}" itemprop="price">0.00</data>
             <meta itemprop="priceCurrency" content="EUR" />
         </div>
-        <div class="cart-summary summary-total">
-            <strong>{{ i18n.total[page.lang] }}</strong>
-            <data class="price total-amount" value="${productData.price}" itemprop="price">0.00</data>
+        <div class="cart-summary summary-total" aria-labelledby="total-label" aria-describedby="total-amount">
+            <strong id="total-label">{{ i18n.total[page.lang] }}</strong>
+            <data id="total-amount" class="price total-amount" value="${productData.price}" itemprop="price">0.00</data>
             <meta itemprop="priceCurrency" content="EUR" />
         </div>
     </div>
 </section>
 
-<section id="no-cart" class="display-none">
+<section id="no-cart" class="display-none" role="alert">
     <p>{{ i18n.no_item[page.lang] }}</p>
-    <a href="{{ '/' | customLocaleUrl(page.lang) | url }}"
-        >‹ {{ i18n.no_item_link[page.lang] }}</a
-    >
+    <a href="{{ '/' | customLocaleUrl(page.lang) | url }}" aria-label="{{ i18n.no_item_link[page.lang] }} - retour à l'accueil">
+        ‹ {{ i18n.no_item_link[page.lang] }}
+    </a>
 </section>
 
 <script>

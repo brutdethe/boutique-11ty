@@ -12,17 +12,7 @@
     --gap-large: 1.5rem;
 }
 
-input[type='number'] {
-    appearance: textfield;
-}
-
-input[type='number']::-webkit-outer-spin-button,
-input[type='number']::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Global Elements */
+/* General Styles */
 html {
     -webkit-tap-highlight-color: transparent;
 }
@@ -50,10 +40,8 @@ ul {
     list-style: none;
 }
 
-.wrapper {}
-
 .disabled {
-    opacity: .5;
+    opacity: 0.5;
     cursor: not-allowed !important;
 }
 
@@ -68,13 +56,10 @@ ul {
     pointer-events: none !important;
 }
 
-/* Links */
+/* Link Styles */
 a,
 .tags-list a {
     color: var(--primary-color);
-}
-
-a {
     text-decoration: underline;
     text-decoration-color: var(--border-color);
     text-decoration-thickness: 1px;
@@ -94,7 +79,7 @@ select:focus {
     align-items: center;
     border-bottom: var(--border-thin);
     display: flex;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--gap-large);
     padding-top: 1rem;
 }
 
@@ -104,8 +89,8 @@ select:focus {
 }
 
 .logo-link img {
-    height: auto;
     width: 80px;
+    height: auto;
 }
 
 /* Navigation */
@@ -130,14 +115,11 @@ select:focus {
 .tags-list {
     border-bottom: var(--border-thin);
     flex-wrap: wrap;
-    padding: 0;
-    padding-bottom: 1.5rem;
+    padding: 0 0 1.5rem 0;
 }
 
-.currency-list .selected,
-.language-list .selected,
-.tags-list .selected {
-    background-color: var(--border-color);
+.selected {
+    background-color: var(--border-color) !important;
 }
 
 .tags-list .selected {
@@ -156,7 +138,7 @@ select:focus {
     background-color: var(--primary-color);
     color: var(--bg-color);
     margin-bottom: 1.2rem;
-    padding: .3rem 1rem 1rem;
+    padding: 0.3rem 1rem 1rem;
 }
 
 .category-description h2 {
@@ -214,7 +196,7 @@ select:focus {
 }
 
 .card-caption {
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     bottom: 0.2rem;
     font-size: 0.8rem;
     left: 0.2rem;
@@ -252,11 +234,6 @@ select:focus {
     margin: 0;
 }
 
-.card-description dd::after {
-    content: "";
-    display: block;
-}
-
 .card-footer {
     margin-top: auto;
 }
@@ -268,7 +245,7 @@ select:focus {
 
 .card-footer .btn-card {
     float: left;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
 }
 
 .add-to-cart.buyed {
@@ -332,16 +309,16 @@ select:focus {
 .badge::after {
     background: var(--primary-color);
     background-clip: padding-box;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     color: var(--bg-color);
     content: attr(data-badge);
     display: inline-block;
-    transform: translate(-.05rem, -.5rem);
+    transform: translate(-0.05rem, -0.5rem);
 }
 
 .badge[data-badge]::after {
-    font-size: .7rem;
-    min-width: .9rem;
+    font-size: 0.7rem;
+    min-width: 0.9rem;
     text-align: center;
     white-space: nowrap;
 }
@@ -350,7 +327,7 @@ select:focus {
 .btn {
     padding: 0.8rem 1.2rem;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
@@ -362,15 +339,12 @@ select:focus {
 .btn-nav {
     background: transparent;
     border: var(--border-thin);
+    font-size: 0.9rem;
+    padding: 0.5rem;
 }
 
 .btn-details {
     border-top: var(--border-thin);
-}
-
-.btn-nav {
-    font-size: 0.9rem;
-    padding: 0.5rem;
 }
 
 .btn-card:hover {
@@ -390,25 +364,121 @@ select:focus {
     flex: 1;
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 0rem;
-    padding: .5rem;
+    margin: 0;
+    padding: 0.5rem;
     text-align: right;
 }
 
-#cart-content {
-    padding: 2rem 0;
+/* Cart Styles */
+#cart {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap-large);
+    width: 100%;
 }
 
-#cart-content .price {
+#cart-content {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--gap-large);
+    padding: 0;
+    opacity: 0.8;
+}
+
+#cart-content .product-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#cart-ticket .subtotal-amount,
+#cart-ticket .shipping-amount {
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+#cart-content .product-image {
+    filter: grayscale(0.7);
+}
+
+#cart-ticket {
+    grid-column: span 1;
+    padding: 1rem;
+    background-color: var(--secondary-bg);
+    border: var(--border-thin);
+    box-shadow: var(--shadow);
+    max-height: 35rem;
+}
+
+#cart-ticket .cart-ticket-title {
+    margin: 0;
+    font-weight: bold;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
     text-align: center;
 }
 
-.qty-input,
-.product-item .item-details,
+#cart-ticket strong {
+    font-size: 1.2rem;
+}
+
+#no-cart {
+    background: var(--secondary-bg);
+    border: var(--border-thin);
+    color: var(--primary-color);
+    padding: 3.2rem 1.6rem;
+    text-align: center;
+}
+
+/* Select Styles */
+select {
+    border: var(--border-thin);
+    flex: 1;
+    padding: 0 1em;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 2rem;
+    overflow: hidden;
+    margin: 0.5rem 0 2rem;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    right: 0;
+    padding: 0.3rem 1em;
+    background-color: var(--border-color);
+    transition: 0.25s all ease;
+    pointer-events: none;
+}
+
+.select:hover::after {
+    color: var(--primary-color);
+}
+
+/* Cart Summary */
 .cart-summary {
     display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.summary-total {
+    padding: 2rem 0;
+}
+
+.qty-input,
+.product-item .item-details {
+    display: flex;
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
 }
 
 .qty-input .product-qty,
@@ -430,10 +500,6 @@ select:focus {
     cursor: pointer;
 }
 
-.qty-input .qty-count--add:after {
-    transform: rotate(90deg);
-}
-
 .item-details .price {
     color: var(--text-color);
     font-weight: 500;
@@ -451,6 +517,7 @@ select:focus {
     padding: 0;
 }
 
+/* Floating Cart */
 #floating-cart {
     position: fixed;
     bottom: 20px;
@@ -478,6 +545,4 @@ select:focus {
 
 #floating-cart:hover {
     background-color: var(--hover-color);
-    color: var(--secondary-bg);
-
 }

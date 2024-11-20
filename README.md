@@ -10,6 +10,16 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 ### Terminées
 
+- US-09 Gestion des frais de transport
+  - [x] mise en place de la grille tarifaire
+  - [x] affichage de la liste des pays
+  - [x] calcul d'un produit par poids
+  - [x] calcul d'un produit par type de colis
+  - [x] calcul d'un produit par points d'encombrement
+  - [x] gestion des "sans envoi"
+  - [x] intégration css pour la mise en forme du ticket
+  - [x] documentation
+
 - US-07 Gestion du panier
   - [x] ajouter un produit
   - [x] gère les badges du panier
@@ -60,8 +70,6 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
   - [x] Déploiement sur GitHub Pages
 
 ### À venir
-
-- US-09 Gestion des frais de transport
 
 - US-08 Paiement
 - US-12 responsive
