@@ -6,7 +6,7 @@
     --secondary-bg: #f7f3ee;
     --bg-color: #fafafa;
     --focus-color: #ffcc00;
-    --shadow: 0 .25rem 1rem var(--secondary-bg);
+    --shadow: 0 .25rem 1rem var(--border-color);
     --border-thin: .5px solid var(--border-color);
     --gap-small: 0.5rem;
     --gap-large: 1.5rem;
@@ -458,6 +458,7 @@ select:focus {
     width: 50px;
     height: 50px;
     background-color: var(--focus-color);
+    box-shadow: var(--shadow);
     border-radius: 50%;
     display: flex;
     align-items: center;
