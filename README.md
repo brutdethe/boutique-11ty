@@ -121,9 +121,106 @@ Pour générer les fichiers Markdown, exécutez le script suivant :
 $ node generateMarkdown.js
 ```
 
+## Gestion des Frais de Transport
+
+### Fonctionnement
+
+Le système de frais de transport est basé sur un fichier YAML : [`/src/_data/shipping.yaml`](./src/_data/shipping.yaml), qui contient une grille tarifaire organisée par zones géographiques, ainsi que les caractéristiques des types de colis disponibles.
+
+### Grille Tarifaire
+
+La grille tarifaire définit les frais de transport en fonction du poids total des colis et de la destination. Les zones géographiques sont :
+
+- **France** : Inclut `France métropolitaine`, `Andorra`, `Monaco`.
+- **Outre-mer** : `France Outre-mer`.
+- **Zone A** : Union Européenne et Suisse.
+- **Zone B** : Europe de l'Est, Norvège, Maghreb.
+- **Zone C** : Reste du monde.
+
+Chaque zone contient une liste de seuils de poids et les tarifs associés. Par exemple :
+
+```yaml
+France:
+  tarifs:
+    - poids_max: 250
+      tarif: 5.25
+    - poids_max: 500
+      tarif: 7.35
+    - poids_max: 1000
+      tarif: 9.40
+```
+
+### Types de Colis
+
+Les types de colis disponibles sont définis comme suit :
+
+```yaml
+types_colis:
+  colis_base:
+    poids_emballage: 260
+    capacite_points: 10
+  tube:
+    poids_emballage: 120
+    capacite_points: 5
+  sans_envoi: null
+```
+- **colis_base** : Colis standard, avec un poids d'emballage de 260 g et une capacité maximale de 10 points d'encombrement.
+- **tube** : Emballage léger (120 g), avec une capacité maximale de 5 points d'encombrement.
+- **sans_envoi** : Articles dématérialisés, sans poids ni frais d'expédition.
+
+### Calcul des Frais
+
+1. **Regroupement des Articles par Type de Colis** :
+   Les articles du panier sont regroupés selon leur type de colis (`colis_base`, `tube`, etc.).
+
+2. **Détermination du Nombre de Colis** :
+   Pour chaque type de colis, les points d'encombrement des articles sont additionnés. Si les points dépassent la capacité du colis, plusieurs colis sont nécessaires :
+   \[
+   \text{Nombre de colis} = \lceil \frac{\text{points totaux}}{\text{capacité}} \rceil
+   \]
+
+3. **Poids Total Par Colis** :
+   Le poids total est calculé en additionnant le poids des articles et le poids des emballages requis.
+
+4. **Frais Par Colis** :
+   Le poids total est comparé à la grille tarifaire de la zone géographique sélectionnée. Le tarif correspondant est appliqué.
+
+5. **Frais Totaux** :
+   Les frais de tous les colis sont additionnés pour obtenir un montant total.
+
+### Exemple de Calcul
+
+#### Panier
+- **Produit 1** :
+  - Poids : 250 g.
+  - Points : 11.
+  - Type : `colis_base`.
+- **Produit 2** :
+  - Poids : 100 g.
+  - Points : 2.
+  - Type : `tube`.
+
+#### Destination
+- **France**.
+
+#### Calcul
+1. **Produit 1** :
+   - 2 colis nécessaires (11 points > 10).
+   - Poids total : \( 250 + (260 \times 2) = 770 \, \text{g} \).
+   - Tarif : \( 9.40 \, \text{€} \).
+
+2. **Produit 2** :
+   - 1 colis nécessaire (2 points ≤ 5).
+   - Poids total : \( 100 + 120 = 220 \, \text{g} \).
+   - Tarif : \( 5.25 \, \text{€} \).
+
+3. **Total Frais** :
+   - \( 9.40 + 5.25 = 14.65 \, \text{€} \).
+
+
 ## Contribuer
 
-Si vous souhaitez contribuer, contactez-nous.
+Si vous souhaitez contribuer, contactez : [coucou@gongfucha.fr](mailto:coucou@gongfucha.fr)
 
 Merci à :
 
@@ -137,4 +234,5 @@ En bref : utilisez, modifiez, et distribuez sans restriction.
 
 ## Contact
 
+Stéphane Langlois  
 [coucou@gongfucha.fr](mailto:coucou@gongfucha.fr)
