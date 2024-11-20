@@ -26,6 +26,26 @@ cart_title:
     fr: Récapitulatif des achats
     en: Your shopping cart
 
+receipt:
+    fr: Ticket
+    en: Receipt
+
+destination:
+    fr: 'destination :'
+    en: 'destination:'
+
+subtotal_amount:
+    fr: 'Sous-total :'
+    en: 'Subtotal amount:'
+
+shipping_amount:
+    fr: 'Frais de transport :'
+    en: 'Shipping amount:'
+
+total:
+    fr: 'Total :'
+    en: 'Total:'
+
 card_detail:
     fr: détail
     en: detail

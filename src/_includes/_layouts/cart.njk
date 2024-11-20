@@ -127,8 +127,8 @@ eleventyComputed:
 <section id="cart" class="">
     <div id="cart-content" class="products-list"></div>
     <div id="cart-ticket">
-        <h2 class="cart-ticket-title">Ticket</h2>
-        <label for="destination" id="destination-label">Destination :</label>
+        <h2 class="cart-ticket-title">{{ i18n.receipt[page.lang] }}</h2>
+        <label for="destination" id="destination-label">{{ i18n.destination[page.lang] }}</label>
         <div class="select">
             <select id="destination" name="destination">
             {% for zone, data in shipping.grille_tarifs %}
@@ -142,17 +142,17 @@ eleventyComputed:
         </div>
 
         <div class="cart-summary">
-            <strong>Sous-total :</strong>
+            <strong>{{ i18n.subtotal_amount[page.lang] }}</strong>
             <data class="price subtotal-amount" value="${productData.price}" itemprop="price">0.00</data>
             <meta itemprop="priceCurrency" content="EUR" />
         </div>
         <div class="cart-summary">
-            <strong>Frais de transport :</strong>
+            <strong>{{ i18n.shipping_amount[page.lang] }}</strong>
             <data class="price shipping-amount" value="${productData.price}" itemprop="price">0.00</data>
             <meta itemprop="priceCurrency" content="EUR" />
         </div>
         <div class="cart-summary summary-total">
-            <strong>TOTAL :</strong>
+            <strong>{{ i18n.total[page.lang] }}</strong>
             <data class="price total-amount" value="${productData.price}" itemprop="price">0.00</data>
             <meta itemprop="priceCurrency" content="EUR" />
         </div>
