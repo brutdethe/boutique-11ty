@@ -36,7 +36,16 @@ eleventyComputed:
     <div id="cart-ticket">
         <h2>Ticket</h2>
 
-       {% include 'shipping.njk' %}
+        <label for="destination" id="destination-label" class="display-none">Destination :</label>
+        <select id="destination" name="destination">
+          {% for zone, data in shipping.grille_tarifs %}
+            {% for country in data.pays[page.lang] %}
+              <option value="{{ zone }}">
+                {{ country }}
+              </option>
+            {% endfor %}
+          {% endfor %}
+        </select>
 
         <div id="cart-subtotal" class="cart-summary">
             <strong>Sous-total :</strong>
@@ -44,7 +53,7 @@ eleventyComputed:
         </div>
         <div id="cart-shipping" class="cart-summary">
             <strong>Frais de transport :</strong>
-            <span class="shipping-amount">5.00</span>
+            <span id="shipping-cost" class="shipping-amount">5.00</span>
         </div>
         <div id="cart-total" class="cart-summary">
             <strong>Total :</strong> <span class="total-amount">0.00</span>
@@ -60,3 +69,8 @@ eleventyComputed:
         >‹ {{ i18n.no_item_link[page.lang] }}</a
     >
 </section>
+
+<script>
+    const shippingData = {{ shipping | dump | safe }};
+  </script>
+  

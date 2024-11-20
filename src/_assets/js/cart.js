@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const sectionCart = document.getElementById('cart')
     const sectionNoCart = document.getElementById('no-cart')
     const cartContent = document.getElementById('cart-content')
-    const shippingSelect = document.getElementById('shipping-country')
+    const shippingSelect = document.getElementById('destination')
     const subtotalElement = document.querySelector('.subtotal-amount')
     const shippingElement = document.querySelector('.shipping-amount')
     const totalElement = document.querySelector('.total-amount')
@@ -402,6 +402,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     function calculateCartTotal() {
         const cartItems = storage.getCart()
         let subtotal = 0
+        let shippingGroups = {}
 
         cartItems.forEach((cartItem) => {
             const productData = productsData.find(
@@ -420,23 +421,46 @@ document.addEventListener('DOMContentLoaded', async () => {
                         itemTotalElement.textContent = `${itemTotal.toFixed(2)} €`
                     }
                 }
+
+                // Grouping products by shipping type
+                if (productData.shipping_type !== 'sans_envoi') {
+                    if (!shippingGroups[productData.shipping_type]) {
+                        shippingGroups[productData.shipping_type] = {
+                            totalPoints: 0,
+                            totalWeight: 0,
+                            colisData: shippingData.types_colis[productData.shipping_type]
+                        }
+                    }
+                    shippingGroups[productData.shipping_type].totalPoints += productData.shipping_point * cartItem.qty
+                    shippingGroups[productData.shipping_type].totalWeight += parseFloat(productData.weight) * cartItem.qty
+                }
             }
         })
 
-        const shippingCost = getShippingCost()
-        const total = subtotal + shippingCost
+        let totalShippingCost = 0
+        Object.keys(shippingGroups).forEach((shippingType) => {
+            const group = shippingGroups[shippingType]
+            const colisCapacity = group.colisData.capacite_points
+            const numberOfColis = Math.ceil(group.totalPoints / colisCapacity)
+            const totalWeight = group.totalWeight + (group.colisData.poids_emballage * numberOfColis)
+            const selectedZone = shippingSelect.value
+            const cost = calculateCostForColis(totalWeight, selectedZone)
+            totalShippingCost += cost
 
-        updateTicket(subtotal, shippingCost, total)
+            console.log(`Type d'envoi : ${shippingType}, Points total : ${group.totalPoints}, Nombre de colis : ${numberOfColis}, Poids total : ${totalWeight}, Coût : ${cost}`)
+        })
+
+        const total = subtotal + totalShippingCost
+        updateTicket(subtotal, totalShippingCost, total)
     }
 
     /**
-     * Récupération du coût de livraison
+     * Calcule les frais pour un type de colis dans une zone.
      */
-    function getShippingCost() {
-        if (!shippingSelect) return 0
-        const selectedOption =
-            shippingSelect.options[shippingSelect.selectedIndex]
-        return parseFloat(selectedOption.dataset.cost) || 0
+    function calculateCostForColis(totalWeight, selectedZone) {
+        const tarifs = shippingData.grille_tarifs[selectedZone].tarifs;
+        const tarif = tarifs.find(t => totalWeight <= t.poids_max);
+        return tarif ? tarif.tarif : 0;
     }
 
     /**
@@ -482,3 +506,4 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 })
+    

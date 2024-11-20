@@ -11,7 +11,7 @@ photos:
   - manon_tasse_A29-b.jpg
 price: 15.00
 stock: 1 article
-weight: 135
+weight: 100
 shipping_type: colis_base
 shipping_point: 2
 options:
