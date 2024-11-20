@@ -1,17 +1,16 @@
 :root {
     --primary-color: #897853;
-    --secondary-bg: #f1f1fc;
     --border-color: #dadee4;
     --hover-color: #6b5f45;
     --text-color: #3b4351;
-    --background-color: #fcf9ff;
+    --secondary-bg: #f7f3ee;
+    --bg-color: #fff;
     --focus-color: #ffcc00;
     --card-shadow: 0 .25rem 1rem var(--secondary-bg);
     --border-thin: .5px solid var(--border-color);
     --gap-small: 0.5rem;
-    --gap-large: 1rem;
+    --gap-large: 1.5rem;
 }
-
 
 input[type='number'] {
     appearance: textfield;
@@ -30,6 +29,7 @@ html {
 
 body {
     color: var(--text-color);
+    background: var(--bg-color);
     font-family: Arial, sans-serif;
     line-height: 1.5;
     text-rendering: optimizeLegibility;
@@ -154,7 +154,7 @@ button:focus {
 
 .category-description {
     background-color: var(--primary-color);
-    color: var(--background-color);
+    color: var(--bg-color);
     margin-bottom: 1.2rem;
     padding: .3rem 1rem 1rem;
 }
@@ -287,6 +287,7 @@ button:focus {
     display: grid;
     grid-template-rows: auto auto 1fr auto;
     border: var(--border-thin);
+    background: var(--secondary-bg);
 }
 
 .product-header {
@@ -330,7 +331,7 @@ button:focus {
     background: var(--primary-color);
     background-clip: padding-box;
     border-radius: .5rem;
-    color: var(--background-color);
+    color: var(--bg-color);
     content: attr(data-badge);
     display: inline-block;
     transform: translate(-.05rem, -.5rem);
@@ -353,7 +354,7 @@ button:focus {
 
 .btn-card {
     background: var(--primary-color);
-    color: var(--background-color);
+    color: var(--bg-color);
 }
 
 .btn-nav {
