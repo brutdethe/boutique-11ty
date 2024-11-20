@@ -23,119 +23,140 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function t(key) {
-        const currentLang = getActiveLanguage()
+        const currentLang = getActiveLanguage();
 
         return translations[key] && translations[key][currentLang]
             ? translations[key][currentLang]
-            : key
+            : key;
     }
 
     // Initialisation des variables
-    const sectionCart = document.getElementById('cart')
-    const sectionNoCart = document.getElementById('no-cart')
-    const cartContent = document.getElementById('cart-content')
-    const shippingSelect = document.getElementById('destination')
-    const subtotalElement = document.querySelector('.subtotal-amount')
-    const shippingElement = document.querySelector('.shipping-amount')
-    const totalElement = document.querySelector('.total-amount')
-    const cartLink = document.getElementById('cart-link')
-    const cartFloatLink = document.getElementById('floating-cart')
+    const sectionCart = document.getElementById('cart');
+    const sectionNoCart = document.getElementById('no-cart');
+    const cartContent = document.getElementById('cart-content');
+    const shippingSelect = document.getElementById('destination');
+    const subtotalElement = document.querySelector('.subtotal-amount');
+    const shippingElement = document.querySelector('.shipping-amount');
+    const totalElement = document.querySelector('.total-amount');
+    const cartLink = document.getElementById('cart-link');
+    const cartFloatLink = document.getElementById('floating-cart');
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
 
-    const isCartPage = sectionCart && sectionNoCart
+    const isCartPage = sectionCart && sectionNoCart;
 
     // Déclaration de l'objet storage avec les méthodes getCart et setCart
     const storage = {
         getCart: () => JSON.parse(localStorage.getItem('cart') || '[]'),
         setCart: (cart) => {
-            localStorage.setItem('cart', JSON.stringify(cart))
-            updateCartBadge()
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartBadge();
         }
     }
 
     // Fonction pour mettre à jour le badge du panier
     const updateCartBadge = () => {
-        const cart = storage.getCart()
-        const badgeElement = document.querySelector('.badge[data-badge]')
+        const cart = storage.getCart();
+        const badgeElement = document.querySelector('.badge[data-badge]');
         if (badgeElement) {
-            badgeElement.setAttribute('data-badge', cart.length)
+            badgeElement.setAttribute('data-badge', cart.length);
         }
     }
 
-    let productsData
+    let productsData;
 
     // Récupération des données du panier et de la langue
-    const cartItems = storage.getCart()
-    const currentLang = getActiveLanguage()
-    const baseUrl = localStorage.getItem('baseUrl') || '/boutique-11ty'
+    const cartItems = storage.getCart();
+    const currentLang = getActiveLanguage();
+    const baseUrl = localStorage.getItem('baseUrl') || '/boutique-11ty';
 
     // Mise à jour initiale du lien du panier et de la visibilité du panier
-    updateCartLink()
-    updateCartBadge()
+    updateCartLink();
+    updateCartBadge();
+    
+    // Nouvelle fonction : désactiver les boutons `add-to-cart` s'ils sont dans le panier
+    disableAddToCartButtonsForItemsInCart();
 
     // Vérifier l'existence de .add-to-cart pour éviter les erreurs
-    const addToCartButtons = document.querySelectorAll('.add-to-cart')
     if (addToCartButtons.length > 0) {
         // Utilisation de la délégation d'événements
         document.addEventListener('click', (event) => {
             if (event.target.matches('.add-to-cart')) {
-                const button = event.target
-                const productElement = button.closest('.product-infos')
-                if (!productElement) return
+                const button = event.target;
+                const productElement = button.closest('.product-infos');
+                if (!productElement) return;
 
-                const productId = String(productElement.dataset.id)
+                const productId = String(productElement.dataset.id);
 
                 if (isProductInCart(productId)) {
-                    disableButton(button)
+                    disableButton(button);
                 } else {
-                    event.preventDefault()
-                    addToCart({ id: productId, qty: 1 })
-                    disableButton(button)
+                    event.preventDefault();
+                    addToCart({ id: productId, qty: 1 });
+                    disableButton(button);
                 }
             }
-        })
+        });
     }
 
     function addToCart(product) {
-        const cart = storage.getCart()
+        const cart = storage.getCart();
         if (!cart.some((item) => item.id === product.id)) {
-            cart.push(product)
-            storage.setCart(cart)
-            updateCartLink()
+            cart.push(product);
+            storage.setCart(cart);
+            updateCartLink();
         }
     }
 
     function disableButton(button) {
-        button.classList.add('disabled')
-        button.textContent = button.dataset.addedText
-        button.disabled = true // Amélioration de l'accessibilité
+        button.classList.add('disabled');
+        button.textContent = button.dataset.addedText || 'Déjà ajouté';
+        button.disabled = true; // Accessibilité
     }
 
     function updateCartLink() {
-        const cartItems = storage.getCart()
+        const cartItems = storage.getCart();
         if (cartLink) {
-            cartLink.classList.toggle('disabled', cartItems.length === 0)
+            cartLink.classList.toggle('disabled', cartItems.length === 0);
         }
         if (cartFloatLink) {
-            cartFloatLink.classList.toggle('hidden', cartItems.length === 0)
+            cartFloatLink.classList.toggle('hidden', cartItems.length === 0);
         }
     }
 
     function isProductInCart(productId) {
-        const cart = storage.getCart()
-        return cart.some((item) => item.id === productId)
+        const cart = storage.getCart();
+        return cart.some((item) => item.id === productId);
     }
 
     if (isCartPage) {
-        updateCartVisibility()
+        updateCartVisibility();
 
-        productsData = await fetchProductsData(baseUrl, currentLang)
+        productsData = await fetchProductsData(baseUrl, currentLang);
 
         if (cartItems.length !== 0) {
-            initializeCart()
+            initializeCart();
         }
         if (shippingSelect) {
-            shippingSelect.addEventListener('change', calculateCartTotal)
+            shippingSelect.addEventListener('change', calculateCartTotal);
         }
+    }
+
+    /**
+     * Fonction pour désactiver les boutons `add-to-cart` s'ils sont déjà dans le panier
+     */
+    function disableAddToCartButtonsForItemsInCart() {
+        const cart = storage.getCart();
+
+        addToCartButtons.forEach((button) => {
+            const productElement = button.closest('.product-infos');
+            if (productElement) {
+                const productId = productElement.dataset.id;
+
+                if (cart.some(item => item.id === productId)) {
+                    disableButton(button);
+                }
+            }
+        });
     }
 
     /**
