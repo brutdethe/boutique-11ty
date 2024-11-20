@@ -10,8 +10,10 @@ photos:
   - gaiwan_2-a.jpg
   - gaiwan_2-b.jpg
 price: 8.00
-stock: 8 items left
-weight: 220 g
+stock: 8
+weight: 220
+shipping_type: colis_base
+shipping_point: 3
 options:
   capacity: 70 ml
 eleventyComputed:

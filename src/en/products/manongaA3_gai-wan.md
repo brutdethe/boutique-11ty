@@ -10,8 +10,10 @@ photos:
   - manon_gaiwan_A3-a.jpg
   - manon_gaiwan_A3-b.jpg
 price: 50.00
-stock: 1 item left
-weight: 193 g
+stock: 1
+weight: 193
+shipping_type: colis_base
+shipping_point: 5
 options:
   capacity: 70
 eleventyComputed:

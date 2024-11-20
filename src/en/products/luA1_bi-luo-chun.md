@@ -10,8 +10,10 @@ photos:
   - BiLuoChun_1-a.jpg
   - BiLuoChun_1-b.jpg
 price: 15.00
-stock: 10 items left
-weight: 125 g
+stock: 10
+weight: 125
+shipping_type: colis_base
+shipping_point: 2
 options:
   harvest: printemps 2023
   cultivar: 青心柑仔 - QīngXīn GānZǐ

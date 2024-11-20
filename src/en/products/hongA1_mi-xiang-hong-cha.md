@@ -11,8 +11,10 @@ photos:
   - HongCha_MiXiang_1-b.jpg
   - conserve_1-c.jpg
 price: 15.00
-stock: 10 items left
-weight: 125 g
+stock: 10
+weight: 125
+shipping_type: colis_base
+shipping_point: 2
 options:
   harvest: printemps 2023
   type: 红茶 - HóngChá

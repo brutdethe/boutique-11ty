@@ -10,8 +10,10 @@ photos:
   - DongDing-WuLong_1-a.jpg
   - DongDing-WuLong_1-b.jpg
 price: 15.00
-stock: 9 items left
-weight: 125 g
+stock: 9
+weight: 125
+shipping_type: colis_base
+shipping_point: 2
 options:
   harvest: printemps 2023
   type: 青茶 - QīngChá

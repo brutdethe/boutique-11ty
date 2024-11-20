@@ -10,8 +10,10 @@ photos:
   - BaiLu-LuCha_1-a.jpg
   - BaiLu-LuCha_1-b.jpg
 price: 15.00
-stock: il reste 10 articles
-weight: 125 g
+stock: 10
+weight: 125
+shipping_type: colis_base
+shipping_point: 2
 options:
   récolte: printemps 2023
   type: 綠茶 - LǜChá

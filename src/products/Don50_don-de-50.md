@@ -9,9 +9,8 @@ description: >
 photos:
   - ticket-gongfucha.jpg
 price: 50.00
-stock: il reste 30 articles
-
-
+stock: 30
+shipping_type: sans_envoi
 eleventyComputed:
   title: "{{ tags }} - {{ name }}"
 ---

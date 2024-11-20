@@ -12,8 +12,10 @@ photos:
   - set-de-voyage_1-c.jpg
   - set-de-voyage_1-d.jpg
 price: 45.00
-stock: 16 items left
-weight: 550 g
+stock: 16
+weight: 550
+shipping_type: colis_base
+shipping_point: 5
 options:
   capacity: 110 ml
 eleventyComputed:

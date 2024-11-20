@@ -10,63 +10,74 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 ### Terminées
 
--   US-07 Gestion du panier
+- US-09 Gestion des frais de transport
+  - [x] mise en place de la grille tarifaire
+  - [x] affichage de la liste des pays
+  - [x] calcul d'un produit par poids
+  - [x] calcul d'un produit par type de colis
+  - [x] calcul d'un produit par points d'encombrement
+  - [x] gestion des "sans envoi"
+  - [x] intégration css pour la mise en forme du ticket
+  - [x] documentation
 
-    -   [x] ajouter un produit
-    -   [x] gère les badges du panier
-    -   [x] récupérer les données sur la page panier
-    -   [x] changer la quantité et supprimer
-    -   [x] mettre en page
-    -   [x] gérer les boutons "déjà ajouté"
-    -   [x] mettre en forme aucun produit dans le panier et panier désactivé
-    -   [x] signaler le panier avec un bouton lors du premier article
-    -   [x] i18n pour le panier
+- US-07 Gestion du panier
+  - [x] ajouter un produit
+  - [x] gère les badges du panier
+  - [x] récupérer les données sur la page panier
+  - [x] changer la quantité et supprimer
+  - [x] mettre en page
+  - [x] gérer les boutons "déjà ajouté"
+  - [x] mettre en forme aucun produit dans le panier et panier désactivé
+  - [x] signaler le panier avec un bouton lors du premier article
+  - [x] i18n pour le panier
 
--   US-04 Carrousel
-    -   [x] retailler les photos automatiquement
-    -   [x] splide-core.min.css
-    -   [x] intégrer le slider dans la fiche
-    -   [x] gestion aria et tabindex
-    -   [x] utilisation de [Splide.js](https://splidejs.com/) pour les carrousels
--   US-06 Présentation des produits
+- US-04 Carrousel
+  - [x] retailler les photos automatiquement
+  - [x] splide-core.min.css
+  - [x] intégrer le slider dans la fiche
+  - [x] gestion aria et tabindex
+  - [x] utilisation de [Splide.js](https://splidejs.com/) pour les carrousels
 
-    -   [x] Affiche les données des produits
-    -   [x] Gère les styles
-    -   [x] reprend le html et les styles
+- US-06 Présentation des produits
+  - [x] Affiche les données des produits
+  - [x] Gère les styles
+  - [x] reprend le html et les styles
 
--   US-05 Migration des fiches
+- US-05 Migration des fiches
+  - [x] Générer des fiches .md à partir du JSON de la boutique
+  - [x] Adapter les titres des fiches
+  - [x] Adapter le .gitignore pour ne pas enregistrer tous les produits
+  - [x] Tester l'import
+  - [x] Documenter le script de migration
 
-    -   [x] Générer des fiches .md à partir du JSON de la boutique
-    -   [x] Adapter les titres des fiches
-    -   [x] Adapter le .gitignore pour ne pas enregistrer tous les produits
-    -   [x] Tester l'import
-    -   [x] Documenter le script de migration
+- US-03 Fiche produit
+  - [x] Reprend une fiche produit
+  - [x] Affiche les données
+  - [x] Ajout une 404 et un favicon
+  - [x] Améliore l'accessibilité Aria
+  - [x] Gère l'i18n
+  - [x] Simplifie le CSS
 
--   US-03 Fiche produit
-    -   [x] Reprend une fiche produit
-    -   [x] Affiche les données
-    -   [x] Ajout une 404 et un favicon
-    -   [x] Améliore l'accessibilité Aria
-    -   [x] Gère l'i18n
-    -   [x] Simplifie le CSS
--   US-02 Gestion de l'i18n
+- US-02 Gestion de l'i18n
+  - [x] Organisation des fichiers
+  - [x] Menu de sélection de la langue
+  - [x] Pages traduites
+  - [x] Traduction de l'interface
 
-    -   [x] Organisation des fichiers
-    -   [x] Menu de sélection de la langue
-    -   [x] Pages traduites
-    -   [x] Traduction de l'interface
-
--   US-01 Création de pages
-    -   [x] Header
-    -   [x] Footer
-    -   [x] Déploiement sur GitHub Pages
+- US-01 Création de pages
+  - [x] Header
+  - [x] Footer
+  - [x] Déploiement sur GitHub Pages
 
 ### À venir
 
--   US-07 Gestion du panier
--   US-08 Paiements
--   US-09 Gestion des frais de transport
--   US-10 Gestion du responsive
+- US-08 Paiement
+- US-12 responsive
+- US-14 gérer les stocks
+- US-10 passer en plugin
+- US-11 currencies
+- US-13 page accueil
+
 
 ## Outils utilisés
 
@@ -118,9 +129,106 @@ Pour générer les fichiers Markdown, exécutez le script suivant :
 $ node generateMarkdown.js
 ```
 
+## Gestion des Frais de Transport
+
+### Fonctionnement
+
+Le système de frais de transport est basé sur un fichier YAML : [`/src/_data/shipping.yaml`](./src/_data/shipping.yaml), qui contient une grille tarifaire organisée par zones géographiques, ainsi que les caractéristiques des types de colis disponibles.
+
+### Grille Tarifaire
+
+La grille tarifaire définit les frais de transport en fonction du poids total des colis et de la destination. Les zones géographiques sont :
+
+- **France** : Inclut `France métropolitaine`, `Andorra`, `Monaco`.
+- **Outre-mer** : `France Outre-mer`.
+- **Zone A** : Union Européenne et Suisse.
+- **Zone B** : Europe de l'Est, Norvège, Maghreb.
+- **Zone C** : Reste du monde.
+
+Chaque zone contient une liste de seuils de poids et les tarifs associés. Par exemple :
+
+```yaml
+France:
+  tarifs:
+    - poids_max: 250
+      tarif: 5.25
+    - poids_max: 500
+      tarif: 7.35
+    - poids_max: 1000
+      tarif: 9.40
+```
+
+### Types de Colis
+
+Les types de colis disponibles sont définis comme suit :
+
+```yaml
+types_colis:
+  colis_base:
+    poids_emballage: 260
+    capacite_points: 10
+  tube:
+    poids_emballage: 120
+    capacite_points: 5
+  sans_envoi: null
+```
+- **colis_base** : Colis standard, avec un poids d'emballage de 260 g et une capacité maximale de 10 points d'encombrement.
+- **tube** : Emballage léger (120 g), avec une capacité maximale de 5 points d'encombrement.
+- **sans_envoi** : Articles dématérialisés, sans poids ni frais d'expédition.
+
+### Calcul des Frais
+
+1. **Regroupement des Articles par Type de Colis** :
+   Les articles du panier sont regroupés selon leur type de colis (`colis_base`, `tube`, etc.).
+
+2. **Détermination du Nombre de Colis** :
+   Pour chaque type de colis, les points d'encombrement des articles sont additionnés. Si les points dépassent la capacité du colis, plusieurs colis sont nécessaires :
+   \[
+   \text{Nombre de colis} = \lceil \frac{\text{points totaux}}{\text{capacité}} \rceil
+   \]
+
+3. **Poids Total Par Colis** :
+   Le poids total est calculé en additionnant le poids des articles et le poids des emballages requis.
+
+4. **Frais Par Colis** :
+   Le poids total est comparé à la grille tarifaire de la zone géographique sélectionnée. Le tarif correspondant est appliqué.
+
+5. **Frais Totaux** :
+   Les frais de tous les colis sont additionnés pour obtenir un montant total.
+
+### Exemple de Calcul
+
+#### Panier
+- **Produit 1** :
+  - Poids : 250 g.
+  - Points : 11.
+  - Type : `colis_base`.
+- **Produit 2** :
+  - Poids : 100 g.
+  - Points : 2.
+  - Type : `tube`.
+
+#### Destination
+- **France**.
+
+#### Calcul
+1. **Produit 1** :
+   - 2 colis nécessaires (11 points > 10).
+   - Poids total : \( 250 + (260 \times 2) = 770 \, \text{g} \).
+   - Tarif : \( 9.40 \, \text{€} \).
+
+2. **Produit 2** :
+   - 1 colis nécessaire (2 points ≤ 5).
+   - Poids total : \( 100 + 120 = 220 \, \text{g} \).
+   - Tarif : \( 5.25 \, \text{€} \).
+
+3. **Total Frais** :
+   - \( 9.40 + 5.25 = 14.65 \, \text{€} \).
+
+
 ## Contribuer
 
-Si vous souhaitez contribuer, contactez-nous.
+Si vous souhaitez contribuer, contactez : [coucou@gongfucha.fr](mailto:coucou@gongfucha.fr)
 
 Merci à :
 
@@ -134,4 +242,5 @@ En bref : utilisez, modifiez, et distribuez sans restriction.
 
 ## Contact
 
+Stéphane Langlois  
 [coucou@gongfucha.fr](mailto:coucou@gongfucha.fr)
