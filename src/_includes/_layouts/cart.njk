@@ -5,62 +5,158 @@ eleventyComputed:
 ---
 
 <style>
-    /* Section du ticket */
     :root {
         --cart-item-padding: 1rem;
-        --cart-gap: 1.5rem;
         --padding-standard: 1rem;
     }
 
+    #cart {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--gap-large);
+        width: 100%;
+    }
+
+    #cart-content {
+        grid-column: span 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--gap-large);
+        padding: 0;
+        opacity: .8;
+    }
+    cart-sum
+    #cart-content .product-title {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    #cart-content .price,
+    #cart-ticket .subtotal-amount,
+    #cart-ticket .shipping-amount {
+        font-size: 1.2rem;
+    }
+
+    #cart-content .product-image {
+        filter: grayscale(.7);
+    }
+
     #cart-ticket {
-        margin-top: var(--gap-large);
+        grid-column: span 1;
         padding: var(--cart-item-padding);
         background-color: var(--secondary-bg);
         border: var(--border-thin);
-        border-radius: var(--cart-border-radius);
-        box-shadow: var(--card-shadow);
+        box-shadow: var(--shadow);
+    }
+
+    #cart-ticket .cart-ticket-title {
+        margin: 0;
+        font-weight: bold;
+        padding-bottom: 2rem;
+        text-transform: uppercase;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #cart-ticket strong {
+        font-size: 1.2rem;
     }
 
     #no-cart {
-        background: #f7f8f9;
-        border-radius: 0.1rem;
-        color: hsl(216, 16%, 47%);
+        background: var(--secondary-bg);
+        border: var(--border-thin);
+        color: var(--primary-color);
         padding: 3.2rem 1.6rem;
         text-align: center;
+    }
+
+    select {
+        border: var(--border-thin);
+        flex: 1;
+        padding: 0 1em;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    .select {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 2rem;
+        overflow: hidden;
+        margin: .5rem 0 2rem;
+    }
+
+    .select::after {
+        content: '\25BC';
+        position: absolute;
+        right: 0;
+        padding: .3rem 1em;
+        background-color: var(--border-color);
+        transition: .25s all ease;
+        pointer-events: none;
+    }
+
+    .select:hover::after {
+        color: var(--primary-color);
+    }
+
+    .select:has(> .disabled)::after {
+        color: var(--primary-color);
+        cursor: not-allowed !important;
+    }
+
+    .cart-summary {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--cart-item-padding) 0;
+        padding:0;
+    }
+
+    .summary-total {
+       padding: 2rem 0; 
     }
 </style>
 
 <h1>{{ title }}</h1>
 
-<section id="cart" class="display-none">
+<section id="cart" class="">
+    <div id="cart-content" class="products-list"></div>
     <div id="cart-ticket">
-        <h2>Ticket</h2>
-
-        <label for="destination" id="destination-label" class="display-none">Destination :</label>
-        <select id="destination" name="destination">
-          {% for zone, data in shipping.grille_tarifs %}
-            {% for country in data.pays[page.lang] %}
-              <option value="{{ zone }}">
-                {{ country }}
-              </option>
+        <h2 class="cart-ticket-title">Ticket</h2>
+        <label for="destination" id="destination-label">Destination :</label>
+        <div class="select">
+            <select id="destination" name="destination">
+            {% for zone, data in shipping.grille_tarifs %}
+                {% for country in data.pays[page.lang] %}
+                <option value="{{ zone }}">
+                    {{ country }}
+                </option>
+                {% endfor %}
             {% endfor %}
-          {% endfor %}
-        </select>
+            </select>
+        </div>
 
-        <div id="cart-subtotal" class="cart-summary">
+        <div class="cart-summary">
             <strong>Sous-total :</strong>
-            <span class="subtotal-amount">0.00</span>
+            <data class="price subtotal-amount" value="${productData.price}" itemprop="price">0.00</data>
+            <meta itemprop="priceCurrency" content="EUR" />
         </div>
-        <div id="cart-shipping" class="cart-summary">
+        <div class="cart-summary">
             <strong>Frais de transport :</strong>
-            <span id="shipping-cost" class="shipping-amount">5.00</span>
+            <data class="price shipping-amount" value="${productData.price}" itemprop="price">0.00</data>
+            <meta itemprop="priceCurrency" content="EUR" />
         </div>
-        <div id="cart-total" class="cart-summary">
-            <strong>Total :</strong> <span class="total-amount">0.00</span>
+        <div class="cart-summary summary-total">
+            <strong>TOTAL :</strong>
+            <data class="price total-amount" value="${productData.price}" itemprop="price">0.00</data>
+            <meta itemprop="priceCurrency" content="EUR" />
         </div>
     </div>
-
-    <section id="cart-content" class="products-list"></section>
 </section>
 
 <section id="no-cart" class="display-none">
@@ -72,5 +168,4 @@ eleventyComputed:
 
 <script>
     const shippingData = {{ shipping | dump | safe }};
-  </script>
-  
+</script>

@@ -4,9 +4,9 @@
     --hover-color: #6b5f45;
     --text-color: #3b4351;
     --secondary-bg: #f7f3ee;
-    --bg-color: #fff;
+    --bg-color: #fafafa;
     --focus-color: #ffcc00;
-    --card-shadow: 0 .25rem 1rem var(--secondary-bg);
+    --shadow: 0 .25rem 1rem var(--secondary-bg);
     --border-thin: .5px solid var(--border-color);
     --gap-small: 0.5rem;
     --gap-large: 1.5rem;
@@ -55,7 +55,6 @@ ul {
 .disabled {
     opacity: .5;
     cursor: not-allowed !important;
-    border-color: transparent !important;
 }
 
 .display-none {
@@ -84,7 +83,8 @@ a {
 }
 
 a:focus,
-button:focus {
+button:focus,
+select:focus {
     outline: 2px solid var(--focus-color);
     outline-offset: 2px;
 }
@@ -149,7 +149,7 @@ button:focus {
 .category-description,
 .btn-nav,
 .card-figure img {
-    box-shadow: var(--card-shadow);
+    box-shadow: var(--shadow);
 }
 
 .category-description {
@@ -311,6 +311,8 @@ button:focus {
 
 .product-image {
     width: 100%;
+    border-top: var(--border-thin);
+    border-bottom: var(--border-thin);
 }
 
 .product-description {
@@ -420,6 +422,7 @@ button:focus {
 .qty-input .product-qty {
     width: 2rem;
     text-align: center;
+    background: var(--secondary-bg);
 }
 
 .qty-input .qty-count {
