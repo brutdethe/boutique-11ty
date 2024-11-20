@@ -454,9 +454,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         })
 
         if (!hasShipping && shippingSelect) {
-            shippingSelect.classList.add('display-none')
+            shippingSelect.classList.add('disabled')
         } else if (shippingSelect) {
-            shippingSelect.classList.remove('display-none')
+            shippingSelect.classList.remove('disabled')
         }
 
         const total = subtotal + totalShippingCost
