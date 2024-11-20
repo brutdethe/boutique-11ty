@@ -438,6 +438,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         })
 
         let totalShippingCost = 0
+        let hasShipping = false
+
         Object.keys(shippingGroups).forEach((shippingType) => {
             const group = shippingGroups[shippingType]
             const colisCapacity = group.colisData.capacite_points
@@ -446,9 +448,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             const selectedZone = shippingSelect.value
             const cost = calculateCostForColis(totalWeight, selectedZone)
             totalShippingCost += cost
+            hasShipping = true
 
             console.log(`Type d'envoi : ${shippingType}, Points total : ${group.totalPoints}, Nombre de colis : ${numberOfColis}, Poids total : ${totalWeight}, Coût : ${cost}`)
         })
+
+        if (!hasShipping && shippingSelect) {
+            shippingSelect.classList.add('display-none')
+        } else if (shippingSelect) {
+            shippingSelect.classList.remove('display-none')
+        }
 
         const total = subtotal + totalShippingCost
         updateTicket(subtotal, totalShippingCost, total)
@@ -506,4 +515,3 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 })
-    
