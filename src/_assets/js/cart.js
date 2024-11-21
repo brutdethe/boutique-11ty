@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const translations = {
         button_remove: {
-            fr: "supprimer l'article",
-            en: 'remove item'
+            fr: "supprimer",
+            en: 'remove'
         },
         button_detail: {
             fr: "revoir l'article",
