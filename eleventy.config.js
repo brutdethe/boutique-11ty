@@ -11,7 +11,7 @@ export const config = {
     htmlTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
     templateFormats: ['njk', 'md', 'html'],
-    pathPrefix: '/boutique-11ty/',
+    pathPrefix: '/',
     langs: { default: 'fr', others: ['en'] }
 }
 
