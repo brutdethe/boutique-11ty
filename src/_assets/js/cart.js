@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
 
     const currentLang = getActiveLanguage();
-    const baseUrl = localStorage.getItem('baseUrl') || '/boutique-11ty';
 
     let productsData;
 
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (sectionCart && sectionNoCart) {
             updateCartVisibility();
-            productsData = await fetchProductsData(baseUrl, currentLang);
+            productsData = await fetchProductsData(currentLang);
 
             if (storage.getCart().length !== 0) {
                 initializeCart();
@@ -135,9 +134,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         return storage.getCart().some((item) => item.id === productId);
     }
 
-    async function fetchProductsData(baseUrl, currentLang) {
+    async function fetchProductsData(currentLang) {
         try {
-            const response = await fetch(`${baseUrl}/products_${currentLang}.json`);
+            const response = await fetch(`/products_${currentLang}.json`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
