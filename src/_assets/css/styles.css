@@ -449,6 +449,11 @@ select {
     margin: 0.5rem 0 2rem;
 }
 
+.select:has(> .disabled)::after {
+    color: var(--primary-color);
+    cursor: not-allowed !important;
+}
+
 .select::after {
     content: '\25BC';
     position: absolute;
