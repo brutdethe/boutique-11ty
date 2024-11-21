@@ -72,6 +72,8 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 ### À venir
 
 - US-08 Paiement
+  - [ ] installation sur netlify
+
 - US-12 responsive
 - US-14 gérer les stocks
 - US-10 passer en plugin
