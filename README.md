@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0edcc928-d8f8-4f22-82a5-14cdd541fb8a/deploy-status)](https://app.netlify.com/sites/boutique-gongfucha/deploys)
+
 # Boutique-11ty
 
 Une petite boutique en ligne construite avec [11ty](https://www.11ty.dev/).
@@ -83,12 +85,14 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 ## Outils utilisés
 
-Pour garder les choses simples, nous utilisons peu d'outils.
+Pour garder les choses simples, nous essayons d'utiliser très peu d'outils.
 
--   [Eleventy](https://www.11ty.dev/), un [générateur de site statique](https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9rateur_de_site_statique).
--   [Splide.js](https://splidejs.com/), une bibliothèque légère pour créer des carrousels accessibles et élégants, utilisée pour la mise en œuvre des sliders de la boutique.
+- [Eleventy](https://www.11ty.dev/), un [générateur de site statique](https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9rateur_de_site_statique).
+- [Splide.js](https://splidejs.com/), une bibliothèque légère pour créer des carrousels accessibles et élégants, utilisée pour la mise en œuvre des sliders de la boutique.
 
-Le site fonctionne côté client, directement dans le navigateur, et peut être hébergé gratuitement sur des plateformes comme [GitLab](https://gitlab.com) ou [GitHub](https://github.com).
+Jusqu'au panier (inclus), le site est statique et fonctionne côté client, directement dans le navigateur, et peut être hébergé gratuitement sur des plateformes comme [GitLab](https://gitlab.com) ou [GitHub](https://github.com) par exemple.
+
+Reste quand même un pépin, pour les paiements en ligne. Une fois que la personne valide son panier en passant au paiement, nous avons choisi de passer par [stripe](stripe). Cette opération de paiement est sensible, une personne bizarrement intentionnée pourrait, par exemple, adapter les tarifs de ses achats. Nous avons donc un tout petit peu d'actions qui ne se font pas que dans le navigateur de la personne qui va commander. Nous utilisons donc un autre service dans sa version gratuite : [netlify](https://www.netlify.com).
 
 ## Script de redimensionnement des images
 
