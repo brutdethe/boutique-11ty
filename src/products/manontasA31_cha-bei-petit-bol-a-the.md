@@ -10,7 +10,7 @@ photos:
   - manon_tasse_A31-a.jpg
   - manon_tasse_A31-b.jpg
 price: 15.00
-stock: 1 article
+stock: 1
 weight: 135
 shipping_type: colis_base
 shipping_point: 2

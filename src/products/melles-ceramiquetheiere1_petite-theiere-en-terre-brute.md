@@ -14,7 +14,7 @@ photos:
   - melles-ceramique_theiere_1-e.jpg
   - melles-ceramique_theiere_1-f.jpg
 price: 200.00
-stock: 1 article
+stock: 1
 weight: 300
 shipping_type: colis_base
 shipping_point: 6
