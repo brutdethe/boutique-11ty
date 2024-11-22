@@ -1,10 +1,3 @@
-// netlify/functions/create-checkout-session.js
-
-// Charger les variables d'environnement en local
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
-
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 export async function handler(event, context) {

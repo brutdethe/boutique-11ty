@@ -26,7 +26,6 @@
     "stripe": "^17.4.0"
   },
   "devDependencies": {
-    "dotenv": "^16.4.5",
     "gh-pages": "^6.2.0",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
