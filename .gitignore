@@ -24,3 +24,5 @@ dist/
 test/stubs-layout-cache/_includes/*.js
 
 output/
+# Local Netlify folder
+.netlify

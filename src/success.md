@@ -1,6 +1,7 @@
 ---
 layout: _layouts/default.njk
 title: Paiement Réussi
+permalink: /success.html
 ---
 
 <h1>Merci pour votre achat !</h1>
