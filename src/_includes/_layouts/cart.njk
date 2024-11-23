@@ -57,25 +57,9 @@ eleventyComputed:
 
 <script src="https://js.stripe.com/v3/"></script>
 <script>
-
-Data = `[
-  {
-    "name": "T-Shirt Logo",
-    "description": "Un t-shirt confortable avec notre logo.",
-    "price": 19.99,
-    "quantity": 2
-  },
-  {
-    "name": "Casquette",
-    "description": "Casquette noire avec logo brodé.",
-    "price": 15.50,
-    "quantity": 1
-  }
-]`
-
 document.getElementById('checkout-button').addEventListener('click', async () => {
   // Récupérer les données du panier depuis le localStorage ou une autre source
-  const cartData = JSON.parse(Data) || [];
+  const cartData = JSON.parse(localStorage.getItem('cart')) || [];
 
   // Vérifiez que le panier n'est pas vide
   if (cartData.length === 0) {
@@ -101,7 +85,7 @@ document.getElementById('checkout-button').addEventListener('click', async () =>
     }
 
     // Initialiser Stripe avec votre clé publique
-    const stripe = Stripe('pk_test_51HEFz3GJpQWhfcWwXgkgoLbJ1GLgViXGqYfWSgBQwzudrYdsQiMhdVkGWHQvRPx3sTMLNsRXvB2B6pdF1GEpQ9Ka00kz6AoFmS'); 
+    const stripe = Stripe('pk_test_51HEFz3GJpQWhfcWwXgkgoLbJ1GLgViXGqYfWSgBQwzudrYdsQiMhdVkGWHQvRPx3sTMLNsRXvB2B6pdF1GEpQ9Ka00kz6AoFmS');
 
     // Rediriger vers Stripe Checkout
     const { error: stripeError } = await stripe.redirectToCheckout({ sessionId });
@@ -112,13 +96,6 @@ document.getElementById('checkout-button').addEventListener('click', async () =>
   } catch (err) {
     console.error('Erreur lors de la création de la session de paiement :', err);
     alert('Une erreur est survenue. Veuillez réessayer.');
-  }
-});
-
-// Détecter si Stripe.js est bloqué
-window.addEventListener('load', function() {
-  if (!window.Stripe) {
-    document.getElementById('stripe-warning').style.display = 'block';
   }
 });
 </script>
