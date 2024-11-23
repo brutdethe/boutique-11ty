@@ -412,9 +412,12 @@ select:focus {
 
 #cart-ticket {
     padding: 1rem;
+    margin: 1.5rem;
     border: var(--border-thin);
     box-shadow: var(--shadow);
     max-height: 35rem;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
 }
 
 #cart-ticket .cart-ticket-title {
@@ -430,7 +433,8 @@ select:focus {
     font-size: 1.2rem;
 }
 
-#no-cart {
+#no-cart,
+#payment-canceled {
     background: var(--secondary-bg);
     border: var(--border-thin);
     color: var(--primary-color);

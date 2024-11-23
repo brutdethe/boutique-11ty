@@ -38,7 +38,15 @@ eleventyComputed:
             <data id="total-amount" class="price total-amount" value="${productData.price}" itemprop="price">0.00</data>
             <meta itemprop="priceCurrency" content="EUR" />
         </div>
-        <button id="checkout-button"></button>
+        <a
+          href="#"
+          id="checkout-button"
+          class="btn btn-card"
+          data-added-text="{{ i18n.checkout_title[page.lang] }}"
+          aria-label="{{ i18n.checkout_title[page.lang] }}"
+        >
+          {{ i18n.checkout_title[page.lang] }}
+      </a>      
     </div>
 
   <!-- Message d'avertissement caché par défaut -->
@@ -54,18 +62,23 @@ eleventyComputed:
     </a>
 </section>
 
+<style>
+  #checkout-button {
+    background: var(--focus-color);
+    display: flex;
+    color: var(--hover-color);
+    font-weight: 600;
+    border: var(--border-thin);
+    box-shadow: var(--shadow);
+  }
+</style>
 
 <script src="https://js.stripe.com/v3/"></script>
 <script>
 document.getElementById('checkout-button').addEventListener('click', async () => {
-  // Récupérer les données du panier depuis le localStorage ou une autre source
-  const cartData = JSON.parse(localStorage.getItem('cart')) || [];
+  event.preventDefault();
 
-  // Vérifiez que le panier n'est pas vide
-  if (cartData.length === 0) {
-    alert('Votre panier est vide.');
-    return;
-  }
+  const cartData = JSON.parse(localStorage.getItem('cart')) || [];
 
   try {
     // Envoyer les données du panier à la fonction serverless
@@ -100,5 +113,5 @@ document.getElementById('checkout-button').addEventListener('click', async () =>
 });
 </script>
 <script>
-    const shippingData = {{ shipping | dump | safe }};
+    const shippingData = {{ shipping | dump | safe }}
 </script>
