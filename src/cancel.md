@@ -1,6 +1,7 @@
 ---
 layout: _layouts/default.njk
 title: Paiement Réussi
+permalink: cancel.html
 ---
 
 <h1>Paiement Annulé</h1>
