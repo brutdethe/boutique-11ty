@@ -429,8 +429,8 @@ select:focus {
     text-align: center;
 }
 
-#cart-ticket strong {
-    font-size: 1.2rem;
+#cart-ticket #total-label {
+    font-size: 1.5rem;
 }
 
 #no-cart,
