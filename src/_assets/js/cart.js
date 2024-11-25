@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         updateCartBadge();
         disableAddToCartButtonsForItemsInCart();
         addToCartButtonEventListener();
+        checkoutButtonEventListener();
 
         if (sectionCart && sectionNoCart) {
             updateCartVisibility();
@@ -369,5 +370,42 @@ document.addEventListener('DOMContentLoaded', async () => {
                 sectionNoCart.classList.add('display-none');
             }
         }
+    }
+
+
+    function checkoutButtonEventListener() {
+        document.getElementById('checkout-button').addEventListener('click', async () => {
+            event.preventDefault();
+            const cartData = JSON.parse(localStorage.getItem('cart')) || [];
+        
+            try {
+                const response = await fetch('/.netlify/functions/create-checkout-session', {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ cartItems: cartData }),
+                });
+            
+                const { sessionId, error } = await response.json();
+            
+                if (error) {
+                    alert(`Erreur : ${error}`);
+                    return;
+                }
+            
+                // Initialiser Stripe avec votre clé publique
+                const stripe = Stripe('pk_test_51HEFz3GJpQWhfcWwXgkgoLbJ1GLgViXGqYfWSgBQwzudrYdsQiMhdVkGWHQvRPx3sTMLNsRXvB2B6pdF1GEpQ9Ka00kz6AoFmS');
+            
+                // Rediriger vers Stripe Checkout
+                const { error: stripeError } = await stripe.redirectToCheckout({ sessionId });
+            
+                if (stripeError) {
+                    alert(stripeError.message);
+                }
+            } catch (err) {
+                console.error('Erreur lors de la création de la session de paiement :', err);
+            }
+        });
     }
 });
