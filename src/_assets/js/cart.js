@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function updateCartLink() {
         const cartItems = storage.getCart();
-        cartLink?.classList.toggle('disabled', cartItems.length === 0);
-        cartFloatLink?.classList.toggle('hidden', cartItems.length === 0);
+        cartLink.classList.toggle('disabled', cartItems.length === 0);
+        cartFloatLink.classList.toggle('hidden', cartItems.length === 0);
     }
 
     function disableAddToCartButtonsForItemsInCart() {
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function disableButton(button) {
         button.classList.add('disabled');
-        button.textContent = button.dataset.addedText || 'Déjà ajouté';
+        button.textContent = button.dataset.addedText;
         button.disabled = true;
     }
 
