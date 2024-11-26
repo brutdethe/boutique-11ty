@@ -62,9 +62,12 @@ eleventyComputed:
         ‹ {{ i18n.no_item_link[page.lang] }}
     </a>
 </section>
+{% include 'loader.njk' %}
 
 <script src="https://js.stripe.com/v3/"></script>
 
 <script>
     const shippingData = {{ shipping | dump | safe }}
 </script>
+
+

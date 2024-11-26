@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const cartFloatLink = document.getElementById('floating-cart');
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     const checkoutButton = document.getElementById('checkout-button');
+    const fullscreenLoader = document.getElementById('fullscreen-loader');
 
     const currentLang = getActiveLanguage();
 
@@ -377,6 +378,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     function checkoutButtonEventListener() {
         checkoutButton.addEventListener('click', async (event) => {
             event.preventDefault();
+            fullscreenLoader.classList.add('loader-visible');
+  
+            setTimeout(() => {
+                window.location.href = this.href;
+            }, 500);
             const cartData = JSON.parse(localStorage.getItem('cart')) || [];
         
             try {
