@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const cartLink = document.getElementById('cart-link');
     const cartFloatLink = document.getElementById('floating-cart');
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const checkoutButton = document.getElementById('checkout-button');
 
     const currentLang = getActiveLanguage();
 
@@ -52,7 +53,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         updateCartBadge();
         disableAddToCartButtonsForItemsInCart();
         addToCartButtonEventListener();
-        checkoutButtonEventListener();
+        checkoutButton && checkoutButtonEventListener();
 
         if (sectionCart && sectionNoCart) {
             updateCartVisibility();
@@ -374,7 +375,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
     function checkoutButtonEventListener() {
-        document.getElementById('checkout-button').addEventListener('click', async () => {
+        checkoutButton.addEventListener('click', async (event) => {
             event.preventDefault();
             const cartData = JSON.parse(localStorage.getItem('cart')) || [];
         

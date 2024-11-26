@@ -46,6 +46,7 @@ eleventyComputed:
           aria-label="{{ i18n.checkout_title[page.lang] }}"
         >
           {{ i18n.checkout_title[page.lang] }}
+          <img class="cb-icon" src="/_assets/icons/cb.svg" alt="{{ i18n.cart_icon_title[page.lang] }}">
       </a>      
     </div>
 
@@ -61,17 +62,6 @@ eleventyComputed:
         ‹ {{ i18n.no_item_link[page.lang] }}
     </a>
 </section>
-
-<style>
-  #checkout-button {
-    background: var(--focus-color);
-    display: flex;
-    color: var(--hover-color);
-    font-weight: 600;
-    border: var(--border-thin);
-    box-shadow: var(--shadow);
-  }
-</style>
 
 <script src="https://js.stripe.com/v3/"></script>
 

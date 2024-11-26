@@ -62,6 +62,10 @@ checkout_title:
     fr: Passer la commande
     en: Placing the order
 
+cart_icon_title:
+    fr: icone du panier
+    en: cart's icon
+
 no_item:
     fr: Il n'y a pas encore d'article dans votre panier
     en: There are no items in your shopping cart yet
