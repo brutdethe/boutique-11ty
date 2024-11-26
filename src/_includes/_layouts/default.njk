@@ -41,9 +41,8 @@
             {{ content | safe }}
         </main>
         {% include 'footer.njk' %}
-
-        <a href="{{ '/cart' | customLocaleUrl(page.lang) | url }}" id="floating-cart" class="hidden">
-            <img class="cart-icon" src="/_assets/icons/shop-bag.svg" alt="{{ i18n.cart_icon_title[page.lang] }}" title="{{ i18n.cart_title[page.lang] }}">
-        </a>
+        {% include 'floating-cart.njk' %}
     </body>
 </html>
+
+
