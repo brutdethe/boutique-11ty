@@ -266,7 +266,7 @@ types_colis:
 
 ## Contribuer
 
-Si vous souhaitez contribuer, contactez : [coucou@gongfucha.fr](mailto:coucou@gongfucha.fr)
+Si vous souhaitez contribuer, contactez : [coucou@gongfucha.fr](mailto:&#99;&#111;&#117;&#99;&#111;&#117;&#64;&#103;&#111;&#110;&#103;&#102;&#117;&#99;&#104;&#97;&#46;&#102;&#114;)
 
 ## Crédit
 
@@ -282,4 +282,4 @@ En bref : utilisez, modifiez, et distribuez sans restriction.
 ## Contact
 
 Stéphane Langlois  
-[coucou@gongfucha.fr](mailto:coucou@gongfucha.fr)
+[coucou@gongfucha.fr](mailto:&#99;&#111;&#117;&#99;&#111;&#117;&#64;&#103;&#111;&#110;&#103;&#102;&#117;&#99;&#104;&#97;&#46;&#102;&#114;)

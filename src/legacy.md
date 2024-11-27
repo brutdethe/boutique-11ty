@@ -12,7 +12,7 @@ et dont le siège social est sis au 15 rue de la montagne, 09320 Massat.
 
 Les paiements sont effectués via [Stripe : Mentions légales](https://stripe.com/fr/legal/france-legal-notice).
 
-Directeur de la publication : Stéphane Langlois, Yalin Cheng : [coucou@gongfucha.fr](mailto:coucou@gongfucha.fr).
+Directeur de la publication : Stéphane Langlois, Yalin Cheng : [coucou@gongfucha.fr](mailto:&#99;&#111;&#117;&#99;&#111;&#117;&#64;&#103;&#111;&#110;&#103;&#102;&#117;&#99;&#104;&#97;&#46;&#102;&#114;).
 
 Cette boutique est créée par [www.gongfucha.fr](https://www.gongfucha.fr)
 le produit est disponible en licence ouverte [CC0.1 - Dépôt Github](https://raw.githubusercontent.com/brutdethe/boutique-11ty/refs/heads/main/LICENSE).
