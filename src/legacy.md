@@ -16,3 +16,9 @@ Directeur de la publication : Stéphane Langlois, Yalin Cheng : [coucou@gongfuch
 
 Cette boutique est créée par [www.gongfucha.fr](https://www.gongfucha.fr)
 le produit est disponible en licence ouverte [CC0.1 - Dépôt Github](https://raw.githubusercontent.com/brutdethe/boutique-11ty/refs/heads/main/LICENSE).
+
+## Crédit
+
+Merci à :
+- [newick](https://entre-quote.com) pour son aide sur l'intégeration.
+- [Antoine Vernois](https://blog.crafting-labs.fr/ensemble/) pour son "copilotage".

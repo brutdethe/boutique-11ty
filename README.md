@@ -268,10 +268,11 @@ types_colis:
 
 Si vous souhaitez contribuer, contactez : [coucou@gongfucha.fr](mailto:coucou@gongfucha.fr)
 
-Merci à :
+## Crédit
 
--   [newick](https://entre-quote.com) pour son aide sur l'intégeration.
--   [Antoine Vernois](https://blog.crafting-labs.fr/ensemble/) pour son "copilotage".
+Merci à :
+- [newick](https://entre-quote.com) pour son aide sur l'intégeration.
+- [Antoine Vernois](https://blog.crafting-labs.fr/ensemble/) pour son "copilotage".
 
 ## Licence
 
