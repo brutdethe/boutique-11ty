@@ -241,6 +241,12 @@ select:focus {
     margin: 0;
 }
 
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.25rem;
+}
+
 .card-description dt,
 .card-description dd {
     display: inline;
