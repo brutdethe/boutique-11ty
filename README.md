@@ -90,7 +90,6 @@ Pour garder les choses simples, nous essayons d'utiliser très peu d'outils.
 - [Eleventy](https://www.11ty.dev/), un [générateur de site statique](https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9rateur_de_site_statique).
 - [Splide.js](https://splidejs.com/), une bibliothèque légère pour créer des carrousels accessibles et élégants, utilisée pour la mise en œuvre des sliders de la boutique.
 - [sharp](https://sharp.pixelplumbing.com/), une librairie légère pour retailler les images.
-- [gray-matter](https://github.com/jonschlinkert/gray-matter), un outil pour transformer un front-matter en json
 
 Jusqu'au panier (inclus), le site est statique et fonctionne côté client, directement dans le navigateur, et peut être hébergé gratuitement sur des plateformes comme [GitLab](https://gitlab.com) ou [GitHub](https://github.com) par exemple.
 

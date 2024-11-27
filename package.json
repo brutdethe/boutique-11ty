@@ -26,8 +26,6 @@
     "stripe": "^17.4.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0",
-    "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "sharp": "^0.33.5"
   }
