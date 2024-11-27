@@ -562,12 +562,20 @@ select {
 .footer-section {
     border-top: var(--border-thin);
     margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer-list {
     display: inline-flex;
     gap: var(--gap-large);
     padding: 0;
+}
+
+.footer-section address {
+    color: var(--primary-color);
+    font-style: normal;
 }
 
 /* Floating Cart */

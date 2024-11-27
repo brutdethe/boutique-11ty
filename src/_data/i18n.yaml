@@ -26,6 +26,10 @@ cart_title:
     fr: Récapitulatif des achats
     en: Your shopping cart
 
+address_title:
+    fr: 'notre atelier :'
+    en: 'our workshop:'
+
 receipt:
     fr: Ticket
     en: Receipt
