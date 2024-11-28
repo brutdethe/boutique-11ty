@@ -170,7 +170,7 @@ $ node generateMarkdown.js
 
 ### Fonctionnement
 
-Le système de frais de transport est basé sur un fichier YAML : [`/src/_data/shipping.yaml`](./src/_data/shipping.yaml), qui contient une grille tarifaire organisée par zones géographiques, ainsi que les caractéristiques des types de colis disponibles.
+Le système de frais de transport est basé sur un fichier YAML : [`/src/_data/shipping_rate.yaml`](./src/_data/shipping_rate.yaml), qui contient une grille tarifaire organisée par zones géographiques, ainsi que les caractéristiques des types de colis disponibles.
 
 ### Grille Tarifaire
 
