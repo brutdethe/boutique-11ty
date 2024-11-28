@@ -6,7 +6,7 @@ mini_descr: traditional green tea from Taïwan
 tags: ["product", "cha"]
 permalink: /en/products/luA1_bi-luo-chun/
 description: >
-  This spring 綠茶 - LǜChá is one of the two main green teas from 臺灣 - Taiwan. It is a 碧螺春 - BìLuóChūn made from the endemic cultivar of 三峽 - SānXiá, the 青心柑仔 - QīngXīn GānZǐ, which gives it a unique aromatic identity. The family of Mr. 李 - Lǐ has been producing high-quality artisanal teas for three generations.
+  This spring 綠茶 - LǜChá is one of the two main green teas from 臺灣 - Taiwan. It is a 碧螺春 - BìLuóChūn made from the endemic cultivar of 三峽 - SānXiá, the 青心柑仔 - QīngXīn GānZǐ, which gives it a unique aromatic identity.<!--more--> The family of Mr. 李 - Lǐ has been producing high-quality artisanal teas for three generations.
 photos:
   - BiLuoChun_1-a.jpg
   - BiLuoChun_1-b.jpg

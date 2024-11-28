@@ -6,7 +6,7 @@ mini_descr: thé vert traditionnel du Sichuan
 tags: ["produit", "cha"]
 permalink: /products/luA3_bai-lu-lu-cha/
 description: >
-  Ce 綠茶 - LǜChá est produit dans le province du 四川 - SìChuān en Chine et plus exactement au village de 白鹿村 -  BáiLùCūn qui se trouve à environ 850 mètres d'altitude. Il ne couvre qu'une superficie de 5,8 kilomètres carrés et compte un peu plus de 1 300 habitants. Aucune industrie, son environnement est donc naturellement excellent et propice à la production agricole.
+  Ce 綠茶 - LǜChá est produit dans le province du 四川 - SìChuān en Chine et plus exactement au village de 白鹿村 -  BáiLùCūn qui se trouve à environ 850 mètres d'altitude.<!--more--> Il ne couvre qu'une superficie de 5,8 kilomètres carrés et compte un peu plus de 1 300 habitants. Aucune industrie, son environnement est donc naturellement excellent et propice à la production agricole.
 photos:
   - BaiLu-LuCha_1-a.jpg
   - BaiLu-LuCha_1-b.jpg
