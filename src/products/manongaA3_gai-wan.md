@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: manongaA3
 name: 蓋碗 - GàiWǎn
+mini_descr: GàiWǎn réalisé par Manon Clouzeau
 tags: ["produit", "manon-clouzeau"]
 permalink: /products/manongaA3_gai-wan/
 description: >

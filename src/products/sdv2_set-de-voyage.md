@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: sdv2
 name: Set de voyage
+mini_descr: ensemble complet pour le GōngFūChá
 tags: ["produit", "gaiwan"]
 permalink: /products/sdv2_set-de-voyage/
 description: >
