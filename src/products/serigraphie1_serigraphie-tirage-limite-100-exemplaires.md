@@ -1,7 +1,8 @@
 ---
 layout: _layouts/product_card.njk
 id: serigraphie1
-name: Sérigraphie - tirage limité 100 exemplaires
+name: sérigraphie GōngFūChá - 工夫茶
+mini_descr: tirage limité 100 exemplaires par Benhito
 tags: ["produit", "benhito"]
 permalink: /products/serigraphie1_serigraphie-tirage-limite-100-exemplaires/
 description: >

@@ -2,7 +2,7 @@
 layout: _layouts/product_card.njk
 id: affiches2
 name: festival GōngFūChá - 工夫茶
-mini_descr: Deux affiches originales par Benhito
+mini_descr: deux affiches originales par Benhito
 tags: ["produit", "benhito"]
 permalink: /products/affiches2_deux-affiches-originales-du-festival-gongfucha/
 description: >

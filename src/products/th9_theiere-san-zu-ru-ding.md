@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: th9
 name: Théière 三足乳鼎 - SānZúRǔDǐng
+mini_descr: théière artisanale (semi-main) de Taïwan
 tags: ["produit", "chahu"]
 permalink: /products/th9_theiere-san-zu-ru-ding/
 description: >
