@@ -52,6 +52,12 @@ export default function (eleventyConfig) {
         return `/${lang}${path}`
     })
 
+    eleventyConfig.addFilter("sortCountries", (countries, lang) => {
+        return countries.sort((a, b) => {
+          return a[lang].localeCompare(b[lang])
+        })
+      })
+
     eleventyConfig.addCollection('allTags', function (collectionApi) {
         const tagSet = new Set()
 
