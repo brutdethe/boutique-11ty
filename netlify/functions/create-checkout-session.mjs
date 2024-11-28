@@ -25,9 +25,7 @@ export async function handler(event, context) {
 
   try {
     const products = await getProducts();
-
-    // Parse le corps de la requête
-    const { cartItems } = JSON.parse(event.body);
+    const { cartItems, currentLang } = JSON.parse(event.body);
 
     // Vérifier que cartItems est un tableau et qu'il contient des éléments
     if (!Array.isArray(cartItems) || cartItems.length === 0 || cartItems.some(item => !item.id || typeof item.qty !== 'number' || item.qty <= 0)) {
@@ -48,8 +46,8 @@ export async function handler(event, context) {
         price_data: {
           currency: 'eur',
           product_data: {
-            name: product.title || `Produit ID: ${item.id}`,
-            description: product.title || 'Pas de description disponible',
+            name: `${product.title} - ${item.id}`,
+            description: product.descr || '',
           },
           unit_amount: Math.round(product.price * 100),
         },
@@ -62,8 +60,11 @@ export async function handler(event, context) {
       payment_method_types: ['card'],
       line_items: line_items,
       mode: 'payment',
-      success_url: `${process.env.URL}/success/?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.URL}/cancel/`,
+      success_url: `${process.env.URL}${currentLang === 'en' ? '/en' : ''}/success/?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.URL}${currentLang === 'en' ? '/en' : ''}/cancel/`,
+      shipping_address_collection: {
+        allowed_countries: ['FR'],
+      }
     });
 
     // Retourner l'ID de la session

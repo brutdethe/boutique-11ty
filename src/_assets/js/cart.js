@@ -51,12 +51,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     initialize()
 
     async function initialize() {
-        resetCartForSuccessPayment()
+        successPayment && resetCartForSuccessPayment()
         updateCartLink()
         updateCartBadge()
         disableAddToCartButtonsForItemsInCart()
         addToCartButtonEventListener()
-        checkoutButton && checkoutButtonEventListener()
+        checkoutButton && checkoutButtonEventListener(currentLang)
 
         if (sectionCart && sectionNoCart) {
             updateCartVisibility()
@@ -76,9 +76,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function resetCartForSuccessPayment() {
-        if (successPayment) {
-            storage.setCart([])
-        }
+        storage.setCart([])
     }
 
     function updateCartBadge() {
@@ -383,14 +381,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
 
-    function checkoutButtonEventListener() {
+    function checkoutButtonEventListener(currentLang) {
         checkoutButton.addEventListener('click', async (event) => {
             event.preventDefault()
             fullscreenLoader.classList.add('loader-visible')
   
-            setTimeout(() => {
-                window.location.href = this.href
-            }, 500)
             const cartData = JSON.parse(localStorage.getItem('cart')) || []
         
             try {
@@ -399,25 +394,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                     headers: {
                     'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ cartItems: cartData }),
+                    body: JSON.stringify({
+                        cartItems: cartData,
+                        currentLang: currentLang
+                     }),
                 })
             
-                const { sessionId, error } = await response.json()
+                const { sessionId } = await response.json()
             
-                if (error) {
-                    alert(`Erreur : ${error}`)
-                    return
-                }
-            
-                // Initialiser Stripe avec votre clé publique
                 const stripe = Stripe('pk_test_51HEFz3GJpQWhfcWwXgkgoLbJ1GLgViXGqYfWSgBQwzudrYdsQiMhdVkGWHQvRPx3sTMLNsRXvB2B6pdF1GEpQ9Ka00kz6AoFmS')
+                await stripe.redirectToCheckout({ sessionId })
             
-                // Rediriger vers Stripe Checkout
-                const { error: stripeError } = await stripe.redirectToCheckout({ sessionId })
-            
-                if (stripeError) {
-                    alert(stripeError.message)
-                }
             } catch (err) {
                 console.error('Erreur lors de la création de la session de paiement :', err)
             }
