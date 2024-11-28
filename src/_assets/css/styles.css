@@ -241,6 +241,11 @@ select:focus {
     margin: 0;
 }
 
+h2.card-title {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
 dl {
     display: grid;
     grid-template-columns: auto 1fr;
