@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: baiA2
 name: 白鹿白茶 - BáiLù BáiChá
+mini_descr: infusion fabriquée comme un thé blanc
 tags: ["produit", "cha"]
 permalink: /products/baiA2_bai-lu-bai-cha/
 description: >
