@@ -1,45 +1,41 @@
-import Stripe from 'stripe';
+import Stripe from 'stripe'
 
-const stripeClient = new Stripe(process.env.STRIPE_SECRET_KEY);
-let productsCache = null;
+const stripeClient = new Stripe(process.env.STRIPE_SECRET_KEY)
+let productsCache = null
 
-async function getProducts() {
-  if (productsCache) {
-    return productsCache;
-  }
-  const response = await fetch(`${process.env.URL}/products_fr.json`);
+async function getProducts(currentLang) {
+  const response = await fetch(`${process.env.URL}/products_${currentLang}.json`)
   if (!response.ok) {
-    throw new Error('Network response was not ok');
+    throw new Error('Network response was not ok')
   }
-  productsCache = await response.json();
-  return productsCache;
+  products = await response.json()
+  return products
 }
 
-export async function handler(event, context) {
+export async function handler(event) {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
       body: JSON.stringify({ error: 'Méthode non autorisée. Utilisez POST.' }),
-    };
+    }
   }
 
   try {
-    const products = await getProducts();
-    const { cartItems, currentLang } = JSON.parse(event.body);
+    const { cartItems, currentLang } = JSON.parse(event.body)
+    const products = await getProducts(currentLang)
 
-    // Vérifier que cartItems est un tableau et qu'il contient des éléments
     if (!Array.isArray(cartItems) || cartItems.length === 0 || cartItems.some(item => !item.id || typeof item.qty !== 'number' || item.qty <= 0)) {
       return {
         statusCode: 400,
         body: JSON.stringify({ error: 'Le panier est vide ou mal formaté.' }),
-      };
+      }
     }
 
     // Construire les éléments de ligne pour Stripe avec price_data
     const line_items = cartItems.map((item) => {
-      const product = products.find(p => p.id === item.id);
+      const product = products.find(p => p.id === item.id)
       if (!product) {
-        throw new Error(`Produit avec ID ${item.id} non trouvé.`);
+        throw new Error(`Produit avec ID ${item.id} non trouvé.`)
       }
 
       return {
@@ -50,13 +46,12 @@ export async function handler(event, context) {
             description: product.descr || '',
           },
           unit_amount: Math.round(product.price * 100),
-          currency: 'eur'
         },
         quantity: item.qty,
-      };
-    });
+      }
+    })
 
-    // Créer une session de paiement Stripe
+    // Créer une session de paiement Stripe avec des options de livraison
     const session = await stripeClient.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: line_items,
@@ -65,18 +60,40 @@ export async function handler(event, context) {
       cancel_url: `${process.env.URL}${currentLang === 'en' ? '/en' : ''}/cancel/`,
       shipping_address_collection: {
         allowed_countries: ['FR'],
-      }
-    });
+      },
+      shipping_options: [
+        {
+          shipping_rate_data: {
+            type: 'fixed_amount',
+            fixed_amount: {
+              amount: 500, // Coût de livraison en centimes (500 centimes = 5 euros)
+              currency: 'eur',
+            },
+            display_name: 'Livraison Standard',
+            delivery_estimate: {
+              minimum: {
+                unit: 'business_day',
+                value: 3,
+              },
+              maximum: {
+                unit: 'business_day',
+                value: 5,
+              },
+            },
+          },
+        },
+      ],
+    })
 
     return {
       statusCode: 200,
       body: JSON.stringify({ sessionId: session.id }),
-    };
+    }
   } catch (error) {
-    console.error('Erreur lors de la création de la session de paiement :', error);
+    console.error('Erreur lors de la création de la session de paiement :', error)
     return {
       statusCode: 500,
       body: JSON.stringify({ error: `Une erreur est survenue lors de la création de la session de paiement : ${error.message}` }),
-    };
+    }
   }
-};
+}
