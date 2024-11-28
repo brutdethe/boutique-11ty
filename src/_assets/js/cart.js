@@ -27,6 +27,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         setCart: (cart) => {
             localStorage.setItem('cart', JSON.stringify(cart))
             updateCartBadge()
+        },
+        getCountry: () => localStorage.getItem('country') || 'FR',
+        setCountry: (country) => {
+            localStorage.setItem('country', country)
         }
     }
 
@@ -46,6 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const currentLang = getActiveLanguage()
 
+    let totalShippingCost = 0;
     let productsData
 
     initialize()
@@ -66,6 +71,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 initializeCart()
             }
             if (shippingSelect) {
+                setSelectedCountry()
                 shippingSelect.addEventListener('change', calculateCartTotal)
             }
         }
@@ -305,9 +311,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     function calculateCartTotal() {
         const cartItems = storage.getCart()
         let subtotal = 0
-        let totalShippingCost = 0
         let hasShipping = false
         let shippingGroups = {}
+        totalShippingCost = 0
 
         cartItems.forEach((cartItem) => {
             const productData = productsData.find((product) => String(product.id) === String(cartItem.id))
@@ -380,6 +386,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    function setSelectedCountry() {
+        const countryIso = storage.getCountry()
+        const options = shippingSelect.options
+    
+        for (let i = 0; i < options.length; i++) {
+            const option = options[i];
+            if (option.getAttribute('data-iso') === countryIso) {
+                option.selected = true
+                break;
+            }
+        }
+    }
+
+    shippingSelect.addEventListener('change', () => {
+        const selectedCountryIso = shippingSelect.selectedOptions[0].getAttribute('data-iso')
+        storage.setCountry(selectedCountryIso)
+    })
 
     function checkoutButtonEventListener(currentLang) {
         checkoutButton.addEventListener('click', async (event) => {
@@ -389,7 +412,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             const cartData = JSON.parse(localStorage.getItem('cart')) || []
         
             try {
-                const currentCountry = shippingSelect.selectedOptions[0].getAttribute('data-iso')
                 const response = await fetch('/.netlify/functions/create-checkout-session', {
                     method: 'POST',
                     headers: {
@@ -398,8 +420,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     body: JSON.stringify({
                         cartItems: cartData,
                         currentLang: currentLang,
-                        shippingAmount: 4200,
-                        country: currentCountry
+                        shippingAmount: totalShippingCost,
+                        country: storage.getCountry()
                      }),
                 })
             

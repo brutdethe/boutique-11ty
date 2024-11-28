@@ -63,7 +63,7 @@ export async function handler(event) {
           shipping_rate_data: {
             type: 'fixed_amount',
             fixed_amount: {
-              amount: shippingAmount,
+              amount: Math.round(shippingAmount*100),
               currency: 'eur',
             },
             display_name: 'Livraison Standard',
