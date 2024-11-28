@@ -456,7 +456,8 @@ dl {
 }
 
 #no-cart,
-#payment-canceled {
+#payment-canceled,
+#payment-successed {
     background: var(--secondary-bg);
     border: var(--border-thin);
     color: var(--primary-color);

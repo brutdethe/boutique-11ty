@@ -86,6 +86,14 @@ payment_canceled_link:
     fr: retour vers votre panier
     en: back to your cart
 
+payment_successed:
+    fr: Votre commande a bien été passée, nous préparons rapidement votre colis
+    en: Your order has been placed, we will quickly prepare your package
+
+payment_successed_link:
+    fr: retour vers l'accueil
+    en: back to home
+
 meta:
     description:
         fr: Découvrez notre boutique Gong Fu Cha et trouvez des produits uniques pour vos dégustations de thé.

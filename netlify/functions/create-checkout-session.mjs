@@ -62,8 +62,8 @@ export async function handler(event, context) {
       payment_method_types: ['card'],
       line_items: line_items,
       mode: 'payment',
-      success_url: `${process.env.URL}/success.html?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.URL}/cancel.html`,
+      success_url: `${process.env.URL}/success/?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.URL}/cancel/`,
     });
 
     // Retourner l'ID de la session
