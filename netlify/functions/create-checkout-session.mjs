@@ -20,7 +20,7 @@ export async function handler(event) {
   }
 
   try {
-    const { cartItems, currentLang } = JSON.parse(event.body)
+    const { cartItems, currentLang, shippingAmount, country } = JSON.parse(event.body)
     const products = await getProducts(currentLang)
 
     if (!Array.isArray(cartItems) || cartItems.length === 0 || cartItems.some(item => !item.id || typeof item.qty !== 'number' || item.qty <= 0)) {
@@ -56,14 +56,14 @@ export async function handler(event) {
       success_url: `${process.env.URL}${currentLang === 'en' ? '/en' : ''}/success/?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.URL}${currentLang === 'en' ? '/en' : ''}/cancel/`,
       shipping_address_collection: {
-        allowed_countries: ['FR'],
+        allowed_countries: [country],
       },
       shipping_options: [
         {
           shipping_rate_data: {
             type: 'fixed_amount',
             fixed_amount: {
-              amount: 500, // Coût de livraison en centimes (500 centimes = 5 euros)
+              amount: shippingAmount,
               currency: 'eur',
             },
             display_name: 'Livraison Standard',

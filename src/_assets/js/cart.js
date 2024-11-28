@@ -389,6 +389,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const cartData = JSON.parse(localStorage.getItem('cart')) || []
         
             try {
+                const currentCountry = shippingSelect.selectedOptions[0].getAttribute('data-iso')
                 const response = await fetch('/.netlify/functions/create-checkout-session', {
                     method: 'POST',
                     headers: {
@@ -396,7 +397,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                     },
                     body: JSON.stringify({
                         cartItems: cartData,
-                        currentLang: currentLang
+                        currentLang: currentLang,
+                        shippingAmount: 4200,
+                        country: currentCountry
                      }),
                 })
             
