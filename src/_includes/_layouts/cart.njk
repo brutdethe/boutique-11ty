@@ -13,13 +13,7 @@ eleventyComputed:
         <label for="destination" id="destination-label">{{ i18n.destination[page.lang] }}</label>
         <div class="select">
             <select id="destination" name="destination" aria-labelledby="destination-label" aria-required="true" role="combobox">
-            {% for zone, data in shipping.grille_tarifs %}
-                {% for country in data.pays[page.lang] %}
-                <option value="{{ zone }}">
-                    {{ country }}
-                </option>
-                {% endfor %}
-            {% endfor %}
+                {% include 'countries_options.njk' %}
             </select>
         </div>
 
@@ -67,7 +61,7 @@ eleventyComputed:
 <script src="https://js.stripe.com/v3/"></script>
 
 <script>
-    const shippingData = {{ shipping | dump | safe }}
+    const shippingData = {{ shipping_rate | dump | safe }}
 </script>
 
 
