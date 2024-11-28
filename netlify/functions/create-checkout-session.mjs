@@ -1,7 +1,6 @@
 import Stripe from 'stripe'
 
 const stripeClient = new Stripe(process.env.STRIPE_SECRET_KEY)
-let productsCache = null
 
 async function getProducts(currentLang) {
   const response = await fetch(`${process.env.URL}/products_${currentLang}.json`)
@@ -31,7 +30,6 @@ export async function handler(event) {
       }
     }
 
-    // Construire les éléments de ligne pour Stripe avec price_data
     const line_items = cartItems.map((item) => {
       const product = products.find(p => p.id === item.id)
       if (!product) {
@@ -51,7 +49,6 @@ export async function handler(event) {
       }
     })
 
-    // Créer une session de paiement Stripe avec des options de livraison
     const session = await stripeClient.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: line_items,
