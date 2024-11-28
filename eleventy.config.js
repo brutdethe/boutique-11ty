@@ -23,10 +23,18 @@ export default function (eleventyConfig) {
         defaultLanguage: 'fr',
         errorMode: 'never'
     })
-
+    
     eleventyConfig.addDataExtension('yaml, yml', (contents) =>
         yaml.load(contents)
     )
+    
+    eleventyConfig.addFilter("excerptFromDescription", function(description) {
+        if (!description) return ""
+        const separator = "<!--more-->"
+        const parts = description.split(separator)
+        return parts[0]
+    })
+
 
     eleventyConfig.addFilter('customLocaleUrl', function (path, lang) {
         if (lang === config.langs.default) {

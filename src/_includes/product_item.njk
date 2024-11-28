@@ -4,7 +4,7 @@
             {{ post.data.name }}
         </h2>
         <h3 class="product-subtitle">
-            {{ post.data.mini_descr}}
+            {{ post.data.mini_descr }}
         </h3>
     </header>
     <figure class="product-figure">
@@ -15,7 +15,7 @@
             alt="{{ post.data.name }}"
         />
     </figure>
-    <p class="product-description">{{ post.data.description }}</p>
+    <p class="product-description">{{ post.data.description | excerptFromDescription }}</p>
     {% set price = post.data.price %}
     {% include 'price.njk' %}
     <footer class="product-footer">
