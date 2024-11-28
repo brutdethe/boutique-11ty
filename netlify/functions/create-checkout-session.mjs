@@ -50,6 +50,7 @@ export async function handler(event, context) {
             description: product.descr || '',
           },
           unit_amount: Math.round(product.price * 100),
+          currency: 'eur'
         },
         quantity: item.qty,
       };
@@ -67,7 +68,6 @@ export async function handler(event, context) {
       }
     });
 
-    // Retourner l'ID de la session
     return {
       statusCode: 200,
       body: JSON.stringify({ sessionId: session.id }),
