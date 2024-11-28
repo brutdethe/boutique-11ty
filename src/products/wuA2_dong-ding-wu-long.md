@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: wuA2
 name: 凍頂烏龍 - DòngDǐng WūLóng
+mini_descr: thé wulong traditionnel de Taïwan
 tags: ["produit", "cha"]
 permalink: /products/wuA2_dong-ding-wu-long/
 description: >

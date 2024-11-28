@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: luA3
 name: 白鹿綠茶 - BáiLù LǜChá
+mini_descr: thé vert traditionnel du Sichuan
 tags: ["produit", "cha"]
 permalink: /products/luA3_bai-lu-lu-cha/
 description: >

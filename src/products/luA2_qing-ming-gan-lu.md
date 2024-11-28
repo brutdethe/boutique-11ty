@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: luA2
 name: 清明甘露 - QīngMíng GānLù
+mini_descr: thé vert traditionnel du Sichuan
 tags: ["produit", "cha"]
 permalink: /products/luA2_qing-ming-gan-lu/
 description: >

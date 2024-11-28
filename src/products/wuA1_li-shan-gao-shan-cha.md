@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: wuA1
 name: 梨山高山茶 - LíShān GāoShānChá
+mini_descr: thé wulong traditionnel de haute montagne de Taïwan
 tags: ["produit", "cha"]
 permalink: /products/wuA1_li-shan-gao-shan-cha/
 description: >

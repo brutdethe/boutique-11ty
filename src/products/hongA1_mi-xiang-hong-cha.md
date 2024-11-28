@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: hongA1
 name: 蜜香红茶 - MìXiāng HóngChá
+mini_descr: thé rouge traditionnel de Taïwan
 tags: ["produit", "cha"]
 permalink: /products/hongA1_mi-xiang-hong-cha/
 description: >

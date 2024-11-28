@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: luA1
 name: 碧螺春 - BìLuóChūn
+mini_descr: traditional green tea from Taïwan
 tags: ["product", "cha"]
 permalink: /en/products/luA1_bi-luo-chun/
 description: >

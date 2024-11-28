@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: luA1
 name: 碧螺春 - BìLuóChūn
+mini_descr: thé vert traditionnel de Taïwan
 tags: ["produit", "cha"]
 permalink: /products/luA1_bi-luo-chun/
 description: >
