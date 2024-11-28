@@ -172,6 +172,19 @@ $ node generateMarkdown.js
 
 Le système de frais de transport est basé sur un fichier YAML : [`/src/_data/shipping_rate.yaml`](./src/_data/shipping_rate.yaml), qui contient une grille tarifaire organisée par zones géographiques, ainsi que les caractéristiques des types de colis disponibles.
 
+### Les pays
+
+Le menu des pays est généré à partir d'un fichier yaml : [`/src/_data/shipping_countries.yaml`](./src/_data/shipping_countries.yaml). 
+
+Pour chaque pays, il y a la traduction, la zone pour le tarif postal applicable et l'abréviation ISO qui est passé à *stripe* et qui bloque *stripe checkout* sur le pays choisi dans le panier.
+
+```yaml
+- fr: Taïwan
+  en: Taiwan
+  zone: ZoneC
+  iso: TW
+```
+
 ### Grille Tarifaire
 
 La grille tarifaire définit les frais de transport en fonction du poids total des colis et de la destination. Les zones géographiques sont :
