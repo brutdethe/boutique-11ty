@@ -6,8 +6,7 @@
   "scripts": {
     "import": "node ./script/import/generateMD.js",
     "resize": "node ./script/resize/resize.js",
-    "build": "npx @11ty/eleventy",
-    "build-ghpages": "npx @11ty/eleventy && gh-pages -d _site"
+    "build": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
@@ -23,11 +22,10 @@
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@splidejs/splide": "^4.1.4"
+    "@splidejs/splide": "^4.1.4",
+    "stripe": "^17.4.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0",
-    "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "sharp": "^0.33.5"
   }

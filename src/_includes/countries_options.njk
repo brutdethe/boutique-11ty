@@ -1,0 +1,6 @@
+{% set sorted_countries = shipping_countries | sortCountries(page.lang) %}
+{% for country in sorted_countries %}
+  <option value="{{ country.zone }}" data-iso="{{ country.iso }}">
+    {{ country[page.lang] }}
+  </option>
+{% endfor %}

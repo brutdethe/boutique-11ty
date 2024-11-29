@@ -2,10 +2,11 @@
 layout: _layouts/product_card.njk
 id: luA3
 name: 白鹿綠茶 - BáiLù LǜChá
+mini_descr: traditional green tea from Sichuan
 tags: ["product", "cha"]
 permalink: /en/products/luA3_bai-lu-lu-cha/
 description: >
-  This 綠茶 - LǜChá is the first tea of 65-year-old Madame 张 - Zhāng, a young producer. A former headmistress of 三峡 - SānXiá Primary School, she spends her new life in the tea gardens of her producer friends. Her tea is sincere with adorable little flaws of youth.
+  This 綠茶 - LǜChá is the first tea of 65-year-old Madame 张 - Zhāng, a young producer. A former headmistress of 三峡 - SānXiá Primary School, she spends her new life in the tea gardens of her producer friends.<!--more--> Her tea is sincere with adorable little flaws of youth.
 photos:
   - BaiLu-LuCha_1-a.jpg
   - BaiLu-LuCha_1-b.jpg

@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: ga2
 name: GàiWǎn basique
+mini_descr: infuseur pour la pratique traditionnel chinoise du thé
 tags: ["produit", "gaiwan"]
 permalink: /products/ga2_gai-wan-basique/
 description: >

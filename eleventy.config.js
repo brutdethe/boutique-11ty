@@ -11,7 +11,7 @@ export const config = {
     htmlTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
     templateFormats: ['njk', 'md', 'html'],
-    pathPrefix: '/boutique-11ty/',
+    pathPrefix: '/',
     langs: { default: 'fr', others: ['en'] }
 }
 
@@ -23,10 +23,18 @@ export default function (eleventyConfig) {
         defaultLanguage: 'fr',
         errorMode: 'never'
     })
-
+    
     eleventyConfig.addDataExtension('yaml, yml', (contents) =>
         yaml.load(contents)
     )
+    
+    eleventyConfig.addFilter("excerptFromDescription", function(description) {
+        if (!description) return ""
+        const separator = "<!--more-->"
+        const parts = description.split(separator)
+        return parts[0]
+    })
+
 
     eleventyConfig.addFilter('customLocaleUrl', function (path, lang) {
         if (lang === config.langs.default) {
@@ -43,6 +51,12 @@ export default function (eleventyConfig) {
 
         return `/${lang}${path}`
     })
+
+    eleventyConfig.addFilter("sortCountries", (countries, lang) => {
+        return countries.sort((a, b) => {
+          return a[lang].localeCompare(b[lang])
+        })
+      })
 
     eleventyConfig.addCollection('allTags', function (collectionApi) {
         const tagSet = new Set()

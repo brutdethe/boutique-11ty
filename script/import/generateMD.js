@@ -171,19 +171,9 @@ function createMarkdownContent(
     isEnglish
 ) {
     const stock = quantité_produite
-        ? `stock: ${
-              isEnglish
-                  ? quantité_produite +
-                    ' item' +
-                    (quantité_produite > 1 ? 's' : '') +
-                    ' left'
-                  : 'il reste ' +
-                    quantité_produite +
-                    ' article' +
-                    (quantité_produite > 1 ? 's' : '')
-          }`
+        ? `stock: ${quantité_produite}`
         : ''
-    const weight = poids ? `weight: ${Math.round(poids * 1000)} g` : ''
+    const weight = poids ? `weight: ${Math.round(poids * 1000)}` : ''
     const photosContent =
         photos?.map((photo) => `  - ${photo}`).join('\n') || ''
 

@@ -1,11 +1,13 @@
 ---
 layout: _layouts/product_card.njk
 id: affiches2
-name: Deux affiches originales du festival GongFuCha
+name: festival GōngFūChá - 工夫茶
+mini_descr: deux affiches originales par Benhito
+meta_descr: Deux affiches originales créées par Benhito pour le festival GōngFūChá - 工夫茶. Dans un style épuré et expressif.
 tags: ["produit", "benhito"]
 permalink: /products/affiches2_deux-affiches-originales-du-festival-gongfucha/
 description: >
-  Deux affiches du festival GongFuCha. Benhito est sorti de son univers rock pour taper juste et fort dans un style épuré avec une mise en couleur parfaite.
+  Deux affiches du festival GōngFūChá - 工夫茶. Benhito est sorti de son univers rock pour taper juste et fort dans un style épuré avec une mise en couleur parfaite.
 photos:
   - gongfucha_affiches_a.jpg
 price: 20.00

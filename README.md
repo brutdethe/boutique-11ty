@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0edcc928-d8f8-4f22-82a5-14cdd541fb8a/deploy-status)](https://app.netlify.com/sites/boutique-gongfucha/deploys)
+
 # Boutique-11ty
 
 Une petite boutique en ligne construite avec [11ty](https://www.11ty.dev/).
@@ -9,6 +11,14 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 ## Les fonctionnalités
 
 ### Terminées
+
+- US-08 Paiement
+  - [x] installation sur netlify
+  - [x] création des pages de succès et d'abandon
+  - [x] gère les désactivation du panier
+  - [x] création d'un fichier avec tous les pays
+  - [x] création du ticket : total - s/total - transport
+  - [x] passe les informations du panier à stripe 
 
 - US-09 Gestion des frais de transport
   - [x] mise en place de la grille tarifaire
@@ -71,7 +81,6 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 ### À venir
 
-- US-08 Paiement
 - US-12 responsive
 - US-14 gérer les stocks
 - US-10 passer en plugin
@@ -81,12 +90,27 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 ## Outils utilisés
 
-Pour garder les choses simples, nous utilisons peu d'outils.
+Pour garder les choses simples, nous essayons d'utiliser très peu d'outils.
 
--   [Eleventy](https://www.11ty.dev/), un [générateur de site statique](https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9rateur_de_site_statique).
--   [Splide.js](https://splidejs.com/), une bibliothèque légère pour créer des carrousels accessibles et élégants, utilisée pour la mise en œuvre des sliders de la boutique.
+- [Eleventy](https://www.11ty.dev/), un [générateur de site statique](https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9rateur_de_site_statique).
+- [Splide.js](https://splidejs.com/), une bibliothèque légère pour créer des carrousels accessibles et élégants, utilisée pour la mise en œuvre des sliders de la boutique.
+- [sharp](https://sharp.pixelplumbing.com/), une librairie légère pour retailler les images.
 
-Le site fonctionne côté client, directement dans le navigateur, et peut être hébergé gratuitement sur des plateformes comme [GitLab](https://gitlab.com) ou [GitHub](https://github.com).
+Jusqu'au panier (inclus), le site est statique et fonctionne côté client, directement dans le navigateur, et peut être hébergé gratuitement sur des plateformes comme [GitLab](https://gitlab.com) ou [GitHub](https://github.com) par exemple.
+
+Reste quand même un pépin, pour les paiements en ligne. Une fois que la personne valide son panier en passant au paiement, nous avons choisi de passer par [stripe](stripe). Cette opération de paiement est sensible, une personne bizarrement intentionnée pourrait, par exemple, adapter les tarifs de ses achats. Nous avons donc un tout petit peu d'actions qui ne se font pas que dans le navigateur de la personne qui va commander. Nous utilisons donc un autre service dans sa version gratuite : [netlify](https://www.netlify.com).
+
+### Installer le site sur netlify
+
+Pour déployer le site *gitHub* sur *netlify*, connectez le dépôt via *import an existing project*. Ajouter la variable d'environnement STRIPE_SECRET_KEY dans *Site Settings > Environment variables*. Lancez le déploiement, et *netlify* s'occupera de cloner le dépôt, installer les dépendances et construire le projet. Une fois terminé, testez le site sur l'URL attribuée par *netlify*.
+
+En local, ajouter un fichier *.env* avec :
+
+```bash
+STRIPE_SECRET_KEY = sk_test_***
+```
+
+La clé privée *stripe* (*STRIPE_SECRET_KEY*) est une donnée sensible qui ne doit jamais être exposée publiquement. Elle est stockée dans un fichier *.env*, qui est ignoré dans le *.gitignore*.
 
 ## Script de redimensionnement des images
 
@@ -98,9 +122,9 @@ Pour retailler et optimiser les images utilisées dans le carrousel, nous utilis
 
 Ce script permet de :
 
--   Redimensionner et optimiser les images placées dans le dossier `photos`.
--   Générer des versions optimisées pour les vignettes, les images du carrousel et les miniatures de celui-ci.
--   Il est exécuté automatiquement via GitHub Actions dès qu'un changement est détecté dans le dossier `/photos`.
+- Redimensionner et optimiser les images placées dans le dossier `photos`.
+- Générer des versions optimisées pour les vignettes, les images du carrousel et les miniatures de celui-ci.
+- Il est exécuté automatiquement via GitHub Actions dès qu'un changement est détecté dans le dossier `/photos`.
 
 ## Installation
 
@@ -115,6 +139,24 @@ $ npx @11ty/eleventy --serve
 ```
 
 Le site devient accessible à l'adresse suivante : [http://localhost:8080/](http://localhost:8080/)
+
+### Pour tester avec le paiement
+
+#### Avec stripe
+
+Pour tester *stripe* activer le mode test, puis récupérer la *clé secrète* de test (*sk_test_...*) et la configurer comme variable d’environnement sous le nom STRIPE_SECRET_KEY. Tester les paiements en utilisant les cartes de test : *4242 4242 4242 4242* pour un paiement réussi, ou d’autres pour simuler des erreurs. Puis vérifier les transactions dans le tableau de bord *stripe*.
+
+#### Puis netlify
+
+Dans un environnement simulant *netlify*, Installer :
+
+```bash
+$ npm install -g netlify-cli
+$ netlify login
+$ netlify dev
+```
+
+Ça démarre un serveur local qui applique les redirections, variables d'environnement (ex. *STRIPE_SECRET_KEY*), et permet de tester les *fonctions serverless* comme en production.
 
 ## Génération de Fichiers Markdown
 
@@ -133,7 +175,20 @@ $ node generateMarkdown.js
 
 ### Fonctionnement
 
-Le système de frais de transport est basé sur un fichier YAML : [`/src/_data/shipping.yaml`](./src/_data/shipping.yaml), qui contient une grille tarifaire organisée par zones géographiques, ainsi que les caractéristiques des types de colis disponibles.
+Le système de frais de transport est basé sur un fichier YAML : [`/src/_data/shipping_rate.yaml`](./src/_data/shipping_rate.yaml), qui contient une grille tarifaire organisée par zones géographiques, ainsi que les caractéristiques des types de colis disponibles.
+
+### Les pays
+
+Le menu des pays est généré à partir d'un fichier yaml : [`/src/_data/shipping_countries.yaml`](./src/_data/shipping_countries.yaml). 
+
+Pour chaque pays, il y a la traduction, la zone pour le tarif postal applicable et l'abréviation ISO qui est passé à *stripe* et qui bloque *stripe checkout* sur le pays choisi dans le panier.
+
+```yaml
+- fr: Taïwan
+  en: Taiwan
+  zone: ZoneC
+  iso: TW
+```
 
 ### Grille Tarifaire
 
@@ -228,12 +283,13 @@ types_colis:
 
 ## Contribuer
 
-Si vous souhaitez contribuer, contactez : [coucou@gongfucha.fr](mailto:coucou@gongfucha.fr)
+Si vous souhaitez contribuer, contactez : [coucou@gongfucha.fr](mailto:&#99;&#111;&#117;&#99;&#111;&#117;&#64;&#103;&#111;&#110;&#103;&#102;&#117;&#99;&#104;&#97;&#46;&#102;&#114;)
+
+## Crédit
 
 Merci à :
-
--   [newick](https://entre-quote.com) pour son aide sur l'intégeration.
--   [Antoine Vernois](https://blog.crafting-labs.fr/ensemble/) pour son "copilotage".
+- [newick](https://entre-quote.com) pour son aide sur l'intégeration.
+- [Antoine Vernois](https://blog.crafting-labs.fr/ensemble/) pour son "copilotage".
 
 ## Licence
 
@@ -243,4 +299,4 @@ En bref : utilisez, modifiez, et distribuez sans restriction.
 ## Contact
 
 Stéphane Langlois  
-[coucou@gongfucha.fr](mailto:coucou@gongfucha.fr)
+[coucou@gongfucha.fr](mailto:&#99;&#111;&#117;&#99;&#111;&#117;&#64;&#103;&#111;&#110;&#103;&#102;&#117;&#99;&#104;&#97;&#46;&#102;&#114;)

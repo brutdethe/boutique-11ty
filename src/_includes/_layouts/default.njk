@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link
-            href="{{ '/_assets/favicon.ico' | url }}"
+            href="{{ '/_assets/icons/favicon.ico' | url }}"
             rel="icon"
             type="image/x-icon"
         />
@@ -22,13 +22,13 @@
 
         <meta
             name="description"
-            content="{{ i18n.meta.description[page.lang] }}"
+            content="{{ meta_descr or i18n.meta.description[page.lang] }}"
         />
 
         <meta property="og:title" content="{{ title }}" />
         <meta
             property="og:description"
-            content="{{ i18n.meta.description[page.lang] }}"
+            content="{{ meta_descr or i18n.meta.description[page.lang]  }}"
         />
         <meta property="og:url" content="{{ page.url | url }}" />
         <meta property="og:type" content="website" />
@@ -41,7 +41,8 @@
             {{ content | safe }}
         </main>
         {% include 'footer.njk' %}
-
-        <a href="{{ '/cart' | customLocaleUrl(page.lang) | url }}" id="floating-cart" class="hidden">P</a>
+        {% include 'floating-cart.njk' %}
     </body>
 </html>
+
+

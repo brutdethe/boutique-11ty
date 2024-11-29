@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: manongaA3
 name: 蓋碗 - GàiWǎn
+mini_descr: GàiWǎn réalisé par Manon Clouzeau
 tags: ["produit", "manon-clouzeau"]
 permalink: /products/manongaA3_gai-wan/
 description: >
@@ -10,7 +11,7 @@ photos:
   - manon_gaiwan_A3-a.jpg
   - manon_gaiwan_A3-b.jpg
 price: 50.00
-stock: 1 article
+stock: 1
 weight: 193
 shipping_type: colis_base
 shipping_point: 3

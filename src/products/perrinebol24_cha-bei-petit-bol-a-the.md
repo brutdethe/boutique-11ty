@@ -10,7 +10,7 @@ photos:
   - perrine_tasse_24-a.jpg
   - perrine_tasse_24-b.jpg
 price: 20.00
-stock: 1 article
+stock: 1
 weight: 125
 shipping_type: colis_base
 shipping_point: 2

@@ -1,0 +1,104 @@
+# Grille tarifaire par zone géographique
+grille_tarifs:
+  France:
+    tarifs:
+      - poids_max: 250
+        tarif: 5.25
+      - poids_max: 500
+        tarif: 7.35
+      - poids_max: 750
+        tarif: 8.65
+      - poids_max: 1000
+        tarif: 9.40
+      - poids_max: 2000
+        tarif: 10.70
+      - poids_max: 5000
+        tarif: 16.60
+      - poids_max: 10000
+        tarif: 24.20
+  OutreMer:
+    tarifs:
+      - poids_max: 500
+        tarif: 10.05
+      - poids_max: 1000
+        tarif: 14.00
+      - poids_max: 2000
+        tarif: 17.70
+      - poids_max: 5000
+        tarif: 29.65
+      - poids_max: 10000
+        tarif: 47.00
+  ZoneA:
+    tarifs:
+      - poids_max: 500
+        tarif: 14.85
+      - poids_max: 1000
+        tarif: 18.45
+      - poids_max: 2000
+        tarif: 20.90
+      - poids_max: 5000
+        tarif: 26.80
+      - poids_max: 10000
+        tarif: 44.20
+      - poids_max: 15000
+        tarif: 64.80
+      - poids_max: 30000
+        tarif: 84.00
+  UK:
+    tarifs:
+      - poids_max: 500
+        tarif: 17.85
+      - poids_max: 1000
+        tarif: 21.45
+      - poids_max: 2000
+        tarif: 23.90
+      - poids_max: 5000
+        tarif: 29.80
+      - poids_max: 10000
+        tarif: 47.20
+      - poids_max: 15000
+        tarif: 67.80
+      - poids_max: 30000
+        tarif: 87.00
+  ZoneB:
+    tarifs:
+      - poids_max: 500
+        tarif: 22.70
+      - poids_max: 1000
+        tarif: 27.10
+      - poids_max: 2000
+        tarif: 29.65
+      - poids_max: 5000
+        tarif: 38.00
+      - poids_max: 10000
+        tarif: 63.00
+      - poids_max: 15000
+        tarif: 85.50
+      - poids_max: 30000
+        tarif: 104.50
+  ZoneC:
+    tarifs:
+      - poids_max: 500
+        tarif: 33.50
+      - poids_max: 1000
+        tarif: 37.30
+      - poids_max: 2000
+        tarif: 51.40
+      - poids_max: 5000
+        tarif: 75.00
+      - poids_max: 10000
+        tarif: 142.00
+      - poids_max: 15000
+        tarif: 201.00
+      - poids_max: 30000
+        tarif: 245.00
+
+types_colis:
+  colis_base:
+    poids_emballage: 260
+    capacite_points: 10
+  tube:
+    poids_emballage: 120
+    capacite_points: 5
+  sans_envoi: null
+

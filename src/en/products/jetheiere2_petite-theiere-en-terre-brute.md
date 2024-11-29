@@ -5,7 +5,7 @@ name: Small teapot in raw clay
 tags: ["product", "je-le-potier"]
 permalink: /en/products/jetheiere2_petite-theiere-en-terre-brute/
 description: >
-  Unique piece. Small teapot made from a very dense clay. This high quality stoneware is made in Germany. The porosity of this clay is 0,8%. The density of the clay limits the water temperature drop during the infusion. The pouring is fluid and fast.
+  Unique piece. Small teapot made from a very dense clay. This high quality stoneware is made in Germany. The porosity of this clay is 0,8%. The density of the clay limits the water temperature drop during the infusion.<!--more--> The pouring is fluid and fast.
 photos:
   - jerome_theiere_2-a.jpg
   - jerome_theiere_2-b.jpg

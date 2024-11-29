@@ -6,7 +6,7 @@
         <ul class="nav-list">
             <li><a href="{{ '/' | customLocaleUrl(page.lang) | url }}" class="nav-link" aria-label="{{ i18n.aria.home[page.lang] }}">{{ i18n.shop_nav[page.lang] }}</a></li>
             <li><a href="{{ i18n.about_url[page.lang] }}" class="nav-link" aria-label="{{ i18n.aria.about[page.lang] }}">{{ i18n.about_nav[page.lang] }}</a></li>
-            <li><a href="{{ '/cart' | customLocaleUrl(page.lang) | url }}" id="cart-link" class="nav-link" aria-label="{{ i18n.aria.cart[page.lang] }}"><span class="badge" data-badge="0" data-initial="YZ">{{ i18n.cart_nav[page.lang] }}</span></a></li>
+            <li><a href="{{ '/cart' | customLocaleUrl(page.lang) | url }}" id="cart-link" class="nav-link" aria-label="{{ i18n.aria.cart[page.lang] }}"><img class="cart-icon" src="/_assets/icons/shop-bag.svg" alt="{{ i18n.cart_icon_title[page.lang] }}" title="{{ i18n.cart_title[page.lang] }}"><span class="badge" data-badge="0" data-initial="YZ"></span></a></li>
         </ul>
         <ul class="currency-list">
             <li><a href="" class="btn btn-nav selected" value="EUR" aria-label="{{ i18n.aria.currency_eur[page.lang] }}" aria-current="page" >€</a></li>

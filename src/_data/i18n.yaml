@@ -26,6 +26,10 @@ cart_title:
     fr: Récapitulatif des achats
     en: Your shopping cart
 
+address_title:
+    fr: 'notre atelier :'
+    en: 'our workshop:'
+
 receipt:
     fr: Ticket
     en: Receipt
@@ -58,6 +62,14 @@ add_to_cart_title:
     fr: ajouter au panier
     en: add to cart
 
+checkout_title:
+    fr: Passer la commande
+    en: Placing the order
+
+cart_icon_title:
+    fr: icone du panier
+    en: cart's icon
+
 no_item:
     fr: Il n'y a pas encore d'article dans votre panier
     en: There are no items in your shopping cart yet
@@ -65,6 +77,22 @@ no_item:
 no_item_link:
     fr: retour à la boutique
     en: back to the store
+
+payment_canceled:
+    fr: Votre paiement a été annulé, vous pouvez revenir au panier pour réessayer
+    en: Your payment has been canceled, You can return to cart to try again
+
+payment_canceled_link:
+    fr: retour vers votre panier
+    en: back to your cart
+
+payment_successed:
+    fr: Votre commande a bien été passée, nous préparons rapidement votre colis
+    en: Your order has been placed, we will quickly prepare your package
+
+payment_successed_link:
+    fr: retour vers l'accueil
+    en: back to home
 
 meta:
     description:

@@ -13,13 +13,7 @@ eleventyComputed:
         <label for="destination" id="destination-label">{{ i18n.destination[page.lang] }}</label>
         <div class="select">
             <select id="destination" name="destination" aria-labelledby="destination-label" aria-required="true" role="combobox">
-            {% for zone, data in shipping.grille_tarifs %}
-                {% for country in data.pays[page.lang] %}
-                <option value="{{ zone }}">
-                    {{ country }}
-                </option>
-                {% endfor %}
-            {% endfor %}
+                {% include 'countries_options.njk' %}
             </select>
         </div>
 
@@ -38,7 +32,22 @@ eleventyComputed:
             <data id="total-amount" class="price total-amount" value="${productData.price}" itemprop="price">0.00</data>
             <meta itemprop="priceCurrency" content="EUR" />
         </div>
+        <a
+          href="#"
+          id="checkout-button"
+          class="btn btn-card"
+          data-added-text="{{ i18n.checkout_title[page.lang] }}"
+          aria-label="{{ i18n.checkout_title[page.lang] }}"
+        >
+          {{ i18n.checkout_title[page.lang] }}
+          <img class="cb-icon" src="/_assets/icons/cb.svg" alt="{{ i18n.cart_icon_title[page.lang] }}">
+      </a>      
     </div>
+
+  <!-- Message d'avertissement caché par défaut -->
+  <div id="stripe-warning" style="display: none; background-color: #fff3cd; color: #856404; padding: 20px; margin: 20px 0; border: 1px solid #ffeeba; border-radius: 4px;">
+    <p>Nous rencontrons des difficultés techniques pour finaliser votre paiement. Veuillez réessayer ou nous contacter si le problème persiste.</p>
+  </div>
 </section>
 
 <section id="no-cart" class="display-none" role="alert">
@@ -47,7 +56,12 @@ eleventyComputed:
         ‹ {{ i18n.no_item_link[page.lang] }}
     </a>
 </section>
+{% include 'loader.njk' %}
+
+<script src="https://js.stripe.com/v3/"></script>
 
 <script>
-    const shippingData = {{ shipping | dump | safe }};
+    const shippingData = {{ shipping_rate | dump | safe }}
 </script>
+
+
