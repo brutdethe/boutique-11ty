@@ -12,6 +12,14 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 ### Terminées
 
+- US-08 Paiement
+  - [x] installation sur netlify
+  - [x] création des pages de succès et d'abandon
+  - [x] gère les désactivation du panier
+  - [x] création d'un fichier avec tous les pays
+  - [x] création du ticket : total - s/total - transport
+  - [x] passe les informations du panier à stripe 
+
 - US-09 Gestion des frais de transport
   - [x] mise en place de la grille tarifaire
   - [x] affichage de la liste des pays
@@ -72,9 +80,6 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
   - [x] Déploiement sur GitHub Pages
 
 ### À venir
-
-- US-08 Paiement
-  - [ ] installation sur netlify
 
 - US-12 responsive
 - US-14 gérer les stocks
