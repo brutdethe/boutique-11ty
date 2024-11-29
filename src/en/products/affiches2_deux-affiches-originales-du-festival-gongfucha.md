@@ -3,6 +3,7 @@ layout: _layouts/product_card.njk
 id: affiches2
 name: GōngFūChá festival - 工夫茶
 mini_descr: Two posters by Benhito
+meta_descr: Two original posters designed by Benhito for the GōngFūChá - 工夫茶 festival. A clean and expressive style.
 tags: ["product", "benhito"]
 permalink: /en/products/affiches2_deux-affiches-originales-du-festival-gongfucha/
 description: >

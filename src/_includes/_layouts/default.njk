@@ -22,13 +22,13 @@
 
         <meta
             name="description"
-            content="{{ i18n.meta.description[page.lang] }}"
+            content="{{ meta_descr or i18n.meta.description[page.lang] }}"
         />
 
         <meta property="og:title" content="{{ title }}" />
         <meta
             property="og:description"
-            content="{{ i18n.meta.description[page.lang] }}"
+            content="{{ meta_descr or i18n.meta.description[page.lang]  }}"
         />
         <meta property="og:url" content="{{ page.url | url }}" />
         <meta property="og:type" content="website" />
