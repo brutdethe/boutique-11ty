@@ -219,8 +219,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                         -
                     </button>
                     <label for="qty-${cartItem.id}" class="display-none">${t('quantity')}</label>
-                    <input id="qty-${cartItem.id}" class="product-qty item-qty" type="number" name="product-qty" data-id="${cartItem.id}" min="1" max="10" value="${cartItem.qty}" />
-                    <button class="qty-count qty-count--add ${cartItem.qty === 10 ? 'disabled' : ''}" data-action="add" type="button" aria-label="${t('button_add_qty')}">
+                    <input id="qty-${cartItem.id}" class="product-qty item-qty" type="number" name="product-qty" data-id="${cartItem.id}" min="1" max="${productData.stock || 10}" value="${cartItem.qty}" />
+                    <button class="qty-count qty-count--add ${cartItem.qty === +productData.stock ? 'disabled' : ''}" data-action="add" type="button" aria-label="${t('button_add_qty')}">
                         +
                     </button>
                 </div>
