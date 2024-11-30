@@ -22,6 +22,10 @@ legacy_nav:
     fr: mentions légales
     en: legal notice
 
+_404_text:
+    fr: cette page n'existe pas
+    en: this page doesn't exists
+
 cart_title:
     fr: Récapitulatif des achats
     en: Your shopping cart
@@ -43,16 +47,16 @@ stock:
     en: only {{ stock }} left in stock
 
 subtotal_amount:
-    fr: 'Sous-total :'
-    en: 'Subtotal amount:'
+    fr: 'sous-total :'
+    en: 'subtotal amount:'
 
 shipping_amount:
-    fr: 'Frais de transport :'
-    en: 'Shipping amount:'
+    fr: 'frais de transport :'
+    en: 'shipping amount:'
 
 total:
-    fr: 'Total :'
-    en: 'Total:'
+    fr: 'total :'
+    en: 'total:'
 
 card_detail:
     fr: détail
@@ -67,8 +71,8 @@ add_to_cart_title:
     en: add to cart
 
 checkout_title:
-    fr: Passer la commande
-    en: Placing the order
+    fr: passer la commande
+    en: placing the order
 
 cart_icon_title:
     fr: icone du panier

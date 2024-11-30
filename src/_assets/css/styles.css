@@ -41,6 +41,11 @@ ul {
     list-style: none;
 }
 
+#_404 img {
+    border: var(--border-thin);
+    box-shadow: var(--shadow);
+}
+
 .disabled {
     opacity: 0.5;
     pointer-events: none;
@@ -462,7 +467,8 @@ dl {
 
 #no-cart,
 #payment-canceled,
-#payment-successed {
+#payment-successed,
+#_404 {
     background: var(--secondary-bg);
     border: var(--border-thin);
     color: var(--primary-color);
