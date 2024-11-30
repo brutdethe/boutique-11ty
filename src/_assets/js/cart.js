@@ -72,7 +72,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
             if (shippingSelect) {
                 setSelectedCountry()
-                shippingSelect.addEventListener('change', calculateCartTotal)
+                shippingSelect.addEventListener('change', () => {
+                    const selectedCountryIso = shippingSelect.selectedOptions[0].getAttribute('data-iso')
+                    storage.setCountry(selectedCountryIso)
+                    calculateCartTotal()
+                })
             }
         }
     }
@@ -399,10 +403,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    shippingSelect.addEventListener('change', () => {
-        const selectedCountryIso = shippingSelect.selectedOptions[0].getAttribute('data-iso')
-        storage.setCountry(selectedCountryIso)
-    })
 
     function checkoutButtonEventListener(currentLang) {
         checkoutButton.addEventListener('click', async (event) => {
