@@ -138,6 +138,10 @@ select:focus {
     gap: var(--gap-small);
 }
 
+.currency-list {
+    visibility: hidden;
+}
+
 .tags-list {
     border-bottom: var(--border-thin);
     flex-wrap: wrap;
