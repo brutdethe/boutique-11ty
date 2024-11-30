@@ -5,5 +5,8 @@
     aria-label="{{ i18n.price[page.lang] }}"
 >
     {{ price | float | round(2) }} €
+    {% if stock < 5 %}
+        <span class="stock">- ({{ i18n.stock[page.lang] | with({stock: stock}) }})</span>
+    {% endif %}
 </data>
 <meta itemprop="priceCurrency" content="EUR" />

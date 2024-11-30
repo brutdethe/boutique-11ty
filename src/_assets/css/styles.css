@@ -400,6 +400,11 @@ dl {
     text-align: right;
 }
 
+.stock {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
 /* Cart Styles */
 #cart {
     display: grid;

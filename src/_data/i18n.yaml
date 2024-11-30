@@ -38,6 +38,10 @@ destination:
     fr: 'destination :'
     en: 'destination:'
 
+stock:
+    fr: il en reste {{ stock }} en stock
+    en: only {{ stock }} left in stock
+
 subtotal_amount:
     fr: 'Sous-total :'
     en: 'Subtotal amount:'

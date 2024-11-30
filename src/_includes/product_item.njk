@@ -17,7 +17,8 @@
     </figure>
     <p class="product-description">{{ post.data.description | excerptFromDescription }}</p>
     {% set price = post.data.price %}
-    {% include 'price.njk' %}
+    {% set stock = post.data.stock %}
+    {% include 'price_stock.njk' %}
     <footer class="product-footer">
         <a
             href="{{ post.data.permalink | customLocaleUrl(page.lang) | url }}"
