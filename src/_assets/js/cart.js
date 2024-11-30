@@ -64,12 +64,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         checkoutButton && checkoutButtonEventListener(currentLang)
 
         if (sectionCart && sectionNoCart) {
-            updateCartVisibility()
-            productsData = await fetchProductsData(currentLang)
-
-            if (storage.getCart().length !== 0) {
-                initializeCart()
-            }
             if (shippingSelect) {
                 setSelectedCountry()
                 shippingSelect.addEventListener('change', () => {
@@ -77,6 +71,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                     storage.setCountry(selectedCountryIso)
                     calculateCartTotal()
                 })
+            }
+            updateCartVisibility()
+            productsData = await fetchProductsData(currentLang)
+
+            if (storage.getCart().length !== 0) {
+                initializeCart()
             }
         }
     }

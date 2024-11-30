@@ -13,8 +13,8 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 ### Terminées
 
 - US-14 gérer les stocks manuellement
-  - [ ] affiche le stock sur le produit
-  - [ ] gère la quantité par rapport au stock
+  - [x] affiche le stock sur le produit
+  - [x] gère la quantité par rapport au stock
 
 - US-08 Paiement
   - [x] installation sur netlify
