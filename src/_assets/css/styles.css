@@ -41,6 +41,11 @@ ul {
     list-style: none;
 }
 
+#_404 img {
+    border: var(--border-thin);
+    box-shadow: var(--shadow);
+}
+
 .disabled {
     opacity: 0.5;
     pointer-events: none;
@@ -400,6 +405,11 @@ dl {
     text-align: right;
 }
 
+.stock {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
 /* Cart Styles */
 #cart {
     display: grid;
@@ -457,7 +467,8 @@ dl {
 
 #no-cart,
 #payment-canceled,
-#payment-successed {
+#payment-successed,
+#_404 {
     background: var(--secondary-bg);
     border: var(--border-thin);
     color: var(--primary-color);
@@ -542,7 +553,7 @@ select {
 }
 
 .qty-input .qty-count {
-    width: 2.5rem;
+    width: 1.5rem;
     cursor: pointer;
 }
 

@@ -56,7 +56,13 @@ export default function (eleventyConfig) {
         return countries.sort((a, b) => {
           return a[lang].localeCompare(b[lang])
         })
-      })
+    })
+
+    eleventyConfig.addFilter("with", function (str, vars) {
+        return str.replace(/{{\s*([\w]+)\s*}}/g, function (match, p1) {
+          return vars[p1] || match
+        })
+    })
 
     eleventyConfig.addCollection('allTags', function (collectionApi) {
         const tagSet = new Set()

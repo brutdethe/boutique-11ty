@@ -12,6 +12,10 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 ### Terminées
 
+- US-14 gérer les stocks manuellement
+  - [x] affiche le stock sur le produit
+  - [x] gère la quantité par rapport au stock
+
 - US-08 Paiement
   - [x] installation sur netlify
   - [x] création des pages de succès et d'abandon
@@ -82,11 +86,13 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 ### À venir
 
 - US-12 responsive
-- US-14 gérer les stocks
+
+-- Version 1.0 - production
+
 - US-10 passer en plugin
 - US-11 currencies
 - US-13 page accueil
-
+- US-16 gère le stock avec stripe
 
 ## Outils utilisés
 
@@ -288,8 +294,8 @@ Si vous souhaitez contribuer, contactez : [coucou@gongfucha.fr](mailto:&#99;&#11
 ## Crédit
 
 Merci à :
-- [newick](https://entre-quote.com) pour son aide sur l'intégeration.
-- [Antoine Vernois](https://blog.crafting-labs.fr/ensemble/) pour son "copilotage".
+- [newick](https://entre-quote.com) pour son aide sur l'intégeration
+- [Antoine Vernois](https://blog.crafting-labs.fr/ensemble/) pour son "copilotage"
 
 ## Licence
 
