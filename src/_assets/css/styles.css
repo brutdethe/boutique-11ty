@@ -179,22 +179,6 @@ select:focus {
     color: var(--secondary-bg);
 }
 
-/* Price */
-.price {
-    color: var(--primary-color);
-    flex: 1;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-    padding: 0.5rem;
-    text-align: right;
-}
-
-.stock {
-    font-weight: normal;
-    font-size: 1rem;
-}
-
 /* Cart Styles */
 #cart {
     display: grid;
