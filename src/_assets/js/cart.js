@@ -202,6 +202,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     function createCartItemElement(productData, cartItem) {
         const itemElement = document.createElement('article')
         itemElement.classList.add('product-item')
+        itemElement.classList.add('shadow')
         itemElement.innerHTML = `
             <header class="product-header">
                 <h2 id="${productData.title}" class="product-title">${productData.title}</h2>

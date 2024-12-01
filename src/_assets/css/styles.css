@@ -6,7 +6,6 @@
     --secondary-bg: #f7f3ee;
     --bg-color: #fafafa;
     --focus-color: #d7c485;
-    --shadow: 0 .25rem 1rem var(--border-color);
     --border-thin: .5px solid var(--border-color);
     --gap-small: 0.5rem;
     --gap-large: 1.5rem;
@@ -43,7 +42,6 @@ ul {
 
 #_404 img {
     border: var(--border-thin);
-    box-shadow: var(--shadow);
 }
 
 .disabled {
@@ -90,56 +88,10 @@ select:focus {
     outline-offset: 2px;
 }
 
-/* Header */
-.header {
-    align-items: center;
-    border-bottom: var(--border-thin);
-    display: flex;
-    margin-bottom: var(--gap-large);
-    padding-top: 1rem;
-}
-
-.nav-header {
-    display: flex;
-    width: 100%;
-}
-
-.logo-link img {
-    width: 80px;
-    height: auto;
-}
-
-/* Navigation */
-.nav-list {
-    display: flex;
-    gap: var(--gap-large);
-    margin-right: auto;
-}
-
-.nav-link {
-    display: inline-flex;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: var(--hover-color);
-}
-
-.nav-link .cart-icon {
-    width: 1.5rem;
-    opacity: .7;
-}
-
 /* Lists */
-.currency-list,
-.language-list,
-.tags-list {
+.list {
     display: flex;
     gap: var(--gap-small);
-}
-
-.currency-list {
-    visibility: hidden;
 }
 
 .tags-list {
@@ -152,16 +104,8 @@ select:focus {
     background-color: var(--border-color) !important;
 }
 
-.tags-list .selected {
-    font-weight: 700;
-}
-
-/* Product & Category Elements */
-.product-item,
-.category-description,
-.btn-nav,
-.card-figure img {
-    box-shadow: var(--shadow);
+.shadow {
+    box-shadow: 0 .25rem 1rem var(--border-color);
 }
 
 .category-description {
@@ -376,26 +320,25 @@ dl {
     color: var(--bg-color);
 }
 
-.btn-nav {
-    background: transparent;
-    border: var(--border-thin);
+.btn-tag {
     font-size: 0.9rem;
     padding: 0.5rem;
+    border: var(--border-thin);
 }
 
 .btn-details {
     border-top: var(--border-thin);
 }
 
+.btn:hover {
+    background-color: var(--secondary-bg);
+    color: var(--hover-color);
+}
+
 .btn-card:hover {
     background: var(--hover-color);
     transform: scale(1.05);
-}
-
-.btn-details:hover,
-.btn-nav:hover {
-    background-color: var(--secondary-bg);
-    color: var(--hover-color);
+    color: var(--secondary-bg);
 }
 
 /* Price */
@@ -450,7 +393,6 @@ dl {
     padding: 1rem;
     margin: 1.5rem;
     border: var(--border-thin);
-    box-shadow: var(--shadow);
     max-height: 35rem;
     display: grid;
     grid-template-rows: auto auto 1fr auto;
@@ -572,7 +514,6 @@ select {
     color: var(--hover-color);
     font-weight: 600;
     border: var(--border-thin);
-    box-shadow: var(--shadow);
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -613,7 +554,6 @@ select {
     width: 50px;
     height: 50px;
     background-color: var(--focus-color);
-    box-shadow: var(--shadow);
     border-radius: 50%;
     display: flex;
     align-items: center;

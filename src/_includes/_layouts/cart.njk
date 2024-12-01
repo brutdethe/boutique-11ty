@@ -8,7 +8,7 @@ eleventyComputed:
 
 <section id="cart" class="" aria-labelledby="cart-title">
     <div id="cart-content" class="products-list"></div>
-    <div id="cart-ticket" aria-live="polite">
+    <div id="cart-ticket" class="shadow" aria-live="polite">
         <h2 class="cart-ticket-title">{{ i18n.receipt[page.lang] }}</h2>
         <label for="destination" id="destination-label">{{ i18n.destination[page.lang] }}</label>
         <div class="select">
@@ -35,7 +35,7 @@ eleventyComputed:
         <a
           href="#"
           id="checkout-button"
-          class="btn btn-card"
+          class="shadow btn btn-card"
           data-added-text="{{ i18n.checkout_title[page.lang] }}"
           aria-label="{{ i18n.checkout_title[page.lang] }}"
         >
