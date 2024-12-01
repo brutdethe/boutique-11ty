@@ -2,6 +2,55 @@
 layout: _layouts/default.njk
 ---
 
+<style>
+    .category-description {
+        background-color: var(--primary-color);
+        color: var(--bg-color);
+        margin-bottom: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .category-description h2 {
+        margin-top: 0;
+    }
+
+    .category-description p {
+        margin: 0;
+    }
+
+    .tags-list {
+        border-bottom: var(--border-thin);
+        flex-wrap: wrap;
+        padding: 0 0 1.5rem 0;
+    }
+
+    .btn-tag {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+        border: var(--border-thin);
+    }
+
+    .products-list {
+        display: grid;
+        gap: var(--gap-large);
+    }
+
+    @media (min-width: 769px) {
+        .category-description {
+            padding: 0.3rem 1rem 1rem;
+        }
+
+        .btn-tag {
+            font-size: 0.9rem;
+            padding: 0.5rem;
+        }
+
+        .products-list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+</style>
+
 {%- if not tag -%} {% set tag = i18n_categories[0] %} {%- endif -%}
 
 <header>
@@ -11,26 +60,25 @@ layout: _layouts/default.njk
     </section>
 
     <ul class="list tags-list" aria-labelledby="category-title">
-        {% for category in i18n_categories %} {% set url_tag = '/category/' +
-        category.label %}
-        <li>
-            <a
-                href="{{ url_tag | customLocaleUrl(page.lang) | url }}#{{
-                    category.title[page.lang]
-                }}"
-                class="btn btn-tag {% if (category.label == tag.label) %}selected{% endif %}"
-                aria-label="{{ i18n.aria.category[page.lang] }} {{
-                    category.title[page.lang]
-                }}"
-            >
-                {{ category.title[page.lang] }}
-            </a>
-        </li>
+        {% for category in i18n_categories %}
+            {% set url_tag = '/category/' + category.label %}
+            <li>
+                <a
+                    href="{{ url_tag | customLocaleUrl(page.lang) | url }}#{{ category.title[page.lang] }}"
+                    class="btn btn-tag {% if (category.label == tag.label) %}selected{% endif %}"
+                    aria-label="{{ i18n.aria.category[page.lang] }} {{ category.title[page.lang] }}"
+                >
+                    {{ category.title[page.lang] }}
+                </a>
+            </li>
         {% endfor %}
     </ul>
 </header>
 
 <section class="products-list">
-    {%- for post in collections[tag.label] -%} {%- if post.data.page.lang ==
-    page.lang -%} {% include "product_item.njk" %} {%- endif -%} {%- endfor -%}
+    {% for post in collections[tag.label] %}
+        {% if post.data.page.lang == page.lang %}
+            {% include "product_item.njk" %}
+        {% endif %}
+    {% endfor %}
 </section>
