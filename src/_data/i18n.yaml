@@ -141,9 +141,9 @@ aria:
         en: view card
 
     cart:
-        fr: aller à la page d'accueil
-        en: go to home
-
+        fr: consulter le panier
+        en: go to cart
+        
     lang_fr:
         fr: changer la langue en français
         en: change language to French
