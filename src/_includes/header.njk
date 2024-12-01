@@ -1,21 +1,23 @@
 <style>
     .header {
+        display: flex;
+        flex-direction: column;
         align-items: center;
         border-bottom: var(--border-thin);
-        display: flex;
-        margin-bottom: var(--gap-large);
         padding-top: 1rem;
     }
 
     .nav-header {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         width: 100%;
     }
 
     .nav-list {
-        display: flex;
+        grid-column: 1 / -1;
+        justify-content: center;
         gap: var(--gap-large);
-        margin-right: auto;
+        padding: 0;
     }
 
     .nav-link {
@@ -29,26 +31,70 @@
 
     .nav-link .cart-icon {
         width: 1.5rem;
-        opacity: .7;
+        opacity: 0.7;
+    }
+
+    .nav-link .cart-icon:hover {
+        opacity: 1;
     }
 
     .logo-link img {
-        width: 80px;
-        height: auto;
+        width: 8rem;
     }
 
     .btn-nav {
-        background: transparent;
-        
         font-size: 0.9rem;
-        padding: 0.5rem;
+        padding: 0.4rem;
+        display: block;
+        width: 100%;
     }
 
+    .language-list,
     .currency-list {
-        visibility: hidden;
+        padding: 0;
+        margin-top: 0;
+        gap: var(--gap-large);
+    }
+
+    .language-list {
+        justify-content: flex-end;
+    }
+
+    #cart-link .cart-icon,
+    #cart-link .badge {
+        display: inline-block;
+    }
+
+    @media (min-width: 769px) {
+        .header {
+            flex-direction: row;
+        }
+
+        .logo-link img {
+            width: 5rem;
+        }
+
+        .nav-header {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .nav-list {
+            justify-content: flex-start;
+            flex: 1;
+        }
+
+        .language-list,
+        .currency-list {
+            padding-left: 3rem;
+        }
+
+        #cart-link::after {
+            content: "";
+        }
     }
 </style>
-
 
 <header class="header">
     <a href="{{ '/' | customLocaleUrl(page.lang) | url }}" class="logo-link" aria-label="{{ i18n.aria.home[page.lang] }}">
@@ -58,15 +104,18 @@
         <ul class="list nav-list">
             <li><a href="{{ '/' | customLocaleUrl(page.lang) | url }}" class="nav-link" aria-label="{{ i18n.aria.home[page.lang] }}">{{ i18n.shop_nav[page.lang] }}</a></li>
             <li><a href="{{ i18n.about_url[page.lang] }}" class="nav-link" aria-label="{{ i18n.aria.about[page.lang] }}">{{ i18n.about_nav[page.lang] }}</a></li>
-            <li><a href="{{ '/cart' | customLocaleUrl(page.lang) | url }}" id="cart-link" class="nav-link" aria-label="{{ i18n.aria.cart[page.lang] }}"><img class="cart-icon" src="/_assets/icons/shop-bag.svg" alt="{{ i18n.cart_icon_title[page.lang] }}" title="{{ i18n.cart_title[page.lang] }}"><span class="badge" data-badge="0" data-initial="YZ"></span></a></li>
+            <li><a href="{{ '/cart' | customLocaleUrl(page.lang) | url }}" id="cart-link" class="nav-link" aria-label="{{ i18n.aria.cart[page.lang] }}">
+                <img class="cart-icon" src="/_assets/icons/shop-bag.svg" alt="{{ i18n.cart_icon_title[page.lang] }}" title="{{ i18n.cart_title[page.lang] }}">
+                <span class="badge" data-badge="0" data-initial="YZ"></span>
+            </a></li>
         </ul>
         <ul class="list currency-list">
-            <li><a href="" class="btn shadow btn-nav selected" value="EUR" aria-label="{{ i18n.aria.currency_eur[page.lang] }}" aria-current="page" >€</a></li>
+            <li><a href="" class="btn shadow btn-nav selected" value="EUR" aria-label="{{ i18n.aria.currency_eur[page.lang] }}" aria-current="page">€</a></li>
             <li><a href="" class="btn shadow btn-nav" value="USD" aria-label="{{ i18n.aria.currency_usd[page.lang] }}">$</a></li>
         </ul>
         <ul class="list language-list">
-            <li><a href="{{ page.url | customLocaleUrl("fr") | url }}" class="btn shadow btn-nav {% if page.lang == 'fr' %}selected{% endif %}" {% if page.lang == 'fr' %} aria-current="true" {% endif %} aria-label="{{ i18n.aria.lang_fr[page.lang] }}">FR</a></li>
-            <li><a href="{{ page.url | locale_url('en') | url }}" class="btn shadow btn-nav {% if page.lang == 'en' %}selected{% endif %}" {% if page.lang == 'en' %} aria-current="true" {% endif %} aria-label="{{ i18n.aria.lang_en[page.lang] }}">EN</a></li>
+            <li><a href="{{ page.url | customLocaleUrl('fr') | url }}" class="btn shadow btn-nav {% if page.lang == 'fr' %}selected{% endif %}" {% if page.lang == 'fr' %}aria-current="true"{% endif %} aria-label="{{ i18n.aria.lang_fr[page.lang] }}">FR</a></li>
+            <li><a href="{{ page.url | locale_url('en') | url }}" class="btn shadow btn-nav {% if page.lang == 'en' %}selected{% endif %}" {% if page.lang == 'en' %}aria-current="true"{% endif %} aria-label="{{ i18n.aria.lang_en[page.lang] }}">EN</a></li>
         </ul>
     </nav>
 </header>
