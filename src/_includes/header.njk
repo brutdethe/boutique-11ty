@@ -60,9 +60,17 @@
         justify-content: flex-end;
     }
 
-    #cart-link .cart-icon,
-    #cart-link .badge {
-        display: inline-block;
+    .badge::after {
+        background: var(--primary-color);
+        border-radius: 0.5rem;
+        color: var(--bg-color);
+        content: attr(data-badge);
+        position: absolute;
+        top: 1rem;
+        left: .8rem;
+        font-size: 0.7rem;
+        min-width: 0.9rem;
+        text-align: center;
     }
 
     @media (min-width: 769px) {
@@ -88,10 +96,6 @@
         .language-list,
         .currency-list {
             padding-left: 3rem;
-        }
-
-        #cart-link::after {
-            content: "";
         }
     }
 </style>

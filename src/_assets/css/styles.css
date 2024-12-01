@@ -290,23 +290,6 @@ dl {
     flex: 1;
 }
 
-/* Badge */
-.badge::after {
-    background: var(--primary-color);
-    border-radius: 0.5rem;
-    color: var(--bg-color);
-    content: attr(data-badge);
-    position: absolute;
-    top: 1rem;
-    left: .8rem;
-}
-
-.badge[data-badge]::after {
-    font-size: 0.7rem;
-    min-width: 0.9rem;
-    text-align: center;
-}
-
 /* Buttons */
 .btn {
     padding: 0.8rem 1.2rem;
