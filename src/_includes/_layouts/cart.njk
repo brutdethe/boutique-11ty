@@ -1,5 +1,6 @@
 ---
 layout: _layouts/default.njk
+include_cart_bundle: true
 eleventyComputed:
     title: '{{ i18n.cart_title[page.lang] | safe }}'
 ---
@@ -32,16 +33,7 @@ eleventyComputed:
             <data id="total-amount" class="price total-amount" value="${productData.price}" itemprop="price">0.00</data>
             <meta itemprop="priceCurrency" content="EUR" />
         </div>
-        <a
-          href="#"
-          id="checkout-button"
-          class="shadow btn btn-card"
-          data-added-text="{{ i18n.checkout_title[page.lang] }}"
-          aria-label="{{ i18n.checkout_title[page.lang] }}"
-        >
-          {{ i18n.checkout_title[page.lang] }}
-          <img class="cb-icon" src="/_assets/icons/cb.svg" alt="{{ i18n.cart_icon_title[page.lang] }}">
-      </a>      
+        {% include 'checkout.njk' %}
     </div>
 
   <!-- Message d'avertissement caché par défaut -->

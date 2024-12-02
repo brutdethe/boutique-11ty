@@ -17,6 +17,8 @@
             <script src="{{ '/bundle-slide.js' | url }}"></script>
         {% elseif include_items_list_bundle %}
             <link rel="stylesheet" href="{{ '/bundle-items-list.css' | url }}" />
+        {% elseif include_cart_bundle %}
+            <link rel="stylesheet" href="{{ '/bundle-cart.css' | url }}" />
         {% else %}
             <link rel="stylesheet" href="{{ '/bundle-main.css' | url }}" />
         {% endif %}
