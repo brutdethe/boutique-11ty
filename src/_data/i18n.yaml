@@ -27,8 +27,8 @@ _404_text:
     en: this page doesn't exists
 
 cart_title:
-    fr: Récapitulatif des achats
-    en: Your shopping cart
+    fr: récapitulatif des achats
+    en: your shopping cart
 
 address_title:
     fr: 'notre atelier :'
@@ -79,24 +79,24 @@ cart_icon_title:
     en: cart's icon
 
 no_item:
-    fr: Il n'y a pas encore d'article dans votre panier
-    en: There are no items in your shopping cart yet
+    fr: il n'y a pas encore d'article dans votre panier
+    en: there are no items in your shopping cart yet
 
 no_item_link:
     fr: retour à la boutique
     en: back to the store
 
 payment_canceled:
-    fr: Votre paiement a été annulé, vous pouvez revenir au panier pour réessayer
-    en: Your payment has been canceled, You can return to cart to try again
+    fr: votre paiement a été annulé, vous pouvez revenir au panier pour réessayer
+    en: your payment has been canceled, You can return to cart to try again
 
 payment_canceled_link:
     fr: retour vers votre panier
     en: back to your cart
 
 payment_successed:
-    fr: Votre commande a bien été passée, nous préparons rapidement votre colis
-    en: Your order has been placed, we will quickly prepare your package
+    fr: votre commande a bien été passée, nous préparons rapidement votre colis
+    en: your order has been placed, we will quickly prepare your package
 
 payment_successed_link:
     fr: retour vers l'accueil
@@ -104,70 +104,82 @@ payment_successed_link:
 
 meta:
     description:
-        fr: Découvrez notre boutique Gong Fu Cha et trouvez des produits uniques pour vos dégustations de thé.
-        en: Discover our Gong Fu Cha shop and find unique products for your tea tasting experience.
+        fr: découvrez notre boutique Gong Fu Cha et trouvez des produits uniques pour vos dégustations de thé.
+        en: discover our Gong Fu Cha shop and find unique products for your tea tasting experience.
 
 alt_logo:
-    fr: Logo de la boutique Gong Fu Cha
-    en: Logo of Gong Fu Cha shop
+    fr: logo de la boutique Gong Fu Cha
+    en: logo of Gong Fu Cha shop
 
 alt_photo:
-    fr: Image du produit
-    en: Product image
+    fr: image du produit
+    en: product image
 
 aria:
     home:
-        fr: Aller à la page d'accueil
-        en: Go to home
+        fr: aller à la page d'accueil
+        en: go to home
 
     about:
-        fr: Aller sur la page à-propos
-        en: Go to about
+        fr: aller sur la page à-propos
+        en: go to about
 
     legacy:
-        fr: Consulter les mentions légales
-        en: Go to legacy
+        fr: consulter les mentions légales
+        en: go to legacy
 
     privacy:
-        fr: Voir les clauses de confidentialités
-        en: Go to privacy
+        fr: voir les clauses de confidentialités
+        en: go to privacy
 
     category:
-        fr: Lister les produits de
-        en: List products of
+        fr: lister les produits de
+        en: list products of
 
     card_detail:
-        fr: Consulter la fiche produit
-        en: View card
+        fr: consulter la fiche produit
+        en: view card
 
     cart:
-        fr: Aller à la page d'accueil
-        en: Go to home
-
+        fr: consulter le panier
+        en: go to cart
+        
     lang_fr:
-        fr: Changer la langue en français
-        en: Change language to French
+        fr: changer la langue en français
+        en: change language to French
 
     lang_en:
-        fr: Changer la langue en anglais
-        en: Change language to English
+        fr: changer la langue en anglais
+        en: change language to English
 
     currency_eur:
-        fr: Changer la monnaie en euros
-        en: Change currency to euros
+        fr: changer la monnaie en euros
+        en: change currency to euros
 
     currency_usd:
-        fr: Changer la monnaie en dollars
-        en: Change currency to dollars
+        fr: changer la monnaie en dollars
+        en: change currency to dollars
 
     product_price:
-        fr: Prix du produit
-        en: Product price
+        fr: prix du produit
+        en: product price
 
     slide:
-        fr: Galerie des photos de
-        en: Pictures gallery of
+        fr: galerie des photos de
+        en: pictures gallery of
 
     slide_thumb:
-        fr: Afficher l'image
-        en: Go to slide
+        fr: afficher l'image
+        en: go to slide
+    
+    send_email:
+        fr: envoyer un email à coucou@gongfucha.fr
+        en: send email to coucou@gongfucha.fr
+
+    call_phone:
+        fr: passer un coup de fil au +33 666 081 188
+        en: better call +33 666 081 188
+
+    view_address:
+        fr: voir l'adresse sur OpenStreetMap
+        en: view address on OpenStreetMap

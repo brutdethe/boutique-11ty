@@ -4,7 +4,7 @@
             {%- for photo in photos -%}
                 <li class="splide__slide">
                     <figure class="card-figure">
-                        <img src="{{ settings.dirs.carousels_images | url }}{{ photo }}" class="card-image" alt="{{ i18n.alt_photo[page.lang] }} - {{ name }}">
+                        <img src="{{ settings.dirs.carousels_images | url }}{{ photo }}" class="shadow card-image" alt="{{ i18n.alt_photo[page.lang] }} - {{ name }}">
                         <figcaption class="card-caption">{{ name }}</figcaption>
                     </figure>
                 </li>

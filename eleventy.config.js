@@ -18,7 +18,9 @@ export const config = {
 export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/_assets')
     eleventyConfig.addPassthroughCopy('bundle.css')
-
+    
+    eleventyConfig.addBundle("css")
+    
     eleventyConfig.addPlugin(EleventyI18nPlugin, {
         defaultLanguage: 'fr',
         errorMode: 'never'

@@ -1,0 +1,15 @@
+.add-to-cart.buyed {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-card {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.btn-card:hover {
+    background: var(--hover-color);
+    transform: scale(1.05);
+    color: var(--secondary-bg);
+}

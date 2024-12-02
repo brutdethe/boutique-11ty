@@ -12,6 +12,13 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 ### Terminées
 
+- US-12 responsive
+  - [x] passe l'interface en responsive 
+  - [x] passe la liste des produits en responsive
+  - [x] passe la fiche produit en responsive
+  - [x] place les css en bundle
+  - [x] passe le panier en responsive
+
 - US-14 gérer les stocks manuellement
   - [x] affiche le stock sur le produit
   - [x] gère la quantité par rapport au stock
@@ -84,8 +91,6 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
   - [x] Déploiement sur GitHub Pages
 
 ### À venir
-
-- US-12 responsive
 
 -- Version 1.0 - production
 

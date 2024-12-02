@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     function disableAddToCartButtonsForItemsInCart() {
         const cart = storage.getCart()
         addToCartButtons.forEach((button) => {
-            const productElement = button.closest('.product-infos')
+            const productElement = button.closest('.item-infos')
             if (productElement) {
                 const productId = productElement.dataset.id
                 if (cart.some(item => item.id === productId)) {
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.addEventListener('click', (event) => {
             if (event.target.matches('.add-to-cart')) {
                 const button = event.target
-                const productElement = button.closest('.product-infos')
+                const productElement = button.closest('.item-infos')
                 if (!productElement) return
 
                 const productId = String(productElement.dataset.id)
@@ -201,13 +201,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function createCartItemElement(productData, cartItem) {
         const itemElement = document.createElement('article')
-        itemElement.classList.add('product-item')
+        itemElement.classList.add('item')
+        itemElement.classList.add('shadow')
         itemElement.innerHTML = `
-            <header class="product-header">
-                <h2 id="${productData.title}" class="product-title">${productData.title}</h2>
+            <header class="item-header">
+                <h2 id="${productData.title}" class="item-title">${productData.title}</h2>
             </header>
-            <figure class="product-figure">
-                <img src="${productData.image}" class="product-image" alt="${productData.title}" />
+            <figure class="item-figure">
+                <img src="${productData.image}" class="item-image" alt="${productData.title}" />
             </figure>
             <section class="item-details">
                 <data class="price" value="${productData.price}" itemprop="price">
@@ -219,7 +220,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         -
                     </button>
                     <label for="qty-${cartItem.id}" class="display-none">${t('quantity')}</label>
-                    <input id="qty-${cartItem.id}" class="product-qty item-qty" type="number" name="product-qty" data-id="${cartItem.id}" min="1" max="${productData.stock || 10}" value="${cartItem.qty}" />
+                    <input id="qty-${cartItem.id}" class="item-qty item-qty" type="number" name="item-qty" data-id="${cartItem.id}" min="1" max="${productData.stock || 10}" value="${cartItem.qty}" />
                     <button class="qty-count qty-count--add ${cartItem.qty === +productData.stock ? 'disabled' : ''}" data-action="add" type="button" aria-label="${t('button_add_qty')}">
                         +
                     </button>
@@ -229,7 +230,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </data>
                 <meta itemprop="priceCurrency" content="EUR" />
             </section>
-            <footer class="product-footer">
+            <footer class="item-footer">
                 <a href="${productData.link}" class="btn btn-details" aria-label="${t('button_detail')}">
                     ${t('button_detail')}
                 </a>
@@ -267,7 +268,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const qtyInput = document.querySelector(`#qty-${productId}`)
         if (qtyInput) {
-            const itemElement = qtyInput.closest('.product-item')
+            const itemElement = qtyInput.closest('.item-item')
             if (itemElement) {
                 itemElement.remove()
             }
