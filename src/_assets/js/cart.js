@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function createCartItemElement(productData, cartItem) {
         const itemElement = document.createElement('article')
-        itemElement.classList.add('item-item')
+        itemElement.classList.add('item')
         itemElement.classList.add('shadow')
         itemElement.innerHTML = `
             <header class="item-header">
