@@ -12,13 +12,16 @@
         <link rel="alternate" hreflang="fr" href="{{ page.filePathStem | customLocaleUrl("fr") | url }}">
         <link rel="alternate" hreflang="en" href="{{ page.filePathStem | customLocaleUrl("en") | url }}">
 
-        <link rel="stylesheet" href="{{ '/bundle.css' | url }}" />
-        <script type="module" src="{{ '/bundle.js' | url }}"></script>
-
-        {% if include_slide_bundle %}
-        <link rel="stylesheet" href="{{ '/bundle-slide.css' | url }}" />
-        <script src="{{ '/bundle-slide.js' | url }}"></script>
+        {% if include_item_card_bundle %}
+            <link rel="stylesheet" href="{{ '/bundle-item-card.css' | url }}" />
+            <script src="{{ '/bundle-slide.js' | url }}"></script>
+        {% elseif include_items_list_bundle %}
+            <link rel="stylesheet" href="{{ '/bundle-items-list.css' | url }}" />
+        {% else %}
+            <link rel="stylesheet" href="{{ '/bundle.css' | url }}" />
         {% endif %}
+
+        <script type="module" src="{{ '/bundle.js' | url }}"></script>
 
         <meta
             name="description"

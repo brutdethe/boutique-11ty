@@ -101,82 +101,21 @@ select:focus {
     box-shadow: 0 .25rem 1rem var(--border-color);
 }
 
-.add-to-cart.buyed {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-.product-item {
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    border: var(--border-thin);
-    background: var(--secondary-bg);
-}
-
-.product-header {
-    padding: 1rem;
-}
-
-.product-title {
-    font-size: 1.4rem;
-    margin: 0;
-}
-
-.product-subtitle {
-    color: var(--primary-color);
-    font-size: 1rem;
-    margin: 0;
-}
-
-.product-figure {
-    margin: 0;
-}
-
-.product-image {
-    width: 100%;
-    border-top: var(--border-thin);
-    border-bottom: var(--border-thin);
-}
-
-.product-description {
-    margin: 0;
-    padding: 1rem;
-}
-
-.product-footer {
-    display: flex;
-}
-
-.product-footer .btn {
-    flex: 1;
-}
-
 /* Buttons */
 .btn {
     padding: 0.8rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     text-decoration: none !important;
     transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn-card {
-    background: var(--primary-color);
-    color: var(--bg-color);
-}
-
-.btn-details {
-    border-top: var(--border-thin);
+    line-height: 1rem;
 }
 
 .btn:hover {
     background-color: var(--secondary-bg);
     color: var(--hover-color);
-}
-
-.btn-card:hover {
-    background: var(--hover-color);
-    transform: scale(1.05);
-    color: var(--secondary-bg);
 }
 
 /* Cart Styles */
@@ -196,7 +135,7 @@ select:focus {
     opacity: 0.8;
 }
 
-#cart-content .product-title {
+#cart-content .item-title {
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -207,7 +146,7 @@ select:focus {
     text-align: right;
 }
 
-#cart-content .product-image {
+#cart-content .item-image {
     filter: grayscale(0.7);
 }
 
@@ -300,13 +239,13 @@ select {
 }
 
 .qty-input,
-.product-item .item-details {
+.item .item-details {
     display: flex;
     align-items: center;
     padding: 1rem 0;
 }
 
-.qty-input .product-qty,
+.qty-input .item-qty,
 .qty-input .qty-count {
     color: var(--primary-color);
     font-weight: bold;
@@ -314,7 +253,7 @@ select {
     border: var(--border-thin);
 }
 
-.qty-input .product-qty {
+.qty-input .item-qty {
     width: 2rem;
     text-align: center;
     background: var(--secondary-bg);
