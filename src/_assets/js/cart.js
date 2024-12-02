@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const qtyInput = document.querySelector(`#qty-${productId}`)
         if (qtyInput) {
-            const itemElement = qtyInput.closest('.item-item')
+            const itemElement = qtyInput.closest('.item')
             if (itemElement) {
                 itemElement.remove()
             }
