@@ -1,6 +1,7 @@
 ---
 layout: _layouts/default.njk
 title: Confidentialité
+eleventyExcludeFromCollections: true
 ---
 
 # Confidentialité

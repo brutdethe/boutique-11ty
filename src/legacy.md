@@ -1,6 +1,7 @@
 ---
 layout: _layouts/default.njk
 title: Mentions légales
+eleventyExcludeFromCollections: true
 ---
 
 # Mentions légales

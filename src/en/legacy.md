@@ -1,6 +1,7 @@
 ---
 layout: _layouts/default.njk  
 title: Legal Notice
+eleventyExcludeFromCollections: true
 ---
 
 # Legal Notice

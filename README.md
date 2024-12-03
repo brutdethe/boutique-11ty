@@ -12,6 +12,10 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 ### Terminées
 
+- US-15 optimisation
+  - [x] pétouille responsive et bug panier
+  - [x] ajoute un sitemap et un robots.txt
+
 - US-12 responsive
   - [x] passe l'interface en responsive 
   - [x] passe la liste des produits en responsive

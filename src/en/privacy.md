@@ -1,6 +1,7 @@
 ---
 layout: _layouts/default.njk
 title: Privacy
+eleventyExcludeFromCollections: true
 ---
 
 # Privacy
