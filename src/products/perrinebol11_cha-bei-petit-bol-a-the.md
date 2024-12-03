@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: perrinebol11
 name: 茶杯 - CháBēi (petit bol à thé)
+mini_descr: petit bol à thé réalisé par Perrine Pottiez
 tags: ["produit", "perrine-pottiez"]
 permalink: /products/perrinebol11_cha-bei-petit-bol-a-the/
 description: >

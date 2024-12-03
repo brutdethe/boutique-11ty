@@ -1,3 +1,20 @@
+- label: welcome
+  title:
+      fr: Bienvenue
+      en: Welcome
+  description:
+      fr: >
+          Nous sommes ravies de vous faire découvrir les créations de nos partenaires céramistes, 
+          les thés des personnes productrices dont nous suivons attentivement le travail, 
+          ainsi que de nombreuses autres œuvres artisanales autour de la culture traditionnelle chinoise du thé. 
+          Nous avons sélectionné ces objets et produits avec soin et espérons qu'ils vous apporteront autant de joie qu'ils nous en offrent au quotidien. 
+          Bonne visite et au plaisir de vous rencontrer, que ce soit dans notre échoppe, en visio ou par écrit - <em>雅玲 - Yǎ Líng et Stéphane</em>
+      en: >
+          We are delighted to introduce you to the creations of our ceramic artist partners, the teas from the producers whose work we closely follow, 
+          and many other artisanal works surrounding the traditional Chinese tea culture. 
+          We have carefully selected these items and products and hope they bring you as much joy as they bring us daily. 
+          Enjoy your visit, and we look forward to meeting you—whether in our shop, via video call, or in writing - <em>雅玲 - Yǎ Líng et Stéphane</em>
+
 - label: cha
   title:
       fr: 茶 Chá

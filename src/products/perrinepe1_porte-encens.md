@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: perrinepe1
 name: Porte-encens
+mini_descr: porte-encens encens cascade réalisé par Perrine Pottiez
 tags: ["produit", "perrine-pottiez"]
 permalink: /products/perrinepe1_porte-encens/
 description: >
