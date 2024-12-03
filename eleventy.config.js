@@ -82,18 +82,18 @@ export default function (eleventyConfig) {
         return [...tagSet];
     });
 
-    eleventyConfig.addNunjucksAsyncShortcode('image', async (src, alt, sizes, cls) => {
+    eleventyConfig.addNunjucksAsyncShortcode('carousel_image', async (src, cls, alt, sizes) => {
 
-        let metadata = await Image(`src/${src}`, {
-            widths: [365, 800],
+        let metadata = await Image(`photos/${src}`, {
+            widths: [100, 365, 490, 750],
             formats: ['jpeg'],
             outputDir: './dist/img/',
             urlPath: '/img/',
           })
 
         let imageAttributes = {
-            alt,
             class: cls,
+            alt,
             sizes,
             loading: 'lazy',
             decoding: 'async',
