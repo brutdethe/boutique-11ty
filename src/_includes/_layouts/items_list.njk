@@ -8,7 +8,7 @@ include_items_list_bundle: true
 <header>
     <section class="shadow category-description">
         <h1 id="{{ tag.title[page.lang] }}">{{ tag.title[page.lang] }}</h1>
-        <p>{{ tag.description[page.lang] }}</p>
+        <p>{{ tag.description[page.lang] | safe }}</p>
     </section>
 
     <ul class="list tags-list" aria-labelledby="category-title">
