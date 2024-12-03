@@ -2,14 +2,14 @@
     <section class="splide__track">
         <ul class="splide__list">
             {%- for photo in photos -%}
-                <li class="splide__slide">
-                    <figure class="card-figure">
-                        <img src="{{ settings.dirs.carousels_images | url }}{{ photo }}" class="shadow card-image" alt="{{ i18n.alt_photo[page.lang] }} - {{ name }}" >
-                        <figcaption class="card-caption">{{ name }}</figcaption>
-                    </figure>
-                </li>
+              <li class="splide__slide">
+                <figure class="card-figure">
+                  {% image settings.dirs.carousels_images + photo, i18n.alt_photo[page.lang] + ' - ' + name, '(max-width: 600px) 365px, 800px', 'card-image' %}
+                  <figcaption class="card-caption">{{ name }}</figcaption>
+                </figure>
+              </li>
             {%- endfor -%}
-        </ul>
+          </ul>      
     </section>
 
     <ul id="card-thumbnails" class="card-thumbnails">
