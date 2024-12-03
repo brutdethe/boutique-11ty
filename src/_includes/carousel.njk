@@ -4,7 +4,8 @@
             {%- for photo in photos -%}
                 <li class="splide__slide">
                     <figure class="card-figure">
-                        <img src="{{ settings.dirs.carousels_images | url }}{{ photo }}" class="shadow card-image" alt="{{ i18n.alt_photo[page.lang] }} - {{ name }}">
+                        <img src="{{ settings.dirs.carousels_images | url }}{{ photo }}" class="shadow card-image" alt="{{ i18n.alt_photo[page.lang] }} - {{ name }}" width="708"
+                        height="468">
                         <figcaption class="card-caption">{{ name }}</figcaption>
                     </figure>
                 </li>
@@ -15,7 +16,8 @@
     <ul id="card-thumbnails" class="card-thumbnails">
         {%- for photo in photos -%}
             <li class="card-thumbnail">
-            	<img src="{{ settings.dirs.carousels_thumbs | url }}{{ photo }}" tabindex="0" aria-label="{{ i18n.aria.slide_thumb[page.lang] }} {{ loop.index }}" aria-controls="card-carousel-slide0{{ loop.index }}">
+            	<img src="{{ settings.dirs.carousels_thumbs | url }}{{ photo }}" tabindex="0" aria-label="{{ i18n.aria.slide_thumb[page.lang] }} {{ loop.index }}" aria-controls="card-carousel-slide0{{ loop.index }}" width="100"
+                height="60">
             </li>
         {%- endfor -%}
     </ul>
