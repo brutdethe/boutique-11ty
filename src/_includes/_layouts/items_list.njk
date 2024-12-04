@@ -3,6 +3,17 @@ layout: _layouts/default.njk
 include_items_list_bundle: true
 ---
 
+{% set css %}
+    {% include "../../_assets/css/items-list.css" %}
+    {% include "../../_assets/css/item.css" %}
+    {% include "../../_assets/css/button-add.css" %}
+    {% include "../../_assets/css/price-stock.css" %}
+{% endset %}
+
+<style>
+	{{ css | cssmin | safe }}
+</style>
+
 {%- if not tag -%} {% set tag = i18n_categories[0] %} {%- endif -%}
 
 <header>

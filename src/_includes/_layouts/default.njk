@@ -11,15 +11,21 @@
         />
 
         {% if include_item_card_bundle %}
-            <link rel="stylesheet" href="{{ '/bundle-item-card.css' | url }}" />
             <script src="{{ '/bundle-slide.js' | url }}"></script>
-        {% elseif include_items_list_bundle %}
-            <link rel="stylesheet" href="{{ '/bundle-items-list.css' | url }}" />
-        {% elseif include_cart_bundle %}
-            <link rel="stylesheet" href="{{ '/bundle-cart.css' | url }}" />
-        {% else %}
-            <link rel="stylesheet" href="{{ '/bundle-main.css' | url }}" />
         {% endif %}
+
+        {% set css %}
+            {% include "../../../node_modules/normalize.css/normalize.css" %}
+
+            {% include "../../_assets/css/styles.css" %}
+            {% include "../../_assets/css/header.css" %}
+            {% include "../../_assets/css/footer.css" %}
+            {% include "../../_assets/css/floating-cart.css" %}
+        {% endset %}
+
+        <style>
+            {{ css | cssmin | safe }}
+        </style>
 
         <script type="module" src="{{ '/bundle.js' | url }}"></script>
 

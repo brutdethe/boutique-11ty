@@ -1,6 +1,7 @@
 import { EleventyI18nPlugin } from '@11ty/eleventy';
 import yaml from 'js-yaml';
 import Image from '@11ty/eleventy-img';
+import CleanCSS from "clean-css";
 
 export const config = {
     dir: {
@@ -63,6 +64,10 @@ export default function (eleventyConfig) {
             return vars[p1] || match;
         });
     });
+
+    eleventyConfig.addFilter("cssmin", function (code) {
+		return new CleanCSS({}).minify(code).styles;
+	});
 
     eleventyConfig.addCollection('allTags', function (collectionApi) {
         const tagSet = new Set();

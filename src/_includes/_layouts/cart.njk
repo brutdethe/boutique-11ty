@@ -6,7 +6,21 @@ eleventyComputed:
     title: '{{ i18n.cart_title[page.lang] | safe }}'
 ---
 
-<h1 id="cart-title">{{ title }}</h1>
+{% set css %}
+    {% include "../../_assets/css/cart.css" %}
+    {% include "../../_assets/css/item.css" %}
+    {% include "../../_assets/css/button-add.css" %}
+    {% include "../../_assets/css/price-stock.css" %}
+    {% include "../../_assets/css/countries-option.css" %}
+    {% include "../../_assets/css/checkout.css" %}
+    {% include "../../_assets/css/loader.css" %}
+{% endset %}
+
+<style>
+	{{ css | cssmin | safe }}
+</style>
+
+<h1 id="cart-title">{{ i18n.cart_title[page.lang] }}</h1>
 
 <section id="cart" class="" aria-labelledby="cart-title">
     <div id="cart-content" class="products-list"></div>
