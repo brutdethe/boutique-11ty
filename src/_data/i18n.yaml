@@ -1,6 +1,6 @@
 about_nav:
     fr: à-propos
-    en: about
+    en: about us
 
 about_url:
     fr: https://www.gongfucha.fr/pages/faq-boutique
@@ -16,7 +16,7 @@ cart_nav:
 
 privacy_nav:
     fr: confidentialité
-    en: privacy notice
+    en: privacy policy
 
 legacy_nav:
     fr: mentions légales
@@ -24,7 +24,7 @@ legacy_nav:
 
 _404_text:
     fr: cette page n'existe pas
-    en: this page doesn't exists
+    en: oops! this page doesn't exist.
 
 cart_title:
     fr: récapitulatif des achats
@@ -48,11 +48,11 @@ stock:
 
 subtotal_amount:
     fr: 'sous-total :'
-    en: 'subtotal amount:'
+    en: 'subtotal:'
 
 shipping_amount:
     fr: 'frais de transport :'
-    en: 'shipping amount:'
+    en: 'shipping:'
 
 total:
     fr: 'total :'
@@ -60,11 +60,11 @@ total:
 
 card_detail:
     fr: détail
-    en: detail
+    en: details
 
 added_to_cart_title:
     fr: déjà ajouté
-    en: already added
+    en: already in your cart
 
 add_to_cart_title:
     fr: ajouter au panier
@@ -72,15 +72,15 @@ add_to_cart_title:
 
 checkout_title:
     fr: passer la commande
-    en: placing the order
+    en: proceed to checkout
 
 cart_icon_title:
     fr: icone du panier
-    en: cart's icon
+    en: cart icon
 
 no_item:
     fr: il n'y a pas encore d'article dans votre panier
-    en: there are no items in your shopping cart yet
+    en: your cart is empty.
 
 no_item_link:
     fr: retour à la boutique
@@ -88,7 +88,7 @@ no_item_link:
 
 payment_canceled:
     fr: votre paiement a été annulé, vous pouvez revenir au panier pour réessayer
-    en: your payment has been canceled, You can return to cart to try again
+    en: your payment was canceled. please return to your cart to try again.
 
 payment_canceled_link:
     fr: retour vers votre panier
@@ -96,7 +96,7 @@ payment_canceled_link:
 
 payment_successed:
     fr: votre commande a bien été passée, nous préparons rapidement votre colis
-    en: your order has been placed, we will quickly prepare your package
+    en: your order has been placed successfully. we are preparing your package shortly.
 
 payment_successed_link:
     fr: retour vers l'accueil
@@ -109,7 +109,7 @@ meta:
 
 alt_logo:
     fr: logo de la boutique Gong Fu Cha
-    en: logo of Gong Fu Cha shop
+    en: gong fu cha shop logo
 
 alt_photo:
     fr: image du produit
@@ -118,19 +118,19 @@ alt_photo:
 aria:
     home:
         fr: aller à la page d'accueil
-        en: go to home
+        en: go to homepage
 
     about:
         fr: aller sur la page à-propos
-        en: go to about
+        en: go to about us
 
     legacy:
         fr: consulter les mentions légales
-        en: go to legacy
+        en: view legal notice
 
     privacy:
         fr: voir les clauses de confidentialités
-        en: go to privacy
+        en: view privacy policy
 
     category:
         fr: lister les produits de
@@ -138,19 +138,19 @@ aria:
 
     card_detail:
         fr: consulter la fiche produit
-        en: view card
+        en: view product details
 
     cart:
         fr: consulter le panier
         en: go to cart
-        
+
     lang_fr:
         fr: changer la langue en français
-        en: change language to French
+        en: change language to french
 
     lang_en:
         fr: changer la langue en anglais
-        en: change language to English
+        en: change language to english
 
     currency_eur:
         fr: changer la monnaie en euros
@@ -166,20 +166,20 @@ aria:
 
     slide:
         fr: galerie des photos de
-        en: pictures gallery of
+        en: photo gallery of
 
     slide_thumb:
         fr: afficher l'image
-        en: go to slide
-    
+        en: view slide
+
     send_email:
         fr: envoyer un email à coucou@gongfucha.fr
-        en: send email to coucou@gongfucha.fr
+        en: send an email to coucou@gongfucha.fr
 
     call_phone:
         fr: passer un coup de fil au +33 666 081 188
-        en: better call +33 666 081 188
+        en: call +33 666 081 188
 
     view_address:
         fr: voir l'adresse sur OpenStreetMap
-        en: view address on OpenStreetMap
+        en: view address on openstreetmap

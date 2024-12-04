@@ -8,7 +8,7 @@ include_items_list_bundle: true
 <header>
     <section class="shadow category-description">
         <h1 id="{{ tag.title[page.lang] }}">{{ tag.title[page.lang] }}</h1>
-        <p>{{ tag.description[page.lang] }}</p>
+        <p>{{ tag.description[page.lang] | safe}}</p>
     </section>
 
     <ul class="list tags-list" aria-labelledby="category-title">
@@ -30,7 +30,32 @@ include_items_list_bundle: true
 <section class="products-list">
     {% for post in collections[tag.label] %}
         {% if post.data.page.lang == page.lang %}
-            {% include "item.njk" %}
+            <article class="shadow item item-infos" data-id="{{ post.data.id }}">
+                <header class="item-header">
+                    <h2 id="{{ post.data.name }}" class="item-title">
+                        {{ post.data.name }}
+                    </h2>
+                    <h3 class="item-subtitle">
+                        {{ post.data.mini_descr }}
+                    </h3>
+                </header>
+                <figure class="item-figure">
+                    {% carousel_image post.data.photos[0], 'item-image', i18n.alt_photo[page.lang] + ' - ' + post.data.name, '(max-width: 769px) 365px, 490px' %}
+                </figure>
+                <p class="item-description">{{ post.data.description | excerptFromDescription }}</p>
+                {% set price = post.data.price %}
+                {% set stock = post.data.stock %}
+                {% include 'price_stock.njk' %}
+                <footer class="item-footer">
+                    <a
+                        href="{{ post.data.permalink | customLocaleUrl(page.lang) | url }}"
+                        class="btn btn-details"
+                        aria-label="{{ i18n.card_detail[page.lang] }}"
+                        >{{ i18n.card_detail[page.lang] }}</a
+                    >
+                    {% include 'button_add.njk' %}
+                </footer>
+            </article>
         {% endif %}
     {% endfor %}
 </section>

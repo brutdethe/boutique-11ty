@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: perrinecoup1
 name: coupelle
+mini_descr: coupelle à encens réalisée par Perrine Pottiez
 tags: ["produit", "perrine-pottiez"]
 permalink: /products/perrinecoup1_coupelle/
 description: >

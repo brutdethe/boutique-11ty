@@ -2,20 +2,20 @@
     <section class="splide__track">
         <ul class="splide__list">
             {%- for photo in photos -%}
-                <li class="splide__slide">
-                    <figure class="card-figure">
-                        <img src="{{ settings.dirs.carousels_images | url }}{{ photo }}" class="shadow card-image" alt="{{ i18n.alt_photo[page.lang] }} - {{ name }}">
-                        <figcaption class="card-caption">{{ name }}</figcaption>
-                    </figure>
-                </li>
+              <li class="splide__slide">
+                <figure class="card-figure">
+                  {% carousel_image photo, 'shadow card-image', i18n.alt_photo[page.lang] + ' - ' + name, '(max-width: 769px) 365px, 750px' %}
+                  <figcaption class="card-caption">{{ name }}</figcaption>
+                </figure>
+              </li>
             {%- endfor -%}
-        </ul>
+          </ul>      
     </section>
 
     <ul id="card-thumbnails" class="card-thumbnails">
         {%- for photo in photos -%}
-            <li class="card-thumbnail">
-            	<img src="{{ settings.dirs.carousels_thumbs | url }}{{ photo }}" tabindex="0" aria-label="{{ i18n.aria.slide_thumb[page.lang] }} {{ loop.index }}" aria-controls="card-carousel-slide0{{ loop.index }}">
+            <li class="card-thumbnail" role="button" aria-label="i18n.aria.slide_thumb[page.lang]" aria-controls="card-carousel-slide0{{ loop.index }}">
+                {% carousel_image photo, 'thumbs', i18n.alt_photo[page.lang] + ' - ' + name, '100px' %}
             </li>
         {%- endfor -%}
     </ul>

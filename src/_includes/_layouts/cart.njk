@@ -1,6 +1,7 @@
 ---
 layout: _layouts/default.njk
 include_cart_bundle: true
+eleventyExcludeFromCollections: true
 eleventyComputed:
     title: '{{ i18n.cart_title[page.lang] | safe }}'
 ---

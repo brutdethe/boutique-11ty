@@ -22,11 +22,13 @@
 }
 
 .item-figure {
-    margin: 0;
+    margin: 0 auto;
 }
 
 .item-image {
     width: 100%;
+    max-width: 100%;
+    height: auto;
     border-top: var(--border-thin);
     border-bottom: var(--border-thin);
 }
@@ -49,6 +51,10 @@
 }
 
 @media (min-width: 769px) {
+    .item-image {
+        max-width: 490px;
+    }
+
     .item-title {
         font-size: 1.4rem;
     }
