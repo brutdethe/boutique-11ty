@@ -91,7 +91,7 @@ export default function (eleventyConfig) {
 
         let metadata = await Image(`photos/${src}`, {
             widths: [100, 365, 490, 750],
-            formats: ['jpeg'],
+            formats: ['webp'],
             outputDir: './dist/img/',
             urlPath: '/img/',
           })
