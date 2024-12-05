@@ -1,7 +1,16 @@
 ---
 layout: _layouts/default.njk
-include_item_card_bundle: true
 ---
+
+{% set js %}
+    {% include "../../_assets/js/add-to-cart.js" %}
+    {% include "../../../node_modules/@splidejs/splide/dist/js/splide.js" %}
+    {% include "../../_assets/js/carousel.js" %}
+{% endset %}
+
+<script>
+    {{ js | jsmin | safe }}
+</script>
 
 {% set css %}
     {% include "../../_assets/css/item-card.css" %}

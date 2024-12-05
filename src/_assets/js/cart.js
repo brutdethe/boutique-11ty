@@ -22,17 +22,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    const storage = {
-        getCart: () => JSON.parse(localStorage.getItem('cart') || '[]'),
-        setCart: (cart) => {
-            localStorage.setItem('cart', JSON.stringify(cart))
-            updateCartBadge()
-        },
-        getCountry: () => localStorage.getItem('country') || 'FR',
-        setCountry: (country) => {
+    storage.getCountry = () => localStorage.getItem('country') || 'FR',
+    storage.setCountry = (country) => {
             localStorage.setItem('country', country)
         }
-    }
 
     const sectionCart = document.getElementById('cart')
     const sectionNoCart = document.getElementById('no-cart')
@@ -41,9 +34,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const subtotalElement = document.querySelector('.subtotal-amount')
     const shippingElement = document.querySelector('.shipping-amount')
     const totalElement = document.querySelector('.total-amount')
-    const cartLink = document.getElementById('cart-link')
-    const cartFloatLink = document.getElementById('floating-cart')
-    const addToCartButtons = document.querySelectorAll('.add-to-cart')
     const checkoutButton = document.getElementById('checkout-button')
     const fullscreenLoader = document.getElementById('fullscreen-loader')
     const successPayment = document.getElementById('payment-successed')
@@ -57,10 +47,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function initialize() {
         successPayment && resetCartForSuccessPayment()
-        updateCartLink()
-        updateCartBadge()
-        disableAddToCartButtonsForItemsInCart()
-        addToCartButtonEventListener()
         checkoutButton && checkoutButtonEventListener(currentLang)
 
         if (sectionCart && sectionNoCart) {
@@ -87,70 +73,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function resetCartForSuccessPayment() {
         storage.setCart([])
-    }
-
-    function updateCartBadge() {
-        const cart = storage.getCart()
-        const badgeElement = document.querySelector('.badge[data-badge]')
-        if (badgeElement) {
-            badgeElement.setAttribute('data-badge', cart.length)
-        }
-    }
-
-    function updateCartLink() {
-        const cartItems = storage.getCart()
-        cartLink.classList.toggle('disabled', cartItems.length === 0)
-        cartFloatLink.classList.toggle('hidden', cartItems.length === 0)
-    }
-
-    function disableAddToCartButtonsForItemsInCart() {
-        const cart = storage.getCart()
-        addToCartButtons.forEach((button) => {
-            const productElement = button.closest('.item-infos')
-            if (productElement) {
-                const productId = productElement.dataset.id
-                if (cart.some(item => item.id === productId)) {
-                    disableButton(button)
-                }
-            }
-        })
-    }
-
-    function addToCartButtonEventListener() {
-        document.addEventListener('click', (event) => {
-            if (event.target.matches('.add-to-cart')) {
-                const button = event.target
-                const productElement = button.closest('.item-infos')
-                if (!productElement) return
-
-                const productId = String(productElement.dataset.id)
-
-                if (!isProductInCart(productId)) {
-                    event.preventDefault()
-                    addToCart({ id: productId, qty: 1 })
-                    disableButton(button)
-                }
-            }
-        })
-    }
-
-    function addToCart(product) {
-        const cart = storage.getCart()
-        if (!cart.some((item) => item.id === product.id)) {
-            cart.push(product)
-            storage.setCart(cart)
-            updateCartLink()
-        }
-    }
-
-    function disableButton(button) {
-        button.classList.add('disabled')
-        button.textContent = button.dataset.addedText
-        button.disabled = true
-    }
-
-    function isProductInCart(productId) {
-        return storage.getCart().some((item) => item.id === productId)
     }
 
     async function fetchProductsData(currentLang) {
@@ -234,7 +156,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <a href="${productData.link}" class="btn btn-details" aria-label="${t('button_detail')}">
                     ${t('button_detail')}
                 </a>
-                <a href="#" class="btn btn-card remove-from-cart" data-id="${cartItem.id}" aria-label="${t('button_remove')}">
+                <a href="#!" class="btn btn-card remove-from-cart" data-id="${cartItem.id}" aria-label="${t('button_remove')}">
                     ${t('button_remove')}
                 </a>
             </footer>`

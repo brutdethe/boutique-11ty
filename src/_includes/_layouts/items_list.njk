@@ -3,6 +3,14 @@ layout: _layouts/default.njk
 include_items_list_bundle: true
 ---
 
+{% set js %}
+    {% include "../../_assets/js/add-to-cart.js" %}
+{% endset %}
+
+<script>
+    {{ js | jsmin | safe }}
+</script>
+
 {% set css %}
     {% include "../../_assets/css/items-list.css" %}
     {% include "../../_assets/css/item.css" %}
@@ -11,7 +19,7 @@ include_items_list_bundle: true
 {% endset %}
 
 <style>
-	{{ css | cssmin | safe }}
+	{{ css }}
 </style>
 
 {%- if not tag -%} {% set tag = i18n_categories[0] %} {%- endif -%}

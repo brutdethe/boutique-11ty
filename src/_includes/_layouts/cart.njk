@@ -6,6 +6,16 @@ eleventyComputed:
     title: '{{ i18n.cart_title[page.lang] | safe }}'
 ---
 
+<script src="https://js.stripe.com/v3/"></script>
+
+{% set js %}
+    {% include "../../_assets/js/cart.js" %}
+{% endset %}
+
+<script>
+    {{ js | jsmin | safe }}
+</script>
+
 {% set css %}
     {% include "../../_assets/css/cart.css" %}
     {% include "../../_assets/css/item.css" %}
@@ -64,8 +74,6 @@ eleventyComputed:
     </a>
 </section>
 {% include 'loader.njk' %}
-
-<script src="https://js.stripe.com/v3/"></script>
 
 <script>
     const shippingData = {{ shipping_rate | dump | safe }}
