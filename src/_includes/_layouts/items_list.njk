@@ -3,6 +3,25 @@ layout: _layouts/default.njk
 include_items_list_bundle: true
 ---
 
+{% set js %}
+    {% include "../../_assets/js/add-to-cart.js" %}
+{% endset %}
+
+<script>
+    {{ js | jsmin | safe }}
+</script>
+
+{% set css %}
+    {% include "../../_assets/css/items-list.css" %}
+    {% include "../../_assets/css/item.css" %}
+    {% include "../../_assets/css/button-add.css" %}
+    {% include "../../_assets/css/price-stock.css" %}
+{% endset %}
+
+<style>
+	{{ css }}
+</style>
+
 {%- if not tag -%} {% set tag = i18n_categories[0] %} {%- endif -%}
 
 <header>
@@ -40,7 +59,7 @@ include_items_list_bundle: true
                     </h3>
                 </header>
                 <figure class="item-figure">
-                    {% carousel_image post.data.photos[0], 'item-image', i18n.alt_photo[page.lang] + ' - ' + post.data.name, '(max-width: 769px) 365px, 490px' %}
+                    {% image_product post.data.photos[0], 'item-image', i18n.alt_photo[page.lang] + ' - ' + post.data.name, '(max-width: 769px) 365px, 490px' %}
                 </figure>
                 <p class="item-description">{{ post.data.description | excerptFromDescription }}</p>
                 {% set price = post.data.price %}

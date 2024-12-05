@@ -18,6 +18,8 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
   - [x] page bienvenue 
   - [x] ajoute les tailles dans les images
   - [x] mise en place du plugin responsive
+  - [x] minification css et js
+  - [x] ajoute un _header
 
 - US-12 responsive
   - [x] passe l'interface en responsive 
@@ -110,13 +112,17 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 Pour garder les choses simples, nous essayons d'utiliser très peu d'outils.
 
-- [Eleventy](https://www.11ty.dev/), un [générateur de site statique](https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9rateur_de_site_statique).
-- [Splide.js](https://splidejs.com/), une bibliothèque légère pour créer des carrousels accessibles et élégants, utilisée pour la mise en œuvre des sliders de la boutique.
-- [sharp](https://sharp.pixelplumbing.com/), une librairie légère pour retailler les images.
+- [Eleventy](https://www.11ty.dev/), un [générateur de site statique](https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9rateur_de_site_statique)
+- [Splide.js](https://splidejs.com/), une bibliothèque légère pour créer des carrousels accessibles et élégants, utilisée pour la mise en œuvre des sliders de la boutique
+- [js-yaml](https://github.com/nodeca/js-yaml) pour utiliser le format [yaml](https://fr.wikipedia.org/wiki/YAML) plus intuitif pour les fichiers de configuration
+- [sharp](https://sharp.pixelplumbing.com/), une librairie légère pour retailler les images
+- [terser](https://github.com/terser/terser), pour minifier les fichier `js` avec le plugin 11ty
+- [clean-css](https://github.com/clean-css/clean-css), pour minifier le `css`, on l'utilise avec le plugin 11ty
+- [netlify cli](https://docs.netlify.com/cli/get-started/), pour exécuter un serveur de développement local avec les fonctions _serverless_
 
 Jusqu'au panier (inclus), le site est statique et fonctionne côté client, directement dans le navigateur, et peut être hébergé gratuitement sur des plateformes comme [GitLab](https://gitlab.com) ou [GitHub](https://github.com) par exemple.
 
-Reste quand même un pépin, pour les paiements en ligne. Une fois que la personne valide son panier en passant au paiement, nous avons choisi de passer par [stripe](stripe). Cette opération de paiement est sensible, une personne bizarrement intentionnée pourrait, par exemple, adapter les tarifs de ses achats. Nous avons donc un tout petit peu d'actions qui ne se font pas que dans le navigateur de la personne qui va commander. Nous utilisons donc un autre service dans sa version gratuite : [netlify](https://www.netlify.com).
+Reste quand même un pépin, pour les paiements en ligne. Une fois que la personne valide son panier en passant au paiement, nous avons choisi de passer par [stripe](stripe). Cette opération de paiement est sensible, une personne bizarrement intentionnée pourrait, par exemple, adapter les tarifs de ses achats. Nous avons donc un tout petit peu d'actions qui ne se font pas que dans le navigateur de la personne qui va commander. Nous utilisons donc un autre service dans sa version actuellement gratuite (modèle freemium) : [netlify](https://www.netlify.com).
 
 ### Installer le site sur netlify
 
@@ -140,9 +146,13 @@ Pour retailler et optimiser les images utilisées dans le carrousel, nous utilis
 
 Ce script permet de :
 
-- Redimensionner et optimiser les images placées dans le dossier `photos`.
-- Générer des versions optimisées pour les vignettes, les images du carrousel et les miniatures de celui-ci.
+- Redimensionner et optimiser les images placées dans le dossier `photos`
+- prend la première photo dans chaque fiche produit et place une vignette optimisé dans `src/_assets/thumbs/`
 - Il est exécuté automatiquement via GitHub Actions dès qu'un changement est détecté dans le dossier `/photos`.
+
+## Images responsives
+
+On utilise le plugin [eleventy-image](https://www.11ty.dev/docs/plugins/image/) pour permettre aux navigateurs de choisir la meilleure optimisation des images en fonction du contexte.
 
 ## Installation
 
@@ -178,7 +188,7 @@ $ netlify dev
 
 ## Génération de Fichiers Markdown
 
-Un [script](https://github.com/brutdethe/boutique-11ty/blob/main/script/import) est à disposition qui génère des fichiers Markdown pour chaque produit à partir d'un fichier JSON : [produits.json](https://github.com/brutdethe/boutique-11ty/blob/main/script/import/produit.json). Les fichiers générés sont organisés en deux répertoires : _/fr_ et _/en_.
+Pour faciliter l'import de produits, un [script](https://github.com/brutdethe/boutique-11ty/blob/main/script/import) est à disposition qui génère des fichiers Markdown pour chaque produit à partir d'un fichier JSON : [produits.json](https://github.com/brutdethe/boutique-11ty/blob/main/script/import/produit.json). Les fichiers générés sont organisés en deux répertoires : _/fr_ et _/en_.
 
 Les noms de fichiers dans le répertoire _/en_ conservent les titres en français pour faciliter la gestion _i18n_ dans _11ty_.  
 Les titres des fichiers sont normalisés pour éliminer les caractères spéciaux, les accents et les espaces, en remplaçant ces derniers par des tirets.

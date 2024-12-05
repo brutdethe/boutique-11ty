@@ -40,6 +40,7 @@
 
 .logo-link img {
     width: 8rem;
+    height: 8rem;
 }
 
 .btn-nav {
@@ -84,6 +85,7 @@
 
     .logo-link img {
         width: 5rem;
+        height: 5rem;
     }
 
     .nav-header {

@@ -1,3 +1,10 @@
+.footer-list {
+    display: flex;
+    gap: var(--gap-large);
+    padding: 0;
+    margin: 0;
+}
+
 .footer-section {
     display: flex;
     flex-direction: row;
@@ -7,13 +14,6 @@
     margin-top: 1rem;
     gap: var(--gap-small);
     flex-wrap: wrap;
-}
-
-.footer-list {
-    display: flex;
-    gap: var(--gap-large);
-    padding: 0;
-    margin: 0;
 }
 
 .footer-section address {
@@ -30,6 +30,11 @@
 
 .footer-section .email {
     display: block;
+}
+
+.footer-section .email,
+.footer-section .phone {
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 769px) {
