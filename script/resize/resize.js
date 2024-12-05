@@ -11,32 +11,16 @@ const paths = {
     productsDir: path.resolve(__dirname, '../../src/products'),
     photosDir: path.resolve(__dirname, '../../photos'),
     thumbsDir: path.resolve(__dirname, '../../src/_assets/thumbs'),
-    carouselsImagesDir: path.resolve(
-        __dirname,
-        '../../src/_assets/carousels_images'
-    ),
-    carouselsThumbsDir: path.resolve(
-        __dirname,
-        '../../src/_assets/carousels_thumbs'
-    )
 }
 
 const resizeTo = {
     thumbs: { width: 446, height: 297 },
-    carouselsThumbs: { width: 100, height: 60 },
-    carouselsImages: { width: 926, height: 612 }
 }
 
-// Vérifie et initialise les répertoires de sortie
-async function initDirectories(paths) {
-    await Promise.all(
-        Object.values(paths).map((dirPath) =>
-            fs.mkdir(dirPath, { recursive: true })
-        )
-    )
+async function initDirectories(path) {
+    await fs.mkdir(path, { recursive: true })
 }
 
-// Fonction générique pour convertir une image selon les dimensions spécifiées et l'optimiser
 async function convertAndSave({ source, target, dimensions }) {
     try {
         console.log(`Processing ${source} to ${target}`)
@@ -52,21 +36,14 @@ async function convertAndSave({ source, target, dimensions }) {
     }
 }
 
-// Vérifie que le dossier des produits existe
 try {
     await fs.access(paths.productsDir)
 } catch {
     throw new Error(`Non-existent ${paths.productsDir}`)
 }
 
-// Initialise les répertoires de sortie
-await initDirectories([
-    paths.thumbsDir,
-    paths.carouselsImagesDir,
-    paths.carouselsThumbsDir
-])
+await initDirectories(paths.thumbsDir)
 
-// Lit toutes les fiches produits du répertoire source
 const productFiles = (await fs.readdir(paths.productsDir)).filter(
     (file) => path.extname(file).toLowerCase() === '.md'
 )
@@ -83,18 +60,13 @@ await Promise.all(
             Array.isArray(data.photos) &&
             data.photos.length > 0
         ) {
-            // Prend la première photo pour les thumbs, et toutes les photos pour les carousels
-            allPhotos.push({
-                thumb: data.photos[0],
-                carousels: data.photos
-            })
+            allPhotos.push(data.photos[0])
         }
     })
 )
 
-// Parcourt chaque produit et crée les différentes tailles requises
 ;(async () => {
-    const promises = allPhotos.flatMap(async ({ thumb, carousels }) => {
+    const promises = allPhotos.flatMap(async (thumb) => {
         const thumbSource = path.join(paths.photosDir, thumb)
 
         try {
@@ -104,39 +76,11 @@ await Promise.all(
             return
         }
 
-        // Crée la vignette pour la première image
-        await convertAndSave({
+        return await convertAndSave({
             source: thumbSource,
             target: path.join(paths.thumbsDir, thumb),
             dimensions: resizeTo.thumbs
         })
-
-        // Crée les versions pour le carrousel pour toutes les images
-        return Promise.all(
-            carousels.map(async (photo) => {
-                const source = path.join(paths.photosDir, photo)
-
-                try {
-                    await fs.access(source)
-                } catch {
-                    console.error('Source file not found:', source)
-                    return
-                }
-
-                return Promise.all([
-                    convertAndSave({
-                        source,
-                        target: path.join(paths.carouselsImagesDir, photo),
-                        dimensions: resizeTo.carouselsImages
-                    }),
-                    convertAndSave({
-                        source,
-                        target: path.join(paths.carouselsThumbsDir, photo),
-                        dimensions: resizeTo.carouselsThumbs
-                    })
-                ])
-            })
-        )
     })
 
     await Promise.all(promises)
