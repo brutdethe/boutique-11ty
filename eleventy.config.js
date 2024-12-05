@@ -87,10 +87,10 @@ export default function (eleventyConfig) {
         return [...tagSet];
     });
 
-    eleventyConfig.addNunjucksAsyncShortcode('carousel_image', async (src, cls, alt, sizes) => {
+    eleventyConfig.addNunjucksAsyncShortcode('image_product', async (src, cls, alt, sizes) => {
 
         let metadata = await Image(`photos/${src}`, {
-            widths: [100, 365, 490, 750],
+            widths: [65, 365, 490, 750],
             formats: ['webp'],
             outputDir: './dist/img/',
             urlPath: '/img/',
@@ -98,6 +98,25 @@ export default function (eleventyConfig) {
 
         let imageAttributes = {
             class: cls,
+            alt,
+            sizes,
+            loading: 'lazy',
+            decoding: 'async',
+        };
+
+        return Image.generateHTML(metadata, imageAttributes);
+    });
+
+    eleventyConfig.addNunjucksAsyncShortcode('logo', async (src, alt, sizes) => {
+
+        let metadata = await Image(src, {
+            widths: [128, 80],
+            formats: ['svg'],
+            outputDir: './dist/img/',
+            urlPath: '/img/',
+          })
+
+        let imageAttributes = {
             alt,
             sizes,
             loading: 'lazy',

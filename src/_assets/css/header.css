@@ -40,6 +40,7 @@
 
 .logo-link img {
     width: 8rem;
+    height: 8rem;
 }
 
 .btn-nav {
@@ -84,21 +85,23 @@
 
     .logo-link img {
         width: 5rem;
+        height: 5rem;
     }
+}
 
-    .nav-header {
-        display: flex;
-        align-items: center;
-        padding: 1rem;
-    }
+.nav-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
 
-    .nav-list {
-        justify-content: flex-start;
-        flex: 1;
-    }
+.nav-list {
+    justify-content: flex-start;
+    flex: 1;
+}
 
-    .language-list,
-    .currency-list {
-        padding-left: 3rem;
-    }
+.language-list,
+.currency-list {
+    padding-left: 3rem;
+}
 }
