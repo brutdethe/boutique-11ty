@@ -19,6 +19,7 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
   - [x] ajoute les tailles dans les images
   - [x] mise en place du plugin responsive
   - [x] minification css et js
+  - [x] ajoute un _header
 
 - US-12 responsive
   - [x] passe l'interface en responsive 
