@@ -103,7 +103,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addNunjucksAsyncShortcode('image_product', async (src, cls, alt, sizes) => {
 
         let metadata = await Image(`photos/${src}`, {
-            widths: [65, 365, 490, 750, 1073],
+            widths: [65, 365, 490, 750],
             formats: ['webp'],
             outputDir: './dist/img/',
             urlPath: '/img/',
