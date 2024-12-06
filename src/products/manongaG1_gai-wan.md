@@ -1,12 +1,18 @@
 ---
 layout: _layouts/product_card.njk
 id: manongaG1
-name: 蓋碗 - GàiWǎn
-mini_descr: GàiWǎn réalisé par Manon Clouzeau
+name:
+    fr: 蓋碗 - GàiWǎn
+    en: 蓋碗 - GàiWǎn
+mini_descr:
+    fr: GàiWǎn réalisé par Manon Clouzeau
+    en: GàiWǎn made by Manon Clouzeau
 tags: ['produit', 'manon-clouzeau']
-
-description: >
-    GàiWǎn émaillé. Pièce unique.
+description: 
+    fr: >
+        GàiWǎn émaillé. Pièce unique.
+    en: >
+        Glazed GàiWǎn. Unique piece.
 photos:
     - manon_gaiwan_G1-a.jpg
     - manon_gaiwan_G1-b.jpg
@@ -17,7 +23,10 @@ weight: 89
 shipping_type: colis_base
 shipping_point: 3
 options:
-    capacité: 50ml
+    fr:
+        capacité: 50ml
+    en:
+        capacity: 50ml
 eleventyComputed:
-    title: '{{ tags }} - {{ name }}'
+    title: '{{ tags }} - {{ name[page.lang] }}'
 ---
