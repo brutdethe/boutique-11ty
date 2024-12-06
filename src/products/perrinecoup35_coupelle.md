@@ -1,7 +1,8 @@
 ---
 layout: _layouts/product_card.njk
 id: perrinecoup35
-name: coupelle
+name: 香盤 - XiāngPán (coupelle à encens)
+mini_descr: coupelle à encens avec pied réalisé par Perrine Pottiez
 tags: ["produit", "perrine-pottiez"]
 permalink: /products/perrinecoup35_coupelle-avec-pied/
 description: >
@@ -16,8 +17,7 @@ weight: 125
 shipping_type: colis_base
 shipping_point: 5
 options:
-  dimension: 8,4-8,6cm x 2,2cm
-  capacité: ml
+  dimension: 8,5cm x 2cm
 eleventyComputed:
   title: "{{ tags }} - {{ name }}"
 ---
