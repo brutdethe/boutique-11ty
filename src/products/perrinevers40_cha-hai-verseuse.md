@@ -2,7 +2,8 @@
 layout: _layouts/product_card.njk
 id: perrinevers40
 name: 茶海 - CháHǎi (verseuse)
-tags: ['produit', 'perrine-pottiez']
+mini_descr: verseuse à thé réalisé par Perrine Pottiez
+tags: ["produit", "perrine-pottiez"]
 
 description: >
     茶海 - CháHǎi en céramique, 1250°C. Pièce unique. Verseuse à thé.

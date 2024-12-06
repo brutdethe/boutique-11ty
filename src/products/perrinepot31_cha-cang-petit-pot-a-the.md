@@ -5,7 +5,7 @@ name: 茶倉 - CháCāng (petit pot à thé)
 tags: ['produit', 'perrine-pottiez']
 
 description: >
-    茶倉 - CháCāng en céramique, 1250°C. Pièce unique.
+    茶倉 - CháCāng en céramique, 1250°C. Pièce unique. Une jarre minimaniste idéal pour le rite du GōngFūChá - 工夫茶.
 photos:
     - perrine_cha-cang_31-a.jpg
     - perrine_cha-cang_31-b.jpg

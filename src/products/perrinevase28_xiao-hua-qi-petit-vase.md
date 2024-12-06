@@ -2,10 +2,11 @@
 layout: _layouts/product_card.njk
 id: perrinevase28
 name: 花器 - HuāQì (petit vase)
-tags: ['produit', 'perrine-pottiez']
+mini_descr: vase sobre à fluer réalisé par Perrine Pottiez
+tags: ["produit", "perrine-pottiez"]
 
 description: >
-    花器 - HuāQì en céramique, 1250°C. Pièce unique. Petit vase à fleur.
+  花器 - HuāQì en céramique, 1250°C. Pièce unique. Petit vase à fleur. Idéal pour le rite du GōngFūChá - 工夫茶.
 photos:
     - perrine_vase_28-a.jpg
     - perrine_vase_28-b.jpg

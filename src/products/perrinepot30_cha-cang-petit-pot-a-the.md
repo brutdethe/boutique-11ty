@@ -2,10 +2,10 @@
 layout: _layouts/product_card.njk
 id: perrinepot30
 name: 茶倉 - CháCāng (petit pot à thé)
-tags: ['produit', 'perrine-pottiez']
+tags: ["produit", "perrine-pottiez"]
 
 description: >
-    茶倉 - CháCāng en céramique, 1250°C. Pièce unique.
+  茶倉 - CháCāng en céramique, 1250°C. Pièce unique.
 photos:
     - perrine_cha-cang_30-a.jpg
     - perrine_cha-cang_30-b.jpg
