@@ -12,11 +12,11 @@ photos:
     - manon_gaiwan_A3-b.jpg
 price: 50.00
 stock: 1
-weight: 193
+weight: 117
 shipping_type: colis_base
 shipping_point: 3
 options:
-    capacité: 70
+    capacité: 100
 eleventyComputed:
     title: '{{ tags }} - {{ name }}'
 ---
