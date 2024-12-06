@@ -62,6 +62,7 @@ include_items_list_bundle: true
                     {% image_product post.data.photos[0], 'item-image', i18n.alt_photo[page.lang] + ' - ' + post.data.name, '(max-width: 769px) 365px, 490px' %}
                 </figure>
                 <p class="item-description">{{ post.data.description | excerptFromDescription }}</p>
+                <p>{{ post.data.subtitle[page.lang] }}</p>
                 {% set price = post.data.price %}
                 {% set stock = post.data.stock %}
                 {% include 'price_stock.njk' %}
