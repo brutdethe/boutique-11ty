@@ -3,9 +3,9 @@ layout: _layouts/product_card.njk
 id: perrinevers40
 name: 茶海 - CháHǎi (verseuse)
 tags: ["produit", "perrine-pottiez"]
-permalink: /products/perrineverseuse40_cha-hai-verseuse/
+permalink: /products/perrinevers40_cha-hai-verseuse/
 description: >
-  茶海 - CháHǎi en céramique, 1250°C. Pièce unique.
+  茶海 - CháHǎi en céramique, 1250°C. Pièce unique. Verseuse à thé.
 photos:
   - perrine_cha-hai_40-a.jpg
   - perrine_cha-hai_40-b.jpg
@@ -17,7 +17,7 @@ weight: 125
 shipping_type: colis_base
 shipping_point: 5
 options:
-  dimension: 6,5-9,5cm x 5,0cm
+  dimension: 10cm x 5cm
   capacité: 120ml
 eleventyComputed:
   title: "{{ tags }} - {{ name }}"

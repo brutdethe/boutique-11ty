@@ -16,7 +16,7 @@ weight: 125
 shipping_type: colis_base
 shipping_point: 5
 options:
-  dimension: 4,9-6,4cm x 9,0cm
+  dimension: 6cm x 9cm
   capacité: 122ml
 eleventyComputed:
   title: "{{ tags }} - {{ name }}"

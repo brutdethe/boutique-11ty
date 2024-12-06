@@ -5,7 +5,7 @@ name: 花器 - HuāQì (petit vase)
 tags: ["produit", "perrine-pottiez"]
 permalink: /products/perrinevase28_xiao-hua-qi-petit-vase/
 description: >
-  花器 - HuāQì en céramique, 1250°C. Pièce unique.
+  花器 - HuāQì en céramique, 1250°C. Pièce unique. Petit vase à fleur.
 photos:
   - perrine_vase_28-a.jpg
   - perrine_vase_28-b.jpg
@@ -16,7 +16,7 @@ weight: 125
 shipping_type: colis_base
 shipping_point: 3
 options:
-  dimension: 4,3cm x 8,9cm
+  dimension: 4cm x 9cm
   capacité: 80ml
 eleventyComputed:
   title: "{{ tags }} - {{ name }}"
