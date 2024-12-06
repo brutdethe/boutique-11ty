@@ -139,7 +139,7 @@ select:focus {
 
 @media (min-width: 769px) {
     body {
-        max-width: 90em;
+        max-width: 95em;
     }
 
     h1,
