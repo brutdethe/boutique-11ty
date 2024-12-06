@@ -5,7 +5,7 @@
               <li class="splide__slide">
                 <figure class="card-figure">
                   {% image_product photo, 'shadow card-image', i18n.alt_photo[page.lang] + ' - ' + name, '(max-width: 769px) 365px, 750px' %}
-                  <figcaption class="card-caption">{{ name }}</figcaption>
+                  <figcaption class="card-caption">{{ name[page.lang] }}</figcaption>
                 </figure>
               </li>
             {%- endfor -%}
