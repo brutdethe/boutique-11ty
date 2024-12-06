@@ -8,16 +8,17 @@ permalink: /products/perrinebol24_cha-bei-petit-bol-a-the/
 description: >
   茶杯 - CháBēi en céramique, 1250°C. Pièce unique.
 photos:
-  - perrine_tasse_24-a.jpg
-  - perrine_tasse_24-b.jpg
+  - perrine_bol_24-a.jpg
+  - perrine_bol_24-b.jpg
+  - perrine_bol_24-c.jpg
 price: 20.00
 stock: 1
 weight: 125
 shipping_type: colis_base
 shipping_point: 2
 options:
-  dimension: 7 cm x 3 cm
-  capacité: 30 ml
+  dimension: 7cm x 3cm
+  capacité: 35ml
 eleventyComputed:
   title: "{{ tags }} - {{ name }}"
 ---
