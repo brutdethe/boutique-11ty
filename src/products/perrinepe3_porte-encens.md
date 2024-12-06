@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: perrinepe3
 name: 香托 - XiāngTuō (porte-encens)
+mini_descr: porte-encens cascade réalisé par Perrine Pottiez
 tags: ['produit', 'perrine-pottiez']
 
 description: >
