@@ -3,6 +3,7 @@ import yaml from 'js-yaml';
 import Image from '@11ty/eleventy-img';
 import CleanCSS from "clean-css";
 import { minify } from "terser";
+import { eleventyImageOnRequestDuringServePlugin } from "@11ty/eleventy-img";
 
 export const config = {
     dir: {
@@ -23,7 +24,8 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
     eleventyConfig.addPassthroughCopy({ 'src/_headers': '/_headers' });
 
-
+    eleventyConfig.addPlugin(eleventyImageOnRequestDuringServePlugin);
+    
     eleventyConfig.addPlugin(EleventyI18nPlugin, {
         defaultLanguage: 'fr',
         errorMode: 'never'
@@ -107,6 +109,7 @@ export default function (eleventyConfig) {
             formats: ['webp'],
             outputDir: './dist/img/',
             urlPath: '/img/',
+            transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
           })
 
         let imageAttributes = {
