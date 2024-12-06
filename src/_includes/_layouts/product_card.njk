@@ -30,13 +30,13 @@ layout: _layouts/default.njk
         {%- include 'carousel.njk' -%}
         <section class="card-info">
             <header>
-                <h1 id="content-title" class="card-title">{{ name }}</h1>
-                <h2 class="card-title">{{ mini_descr }}</h2>
+                <h1 id="content-title" class="card-title">{{ name[page.lang] }}</h1>
+                <h2 class="card-title">{{ mini_descr[page.lang] }}</h2>
             </header>
             <section class="card-description">
-                <p>{{ description | safe }}</p>
+                <p>{{ description[page.lang] | safe }}</p>
                 <dl>
-                    {% for key, value in options %}
+                    {% for key, value in options[page.lang] %}
                     <dt>
                         {{ key }}{% if page.lang == 'fr'%}&nbsp;{% endif
                         %}:&nbsp;
