@@ -2,6 +2,7 @@
 layout: _layouts/product_card.njk
 id: perrinepot31
 name: 茶倉 - CháCāng (petit pot à thé)
+mini_descr: mini jarre à thé réalisé par Perrine Pottiez
 tags: ['produit', 'perrine-pottiez']
 
 description: >

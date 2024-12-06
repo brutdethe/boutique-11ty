@@ -2,10 +2,11 @@
 layout: _layouts/product_card.njk
 id: perrinepot30
 name: 茶倉 - CháCāng (petit pot à thé)
+mini_descr: mini jarre à thé réalisé par Perrine Pottiez
 tags: ["produit", "perrine-pottiez"]
 
-description: >
-  茶倉 - CháCāng en céramique, 1250°C. Pièce unique.
+ddescription: >
+    茶倉 - CháCāng en céramique, 1250°C. Pièce unique. Une jarre minimaniste idéal pour le rite du GōngFūChá - 工夫茶.
 photos:
     - perrine_cha-cang_30-a.jpg
     - perrine_cha-cang_30-b.jpg
