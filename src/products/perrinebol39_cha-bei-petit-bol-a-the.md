@@ -2,11 +2,11 @@
 layout: _layouts/product_card.njk
 id: perrinebol39
 name: 茶杯 - CháBēi (petit bol à thé)
-mini_descr: petit bol à thé haut,réalisé par Perrine Pottiez en technique de pinçage
+mini_descr: petit bol à thé réalisé par Perrine Pottiez 
 tags: ["produit", "perrine-pottiez", "welcome"]
 permalink: /products/perrinebol39_cha-bei-petit-bol-a-the/
 description: >
-  茶杯 - CháBēi en céramique, 1250°C. Pièce unique.
+  茶杯 - CháBēi en céramique, 1250°C. Pièce unique. Bol à forme allongée en technique de pinçage.
 photos:
   - perrine_bol_39-a.jpg
   - perrine_bol_39-b.jpg

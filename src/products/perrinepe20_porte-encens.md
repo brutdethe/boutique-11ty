@@ -1,15 +1,15 @@
 ---
 layout: _layouts/product_card.njk
-id: perrinepe10
+id: perrinepe20
 name: 香托 - XiāngTuō (porte-encens)
 mini_descr: porte-encens cascade réalisé par Perrine Pottiez
 tags: ["produit", "perrine-pottiez"]
-permalink: /products/perrinepe10_porte-encens/
+permalink: /products/perrinepe20_porte-encens/
 description: >
   Porte-encens, 1250°C. Pièce unique. Pour encens en cascade et encens normal
 photos:
-  - perrine_porte-encens_10-a.jpg
-  - perrine_porte-encens_10-b.jpg
+  - perrine_porte-encens_20-a.jpg
+  - perrine_porte-encens_20-b.jpg
 price: 20.00
 stock: 1
 weight: 125
