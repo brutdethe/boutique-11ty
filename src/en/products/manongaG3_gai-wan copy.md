@@ -1,34 +1,34 @@
 ---
 layout: _layouts/product_card.njk
-id: manongaA3
+id: manongaG3
 name:
     fr: 蓋碗 - GàiWǎn
     en: 蓋碗 - GàiWǎn
-mini_descr: GàiWǎn réalisé par Manon Clouzeau
+mini_descr:
     fr: GàiWǎn réalisé par Manon Clouzeau
     en: GàiWǎn made by Manon Clouzeau
 tags: ['produit', 'manon-clouzeau']
-description: >
+description: 
     fr: >
         GàiWǎn émaillé. Pièce unique.
     en: >
         Glazed GàiWǎn. Unique piece.
 photos:
-    - manon_gaiwan_A3-a.jpg
-    - manon_gaiwan_A3-b.jpg
-    - manon_gaiwan_A3-C.jpg
-price: 50.00
+    - manon_gaiwan_G3-a.jpg
+    - manon_gaiwan_G3-b.jpg
+    - manon_gaiwan_G3-c.jpg
+price: 40.00
 stock: 1
-weight: 117
+weight: 105
 shipping_type: colis_base
 shipping_point: 3
 options:
     fr:
-        dimensions: 9cm x 5cm
-        capacité: 100ml
+        dimensions: 9,5cm x 5cm
+        capacité: 75ml
     en:
-        dimensions: 9cm x 5cm
-        capacity: 100ml
+        dimensions: 9.5cm x 5cm
+        capacity: 75ml
 eleventyComputed:
-    title: '{{ tags }} - {{ name }}'
+    title: '{{ tags }} - {{ name[page.lang] }}'
 ---
