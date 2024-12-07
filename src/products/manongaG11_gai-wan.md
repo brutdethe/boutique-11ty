@@ -19,13 +19,15 @@ photos:
     - manon_gaiwan_G11-c.jpg
 price: 50.00
 stock: 1
-weight: 143
+weight: 145
 shipping_type: colis_base
 shipping_point: 3
 options:
     fr:
+        dimensions: 9cm x 5cm
         capacité: 115ml
     en:
+        dimensions: 9cm x 5cm
         capacity: 115ml
 eleventyComputed:
     title: '{{ tags }} - {{ name }}'

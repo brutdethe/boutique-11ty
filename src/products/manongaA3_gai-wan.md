@@ -10,13 +10,15 @@ description: >
 photos:
     - manon_gaiwan_A3-a.jpg
     - manon_gaiwan_A3-b.jpg
+    - manon_gaiwan_A3-C.jpg
 price: 50.00
 stock: 1
 weight: 117
 shipping_type: colis_base
 shipping_point: 3
 options:
-    capacité: 100
+    dimension: 9cm x 5cm
+    capacité: 100ml
 eleventyComputed:
     title: '{{ tags }} - {{ name }}'
 ---

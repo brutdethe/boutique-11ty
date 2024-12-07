@@ -24,8 +24,10 @@ shipping_type: colis_base
 shipping_point: 3
 options:
     fr:
+        dimensions: 8cm x 4cm
         capacité: 50ml
     en:
+        dimensions: 8cm x 4cm
         capacity: 50ml
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'

@@ -24,8 +24,10 @@ shipping_type: colis_base
 shipping_point: 3
 options:
     fr:
+        dimensions: 1cm x 6cm
         capacité: 140ml
     en:
+        dimensions: 1cm x 6cm
         capacity: 140ml
 eleventyComputed:
     title: '{{ tags }} - {{ name }}'

@@ -24,8 +24,10 @@ shipping_type: colis_base
 shipping_point: 3
 options:
     fr:
+        dimensions: 9cm x 5,5cm
         capacité: 100ml
     en:
+        dimensions: 9cm x 5.5cm
         capacity: 100ml
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'

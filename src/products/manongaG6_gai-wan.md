@@ -19,13 +19,15 @@ photos:
     - manon_gaiwan_G6-c.jpg
 price: 50.00
 stock: 1
-weight: 144
+weight: 145
 shipping_type: colis_base
 shipping_point: 3
 options:
     fr:
+        dimension: 9cm x 5,5cm
         capacité: 125ml
     en:
+        dimension: 9cm x 5.5cm
         capacity: 125ml
 eleventyComputed:
     title: '{{ tags }} - {{ name }}'
