@@ -17,6 +17,7 @@ weight: 171
 shipping_type: colis_base
 shipping_point: 3
 options:
+    dimension: 1cm x 6cm
     capacité: 140ml
 eleventyComputed:
     title: '{{ tags }} - {{ name }}'

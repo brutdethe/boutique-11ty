@@ -13,10 +13,11 @@ photos:
     - manon_gaiwan_G10-c.jpg
 price: 45.00
 stock: 1
-weight: 123
+weight: 125
 shipping_type: colis_base
 shipping_point: 3
 options:
+    dimension: 9cm x 4,5cm
     capacité: 95ml
 eleventyComputed:
     title: '{{ tags }} - {{ name }}'

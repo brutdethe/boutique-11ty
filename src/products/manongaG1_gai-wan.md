@@ -17,6 +17,7 @@ weight: 89
 shipping_type: colis_base
 shipping_point: 3
 options:
+    dimension: 8cm x 4cm
     capacité: 50ml
 eleventyComputed:
     title: '{{ tags }} - {{ name }}'
