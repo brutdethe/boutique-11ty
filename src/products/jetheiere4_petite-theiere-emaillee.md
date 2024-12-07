@@ -1,12 +1,18 @@
 ---
 layout: _layouts/product_card.njk
 id: jetheiere4
-name: Petite théière émaillée
-mini_descr: théière pour GōngFūChá - 工夫茶 réalisé par Jé le Potier
+name:
+    fr: 茶壺 CháHú - Petite théière émaillée
+    en: 茶壺 CháHú - Small Glazed Teapot
+mini_descr:
+    fr: théière pour GōngFūChá - 工夫茶 réalisée par Jé le Potier
+    en: teapot for GōngFūChá - 工夫茶 made by Jé le Potier
 tags: ['produit', 'je-le-potier', 'welcome']
-
-description: >
-    Pièce unique. Petite théière émaillée. L'émail présent à l'intérieur, confère à cette théière une certaine polyvalence. La verse et rapide et fluide.
+description: 
+    fr: >
+        Pièce unique. 茶壺 CháHú - petite théière émaillée. L'émail présent à l'intérieur confère à cette théière une certaine polyvalence. La verse est rapide et fluide.
+    en: >
+        Unique piece. 茶壺 CháHú - small glazed teapot. The interior glaze gives this teapot versatility. The pour is smooth and fast.
 photos:
     - jerome_theiere_4-a.jpg
     - jerome_theiere_4-b.jpg
@@ -19,7 +25,10 @@ weight: 220
 shipping_type: colis_base
 shipping_point: 5
 options:
-    capacité: 80 ml
+    fr:
+        capacité: 80ml
+    en:
+        capacity: 80ml
 eleventyComputed:
-    title: '{{ tags }} - {{ name }}'
+    title: '{{ tags }} - {{ name[page.lang] }}'
 ---
