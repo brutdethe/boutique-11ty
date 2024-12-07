@@ -19,13 +19,15 @@ photos:
     - manon_gaiwan_G7-c.jpg
 price: 45.00
 stock: 1
-weight: 128
+weight: 130
 shipping_type: colis_base
 shipping_point: 3
 options:
     fr:
+        dimensions: 9cm x 4cm
         capacité: 75ml
     en:
+        dimensions: 9cm x 4cm
         capacity: 75ml
 eleventyComputed:
     title: '{{ tags }} - {{ name }}'

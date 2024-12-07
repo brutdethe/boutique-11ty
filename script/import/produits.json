@@ -359,7 +359,7 @@
         },
         "prix": 8,
         "poids": 0.22,
-        "capacité": "70 ml",
+        "capacité": "70ml",
         "quantité_produite": 8,
         "photos": [
             "gaiwan_2-a.jpg",
@@ -381,7 +381,7 @@
         },
         "prix": 45,
         "poids": 0.55,
-        "capacité": "110 ml",
+        "capacité": "110ml",
         "quantité_produite": 16,
         "photos": [
             "set-de-voyage_1-a.jpg",
@@ -407,7 +407,7 @@
         "producteur": "YanLi",
         "prix": 89,
         "poids": 0.18,
-        "capacité": "130 ml",
+        "capacité": "130ml",
         "quantité_produite": 1,
         "photos": [
             "theiere_3-a.jpg",
@@ -432,7 +432,7 @@
         },
         "prix": 80,
         "poids": 0.235,
-        "capacité": "220 ml",
+        "capacité": "220ml",
         "quantité_produite": 1,
         "photos": [
             "theiere_9-a.jpg",
@@ -459,7 +459,7 @@
         "prix": 20,
         "dimension": "7 cm x 3 cm",
         "poids": 0.125,
-        "capacité": "30 ml",
+        "capacité": "30ml",
         "quantité_produite": 1,
         "photos": [
             "perrine_tasse_2-a.jpg",
@@ -483,7 +483,7 @@
         "prix": 20,
         "dimension": "7 cm x 3 cm",
         "poids": 0.125,
-        "capacité": "30 ml",
+        "capacité": "30ml",
         "quantité_produite": 1,
         "photos": [
             "perrine_tasse_11-a.jpg",
@@ -507,7 +507,7 @@
         "prix": 20,
         "dimension": "7 cm x 3 cm",
         "poids": 0.125,
-        "capacité": "30 ml",
+        "capacité": "30ml",
         "quantité_produite": 1,
         "photos": [
             "perrine_tasse_24-a.jpg",
@@ -531,7 +531,7 @@
         "prix": 15,
         "dimension": "7 cm x 3 cm",
         "poids": 0.135,
-        "capacité": "40 ml",
+        "capacité": "40ml",
         "quantité_produite": 1,
         "photos": [
             "manon_tasse_A29-a.jpg",
@@ -554,7 +554,7 @@
         "prix": 15,
         "dimension": "7 cm x 3 cm",
         "poids": 0.135,
-        "capacité": "40 ml",
+        "capacité": "40ml",
         "quantité_produite": 1,
         "photos": [
             "manon_tasse_A31-a.jpg",
@@ -598,7 +598,7 @@
         },
         "prix": 18,
         "poids": 0.170,
-        "capacité": "50 ml",
+        "capacité": "50ml",
         "quantité_produite": 28,
         "photos": [
             "jerome_bol_A1-a.jpg",
@@ -620,7 +620,7 @@
         },
         "prix": 142,
         "poids": 0.22,
-        "capacité": "80 ml",
+        "capacité": "80ml",
         "quantité_produite": 1,
         "photos": [
             "jerome_theiere_1-a.jpg",
@@ -645,7 +645,7 @@
         },
         "prix": 132,
         "poids": 0.22,
-        "capacité": "100 ml",
+        "capacité": "100ml",
         "quantité_produite": 1,
         "photos": [
             "jerome_theiere_2-a.jpg",
@@ -670,7 +670,7 @@
         },
         "prix": 132,
         "poids": 0.23,
-        "capacité": "100 ml",
+        "capacité": "100ml",
         "quantité_produite": 1,
         "photos": [
             "jerome_theiere_3-a.jpg",
@@ -696,7 +696,7 @@
         },
         "prix": 142,
         "poids": 0.22,
-        "capacité": "80 ml",
+        "capacité": "80ml",
         "quantité_produite": 1,
         "photos": [
             "jerome_theiere_4-a.jpg",
@@ -721,7 +721,7 @@
         },
         "prix": 60.00,
         "poids": 0.315,
-        "capacité": "90 ml",
+        "capacité": "90ml",
         "quantité_produite": 3,
         "photos": [
             "melles-ceramique_gaiwan_1-a.jpg",
@@ -745,7 +745,7 @@
         },
         "prix": 200,
         "poids": 0.335,
-        "capacité": "100 ml",
+        "capacité": "100ml",
         "quantité_produite": 1,
         "photos": [
             "melles-ceramique_theiere_1-a.jpg",
