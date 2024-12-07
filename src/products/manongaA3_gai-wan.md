@@ -4,7 +4,7 @@ id: manongaA3
 name:
     fr: 蓋碗 - GàiWǎn
     en: 蓋碗 - GàiWǎn
-mini_descr: GàiWǎn réalisé par Manon Clouzeau
+mini_descr:
     fr: GàiWǎn réalisé par Manon Clouzeau
     en: GàiWǎn made by Manon Clouzeau
 tags: ['produit', 'manon-clouzeau']
@@ -16,7 +16,7 @@ description: >
 photos:
     - manon_gaiwan_A3-a.jpg
     - manon_gaiwan_A3-b.jpg
-    - manon_gaiwan_A3-C.jpg
+    - manon_gaiwan_A3-c.jpg
 price: 50.00
 stock: 1
 weight: 117
