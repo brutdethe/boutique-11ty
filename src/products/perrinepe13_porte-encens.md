@@ -13,6 +13,9 @@ description:
         Porte-encens, 1250°C. Pièce unique. Pour encens en cascade et encens normal.
     en: >
         Incense holder, fired at 1250°C. Unique piece. Suitable for waterfall incense and regular incense.
+photos:
+    - perrine_porte-encens_13-a.jpg
+    - perrine_porte-encens_13-b.jpg
 price: 20.00
 stock: 1
 weight: 125
