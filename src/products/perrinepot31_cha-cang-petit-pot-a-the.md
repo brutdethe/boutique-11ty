@@ -1,12 +1,18 @@
 ---
 layout: _layouts/product_card.njk
 id: perrinepot31
-name: 茶倉 - CháCāng (petit pot à thé)
-mini_descr: mini jarre à thé réalisé par Perrine Pottiez
+name:
+    fr: 茶倉 - CháCāng (petit pot à thé)
+    en: Tea Storage - 茶倉 - CháCāng (small tea jar)
+mini_descr:
+    fr: mini jarre à thé réalisé par Perrine Pottiez
+    en: small tea jar made by Perrine Pottiez
 tags: ['produit', 'perrine-pottiez']
-
-description: >
-    茶倉 - CháCāng en céramique, 1250°C. Pièce unique. Une jarre minimaniste idéal pour le rite du GōngFūChá - 工夫茶.
+description: 
+    fr: >
+        茶倉 - CháCāng en céramique, 1250°C. Pièce unique. Une jarre minimaliste idéale pour le rite du GōngFūChá - 工夫茶
+    en: >
+        茶倉 - CháCāng - Tea Storage made of ceramic, fired at 1250°C. Unique piece. A minimalist jar perfect for the GōngFūChá - 工夫茶
 photos:
     - perrine_cha-cang_31-a.jpg
     - perrine_cha-cang_31-b.jpg
@@ -17,8 +23,12 @@ weight: 125
 shipping_type: colis_base
 shipping_point: 5
 options:
-    dimension: 6cm x 9cm
-    capacité: 122ml
+    fr:
+        dimensions: 6cm x 9cm
+        capacité: 122ml
+    en:
+        dimensions: 6cm x 9cm
+        capacity: 122ml
 eleventyComputed:
     title: '{{ tags }} - {{ name }}'
 ---
