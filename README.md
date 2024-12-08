@@ -12,6 +12,11 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 ### Terminées
 
+- US-13 produits
+  - [x] ajoute des fiches produits
+  - [x] créé des fiches produits multi-lingues
+  - [x] convertie toutes les fiches produit en multi-lingues   
+
 - US-15 optimisation
   - [x] pétouille responsive et bug panier
   - [x] ajoute un sitemap et un robots.txt
@@ -105,7 +110,6 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 - US-10 passer en plugin
 - US-11 currencies
-- US-13 page accueil
 - US-16 gère le stock avec stripe
 
 ## Outils utilisés

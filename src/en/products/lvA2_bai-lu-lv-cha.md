@@ -10,9 +10,9 @@ mini_descr:
 tags: ['produit', 'cha']
 description: 
     fr: >
-        Ce 綠茶 - LǜChá est produit dans la province du 四川 - SìChuān en Chine et plus exactement au village de 白鹿村 - BáiLùCūn qui se trouve à environ 850 mètres d'altitude. Il ne couvre qu'une superficie de 5,8 kilomètres carrés et compte un peu plus de 1 300 habitants. Aucune industrie, son environnement est donc naturellement excellent et propice à la production agricole.
+        Ce 綠茶 - LǜChá est produit dans la province du 四川 - SìChuān en Chine et plus exactement au village de 白鹿村 - BáiLùCūn qui se trouve à environ 850 mètres d'altitude.<!--more--> Il ne couvre qu'une superficie de 5,8 kilomètres carrés et compte un peu plus de 1 300 habitants. Aucune industrie, son environnement est donc naturellement excellent et propice à la production agricole.
     en: >
-        This 綠茶 - LǜChá (green tea) is produced in the 四川 - SìChuān province of China, specifically in the village of 白鹿村 - BáiLùCūn, located at an altitude of approximately 850 meters. It covers an area of only 5.8 square kilometers and has just over 1,300 residents. With no industry, its natural environment is ideal for agricultural production.
+        This 綠茶 - LǜChá (green tea) is produced in the 四川 - SìChuān province of China, specifically in the village of 白鹿村 - BáiLùCūn, located at an altitude of approximately 850 meters.<!--more--> It covers an area of only 5.8 square kilometers and has just over 1,300 residents. With no industry, its natural environment is ideal for agricultural production.
 photos:
     - BaiLu-LvCha_1-a.jpg
     - BaiLu-LvCha_1-b.jpg
