@@ -23,19 +23,19 @@ shipping_type: colis_base
 shipping_point: 2
 options:
     fr:
-        récolte: printemps 2023
+        récolte: printemps 2024
         type: 青茶 - QīngChá
         altitude: 2000m
         village: 臺中 - TáiZhōng
         province: 台灣 - TáiWān
-        producteur: Monsieur 李 - Lǐ
+        producteur: Madame 喻 - Yù
     en:
-        harvest: Spring 2023
+        harvest: Spring 2024
         type: 青茶 - QīngChá (oolong tea)
         altitude: 2000m
         village: 臺中 - TáiZhōng
         province: 台灣 - TáiWān (Taiwan)
-        producer: Mr. 李 - Lǐ
+        producer: Mrs. 喻 - Yù
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'
 ---

@@ -23,14 +23,14 @@ shipping_type: colis_base
 shipping_point: 2
 options:
     fr:
-        récolte: printemps 2023
+        récolte: printemps 2024
         type: 青茶 - QīngChá
         altitude: 1000m
         village: 阿里山 - ĀlǐShān
         province: 台灣 - TáiWān
         producteur: Monsieur 李 - Lǐ
     en:
-        harvest: Spring 2023
+        harvest: Spring 2024
         type: 青茶 - QīngChá (oolong tea)
         altitude: 1000m
         village: 阿里山 - ĀlǐShān
