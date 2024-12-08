@@ -7,7 +7,7 @@ name:
 mini_descr:
     fr: théière pour GōngFūChá - 工夫茶 réalisée par Jé le Potier
     en: teapot for GōngFūChá - 工夫茶 made by Jé le Potier
-tags: ['produit', 'je-le-potier', 'welcome']
+tags: ['produit', 'je-le-potier']
 description: 
     fr: >
         Pièce unique. 茶壺 CháHú - petite théière émaillée. L'émail présent à l'intérieur confère à cette théière une certaine polyvalence. La verse est rapide et fluide.

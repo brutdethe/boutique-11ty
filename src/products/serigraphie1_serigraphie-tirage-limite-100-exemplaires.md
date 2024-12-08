@@ -7,7 +7,7 @@ name:
 mini_descr:
     fr: tirage limité 100 exemplaires par Benhito
     en: limited edition of 100 prints by Benhito
-tags: ['produit', 'benhito', 'welcome']
+tags: ['produit', 'benhito']
 description: 
     fr: >
         Une déclinaison de la première affiche du festival pour cadrer l'image de notre collectif : Brut de Thé. La traduction en chinois n'est pas du tout littérale, c'est un choix assumé qu'on pourrait interpréter par -l'âme du thé-. Chaque pièce est unique. Elles ont été tirées avec soin par - Estampille, le studio Delphine Chapuis à Saint-Étienne et sont contrôlées et signées par l'auteur.
