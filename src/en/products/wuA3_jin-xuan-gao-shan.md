@@ -7,7 +7,7 @@ name:
 mini_descr:
     fr: thé wulong traditionnel de Taïwan
     en: traditional oolong tea from Taiwan
-tags: ['produit', 'cha', 'welcome']
+tags: ['produit', 'cha']
 description: 
     fr: >
         金萱高山茶 - JīnXuān GāoShānChá, ce thé de haute montagne Jin Xuan est cultivé à partir de la variété Jin Xuan, plantée dans les régions montagneuses du centre de Taïwan à une altitude de 1 000 mètres. Ce thé possède le parfum élégant unique de l’osmanthus propre à la variété Jin Xuan, ainsi que des arômes particuliers liés à son environnement de haute altitude, tels que des notes minérales, rocailleuses et fraîches.<!--more--> Il y a quarante ans, Madame Yu et son mari, passionnés par le thé, ont renoncé à des salaires avantageux en ville pour se consacrer entièrement à la culture et à la production de thé. Ces dernières années, leurs enfants ont également commencé à rejoindre les rangs des producteurs de thé, perpétuant ainsi la vocation familiale.

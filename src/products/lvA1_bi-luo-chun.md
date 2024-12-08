@@ -7,7 +7,7 @@ name:
 mini_descr:
     fr: thé vert traditionnel de Taïwan
     en: traditional Taiwanese green tea
-tags: ['produit', 'cha']
+tags: ['produit', 'cha', 'welcome']
 description: 
     fr: >
         Ce 綠茶 - LǜChá de printemps est l'un des deux principaux thés verts taïwanais. C'est un 碧螺春 - BìLuóChūn réalisé à partir du cultivar endémique de 三峽 - SānXiá, le 青心柑仔 - QīngXīn GānZǐ qui donne une identité aromatique unique. La famille de Mr.李- Lǐ produit des thés artisanaux de qualité depuis trois générations.
