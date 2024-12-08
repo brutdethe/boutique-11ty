@@ -7,7 +7,7 @@ name:
 mini_descr:
     fr: petit bol à thé réalisé par Perrine Pottiez
     en: small tea bowl made by Perrine Pottiez
-tags: ['produit', 'perrine-pottiez', 'welcome']
+tags: ['produit', 'perrine-pottiez']
 description: 
     fr: >
         茶杯 - CháBēi en céramique, 1250°C. Pièce unique. Bol à forme allongée en technique de pinçage.
