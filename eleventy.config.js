@@ -102,16 +102,22 @@ export default function (eleventyConfig) {
         return [...tagSet];
     });
 
-    eleventyConfig.addNunjucksAsyncShortcode('image_product', async (src, cls, alt, sizes) => {
 
+    eleventyConfig.addNunjucksAsyncShortcode('image_product', async (src, cls, alt, sizes) => {
         let metadata = await Image(`photos/${src}`, {
             widths: [65, 365, 490, 750],
             formats: ['webp'],
             outputDir: './dist/img/',
             urlPath: '/img/',
             transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
-          })
-
+            filenameFormat: function (id, src, width, format, options) {
+                const path = require("path");
+                const extension = path.extname(src);
+                const name = path.basename(src, extension);
+                return `${name}-${width}w.${format}`;
+            }
+        });
+    
         let imageAttributes = {
             class: cls,
             alt,
@@ -119,7 +125,7 @@ export default function (eleventyConfig) {
             loading: 'lazy',
             decoding: 'async',
         };
-
+    
         return Image.generateHTML(metadata, imageAttributes);
     });
 
