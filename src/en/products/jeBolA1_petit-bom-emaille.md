@@ -1,21 +1,31 @@
 ---
 layout: _layouts/product_card.njk
 id: jeBolA1
-name: Small glazed tea bowl
-tags: ["product", "je-le-potier"]
-permalink: /en/products/jeBolA1_petit-bom-emaille/
-description: >
-  Ceramic 茶杯 - CháBēi. Unique piece.
+name:
+    fr: 茶杯 - CháBēi - Petit bol
+    en: 茶杯 - CháBēi - Small Bowl
+mini_descr:
+    fr: Bol émaillé réalisé par Jé le Potier
+    en: Glazed bowl made by Jé le Potier
+tags: ['produit', 'je-le-potier']
+description: 
+    fr: >
+        茶杯 - CháBēi en céramique, 1250°C. Pièce unique.
+    en: >
+        茶杯 - CháBēi Tea Bowl made of ceramic, fired at 1250°C. Unique piece.
 photos:
-  - jerome_bol_A1-a.jpg
-  - jerome_bol_A1-b.jpg
+    - jerome_bol_A1-a.jpg
+    - jerome_bol_A1-b.jpg
 price: 18.00
 stock: 28
 weight: 170
 shipping_type: colis_base
 shipping_point: 2
 options:
-  capacity: 50 ml
+    fr:
+        capacité: 50ml
+    en:
+        capacity: 50ml
 eleventyComputed:
-  title: "{{ tags }} - {{ name }}"
+    title: '{{ tags }} - {{ name[page.lang] }}'
 ---
