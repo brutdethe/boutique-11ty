@@ -1,10 +1,10 @@
-<div id="card-carousel" class="splide" aria-label="{{ i18n.aria.slide[page.lang] }} {{ name }}">
+<div id="card-carousel" class="splide" aria-label="{{ i18n.aria.slide[page.lang] }} {{ name[page.lang] }}">
     <section class="splide__track">
         <ul class="splide__list">
             {%- for photo in photos -%}
               <li class="splide__slide">
                 <figure class="card-figure">
-                  {% image_product photo, 'shadow card-image', i18n.alt_photo[page.lang] + ' - ' + name, '(max-width: 769px) 365px, 750px' %}
+                  {% image_product photo, 'shadow card-image', i18n.alt_photo[page.lang] + ' - ' + name[page.lang], '(max-width: 769px) 365px, 750px' %}
                   <figcaption class="card-caption">{{ name[page.lang] }}</figcaption>
                 </figure>
               </li>
@@ -15,7 +15,7 @@
     <ul id="card-thumbnails" class="card-thumbnails">
         {%- for photo in photos -%}
             <li class="card-thumbnail" role="button" aria-label="i18n.aria.slide_thumb[page.lang]" aria-controls="card-carousel-slide0{{ loop.index }}">
-                {% image_product photo, 'thumbs', i18n.alt_photo[page.lang] + ' - ' + name, '65px' %}
+                {% image_product photo, 'thumbs', i18n.alt_photo[page.lang] + ' - ' + name[page.lang], '65px' %}
             </li>
         {%- endfor -%}
     </ul>
