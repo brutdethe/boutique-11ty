@@ -74,16 +74,16 @@ export default function (eleventyConfig) {
 		return new CleanCSS({}).minify(code).styles;
 	});
 
-    eleventyConfig.addFilter("jsmin", async function (code) {
+    eleventyConfig.addNunjucksAsyncFilter("jsmin", async (code, callback) => {
         try {
-            const minified = await minify(code);
-            return minified.code;
+          const minified = await minify(code);
+          return callback(null, minified.code);
         } catch (err) {
-            console.error("Terser error: ", err);
-            return code; // Retournez le code original en cas d'erreur
+          console.error("Error during terser minify:", err);
+          return callback(err, code);
         }
-    });
-
+      });
+    
     eleventyConfig.addCollection('allTags', function (collectionApi) {
         const tagSet = new Set();
 
