@@ -16,8 +16,7 @@ eleventyExcludeFromCollections: true
     },
     "price": "{{ product.data.price }}",
     "link": "{{ product.url | url }}",
-    {%- set imagePath = settings.dirs['thumbs'] + product.data.photos[0] %}
-    "image": "{{ imagePath | url }}",
+    "image": "{{ product.data.photos[0] }}",
     "stock": "{{ product.data.stock }}",
     "weight": "{{ product.data.weight }}",
     "shipping_type": "{{ product.data.shipping_type }}",
