@@ -17,7 +17,7 @@ weight: 125
 shipping_type: colis_base
 shipping_point: 5
 options:
-    dimension: 9,5cm x 2cm
+    dimensions: 9,5cm x 2cm
 eleventyComputed:
     title: '{{ tags }} - {{ name }}'
 ---

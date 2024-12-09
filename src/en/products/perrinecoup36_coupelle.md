@@ -1,12 +1,18 @@
 ---
 layout: _layouts/product_card.njk
 id: perrinecoup36
-name: 香盤 - XiāngPán (coupelle à encens)
-mini_descr: coupelle à encens avec pied réalisé par Perrine Pottiez
+name:
+    fr: 香盤 - XiāngPán - coupelle
+    en: 香盤 - XiāngPán - dish
+mini_descr:
+    fr: coupelle réalisée par Perrine Pottiez
+    en: dish made by Perrine Pottiez
 tags: ['produit', 'perrine-pottiez']
-
-description: >
-    Coupelle en céramique, 1250°C. Pièce unique.
+description: 
+    fr: >
+        Coupelle en céramique, 1250°C. Pièce unique.
+    en: >
+        Ceramic dish, fired at 1250°C. Unique piece.
 photos:
     - perrine_coupelle_36-a.jpg
     - perrine_coupelle_36-b.jpg
@@ -17,7 +23,10 @@ weight: 125
 shipping_type: colis_base
 shipping_point: 5
 options:
-    dimension: 8,5cm x 2,0cm
+    fr:
+        dimensions: 8,5cm x 2cm
+    en:
+        dimensions: 8.5cm x 2cm
 eleventyComputed:
     title: '{{ tags }} - {{ name }}'
 ---
