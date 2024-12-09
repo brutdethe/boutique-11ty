@@ -4,6 +4,7 @@ import Image from '@11ty/eleventy-img';
 import CleanCSS from "clean-css";
 import { minify } from "terser";
 import { eleventyImageOnRequestDuringServePlugin } from "@11ty/eleventy-img";
+import path from 'path';
 
 export const config = {
     dir: {
@@ -111,7 +112,6 @@ export default function (eleventyConfig) {
             urlPath: '/img/',
             transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
             filenameFormat: function (id, src, width, format, options) {
-                const path = require("path");
                 const extension = path.extname(src);
                 const name = path.basename(src, extension);
                 return `${name}-${width}w.${format}`;
