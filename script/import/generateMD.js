@@ -84,10 +84,6 @@ fs.readFile(dataFilePath, 'utf8', (err, data) => {
         const frOptions = getOptions(rest, producteur?.fr, false)
         const enOptions = getOptions(rest, producteur?.en, true)
 
-        // Utilisation du nom de fichier sans l'extension .md comme permalink
-        const permalinkFr = `products/${path.basename(frFileName, '.md')}/`
-        const permalinkEn = `en/products/${path.basename(enFileName, '.md')}/`
-
         let frContent = createMarkdownContent(
             'product_card.njk',
             id,
@@ -99,7 +95,6 @@ fs.readFile(dataFilePath, 'utf8', (err, data) => {
             quantité_produite,
             poids,
             frOptions,
-            permalinkFr,
             false
         )
 
@@ -114,7 +109,6 @@ fs.readFile(dataFilePath, 'utf8', (err, data) => {
             quantité_produite,
             poids,
             enOptions,
-            permalinkEn,
             true
         )
 
@@ -167,7 +161,6 @@ function createMarkdownContent(
     quantité_produite,
     poids,
     options,
-    permalink,
     isEnglish
 ) {
     const stock = quantité_produite
@@ -182,7 +175,6 @@ layout: _layouts/${layout}
 id: ${id}
 name: ${title}
 tags: ["${isEnglish ? 'product' : 'produit'}", "${tags}"]
-permalink: /${permalink}
 description: >
   ${description}
 photos:

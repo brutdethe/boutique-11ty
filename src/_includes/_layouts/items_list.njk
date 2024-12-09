@@ -51,23 +51,23 @@ include_items_list_bundle: true
         {% if post.data.page.lang == page.lang %}
             <article class="shadow item item-infos" data-id="{{ post.data.id }}">
                 <header class="item-header">
-                    <h2 id="{{ post.data.name }}" class="item-title">
-                        {{ post.data.name }}
+                    <h2 id="{{ post.data.name[page.lang] }}" class="item-title">
+                        {{ post.data.name[page.lang] }}
                     </h2>
                     <h3 class="item-subtitle">
-                        {{ post.data.mini_descr }}
+                        {{ post.data.mini_descr[page.lang] }}
                     </h3>
                 </header>
                 <figure class="item-figure">
-                    {% image_product post.data.photos[0], 'item-image', i18n.alt_photo[page.lang] + ' - ' + post.data.name, '(max-width: 769px) 365px, 490px' %}
+                    {% image_product post.data.photos[0], 'item-image', i18n.alt_photo[page.lang] + ' - ' + post.data.name[page.lang], '(max-width: 769px) 365px, 490px' %}
                 </figure>
-                <p class="item-description">{{ post.data.description | excerptFromDescription }}</p>
+                <p class="item-description">{{ post.data.description[page.lang] | excerptFromDescription }}</p>
                 {% set price = post.data.price %}
                 {% set stock = post.data.stock %}
                 {% include 'price_stock.njk' %}
                 <footer class="item-footer">
                     <a
-                        href="{{ post.data.permalink | customLocaleUrl(page.lang) | url }}"
+                        href="{{ post.url | customLocaleUrl(page.lang) | url }}"
                         class="btn btn-details"
                         aria-label="{{ i18n.card_detail[page.lang] }}"
                         >{{ i18n.card_detail[page.lang] }}</a

@@ -264,8 +264,8 @@
         "création": "2023-08-30",
         "tags": "cha",
         "description": {
-            "en": "This 红茶 - HóngChá with its characteristic honey notes is made with the endemic cultivar 青心柑仔 - QīngXīnGānZǐ from 三峡 - SānXiá. Mr. 李 - Lǐ's family has been cultivating tea for three generations. He owns two tea gardens in 三峡 - SānXiá, on the outskirts of Taipei, and in 南投 - Nántóu, in the center of 臺灣 - Táiwān. I've known him for ten years, and he has always faithfully maintained his seriousness and sincerity in tea preparation.",
-            "fr": "Ce 红茶 - HóngChá aux notes de miel caractéristiques est réalisé avec le cultivar endémique 青心柑仔 - QīngXīnGānZǐ de 三峡 - SānXiá. La famille de Monsieur 李 - Lǐ cultive le thé depuis trois générations. Il possède deux jardins de thé à 三峡 - SānXiá, à la périphérie de Taipei et à 南投 - Nántóu, dans le centre de 臺灣 - Táiwān. Je le connais depuis dix ans, et il a toujours fidèlement conservé son sérieux et sa sincérité dans la préparation du thé."
+            "en": "This 红茶 - HóngChá with its characteristic honey notes is made with the endemic cultivar 青心柑仔 - QīngXīnGānZǐ from 三峡 - SānXiá.<!--more--> Mr. 李 - Lǐ's family has been cultivating tea for three generations. He owns two tea gardens in 三峡 - SānXiá, on the outskirts of Taipei, and in 南投 - Nántóu, in the center of 臺灣 - Táiwān. I've known him for ten years, and he has always faithfully maintained his seriousness and sincerity in tea preparation.",
+            "fr": "Ce 红茶 - HóngChá aux notes de miel caractéristiques est réalisé avec le cultivar endémique 青心柑仔 - QīngXīnGānZǐ de 三峡 - SānXiá.<!--more--> La famille de Monsieur 李 - Lǐ cultive le thé depuis trois générations. Il possède deux jardins de thé à 三峡 - SānXiá, à la périphérie de Taipei et à 南投 - Nántóu, dans le centre de 臺灣 - Táiwān. Je le connais depuis dix ans, et il a toujours fidèlement conservé son sérieux et sa sincérité dans la préparation du thé."
         },
         "prix": 15,
         "poids": 0.125,
@@ -294,8 +294,8 @@
         "création": "2023-09-01",
         "tags": "cha",
         "description": {
-            "en": "This 高山茶 - GāoShānChá (high mountain tea) is one of the emblematic 烏龍 - WūLóng teas of 臺灣 - Táiwān. 梨山 - LíShān is located in 臺中市 - TáiZhōng and has an average altitude of 2000 meters. There are only two harvests per year. Due to the large difference in temperature between day and night, the tea grows slowly and the leaves are thicker. In the mountains, with persistent clouds and mist, the duration of sunlight is short, which reduces the catechin content and thus the astringency.",
-            "fr": "Ce 高山茶 - GāoShānChá (thé de haute montagne) est l'un des thés 烏龍 - WūLóng emblématiques de 臺灣 - Táiwān. 梨山 - LíShān est situé à 臺中市 - TáiZhōng a une altitude moyenne de 2000 mètres. Il n'y a que deux récoltes par an. En raison de la grande différence de température entre le jour et la nuit, le thé pousse lentement et les feuilles sont plus épaisses. Dans les montagnes avec les nuages et la brume persistante, la durée d'ensoleillement est courte ce qui réduit la teneur en catéchines et donc l'astringence."
+            "en": "This 高山茶 - GāoShānChá (high mountain tea) is one of the emblematic 烏龍 - WūLóng teas of 臺灣 - Táiwān. 梨山 - LíShān is located in 臺中市 - TáiZhōng and has an average altitude of 2000 meters.<!--more--> There are only two harvests per year. Due to the large difference in temperature between day and night, the tea grows slowly and the leaves are thicker. In the mountains, with persistent clouds and mist, the duration of sunlight is short, which reduces the catechin content and thus the astringency.",
+            "fr": "Ce 高山茶 - GāoShānChá (thé de haute montagne) est l'un des thés 烏龍 - WūLóng emblématiques de 臺灣 - Táiwān. 梨山 - LíShān est situé à 臺中市 - TáiZhōng a une altitude moyenne de 2000 mètres.<!--more--> Il n'y a que deux récoltes par an. En raison de la grande différence de température entre le jour et la nuit, le thé pousse lentement et les feuilles sont plus épaisses. Dans les montagnes avec les nuages et la brume persistante, la durée d'ensoleillement est courte ce qui réduit la teneur en catéchines et donc l'astringence."
         },
         "prix": 15,
         "poids": 0.125,
@@ -359,7 +359,7 @@
         },
         "prix": 8,
         "poids": 0.22,
-        "capacité": "70 ml",
+        "capacité": "70ml",
         "quantité_produite": 8,
         "photos": [
             "gaiwan_2-a.jpg",
@@ -381,7 +381,7 @@
         },
         "prix": 45,
         "poids": 0.55,
-        "capacité": "110 ml",
+        "capacité": "110ml",
         "quantité_produite": 16,
         "photos": [
             "set-de-voyage_1-a.jpg",
@@ -407,7 +407,7 @@
         "producteur": "YanLi",
         "prix": 89,
         "poids": 0.18,
-        "capacité": "130 ml",
+        "capacité": "130ml",
         "quantité_produite": 1,
         "photos": [
             "theiere_3-a.jpg",
@@ -432,7 +432,7 @@
         },
         "prix": 80,
         "poids": 0.235,
-        "capacité": "220 ml",
+        "capacité": "220ml",
         "quantité_produite": 1,
         "photos": [
             "theiere_9-a.jpg",
@@ -459,7 +459,7 @@
         "prix": 20,
         "dimension": "7 cm x 3 cm",
         "poids": 0.125,
-        "capacité": "30 ml",
+        "capacité": "30ml",
         "quantité_produite": 1,
         "photos": [
             "perrine_tasse_2-a.jpg",
@@ -483,7 +483,7 @@
         "prix": 20,
         "dimension": "7 cm x 3 cm",
         "poids": 0.125,
-        "capacité": "30 ml",
+        "capacité": "30ml",
         "quantité_produite": 1,
         "photos": [
             "perrine_tasse_11-a.jpg",
@@ -507,7 +507,7 @@
         "prix": 20,
         "dimension": "7 cm x 3 cm",
         "poids": 0.125,
-        "capacité": "30 ml",
+        "capacité": "30ml",
         "quantité_produite": 1,
         "photos": [
             "perrine_tasse_24-a.jpg",
@@ -531,7 +531,7 @@
         "prix": 15,
         "dimension": "7 cm x 3 cm",
         "poids": 0.135,
-        "capacité": "40 ml",
+        "capacité": "40ml",
         "quantité_produite": 1,
         "photos": [
             "manon_tasse_A29-a.jpg",
@@ -554,7 +554,7 @@
         "prix": 15,
         "dimension": "7 cm x 3 cm",
         "poids": 0.135,
-        "capacité": "40 ml",
+        "capacité": "40ml",
         "quantité_produite": 1,
         "photos": [
             "manon_tasse_A31-a.jpg",
@@ -598,7 +598,7 @@
         },
         "prix": 18,
         "poids": 0.170,
-        "capacité": "50 ml",
+        "capacité": "50ml",
         "quantité_produite": 28,
         "photos": [
             "jerome_bol_A1-a.jpg",
@@ -620,7 +620,7 @@
         },
         "prix": 142,
         "poids": 0.22,
-        "capacité": "80 ml",
+        "capacité": "80ml",
         "quantité_produite": 1,
         "photos": [
             "jerome_theiere_1-a.jpg",
@@ -645,7 +645,7 @@
         },
         "prix": 132,
         "poids": 0.22,
-        "capacité": "100 ml",
+        "capacité": "100ml",
         "quantité_produite": 1,
         "photos": [
             "jerome_theiere_2-a.jpg",
@@ -670,7 +670,7 @@
         },
         "prix": 132,
         "poids": 0.23,
-        "capacité": "100 ml",
+        "capacité": "100ml",
         "quantité_produite": 1,
         "photos": [
             "jerome_theiere_3-a.jpg",
@@ -696,7 +696,7 @@
         },
         "prix": 142,
         "poids": 0.22,
-        "capacité": "80 ml",
+        "capacité": "80ml",
         "quantité_produite": 1,
         "photos": [
             "jerome_theiere_4-a.jpg",
@@ -721,7 +721,7 @@
         },
         "prix": 60.00,
         "poids": 0.315,
-        "capacité": "90 ml",
+        "capacité": "90ml",
         "quantité_produite": 3,
         "photos": [
             "melles-ceramique_gaiwan_1-a.jpg",
@@ -745,7 +745,7 @@
         },
         "prix": 200,
         "poids": 0.335,
-        "capacité": "100 ml",
+        "capacité": "100ml",
         "quantité_produite": 1,
         "photos": [
             "melles-ceramique_theiere_1-a.jpg",

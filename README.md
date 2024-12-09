@@ -12,6 +12,11 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 ### Terminées
 
+- US-13 produits
+  - [x] ajoute des fiches produits
+  - [x] créé des fiches produits multi-lingues
+  - [x] convertie toutes les fiches produit en multi-lingues   
+
 - US-15 optimisation
   - [x] pétouille responsive et bug panier
   - [x] ajoute un sitemap et un robots.txt
@@ -105,7 +110,6 @@ Créer une boutique simple et minimaliste pour vendre des objets ou des prestati
 
 - US-10 passer en plugin
 - US-11 currencies
-- US-13 page accueil
 - US-16 gère le stock avec stripe
 
 ## Outils utilisés
@@ -135,20 +139,6 @@ STRIPE_SECRET_KEY = sk_test_***
 ```
 
 La clé privée *stripe* (*STRIPE_SECRET_KEY*) est une donnée sensible qui ne doit jamais être exposée publiquement. Elle est stockée dans un fichier *.env*, qui est ignoré dans le *.gitignore*.
-
-## Script de redimensionnement des images
-
-Pour retailler et optimiser les images utilisées dans le carrousel, nous utilisons un script de redimensionnement :
-
-```json
-"resize": "node ./script/resize/resize.js"
-```
-
-Ce script permet de :
-
-- Redimensionner et optimiser les images placées dans le dossier `photos`
-- prend la première photo dans chaque fiche produit et place une vignette optimisé dans `src/_assets/thumbs/`
-- Il est exécuté automatiquement via GitHub Actions dès qu'un changement est détecté dans le dossier `/photos`.
 
 ## Images responsives
 

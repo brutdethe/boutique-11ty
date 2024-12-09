@@ -3,7 +3,7 @@ import Stripe from 'stripe'
 const stripeClient = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 async function getProducts(currentLang) {
-  const response = await fetch(`${process.env.URL}/products_${currentLang}.json`)
+  const response = await fetch(`${process.env.URL}/products.json`)
   if (!response.ok) {
     throw new Error('Network response was not ok')
   }
@@ -40,8 +40,8 @@ export async function handler(event) {
         price_data: {
           currency: 'eur',
           product_data: {
-            name: `${product.title} - ${item.id}`,
-            description: product.descr || '',
+            name: `${product.title[currentLang]} - ${item.id}`,
+            description: product.descr[currentLang] || '',
           },
           unit_amount: Math.round(product.price * 100),
         },
