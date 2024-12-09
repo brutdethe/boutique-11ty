@@ -10,9 +10,9 @@ mini_descr:
 tags: ['produit', 'cha', 'welcome']
 description: 
     fr: >
-        Le 凍頂烏龍 - DòngDǐng est l'un des deux principaux thés 烏龍 - WūLóng taïwanais. Monsieur 李 - Lǐ le cultive dans la montagne 阿里山 - ĀLǐShān et le produit selon des méthodes traditionnelles. Ce thé nous transporte dans les souvenirs des salons de thé de 臺灣 - Táiwān dans les années 80'.<!--more--> La famille de Monsieur 李 - Lǐ cultive le thé depuis trois générations. Je le connais depuis dix ans, et il a toujours fidèlement conservé son sérieux et sa sincérité dans la fabrication de ses thés.
+        Le 凍頂烏龍 - DòngDǐng est l'un des deux principaux thés 烏龍 - WūLóng taïwanais. Monsieur 李 - Lǐ le cultive dans la montagne 阿里山 - ĀLǐShān et le produit selon des méthodes traditionnelles.<!--more--> Ce thé nous transporte dans les souvenirs des salons de thé de 臺灣 - Táiwān dans les années 80'. La famille de Monsieur 李 - Lǐ cultive le thé depuis trois générations. Je le connais depuis dix ans, et il a toujours fidèlement conservé son sérieux et sa sincérité dans la fabrication de ses thés.
     en: >
-        The 凍頂烏龍 - DòngDǐng is one of the two main 烏龍 - WūLóng teas of Taiwan. Mr. 李 - Lǐ grows it in the 阿里山 - ĀLǐShān mountain and produces it using traditional methods. This tea transports us back to the tea houses of 臺灣 - Táiwān in the 1980s.<!--more--> Mr. 李 - Lǐ's family has been cultivating tea for three generations. I have known him for ten years, and he has always faithfully maintained his dedication and sincerity in crafting his teas.
+        The 凍頂烏龍 - DòngDǐng is one of the two main 烏龍 - WūLóng teas of Taiwan. Mr. 李 - Lǐ grows it in the 阿里山 - ĀLǐShān mountain and produces it using traditional methods.<!--more--> This tea transports us back to the tea houses of 臺灣 - Táiwān in the 1980s. Mr. 李 - Lǐ's family has been cultivating tea for three generations. I have known him for ten years, and he has always faithfully maintained his dedication and sincerity in crafting his teas.
 photos:
     - DongDing-WuLong_1-a.jpg
     - DongDing-WuLong_1-b.jpg
