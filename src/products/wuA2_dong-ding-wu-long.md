@@ -10,9 +10,9 @@ mini_descr:
 tags: ['produit', 'cha', 'welcome']
 description: 
     fr: >
-        Le 凍頂烏龍 - DòngDǐng est l'un des deux principaux thés 烏龍 - WūLóng taïwanais. Monsieur 李 - Lǐ le cultive dans la montagne 阿里山 - ĀLǐShān et le produit selon des méthodes traditionnelles.<!--more--> Ce thé nous transporte dans les souvenirs des salons de thé de 臺灣 - Táiwān dans les années 80'. La famille de Monsieur 李 - Lǐ cultive le thé depuis trois générations. Je le connais depuis dix ans, et il a toujours fidèlement conservé son sérieux et sa sincérité dans la fabrication de ses thés.
+        La famille Li (李家 - LǐJiā) est une lignée traditionnelle de cultivateurs et de producteurs de thé, transmise de génération en génération. Leurs plantations se trouvent principalement dans la région de 鹿谷 - LùGǔ, dans les montagnes de 阿里山 - ĀLǐShān, au centre de Taïwan. 凍頂烏龍茶 - DòngDǐng WūLóngChá a une histoire de plus de cent ans et est l’un des thés les plus renommés de Taïwan. Beaucoup de gens pensent que « Dong Ding » est le nom d’une marque de thé, mais en réalité, 凍頂 - DòngDǐng est le nom d’une montagne. La montagne 凍頂 - DòngDǐng est située dans le canton de 鹿谷 - LùGǔ, dans le comté de 南投 - NánTóu), au sud de Taïwan.
     en: >
-        The 凍頂烏龍 - DòngDǐng is one of the two main 烏龍 - WūLóng teas of Taiwan. Mr. 李 - Lǐ grows it in the 阿里山 - ĀLǐShān mountain and produces it using traditional methods.<!--more--> This tea transports us back to the tea houses of 臺灣 - Táiwān in the 1980s. Mr. 李 - Lǐ's family has been cultivating tea for three generations. I have known him for ten years, and he has always faithfully maintained his dedication and sincerity in crafting his teas.
+        The Li family (李家 - LǐJiā) is a traditional lineage of tea cultivators and producers, passed down from generation to generation. Their plantations are mainly located in the region of 鹿谷 - LùGǔ, in the mountains of 阿里山 - ĀLǐShān, in central Taiwan. 凍頂烏龍茶 - DòngDǐng WūLóngChá has a history of more than one hundred years and is one of Taiwan's most renowned teas. Many people think that "Dong Ding" is the name of a tea brand, but in reality, 凍頂 - DòngDǐng is the name of a mountain. The mountain 凍頂 - DòngDǐng is located in the canton of 鹿谷 - LùGǔ, in the county of 南投 - NánTóu, in southern Taiwan.
 photos:
     - DongDing-WuLong_1-a.jpg
     - DongDing-WuLong_1-b.jpg

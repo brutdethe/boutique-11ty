@@ -40,12 +40,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const currentLang = getActiveLanguage()
 
+    const productsData = await fetchProductsData()
+
     let totalShippingCost = 0;
-    let productsData
 
-    initialize()
+    initialize(currentLang)
 
-    async function initialize() {
+    async function initialize(currentLang) {
         successPayment && resetCartForSuccessPayment()
         checkoutButton && checkoutButtonEventListener(currentLang)
 
@@ -59,10 +60,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 })
             }
             updateCartVisibility()
-            productsData = await fetchProductsData(currentLang)
 
             if (storage.getCart().length !== 0) {
-                initializeCart()
+                initializeCart(currentLang)
             }
         }
     }
@@ -75,9 +75,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         storage.setCart([])
     }
 
-    async function fetchProductsData(currentLang) {
+    async function fetchProductsData() {
         try {
-            const response = await fetch(`/products_${currentLang}.json`)
+            const response = await fetch(`/products.json`)
             if (!response.ok) {
                 throw new Error('Network response was not ok')
             }
@@ -88,12 +88,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    function initializeCart() {
+    function initializeCart(currentLang) {
         const cartItems = storage.getCart()
         cartItems.forEach((cartItem) => {
             const productData = productsData.find((product) => String(product.id) === String(cartItem.id))
             if (productData) {
-                const itemElement = createCartItemElement(productData, cartItem)
+                const itemElement = createCartItemElement(productData, cartItem, currentLang)
                 cartContent.appendChild(itemElement)
             }
         })
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    function createCartItemElement(productData, cartItem) {
+    function createCartItemElement(productData, cartItem, currentLang) {
         const itemElement = document.createElement('article')
         itemElement.classList.add('item')
         itemElement.classList.add('shadow')

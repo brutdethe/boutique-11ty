@@ -1,0 +1,28 @@
+---
+permalink: /products.json
+eleventyExcludeFromCollections: true
+---
+[ 
+{% for product in collections.produit -%}
+{
+    "id": "{{ product.data.id }}",
+    "title": {
+        "fr": "{{ product.data.name.fr }}",
+        "en": "{{ product.data.name.en }}"
+    },
+    "descr": {
+        "fr": "{{ product.data.mini_descr.fr }}",
+        "en": "{{ product.data.mini_descr.en }}"
+    },
+    "price": "{{ product.data.price }}",
+    "link": "{{ product.url | url }}",
+    {%- set imagePath = settings.dirs['thumbs'] + product.data.photos[0] %}
+    "image": "{{ imagePath | url }}",
+    "stock": "{{ product.data.stock }}",
+    "weight": "{{ product.data.weight }}",
+    "shipping_type": "{{ product.data.shipping_type }}",
+    "shipping_point": "{{ product.data.shipping_point }}"
+  }{%- if not loop.last -%},{%- endif %}
+  
+{% endfor -%}
+]
