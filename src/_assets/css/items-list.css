@@ -13,6 +13,10 @@
     margin: 1rem 0;
 }
 
+.category-description a {
+    color: var(--secondary-bg);
+}
+
 .tags-list {
     border-bottom: var(--border-thin);
     flex-wrap: wrap;

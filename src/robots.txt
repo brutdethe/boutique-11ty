@@ -11,7 +11,6 @@ Disallow: /en/404.html/
 Disallow: /en/cart/
 Disallow: /en/cancel/
 Disallow: /en/success/
-Disallow: /products_fr.json/
-Disallow: /products_en.json/
+Disallow: /products.json/
 
 Sitemap: https://boutique.gongfucha.fr/sitemap.xml

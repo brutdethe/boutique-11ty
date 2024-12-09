@@ -40,12 +40,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const currentLang = getActiveLanguage()
 
+    const productsData = await fetchProductsData()
+
     let totalShippingCost = 0;
-    let productsData
 
-    initialize()
+    initialize(currentLang)
 
-    async function initialize() {
+    async function initialize(currentLang) {
         successPayment && resetCartForSuccessPayment()
         checkoutButton && checkoutButtonEventListener(currentLang)
 
@@ -59,10 +60,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 })
             }
             updateCartVisibility()
-            productsData = await fetchProductsData(currentLang)
 
             if (storage.getCart().length !== 0) {
-                initializeCart()
+                initializeCart(currentLang)
             }
         }
     }
@@ -75,9 +75,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         storage.setCart([])
     }
 
-    async function fetchProductsData(currentLang) {
+    async function fetchProductsData() {
         try {
-            const response = await fetch(`/products_${currentLang}.json`)
+            const response = await fetch(`/products.json`)
             if (!response.ok) {
                 throw new Error('Network response was not ok')
             }
@@ -88,12 +88,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    function initializeCart() {
+    function initializeCart(currentLang) {
         const cartItems = storage.getCart()
         cartItems.forEach((cartItem) => {
             const productData = productsData.find((product) => String(product.id) === String(cartItem.id))
             if (productData) {
-                const itemElement = createCartItemElement(productData, cartItem)
+                const itemElement = createCartItemElement(productData, cartItem, currentLang)
                 cartContent.appendChild(itemElement)
             }
         })
@@ -121,16 +121,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    function createCartItemElement(productData, cartItem) {
+    function createCartItemElement(productData, cartItem, currentLang) {
         const itemElement = document.createElement('article')
+        const imageName = productData.image.replace(/\.[^/.]+$/, '')
         itemElement.classList.add('item')
         itemElement.classList.add('shadow')
         itemElement.innerHTML = `
             <header class="item-header">
-                <h2 id="${productData.title}" class="item-title">${productData.title}</h2>
+                <h2 class="item-title">${productData.title.fr}</h2>
             </header>
             <figure class="item-figure">
-                <img src="${productData.image}" class="item-image" alt="${productData.title}" />
+               <img class="item-image" alt="image - ${productData.title.fr}" loading="lazy" decoding="async" src="/img/${imageName}-365w.webp" width="365" height="242" srcset="/img/${imageName}-365w.webp" sizes="365px">
             </figure>
             <section class="item-details">
                 <data class="price" value="${productData.price}" itemprop="price">
@@ -350,7 +351,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             
                 const { sessionId } = await response.json()
             
-                const stripe = Stripe('pk_test_51HEFz3GJpQWhfcWwXgkgoLbJ1GLgViXGqYfWSgBQwzudrYdsQiMhdVkGWHQvRPx3sTMLNsRXvB2B6pdF1GEpQ9Ka00kz6AoFmS')
+                const stripe = Stripe('pk_live_51HEFz3GJpQWhfcWwhCYHYe1ErHxMdZEd8ZR9stq8WIK6QRXVUlPFbvSCFQPCdUFYPbIVESTrZUbykYDW95FxtFNb00HuTOpKCx')
                 await stripe.redirectToCheckout({ sessionId })
             
             } catch (err) {
