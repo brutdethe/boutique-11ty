@@ -125,12 +125,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         const itemElement = document.createElement('article')
         itemElement.classList.add('item')
         itemElement.classList.add('shadow')
+        const image = '.11ty/image/?src=photos%2FBaiLu-BaiCha_1-a.jpg&width=490&format=webp'
         itemElement.innerHTML = `
             <header class="item-header">
                 <h2 id="${productData.title}" class="item-title">${productData.title}</h2>
             </header>
             <figure class="item-figure">
-                <img src="${productData.image}" class="item-image" alt="${productData.title}" />
+               <img class="item-image" alt="image du produit - [object Object]" loading="lazy" decoding="async" src="/.11ty/image/?src=photos%2FBaiLu-BaiCha_1-a.jpg&amp;width=65&amp;format=webp" width="750" height="563" srcset="/.11ty/image/?src=photos%2FBaiLu-BaiCha_1-a.jpg&amp;width=65&amp;format=webp 65w, /.11ty/image/?src=photos%2FBaiLu-BaiCha_1-a.jpg&amp;width=365&amp;format=webp 365w, /.11ty/image/?src=photos%2FBaiLu-BaiCha_1-a.jpg&amp;width=490&amp;format=webp 490w, /.11ty/image/?src=photos%2FBaiLu-BaiCha_1-a.jpg&amp;width=750&amp;format=webp 750w" sizes="(max-width: 769px) 365px, 490px">
             </figure>
             <section class="item-details">
                 <data class="price" value="${productData.price}" itemprop="price">
