@@ -2,18 +2,14 @@
 layout: _layouts/default.njk
 ---
 
-{% set js_min %}
-    {% include "../../../node_modules/@splidejs/splide/dist/js/splide.min.js" %}
-{% endset %}
-
 {% set js %}
     {% include "../../_assets/js/add-to-cart.js" %}
+    {% include "../../../node_modules/@splidejs/splide/dist/js/splide.js" %}
     {% include "../../_assets/js/carousel.js" %}
 {% endset %}
 
 <script>
-    {{ js_min | jsmin | safe }}
-    {{ js | jsmin | safe }}
+    {{ js | safe }}
 </script>
 
 {% set css %}
