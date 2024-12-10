@@ -18,6 +18,7 @@ photos:
     - jerome_theiere_4-b.jpg
     - jerome_theiere_4-c.jpg
     - jerome_theiere_4-d.jpg
+    - jerome_theiere_4-e.jpg
 price: 142.00
 stock: 1
 weight: 220
