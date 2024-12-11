@@ -2,8 +2,8 @@
 layout: _layouts/product_card.njk
 id: luA1
 name:
-    fr: 碧螺春 - BìLuóChūn
-    en: 碧螺春 - BìLuóChūn
+    fr: 碧螺春 - BìLuóChūn - 25g
+    en: 碧螺春 - BìLuóChūn - 25g
 mini_descr:
     fr: thé vert traditionnel de Taïwan
     en: traditional Taiwanese green tea
@@ -29,6 +29,7 @@ options:
         village: 三峡 - SānXiá
         province: 台灣 - TáiWān
         producteur: Monsieur 李- Lǐ
+        poids: 25g
     en:
         harvest: Spring 2023
         cultivar: 青心柑仔 - QīngXīn GānZǐ
@@ -36,6 +37,7 @@ options:
         village: 三峡 - SānXiá
         province: 台灣 - TáiWān (Taiwan)
         producer: Mr. 李- Lǐ
+        weight: 25g
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'
 ---

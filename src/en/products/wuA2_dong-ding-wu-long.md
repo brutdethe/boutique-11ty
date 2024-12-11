@@ -2,8 +2,8 @@
 layout: _layouts/product_card.njk
 id: wuA2
 name:
-    fr: 凍頂烏龍 - DòngDǐng WūLóng
-    en: 凍頂烏龍 - DòngDǐng WūLóng
+    fr: 凍頂烏龍 - DòngDǐng WūLóng - 25g
+    en: 凍頂烏龍 - DòngDǐng WūLóng - 25g
 mini_descr:
     fr: thé wulong traditionnel de Taïwan
     en: traditional oolong tea from Taiwan
@@ -29,6 +29,7 @@ options:
         village: 阿里山 - ĀlǐShān
         province: 台灣 - TáiWān
         producteur: Monsieur 李 - Lǐ
+        poids: 25g
     en:
         harvest: Spring 2024
         type: 青茶 - QīngChá (oolong tea)
@@ -36,6 +37,7 @@ options:
         village: 阿里山 - ĀlǐShān
         province: 台灣 - TáiWān (Taiwan)
         producer: Mr. 李 - Lǐ
+        weight: 25g
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'
 ---

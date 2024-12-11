@@ -2,8 +2,8 @@
 layout: _layouts/product_card.njk
 id: wuA3
 name:
-    fr: 金萱高山茶 - JīnXuān GāoShānChá
-    en: 金萱高山茶 - JīnXuān GāoShānChá
+    fr: 金萱高山茶 - JīnXuān GāoShānChá - 25g
+    en: 金萱高山茶 - JīnXuān GāoShānChá - 25g
 mini_descr:
     fr: thé wulong traditionnel de Taïwan
     en: traditional oolong tea from Taiwan
@@ -29,6 +29,7 @@ options:
         village: 阿里山 - ĀlǐShān
         province: 台灣 - TáiWān
         producteur: Madame 喻 - Yù
+        poids: 25g
     en:
         harvest: Spring 2024
         type: 青茶 - QīngChá (oolong tea)
@@ -36,6 +37,7 @@ options:
         village: 阿里山 - ĀlǐShān
         province: 台灣 - TáiWān (Taiwan)
         producer: Mrs. 喻 - Yù
+        weight: 25g
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'
 ---

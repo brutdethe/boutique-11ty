@@ -2,8 +2,8 @@
 layout: _layouts/product_card.njk
 id: luA3
 name:
-    fr: 白鹿綠茶 - BáiLù LǜChá
-    en: 白鹿綠茶 - BáiLù LǜChá
+    fr: 白鹿綠茶 - BáiLù LǜChá - 25g
+    en: 白鹿綠茶 - BáiLù LǜChá - 25g
 mini_descr:
     fr: thé vert traditionnel du Sichuan
     en: traditional green tea from Sichuan
@@ -28,12 +28,14 @@ options:
         village: 白鹿村 - BáiLùCūn
         province: 四川 - SìChuān
         producteur: Monsieur 李 - Lǐ
+        poids: 25g
     en:
         harvest: Spring 2023
         type: 綠茶 - LǜChá (green tea)
         village: 白鹿村 - BáiLùCūn
         province: 四川 - SìChuān (Sichuan)
         producer: Mr. 李 - Lǐ
+        weight: 25g
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'
 ---

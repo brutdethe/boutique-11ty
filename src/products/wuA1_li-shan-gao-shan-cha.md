@@ -2,8 +2,8 @@
 layout: _layouts/product_card.njk
 id: wuA1
 name:
-    fr: 梨山高山茶 - LíShān GāoShānChá
-    en: 梨山高山茶 - LíShān GāoShānChá
+    fr: 梨山高山茶 - LíShān GāoShānChá - 25g
+    en: 梨山高山茶 - LíShān GāoShānChá - 25g
 mini_descr:
     fr: thé wulong traditionnel de haute montagne de Taïwan
     en: traditional high mountain oolong tea from Taiwan
@@ -29,6 +29,7 @@ options:
         village: 臺中 - TáiZhōng
         province: 台灣 - TáiWān
         producteur: Madame 喻 - Yù
+        poids: 25g
     en:
         harvest: Spring 2024
         type: 青茶 - QīngChá (oolong tea)
@@ -36,6 +37,7 @@ options:
         village: 臺中 - TáiZhōng
         province: 台灣 - TáiWān (Taiwan)
         producer: Mrs. 喻 - Yù
+        weight: 25g
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'
 ---

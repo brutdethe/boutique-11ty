@@ -2,8 +2,8 @@
 layout: _layouts/product_card.njk
 id: baiA2
 name:
-    fr: 白鹿白茶 - BáiLù BáiChá
-    en: 白鹿白茶 - BáiLù BáiChá
+    fr: 白鹿白茶 - BáiLù BáiChá - 25g
+    en: 白鹿白茶 - BáiLù BáiChá - 25g
 mini_descr:
     fr: infusion fabriquée comme un thé blanc
     en: infusion crafted like white tea
@@ -28,12 +28,14 @@ options:
         altitude: 850
         province: 四川 - SìChuān
         producteur: Monsieur 李 - Lǐ
+        poids: 25g
     en:
         harvest: Spring 2023
         village: 白鹿村 - BáiLùCūn
         altitude: 850m
         province: 四川 - SìChuān (Sichuan)
         producer: Mr. 李 - Lǐ
+        weight: 25g
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'
 ---

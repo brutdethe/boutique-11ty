@@ -2,8 +2,8 @@
 layout: _layouts/product_card.njk
 id: hongA1
 name:
-    fr: 蜜香红茶 - MìXiāng HóngChá
-    en: 蜜香红茶 - MìXiāng HóngChá
+    fr: 蜜香红茶 - MìXiāng HóngChá - 25g
+    en: 蜜香红茶 - MìXiāng HóngChá - 25g
 mini_descr:
     fr: thé rouge traditionnel de Taïwan
     en: traditional Taiwanese black tea
@@ -29,12 +29,14 @@ options:
         village: 三峡 - SānXiá
         province: 台灣 - TáiWān
         producteur: Monsieur 李 - Lǐ
+        poids: 25g
     en:
         harvest: Spring 2023
         type: 红茶 - HóngChá (black tea)
         village: 三峡 - SānXiá
         province: 台灣 - TáiWān (Taiwan)
         producer: Mr. 李 - Lǐ
+        weight: 25g
 eleventyComputed:
     title: "{{ tags }} - {{ name[page.lang] }}"
 ---
