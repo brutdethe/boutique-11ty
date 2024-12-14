@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
 
         <link
             href="{{ '/_assets/icons/favicon.ico' | url }}"
             rel="icon"
             type="image/x-icon"
-        />
+        >
 
         <link rel="apple-touch-icon" href="{{ '/_assets/icons/favicon.ico' | url }}">
 
@@ -36,15 +36,15 @@
         <meta
             name="description"
             content="{{ meta_descr or i18n.meta.description[page.lang] }}"
-        />
+        >
 
-        <meta property="og:title" content="{{ title }}" />
+        <meta property="og:title" content="{{ title }}" >
         <meta
             property="og:description"
             content="{{ meta_descr or i18n.meta.description[page.lang]  }}"
-        />
-        <meta property="og:url" content="{{ page.url | url }}" />
-        <meta property="og:type" content="website" />
+        >
+        <meta property="og:url" content="{{ page.url | url }}" >
+        <meta property="og:type" content="website" >
 
         <title>{{ title }}</title>
     </head>

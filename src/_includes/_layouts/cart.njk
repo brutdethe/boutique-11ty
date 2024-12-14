@@ -46,17 +46,17 @@ eleventyComputed:
         <div class="cart-summary" aria-labelledby="subtotal-label" aria-describedby="subtotal-amount">
             <strong id="subtotal-label">{{ i18n.subtotal_amount[page.lang] }}</strong>
             <data id="subtotal-amount" class="price subtotal-amount" value="${productData.price}" itemprop="price">0.00</data>
-            <meta itemprop="priceCurrency" content="EUR" />
+            <meta itemprop="priceCurrency" content="EUR" >
         </div>
         <div class="cart-summary" aria-labelledby="shipping-label" aria-describedby="shipping-amount">
             <strong id="shipping-label">{{ i18n.shipping_amount[page.lang] }}</strong>
             <data id="shipping-amount" class="price shipping-amount" value="${productData.price}" itemprop="price">0.00</data>
-            <meta itemprop="priceCurrency" content="EUR" />
+            <meta itemprop="priceCurrency" content="EUR" >
         </div>
         <div class="cart-summary summary-total" aria-labelledby="total-label" aria-describedby="total-amount">
             <strong id="total-label">{{ i18n.total[page.lang] }}</strong>
             <data id="total-amount" class="price total-amount" value="${productData.price}" itemprop="price">0.00</data>
-            <meta itemprop="priceCurrency" content="EUR" />
+            <meta itemprop="priceCurrency" content="EUR" >
         </div>
         {% include 'checkout.njk' %}
     </div>

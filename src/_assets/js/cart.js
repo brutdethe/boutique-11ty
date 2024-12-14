@@ -137,13 +137,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <data class="price" value="${productData.price}" itemprop="price">
                     ${parseFloat(productData.price).toFixed(2)} €
                 </data>
-                <meta itemprop="priceCurrency" content="EUR" />
+                <meta itemprop="priceCurrency" content="EUR" >
                 <div class="qty-input">
                     <button class="qty-count qty-count--minus ${cartItem.qty === 1 ? 'disabled' : ''}" data-action="minus" type="button" aria-label="${t('button_remove_qty')}">
                         -
                     </button>
                     <label for="qty-${cartItem.id}" class="display-none">${t('quantity')}</label>
-                    <input id="qty-${cartItem.id}" class="item-qty item-qty" type="number" name="item-qty" data-id="${cartItem.id}" min="1" max="${productData.stock || 10}" value="${cartItem.qty}" />
+                    <input id="qty-${cartItem.id}" class="item-qty item-qty" type="number" name="item-qty" data-id="${cartItem.id}" min="1" max="${productData.stock || 10}" value="${cartItem.qty}" >
                     <button class="qty-count qty-count--add ${cartItem.qty === +productData.stock ? 'disabled' : ''}" data-action="add" type="button" aria-label="${t('button_add_qty')}">
                         +
                     </button>
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <data class="item-total-price price" value="${(parseFloat(productData.price) * cartItem.qty).toFixed(2)}" itemprop="price">
                     ${(parseFloat(productData.price) * cartItem.qty).toFixed(2)} €
                 </data>
-                <meta itemprop="priceCurrency" content="EUR" />
+                <meta itemprop="priceCurrency" content="EUR" >
             </section>
             <footer class="item-footer">
                 <a href="${productData.link}" class="btn btn-details" aria-label="${t('button_detail')}">
