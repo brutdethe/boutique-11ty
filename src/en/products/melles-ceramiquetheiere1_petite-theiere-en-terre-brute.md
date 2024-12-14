@@ -17,7 +17,6 @@ photos:
     - melles-ceramique_theiere_1-a.jpg
     - melles-ceramique_theiere_1-b.jpg
     - melles-ceramique_theiere_1-c.jpg
-    - melles-ceramique_theiere_1-d.jpg
 price: 200.00
 stock: 1
 weight: 300
