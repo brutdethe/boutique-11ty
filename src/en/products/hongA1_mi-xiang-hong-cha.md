@@ -16,7 +16,6 @@ description:
 photos:
     - HongCha_MiXiang_1-a.jpg
     - HongCha_MiXiang_1-b.jpg
-    - conserve_1-c.jpg
 price: 15.00
 stock: 10
 weight: 125
