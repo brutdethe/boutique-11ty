@@ -5,8 +5,8 @@ name:
     fr: 茶壺 CháHú - Petite théière émaillée
     en: 茶壺 CháHú - Small Glazed Teapot
 mini_descr:
-    fr: théière pour GōngFūChá - 工夫茶 réalisée par Jé le Potier
-    en: teapot for GōngFūChá - 工夫茶 made by Jé le Potier
+    fr: théière réalisée par Jé le Potier
+    en: teapot made by Jé le Potier
 tags: ['produit', 'je-le-potier']
 description: 
     fr: >
