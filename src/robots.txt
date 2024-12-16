@@ -1,11 +1,11 @@
 User-agent: *
-Disallow: /legacy/
+Disallow: /legal/
 Disallow: /privacy/
 Disallow: /404.html/
 Disallow: /cart/
 Disallow: /cancel/
 Disallow: /success/
-Disallow: /en/legacy/
+Disallow: /en/legal/
 Disallow: /en/privacy/
 Disallow: /en/404.html/
 Disallow: /en/cart/

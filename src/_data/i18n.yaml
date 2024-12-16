@@ -18,7 +18,7 @@ privacy_nav:
     fr: confidentialité
     en: privacy policy
 
-legacy_nav:
+legal_nav:
     fr: mentions légales
     en: legal notice
 
@@ -115,71 +115,3 @@ alt_photo:
     fr: image du produit
     en: product image
 
-aria:
-    home:
-        fr: aller à la page d'accueil
-        en: go to homepage
-
-    about:
-        fr: aller sur la page à-propos
-        en: go to about us
-
-    legacy:
-        fr: consulter les mentions légales
-        en: view legal notice
-
-    privacy:
-        fr: voir les clauses de confidentialités
-        en: view privacy policy
-
-    category:
-        fr: lister les produits de
-        en: list products of
-
-    card_detail:
-        fr: consulter la fiche produit
-        en: view product details
-
-    cart:
-        fr: consulter le panier
-        en: go to cart
-
-    lang_fr:
-        fr: changer la langue en français
-        en: change language to french
-
-    lang_en:
-        fr: changer la langue en anglais
-        en: change language to english
-
-    currency_eur:
-        fr: changer la monnaie en euros
-        en: change currency to euros
-
-    currency_usd:
-        fr: changer la monnaie en dollars
-        en: change currency to dollars
-
-    product_price:
-        fr: prix du produit
-        en: product price
-
-    slide:
-        fr: galerie des photos de
-        en: photo gallery of
-
-    slide_thumb:
-        fr: afficher l'image
-        en: view slide
-
-    send_email:
-        fr: envoyer un email à coucou@gongfucha.fr
-        en: send an email to coucou@gongfucha.fr
-
-    call_phone:
-        fr: passer un coup de fil au +33 666 081 188
-        en: call +33 666 081 188
-
-    view_address:
-        fr: voir l'adresse sur OpenStreetMap
-        en: view address on openstreetmap

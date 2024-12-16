@@ -37,7 +37,7 @@ include_items_list_bundle: true
                 <a
                     href="{{ url_tag | customLocaleUrl(page.lang) | url }}#{{ category.title[page.lang] }}"
                     class="btn btn-tag {% if (category.label == tag.label) %}selected{% endif %}"
-                    aria-label="{{ i18n.aria.category[page.lang] }} {{ category.title[page.lang] }}"
+                    aria-label="{{ i18n_aria.aria.category[page.lang] }} {{ category.title[page.lang] }}"
                 >
                     {{ category.title[page.lang] }}
                 </a>
@@ -49,17 +49,20 @@ include_items_list_bundle: true
 <section class="products-list">
     {% for post in collections[tag.label] %}
         {% if post.data.page.lang == page.lang %}
+        {% set hrefDetails = post.url | customLocaleUrl(page.lang) | url %}
             <article class="shadow item item-infos" data-id="{{ post.data.id }}">
                 <header class="item-header">
-                    <h2 id="{{ post.data.name[page.lang] }}" class="item-title">
-                        {{ post.data.name[page.lang] }}
+                    <h2 class="item-title">
+                        <a href="{{ hrefDetails }}" aria-label="{{ i18n_aria.aria.card_detail[page.lang] }}">{{ post.data.name[page.lang] }}</a>
                     </h2>
                     <h3 class="item-subtitle">
                         {{ post.data.mini_descr[page.lang] }}
                     </h3>
                 </header>
                 <figure class="item-figure">
+                    <a href="{{ hrefDetails }}" aria-label="{{ i18n_aria.aria.card_detail[page.lang] }}">
                     {% image_product post.data.photos[0], 'item-image', i18n.alt_photo[page.lang] + ' - ' + post.data.name[page.lang], '(max-width: 769px) 365px, 490px' %}
+                    </a>
                 </figure>
                 <p class="item-description">{{ post.data.description[page.lang] | excerptFromDescription }}</p>
                 {% set price = post.data.price %}
@@ -67,9 +70,9 @@ include_items_list_bundle: true
                 {% include 'price_stock.njk' %}
                 <footer class="item-footer">
                     <a
-                        href="{{ post.url | customLocaleUrl(page.lang) | url }}"
+                        href="{{ hrefDetails }}"
                         class="btn btn-details"
-                        aria-label="{{ i18n.card_detail[page.lang] }}"
+                        aria-label="{{ i18n_aria.aria.card_detail[page.lang] }}"
                         >{{ i18n.card_detail[page.lang] }}</a
                     >
                     {% include 'button_add.njk' %}

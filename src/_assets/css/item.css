@@ -15,6 +15,14 @@
     margin: 0;
 }
 
+.item-title a {
+    color: var(--text-color);
+}
+
+.item-title a:hover {
+    color: var(--primary-color);
+}
+
 .item-subtitle {
     color: var(--primary-color);
     font-size: 1rem;

@@ -4,22 +4,22 @@
             <a
                 href="{{ '/privacy' | customLocaleUrl(page.lang) | url }}"
                 class="footer-link"
-                aria-label="{{ i18n.aria.privacy[page.lang] }}"
+                aria-label="{{ i18n_aria.aria.privacy[page.lang] }}"
                 >{{ i18n.privacy_nav[page.lang] }}</a
             >
         </li>
         <li>
             <a
-                href="{{ '/legacy' | customLocaleUrl(page.lang) | url }}"
+                href="{{ '/legal' | customLocaleUrl(page.lang) | url }}"
                 class="footer-link"
-                aria-label="{{ i18n.aria.legacy[page.lang] }}"
-                >{{ i18n.legacy_nav[page.lang] }}</a
+                aria-label="{{ i18n_aria.aria.legal[page.lang] }}"
+                >{{ i18n.legal_nav[page.lang] }}</a
             >
         </li>
     </ul>
     <address itemscope itemtype="https://schema.org/PostalAddress">
         <span itemprop="name">{{ i18n.address_title[page.lang] }}</span>
-        <a href="https://www.openstreetmap.org/node/3514787034" aria-label="{{ i18n.aria.view_address[page.lang] }}" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.openstreetmap.org/node/3514787034" aria-label="{{ i18n_aria.aria.view_address[page.lang] }}" target="_blank" rel="noopener noreferrer">
             <span itemprop="streetAddress">15, rue de la montagne</span> - 
             <span itemprop="postalCode">09320</span>
             <span itemprop="addressLocality">Massat</span>
@@ -27,10 +27,10 @@
         <span itemprop="addressRegion">Ariège</span> - 
         <data itemprop="addressCountry" value="FR">France</data>
         <div class="contact-info" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
-            <a href="mailto:&#99;&#111;&#117;&#99;&#111;&#117;&#64;&#103;&#111;&#110;&#103;&#102;&#117;&#99;&#104;&#97;&#46;&#102;&#114;"class="email"  itemprop="email" aria-label="{{ i18n.aria.send_email[page.lang] }}">
+            <a href="mailto:&#99;&#111;&#117;&#99;&#111;&#117;&#64;&#103;&#111;&#110;&#103;&#102;&#117;&#99;&#104;&#97;&#46;&#102;&#114;"class="email"  itemprop="email" aria-label="{{ i18n_aria.aria.send_email[page.lang] }}">
                 coucou@gongfucha.fr
             </a>
-            <a href="tel:+33666081188" itemprop="telephone" class="phone" aria-label="{{ i18n.aria.call_phone[page.lang] }}">
+            <a href="tel:+33666081188" itemprop="telephone" class="phone" aria-label="{{ i18n_aria.aria.call_phone[page.lang] }}">
                 +33 666 081 188
             </a>
         </div>
