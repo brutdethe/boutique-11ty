@@ -24,7 +24,7 @@ select {
     content: '\25BC';
     position: absolute;
     right: 0;
-    padding: 0.3rem 1em;
+    padding: 0.3rem 1rem;
     background-color: var(--border-color);
     transition: 0.25s all ease;
     pointer-events: none;

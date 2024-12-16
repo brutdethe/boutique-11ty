@@ -3,11 +3,11 @@
 }
 
 .splide__arrow--prev {
-    left: 1em;
+    left: 1rem;
 }
 
 .splide__arrow--next {
-    right: 1em;
+    right: 1rem;
 }
 
 .splide__arrow {
@@ -19,7 +19,7 @@
     cursor: pointer;
     display: -ms-flexbox;
     display: flex;
-    height: 2em;
+    height: 2rem;
     -ms-flex-pack: center;
     justify-content: center;
     opacity: .7;
@@ -27,14 +27,14 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 2em;
+    width: 2rem;
     z-index: 1;
 }
 
 .splide__arrow svg {
     fill: #000;
-    height: 1.2em;
-    width: 1.2em;
+    height: 1.2rem;
+    width: 1.2rem;
 }
 
 .splide__arrow--prev svg {
