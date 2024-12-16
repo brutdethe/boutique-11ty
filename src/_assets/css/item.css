@@ -41,6 +41,10 @@
     border-bottom: var(--border-thin);
 }
 
+.item-image:hover {
+    filter: opacity(50%);
+}
+
 .item-description {
     margin: 0;
     padding: 1rem;
