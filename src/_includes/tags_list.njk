@@ -1,0 +1,14 @@
+<ul class="list tags-list" aria-labelledby="category-title">
+    {% for category in i18n_categories %}
+        {% set url_tag = '/category/' + category.label %}
+        <li>
+            <a
+                href="{{ url_tag | customLocaleUrl(page.lang) | url }}#{{ category.title[page.lang] }}"
+                class="btn btn-tag {% if (category.label == tag.label) %}selected{% endif %}"
+                aria-label="{{ i18n_aria.aria.category[page.lang] }} {{ category.title[page.lang] }}"
+            >
+                {{ category.title[page.lang] }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

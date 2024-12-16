@@ -14,6 +14,7 @@ layout: _layouts/default.njk
 
 {% set css %}
     {% include "../../_assets/css/item-card.css" %}
+    {% include "../../_assets/css/tags-list.css" %}
     {% include "../../_assets/css/button-add.css" %}
     {% include "../../_assets/css/price-stock.css" %}
 
@@ -24,8 +25,11 @@ layout: _layouts/default.njk
 <style>
 	{{ css | cssmin | safe }}
 </style>
-
+{% set tag = { 'label': tags[1] } %}
 <section aria-labelledby="card-title">
+    <header>
+        {% include 'tags_list.njk' %}
+    </header>
     <article class="card-details product-infos item-infos" data-id="{{ id }}">
         {%- include 'carousel.njk' -%}
         <section class="card-info">
