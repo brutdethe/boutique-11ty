@@ -14,10 +14,10 @@ description:
     en: >
         This teapot in the shape of 三足乳鼎 - SānZúRǔDǐng is made in 臺灣 - Táiwān using 半手工 - BànShǒuGōng, a semi-handcrafted technique involving molds. It bears an inscription tied to Buddhist culture: 觀自在 - GuānZìZài, which invites harmony with nature.
 photos:
-    - theiere_9-a.jpg
-    - theiere_9-b.jpg
-    - theiere_9-c.jpg
-    - theiere_9-d.jpg
+    - theiere-argile-main_T19-a.jpg
+    - theiere-argile-main_T19-b.jpg
+    - theiere-argile-main_T19-c.jpg
+    - theiere-argile-main_T19-d.jpg
 price: 80.00
 stock: 1
 weight: 235
