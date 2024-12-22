@@ -18,7 +18,7 @@ photos:
     - theiere-argile-main_T19-b.jpg
     - theiere-argile-main_T19-c.jpg
     - theiere-argile-main_T19-d.jpg
-price: 80.00
+price: 180.00
 stock: 1
 weight: 235
 shipping_type: colis_base
