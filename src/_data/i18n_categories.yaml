@@ -39,7 +39,7 @@
           La théière, 茶壺 - CháHú, permet un contrôle précis de l’infusion des feuilles.
           Née au XVIème siècle des mains d’un certain 供春 - Gōng Chūn, la forme 供春壶 - Gōng
           Chūn Hú a inspiré les plus de 200 modèles qui existent de nos jours. Composée
-          d’un 盖 - Gài (couvercle), 身 - Shēn (corps) et 低 - Dī (bas), chaque théière est
+          d’un 盖 - Gài (couvercle), 身 - Shēn (corps) et 底 - Dǐ (fond), chaque théière est
           traditionnellement utilisée pour un seul et unique type de thé.
       en: >
           The teapot, 茶壺 - CháHú, allows precise control of the infusion of the leaves. Born in the 16th century at the hands of a certain 供春 - Gōng Chūn, the 供春壶 - Gōng Chūn Hú shape inspired the more than 200 models that exist today. Consisting of a 盖 - Gài (lid), 身 - Shēn (body) and 低 - Dī (bottom), each teapot is traditionally used for a single type of tea.
@@ -57,6 +57,66 @@
           et de partage.
       en: >
           The 蓋碗 - GàiWǎn, is the ideal utensil to start on the road to tea. Traditionally enamelled, it remains neutral and can therefore be used with all types of tea. Its shape makes it easy to observe the evolution of the infusion. With a little practice, preparing your tea with the GàiWǎn will be a real moment of pleasure and sharing.
+
+- label: chahai
+  title:
+      fr: 茶海 CháHǎi
+      en: 茶海 CháHǎi
+  description:
+      fr: >
+          Le 茶海 - CháHǎi, ou « mer de thé », est une pièce essentielle dans l’art du thé chinois, 
+          surtout dans la pratique du 工夫茶 - GōngFūChá.
+          Au-delà de son rôle pratique, il représente le plaisir de partager, 
+          en réunissant les amateurs de thé autour d’un moment simple et élégant.
+          Le 茶海 trouve naturellement sa place dans votre espace de thé, 
+          où il incarne votre attachement à la beauté des gestes et à la richesse des traditions. 
+          Plus qu’un objet, il est une invitation à savourer le calme et la sérénité que procure l’art du thé.
+      en: >
+          The 茶海 - CháHǎi, or "sea of tea," is an essential piece in the art of Chinese tea, 
+          especially in the practice of 工夫茶 - GōngFūChá.
+          Beyond its practical function, it embodies the joy of sharing, bringing tea lovers together for simple and elegant moments.
+          The 茶海 naturally belongs in your tea space, 
+          reflecting your appreciation for the beauty of the ritual and the richness of tradition. 
+          More than just an object, it invites you to embrace the calm and serenity that the art of tea brings.
+
+- label: shuifang
+  title:
+      fr: 水方 ShuǐFāng
+      en: 水方 ShuǐFāng
+  description:
+      fr: >
+          Le 水方 - ShuǐFāng, ou "Refuge de l'Eau", est là pour recueillir l’eau excédentaire, 
+          rincer les ustensiles et se débarrasser des infusions usées. Discret mais essentiel, 
+          il veille à garder votre espace de thé propre et fluide.
+          Toujours à portée de main, il accompagne chaque geste avec simplicité, créant une atmosphère harmonieuse et apaisée.
+          Bien plus qu’un récipient, le 水方 reflète le soin apporté à chaque détail du rituel du thé. Il invite à ralentir, 
+          à organiser chaque mouvement et à savourer le calme qui émane de cette pratique.
+      en: >
+          The 水方 - ShuǐFāng, or "Refuge of Water," is there to collect excess water, rinse utensils, 
+          and discard used infusions. Discreet yet essential, it helps keep your tea space clean and flowing smoothly.
+          Always within reach, it quietly supports each gesture, bringing a sense of harmony and calm to the ritual.
+          More than just a vessel, the 水方 reflects the care and attention given to every detail of the tea ceremony. 
+          It encourages you to slow down, organize each movement, and embrace the tranquility that comes with this practice.
+
+- label: chabei
+  title:
+      fr: 茶杯 CháBēi
+      en: 茶杯 CháBēi
+  description:
+      fr: >
+          Le 茶杯 - CháBēi, ou "bol à thé", Le 茶杯, est bien plus qu’une simple tasse. 
+          C’est un petit compagnon qui accueille l’essence de chaque infusion, révélant les arômes subtils et les saveurs profondes du thé.
+          Pensée pour se glisser naturellement dans votre main, sa forme invite à la simplicité et à la douceur. 
+          Le 茶杯 ne se limite pas à contenir le thé, il vous rappelle de ralentir, de respirer et de savourer l’instant.
+          À la fois discret et essentiel, le 茶杯 transforme chaque gorgée en un rituel apaisant, 
+          où goût, texture et parfum se mêlent dans une harmonie délicate.
+      en: >
+         The 茶杯 - CháBēi, or "tea bowl,", is more than just a cup. It’s a small companion that holds the essence of each infusion, 
+         revealing the tea’s delicate aromas and rich flavors.
+         Carefully crafted to fit comfortably in your hand, its design feels natural and inviting. 
+         The 茶杯 isn’t just for drinking tea—it’s a reminder to pause, breathe, and savor the moment.
+         Simple yet meaningful, the 茶杯 turns each sip into a quiet ritual, where taste, texture, 
+         and fragrance come together to create a little pocket of calm.
 
 - label: manon-clouzeau
   title:
@@ -115,6 +175,7 @@
           Marion Muselet, alias Mademoiselles Céramique, is a ceramist from Montpellier who specialises in porcelain work. 
           Her universe oscillates between art and craft. Since 2022, she has been creating porcelain GàiWǎns and teapots in Yixing and French clay. 
           Her creations are 100% turned by hand on a potter's wheel.
+
 
 - label: benhito
   title:
