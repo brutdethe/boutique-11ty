@@ -17,7 +17,6 @@ photos:
     - shuifang-argile-bois_T35-a.jpg
     - shuifang-argile-bois_T35-b.jpg
     - shuifang-argile-bois_T35-c.jpg
-    - shuifang-argile-bois_T35-d.jpg
 price: 200.00
 stock: 1
 weight: 295
