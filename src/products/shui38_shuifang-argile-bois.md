@@ -18,7 +18,6 @@ description:
 photos:
     - shuifang-argile-bois_T38-a.jpg
     - shuifang-argile-bois_T38-b.jpg
-    - shuifang-argile-bois_T38-c.jpg
     - shuifang-argile-bois_T38-d.jpg
 price: 150.00
 stock: 1
