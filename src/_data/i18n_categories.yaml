@@ -108,6 +108,25 @@
           More than just a vessel, the 水方 reflects the care and attention given to every detail of the tea ceremony. 
           It encourages you to slow down, organize each movement, and embrace the tranquility that comes with this practice.
 
+- label: chacang
+  title:
+      fr: 茶倉 CháCāng
+      en: 茶倉 CháCāng
+  description:
+      fr: >
+         Le 茶倉 se décline en différentes formes et tailles. Les plus grands sont parfaits pour conserver vos thés précieux, 
+         tandis que les plus petits s’intègrent facilement sur un 茶席 (ChaXi) ou se glissent dans vos affaires pour vous accompagner partout. 
+         Fabriqué en argile, porcelaine, étain ou argent, et parfois même en bambou ou en laque, 
+         chaque 茶倉 raconte une histoire et apporte une touche unique à votre rituel de thé. Le 茶倉 est également un élément essentiel de la culture chinoise du thé, 
+         incarnant l’art de conserver et de partager les thés avec soin et respect.
+      en: >
+          The 茶倉 comes in various shapes and sizes. Larger ones are ideal for storing precious teas, 
+          while smaller ones fit perfectly on a 茶席 (ChaXi) or slip easily into your belongings to accompany you anywhere. 
+          Made of clay, porcelain, tin, or silver, and sometimes even bamboo or lacquer, 
+          each 茶倉 tells a story and adds a unique touch to your tea ritual. The 茶倉 is also an essential part of Chinese tea culture, 
+          embodying the art of preserving and sharing tea with care and respect.
+
+
 - label: chabei
   title:
       fr: 茶杯 CháBēi
@@ -223,20 +242,3 @@
         <br>Thank you.
         <br> - <em>雅玲 - Yǎ Líng et Stéphane</em>
 
-- label: chacang
-  title:
-      fr: 茶倉 CháCāng
-      en: 茶倉 CháCāng
-  description:
-      fr: >
-         Le 茶倉 se décline en différentes formes et tailles. Les plus grands sont parfaits pour conserver vos thés précieux, 
-         tandis que les plus petits s’intègrent facilement sur un 茶席 (ChaXi) ou se glissent dans vos affaires pour vous accompagner partout. 
-         Fabriqué en argile, porcelaine, étain ou argent, et parfois même en bambou ou en laque, 
-         chaque 茶倉 raconte une histoire et apporte une touche unique à votre rituel de thé. Le 茶倉 est également un élément essentiel de la culture chinoise du thé, 
-         incarnant l’art de conserver et de partager les thés avec soin et respect.
-      en: >
-          The 茶倉 comes in various shapes and sizes. Larger ones are ideal for storing precious teas, 
-          while smaller ones fit perfectly on a 茶席 (ChaXi) or slip easily into your belongings to accompany you anywhere. 
-          Made of clay, porcelain, tin, or silver, and sometimes even bamboo or lacquer, 
-          each 茶倉 tells a story and adds a unique touch to your tea ritual. The 茶倉 is also an essential part of Chinese tea culture, 
-          embodying the art of preserving and sharing tea with care and respect.
