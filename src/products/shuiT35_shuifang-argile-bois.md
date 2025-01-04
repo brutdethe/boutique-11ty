@@ -1,6 +1,6 @@
 ---
 layout: _layouts/product_card.njk
-id: shui35
+id: shuiT35
 name:
     fr: 水方 ShuǐFāng (Refuge de l'Eau) 
     en: 水方 ShuǐFāng (Refuge de l'Eau)
