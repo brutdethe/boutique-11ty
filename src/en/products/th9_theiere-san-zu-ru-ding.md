@@ -2,7 +2,7 @@
 layout: _layouts/product_card.njk
 id: th9
 name:
-    fr: 茶壺 CháHú (Théière)
+    fr: 茶壺 CháHú (Théière) 
     en: 茶壺 CháHú (Teapot)
 mini_descr:
     fr: théière artisanale (semi-main) de Taïwan

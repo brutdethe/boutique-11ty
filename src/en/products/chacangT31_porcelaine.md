@@ -2,10 +2,10 @@
 layout: _layouts/product_card.njk
 id: chacangT31
 name:
-    fr: 茶倉 CháCāng(Jar à thé) 
+    fr: 茶倉 CháCāng(jarre à thé) 
     en: 茶倉 CháCāng(Tea Jar)
 mini_descr:
-    fr: petit jar à thé en porcelaine semi-artisanale, fabriquée à Taïwan
+    fr: petite jarre à thé en porcelaine semi-artisanale, fabriquée à Taïwan
     en: small semi-handcrafted porcelain tea jar, made in Taiwan.
 tags: ['produit', 'chacang']
 description: 
@@ -17,7 +17,7 @@ photos:
     - chacang-porce-semi-main_T31-a.jpg
     - chacang-porce-semi-main_T31-b.jpg
 price: 40
-stock: 1
+stock: 2
 weight: 120 
 shipping_type: colis_base
 shipping_point: 3
