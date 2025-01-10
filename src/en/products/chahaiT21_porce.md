@@ -5,8 +5,8 @@ name:
     fr: 茶海 CháHǎi(Verseuse de thé) 
     en: 茶海 CháHǎi(Verseuse de thé)
 mini_descr:
-    fr: petit jar à thé en porcelaine épurée (semi-main) de Taïwan
-    en: small, minimalist porcelain tea jar (semi-handcrafted) from Taiwan.
+    fr: petit verseuse à thé en porcelaine (semi-main) de Taïwan.
+    en: small porcelain tea pitcher (semi-handcrafted) from Taiwan.
 tags: ['produit', 'chahai']
 description: 
     fr: >
