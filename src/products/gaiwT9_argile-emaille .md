@@ -25,9 +25,11 @@ shipping_point: 5
 options:
     fr:
         origine: 臺灣 - Táiwān
+        dimensions: 10cm x 6cm
         capacité: 150 ml
     en:
         origin: 臺灣 - Táiwān (Taiwan)
+        dimensions: 10cm x 6cm
         capacity: 150 ml
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'
