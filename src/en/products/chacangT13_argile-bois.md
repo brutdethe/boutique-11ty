@@ -2,8 +2,8 @@
 layout: _layouts/product_card.njk
 id: chacangT13
 name:
-    fr: 茶倉 CháCāng(pot à thé) 
-    en: 茶倉 CháCāng(Tea Jar)
+    fr: 茶倉 CháCāng (pot à thé) 
+    en: 茶倉 CháCāng (tea jar)
 mini_descr:
     fr: petit pot à thé en argile, cuisson au bois, artisanal de Taïwan
     en: small clay tea jar, wood-fired and handcrafted in Taiwan

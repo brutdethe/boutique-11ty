@@ -2,8 +2,8 @@
 layout: _layouts/product_card.njk
 id: chahaiT21
 name:
-    fr: 茶海 CháHǎi(Verseuse de thé) 
-    en: 茶海 CháHǎi(Verseuse de thé)
+    fr: 茶海 CháHǎi (Verseuse de thé) 
+    en: 茶海 CháHǎi (tea pitcher)
 mini_descr:
     fr: petit verseuse à thé en porcelaine (semi-main) de Taïwan
     en: small porcelain tea pitcher (semi-handcrafted) from Taiwan
