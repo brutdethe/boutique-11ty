@@ -5,7 +5,7 @@ name:
     fr: 茶倉 CháCāng(jarre à thé) 
     en: 茶倉 CháCāng(Tea Jar)
 mini_descr:
-    fr: petite jarre à thé en porcelaine semi-artisanale, fabriquée à Taïwan
+    fr: pot à thé en porcelaine semi-artisanale, fabriquée à Taïwan
     en: small semi-handcrafted porcelain tea jar, made in Taiwan.
 tags: ['produit', 'chacang']
 description: 

@@ -5,7 +5,7 @@ name:
     fr: 茶倉 CháCāng(jarre à thé) 
     en: 茶倉 CháCāng(Tea Jar)
 mini_descr:
-    fr: mini jarre à thé en porcelaine émaillée noire de Taïwan.
+    fr: mini pot à thé en porcelaine émaillée noire de Taïwan.
     en: mini black-glazed porcelain tea jar, made in Taiwan.
 tags: ['produit', 'chacang']
 description: 
