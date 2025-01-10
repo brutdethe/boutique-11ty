@@ -10,9 +10,9 @@ mini_descr:
 tags: ['produit', 'chacang']
 description: 
     fr: >
-       Ce pot à thé artisanal en porcelaine, cuit au feu de bois à Taïwan, est une pièce unique où chaque détail raconte une histoire. Ses teintes chaleureuses et son fini texturé apportent une touche d’élégance naturelle à vos moments de thé.<!--more--> Un bel équilibre entre authenticité et simplicité.
+       Ce pot à thé artisanal en porcelaine, cuit au feu de bois à Taïwan, est une pièce unique où chaque détail raconte une histoire.<!--more--> Ses teintes chaleureuses et son fini texturé apportent une touche d’élégance naturelle à vos moments de thé. Un bel équilibre entre authenticité et simplicité.
     en: >
-       This handcrafted porcelain tea jar, wood-fired in Taiwan, is a unique piece where every detail tells a story. Its warm tones and textured finish bring a natural elegance to your tea moments.<!--more--> A perfect balance of authenticity and simplicity.
+       This handcrafted porcelain tea jar, wood-fired in Taiwan, is a unique piece where every detail tells a story.<!--more--> Its warm tones and textured finish bring a natural elegance to your tea moments. A perfect balance of authenticity and simplicity.
 photos:
     - chacang-porcelaine-bois_T11-a.jpg
     - chacang-porcelaine-bois_T11-b.jpg
