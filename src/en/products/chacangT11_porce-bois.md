@@ -1,33 +1,37 @@
 ---
 layout: _layouts/product_card.njk
-id: chacangT34
+id: chacangT11
 name:
-    fr: 茶倉 CháCāng(jarre à thé) 
+    fr: 茶倉 CháCāng(pot à thé) 
     en: 茶倉 CháCāng(Tea Jar)
 mini_descr:
-    fr: mini pot à thé en porcelaine émaillée noire de Taïwan
-    en: mini black-glazed porcelain tea jar, made in Taiwan
+    fr: pot à thé en porcelaine, cuisson au bois, artisanal de Taïwan
+    en: Wood-fired porcelain tea jar, handcrafted in Taiwan
 tags: ['produit', 'chacang']
 description: 
     fr: >
-       Ce mini 茶倉 en porcelaine émaillée noire, fabriqué de manière semi-artisanale à Taïwan, est un modèle idéal pour vos déplacements, tout en conservant un style naturel et élégant.
+       Ce pot à thé artisanal en porcelaine, cuit au feu de bois à Taïwan, est une pièce unique où chaque détail raconte une histoire. Ses teintes chaleureuses et son fini texturé apportent une touche d’élégance naturelle à vos moments de thé.<!--more--> Un bel équilibre entre authenticité et simplicité.
     en: >
-        This mini 茶倉 black-glazed porcelain tea jar, semi-handcrafted in Taiwan, is the perfect model for travel, combining natural elegance with practicality.
+       This handcrafted porcelain tea jar, wood-fired in Taiwan, is a unique piece where every detail tells a story. Its warm tones and textured finish bring a natural elegance to your tea moments.<!--more--> A perfect balance of authenticity and simplicity.
 photos:
-    - chacang-porce-emai_T34-a.jpg
-    - chacang-porce-emai_T34-b.jpg
-price: 20
+    - chacang-porcelaine-bois_T11-a.jpg
+    - chacang-porcelaine-bois_T11-b.jpg
+    - chacang-porcelaine-bois_T11-c.jpg
+    - chacang-porcelaine-bois_T11-d.jpg
+price: 130
 stock: 1
-weight: 90
+weight: 160
 shipping_type: colis_base
-shipping_point: 2
+shipping_point: 5
 options:
     fr:
         origine: 臺灣 - Táiwān
-        dimensions: 4,8cm x 5,5cm
+        dimensions: 8,5cm x 6,6cm
+        capacité: 200 ml
     en:
         origin: 臺灣 - Táiwān (Taiwan)
-        dimensions: 4,8cm x 5,5cm
+        dimensions: 8,5cm x 6,6cm
+        capacity: 200 ml
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'
 ---
