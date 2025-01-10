@@ -10,9 +10,9 @@ mini_descr:
 tags: ['produit', 'chahai']
 description: 
     fr: >
-        Ce petit CháHǎi en porcelaine blanche est un concentré de douceur et de simplicité. Son design épuré et sa prise en main confortable en font un compagnon idéal pour vos moments de thé. Le bec verseur garantit un service précis,<!--more--> sans une goutte perdue. Léger et facile à utiliser, il ajoute une touche d’élégance à vos dégustations.Parfait pour ceux qui apprécient la beauté dans les petits détails.
+        Ce petit 茶海 en porcelaine blanche est un concentré de douceur et de simplicité. Son design épuré et sa prise en main confortable en font un compagnon idéal pour vos moments de thé. Le bec verseur garantit un service précis,<!--more--> sans une goutte perdue. Léger et facile à utiliser, il ajoute une touche d’élégance à vos dégustations.Parfait pour ceux qui apprécient la beauté dans les petits détails.
     en: >
-        This small white porcelain CháHǎi is a blend of simplicity and elegance. Its minimalist design and comfortable grip make it the perfect companion for your tea moments. The spout ensures precise pouring,<!--more--> without a single drop wasted. Light and easy to handle, it adds a touch of sophistication to your tea rituals. Perfect for those who appreciate beauty in the finer details.
+        This small white porcelain 茶海 is a blend of simplicity and elegance. Its minimalist design and comfortable grip make it the perfect companion for your tea moments. The spout ensures precise pouring,<!--more--> without a single drop wasted. Light and easy to handle, it adds a touch of sophistication to your tea rituals. Perfect for those who appreciate beauty in the finer details.
 photos:
     - chahai-porcelaine_T21-a.jpg
     - chahai-porcelaine_T21-b.jpg
