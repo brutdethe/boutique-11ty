@@ -2,8 +2,8 @@
 layout: _layouts/product_card.njk
 id: bolT1
 name:
-    fr: 茶杯 CháBēi (bol à thé) 
-    en: 茶杯 CháBēi (Tea Cup)
+    fr: 茶杯 CháBēi (petit bol à thé) 
+    en: 茶杯 CháBēi (small tea bowl)
 mini_descr:
     fr: bol à thé en porcelaine, cuisson au bois, artisanal de Taïwan
     en: Wood-fired porcelain tea cup, handcrafted in Taiwan
