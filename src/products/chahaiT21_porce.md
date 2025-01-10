@@ -26,9 +26,11 @@ options:
     fr:
         origine: 臺灣 - Táiwān
         dimensions: 5cm x 6cm
+        capacité: 100 ml
     en:
         origin: 臺灣 - Táiwān (Taiwan)
         dimensions: 5cm x 6cm
+        capacity: 100 ml
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'
 ---

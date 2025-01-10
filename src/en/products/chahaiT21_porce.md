@@ -16,7 +16,7 @@ description:
 photos:
     - chahai-porcelaine_T21-a.jpg
     - chahai-porcelaine_T21-b.jpg
-    - chahai-porcelaine_T21-a.jpg
+    - chahai-porcelaine_T21-c.jpg
 price: 30
 stock: 1
 weight:  
@@ -26,9 +26,11 @@ options:
     fr:
         origine: 臺灣 - Táiwān
         dimensions: 5cm x 6cm
+        capacité: 100 ml
     en:
         origin: 臺灣 - Táiwān (Taiwan)
         dimensions: 5cm x 6cm
+        capacity: 100 ml
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'
 ---
