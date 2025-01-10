@@ -2,7 +2,7 @@
 layout: _layouts/product_card.njk
 id: chacangT32
 name:
-    fr: 茶倉 CháCāng(Jar à thé) 
+    fr: 茶倉 CháCāng(pot à thé) 
     en: 茶倉 CháCāng(Tea Jar)
 mini_descr:
     fr: pot à thé en porcelaine semi-artisanale, fabriquée à Taïwan
