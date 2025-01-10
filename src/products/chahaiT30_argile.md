@@ -5,8 +5,8 @@ name:
     fr: 茶海 CháHǎi(Verseuse de thé) 
     en: 茶海 CháHǎi(Verseuse de thé)
 mini_descr:
-    fr: verseuse en argile semi-artisanale, fabriquée à Taïwan
-    en: traditional clay tea pitcher, semi-handmade in Taiwan
+    fr: petit verseuse à thé en argile (semi-main) de Taïwan
+    en: small clay tea pitcher (semi-handcrafted) from Taiwan
 tags: ['produit', 'chahai']
 description: 
     fr: >
