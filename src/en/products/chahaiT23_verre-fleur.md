@@ -5,7 +5,7 @@ name:
     fr: 茶海 CháHǎi (Verseuse de thé) 
     en: 茶海 CháHǎi (tea pitcher)
 mini_descr:
-    fr: petit verseuse à thé en verre de Taïwan
+    fr: petite verseuse à thé en verre de Taïwan
     en: small glass tea pitcher from Taiwan
 tags: ['produit', 'chahai']
 description: 
