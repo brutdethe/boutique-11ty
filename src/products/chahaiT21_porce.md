@@ -16,7 +16,7 @@ description:
 photos:
     - chahai-porcelaine_T21-a.jpg
     - chahai-porcelaine_T21-b.jpg
-    - chahai-porcelaine_T21-a.jpg
+    - chahai-porcelaine_T21-c.jpg
 price: 30
 stock: 1
 weight:  
