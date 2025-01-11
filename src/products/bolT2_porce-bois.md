@@ -6,7 +6,7 @@ name:
     en: 茶杯 CháBēi (small tea bowl)
 mini_descr:
     fr: bol à thé en porcelaine, cuisson au bois, artisanal de Taïwan
-    en: Wood-fired porcelain tea cup, handcrafted in Taiwan
+    en: Wood-fired porcelain tea bowl, handcrafted in Taiwan
 tags: ['produit', 'chabei']
 description: 
     fr: >
