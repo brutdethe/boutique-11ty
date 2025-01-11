@@ -2,11 +2,11 @@
 layout: _layouts/product_card.njk
 id: shuiT35
 name:
-    fr: 水方 ShuǐFāng (Refuge de l'Eau) 
-    en: 水方 ShuǐFāng (Refuge de l'Eau)
+    fr: 水方 ShuǐFāng (bol du flot) 
+    en: 水方 ShuǐFāng (overflow bowl)
 mini_descr:
-    fr: refuge de l’eau, entièrement fait à la main à Taïwan
-    en: water refuge, entirely handmade in Taiwan
+    fr: bol du flot, fait à la main à Taïwan
+    en: overflow bowl, handmade in Taiwan
 tags: ['produit', 'shuifang']
 description: 
     fr: >

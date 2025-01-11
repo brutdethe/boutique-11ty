@@ -2,17 +2,15 @@
 layout: _layouts/product_card.njk
 id: shuiT39
 name:
-    fr: 水方 ShuǐFāng (Refuge de l'Eau) 
-    en: 水方 ShuǐFāng (Refuge de l'Eau)
+    fr: 水方 ShuǐFāng (bol du flot) 
+    en: 水方 ShuǐFāng (overflow bowl)
 mini_descr:
-    fr: refuge de l’eau, entièrement fait à la main à Taïwan
-    en: water refuge, entirely handmade in Taiwan
+    fr: bol du flot, fait à la main à Taïwan
+    en: overflow bowl, handmade in Taiwan
 tags: ['produit', 'shuifang']
 description: 
     fr: >
         Ce bol en argile, façonné à la main et cuit au bois, charme par sa forme organique et ses textures naturelles. Ses nuances chaleureuses et ses détails uniques racontent l’histoire du feu et de la terre qui l’ont façonné.<!--more--> Une pièce pleine de caractère, idéale pour ajouter une touche d’authenticité à vos moments de thé.
-
-
     en: >
        This handcrafted, wood-fired clay bowl captivates with its organic shape and natural textures. Its warm tones and unique details tell the story of the fire and earth that shaped it.<!--more--> A piece full of character, perfect for bringing authenticity to your tea moments.
 photos:
