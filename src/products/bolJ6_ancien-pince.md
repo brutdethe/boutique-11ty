@@ -1,0 +1,37 @@
+---
+layout: _layouts/product_card.njk
+id: bolJ6
+name:
+    fr: 茶杯 CháBēi (petit bol à thé) 
+    en: 茶杯 CháBēi (small tea bowl)
+mini_descr:
+    fr: bol à thé ancien en Shino-yaki, œuvre artisanale japonaise
+    en: antique Shino-yaki tea bowl, a japanese handcrafted piece
+tags: ['produit', 'chabei']
+description: 
+    fr: >
+       Un bol ancien en céramique japonaise, probablement issu de la tradition du Shino-yaki. Ses tons doux et naturels, parsemés de délicates craquelures,<!--more--> évoquent l’authenticité et la simplicité des rituels du thé. Chaque détail raconte une histoire, entre savoir-faire ancestral et beauté intemporelle. Idéal pour savourer votre thé dans une ambiance empreinte de sérénité.
+    en: >
+       An antique japanese ceramic bowl, likely from the Shino-yaki tradition. Its soft, natural tones, adorned with delicate crackles,<!--more--> evoke the authenticity and simplicity of tea rituals. Every detail tells a story of ancestral craftsmanship and timeless beauty. Perfect for enjoying your tea in a serene and contemplative atmosphere.
+photos:
+    - bol-ancien-pince_J6-a.jpg
+    - bol-ancien-pince_J6-b.jpg
+    - bol-ancien-pince_J6-c.jpg
+    - bol-ancien-pince_J6-d.jpg
+price: 25
+stock: 1
+weight: 32 
+shipping_type: colis_base
+shipping_point: 2
+options:
+    fr:
+        origine: Japon
+        dimensions: 6cm x 2,5cm
+        capacité: 29 ml
+    en:
+        origin: Japon
+        dimensions: 6cm x 2,5m
+        capacity: 29 ml
+eleventyComputed:
+    title: '{{ tags }} - {{ name[page.lang] }}'
+---
