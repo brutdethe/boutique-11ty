@@ -5,8 +5,8 @@ name:
     fr: 茶壺 CháHú (Théière) 
     en: 茶壺 CháHú (Teapot)
 mini_descr:
-    fr: théière artisanale en porcelaine épurée (semi-main) de Taïwan
-    en: refined handcrafted porcelain teapot (semi-handmade) from Taiwan
+    fr: théière en porcelaine épurée (semi-main) de Taïwan
+    en: porcelain teapot (semi-handmade) from Taiwan
 tags: ['produit', 'chahu']
 description: 
     fr: >
