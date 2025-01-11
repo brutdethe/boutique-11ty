@@ -25,11 +25,11 @@ shipping_type: colis_base
 shipping_point: 3
 options:
     fr:
-        origine: 臺灣 - Táiwān
+        origine: Japon
         dimensions: 8,3cm x 3,7cm
         capacité: 60 ml
     en:
-        origin: 臺灣 - Táiwān (Taiwan)
+        origin: Japon
         dimensions: 8,3cm x 3,7m
         capacity: 60 ml
 eleventyComputed:
