@@ -10,9 +10,9 @@ mini_descr:
 tags: ['produit', 'chabei']
 description: 
     fr: >
-       bol ancien en céramique Shigaraki-yaki, empreint de simplicité et de caractère. Ses textures brutes et nuances naturelles, teintées d’un vert évoquant la quiétude d’un lac,<!--more--> racontent l’histoire d’un savoir-faire ancestral. Un objet rare, parfait pour savourer le thé dans une sérénité authentique.
+       Ce bol ancien en céramique Shigaraki-yaki, empreint de simplicité et de caractère. Ses textures brutes et nuances naturelles, teintées d’un vert évoquant la quiétude d’un lac,<!--more--> racontent l’histoire d’un savoir-faire ancestral. Un objet rare, parfait pour savourer le thé dans une sérénité authentique.
     en: >
-       Antique Shigaraki-yaki ceramic bowl, full of simplicity and character. Its raw textures and natural tones, tinted with a green reminiscent of a tranquil lake,<!--more--> tell the story of ancestral craftsmanship. A rare piece, perfect for enjoying tea in authentic serenity.
+       This antique Shigaraki-yaki ceramic bowl, full of simplicity and character. Its raw textures and natural tones, tinted with a green reminiscent of a tranquil lake,<!--more--> tell the story of ancestral craftsmanship. A rare piece, perfect for enjoying tea in authentic serenity.
 photos:
     - bol-ancien-lac_J1-a.jpg
     - bol-ancien-lac_J1-b.jpg
