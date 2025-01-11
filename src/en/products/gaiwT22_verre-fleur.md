@@ -5,8 +5,8 @@ name:
     fr: 蓋碗 GàiWǎn  
     en: 蓋碗 GàiWǎn  
 mini_descr:
-    fr: 蓋碗 GàiWǎn de Taïwan
-    en: 蓋碗 GàiWǎn from Taiwan
+    fr: GàiWǎn en verre de Taïwan
+    en: glass GàiWǎn from Taiwan
 tags: ['produit', 'gaiwan']
 description: 
     fr: >
