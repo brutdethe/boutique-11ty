@@ -10,9 +10,9 @@ mini_descr:
 tags: ['produit', 'chabei']
 description: 
     fr: >
-       Un bol ancien en céramique japonaise, probablement issu de la tradition du Shino-yaki. Ses tons doux et naturels, parsemés de délicates craquelures,<!--more--> évoquent l’authenticité et la simplicité des rituels du thé. Chaque détail raconte une histoire, entre savoir-faire ancestral et beauté intemporelle. Idéal pour savourer votre thé dans une ambiance empreinte de sérénité.
+       Ce bol à thé ancien en céramique japonaise, probablement issu de la tradition du Shino-yaki. Ses tons doux et naturels, parsemés de délicates craquelures,<!--more--> évoquent l’authenticité et la simplicité des rituels du thé. Chaque détail raconte une histoire, entre savoir-faire ancestral et beauté intemporelle. Idéal pour savourer votre thé dans une ambiance empreinte de sérénité.
     en: >
-       An antique japanese ceramic bowl, likely from the Shino-yaki tradition. Its soft, natural tones, adorned with delicate crackles,<!--more--> evoke the authenticity and simplicity of tea rituals. Every detail tells a story of ancestral craftsmanship and timeless beauty. Perfect for enjoying your tea in a serene and contemplative atmosphere.
+       This antique japanese ceramic tea bowl, likely from the Shino-yaki tradition. Its soft, natural tones, adorned with delicate crackles,<!--more--> evoke the authenticity and simplicity of tea rituals. Every detail tells a story of ancestral craftsmanship and timeless beauty. Perfect for enjoying your tea in a serene and contemplative atmosphere.
 photos:
     - bol-ancien-pince_J6-a.jpg
     - bol-ancien-pince_J6-b.jpg
