@@ -1,6 +1,6 @@
 ---
 layout: _layouts/product_card.njk
-id: bolJ1
+id: bolJ2
 name:
     fr: 茶杯 CháBēi (petit bol à thé) 
     en: 茶杯 CháBēi (small tea bowl)
@@ -14,10 +14,10 @@ description:
     en: >
        Antique Shigaraki-yaki ceramic bowl, full of simplicity and character. Its raw textures and natural tones, tinted with a green reminiscent of a tranquil lake,<!--more--> tell the story of ancestral craftsmanship. A rare piece, perfect for enjoying tea in authentic serenity.
 photos:
-    - bol-ancien-lac_J1-a.jpg
-    - bol-ancien-lac_J1-b.jpg
-    - bol-ancien-lac_J1-c.jpg
-    - bol-ancien-lac_J1-d.jpg
+    - bol-ancien-lac_J2-a.jpg
+    - bol-ancien-lac_J2-b.jpg
+    - bol-ancien-lac_J2-c.jpg
+    - bol-ancien-lac_J2-d.jpg
 price: 30
 stock: 1
 weight: 
@@ -26,11 +26,11 @@ shipping_point: 3
 options:
     fr:
         origine: 臺灣 - Táiwān
-        dimensions: 8,3cm x 3,7cm
+        dimensions: 8cm x 3,9cm
         capacité: 60 ml
     en:
         origin: 臺灣 - Táiwān (Taiwan)
-        dimensions: 8,3cm x 3,7m
+        dimensions: 8cm x 3,9m
         capacity: 60 ml
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'
