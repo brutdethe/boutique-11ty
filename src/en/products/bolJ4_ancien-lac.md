@@ -6,7 +6,7 @@ name:
     en: 茶杯 CháBēi (small tea bowl)
 mini_descr:
     fr: bol à thé ancien en Shigaraki-yaki, œuvre artisanale japonaise
-    en: antique Shigaraki-yaki tea bowl, a Japanese handcrafted piece
+    en: antique Shigaraki-yaki tea bowl, a japanese handcrafted piece
 tags: ['produit', 'chabei']
 description: 
     fr: >
