@@ -1,6 +1,6 @@
 ---
 layout: _layouts/product_card.njk
-id: bolT6
+id: bolT7
 name:
     fr: 茶杯 CháBēi (petit bol à thé) 
     en: 茶杯 CháBēi (small tea bowl)
