@@ -2,17 +2,17 @@
 layout: _layouts/product_card.njk
 id: gaiwT22
 name:
-    fr: 蓋碗 GàiWǎn (Gaiwan) 
-    en: 蓋碗 GàiWǎn (Gaiwan) 
+    fr: 蓋碗 GàiWǎn  
+    en: 蓋碗 GàiWǎn  
 mini_descr:
-    fr: gaiwan de Taïwan
-    en: gaiwan from Taiwan
+    fr: 蓋碗 GàiWǎn de Taïwan
+    en: 蓋碗 GàiWǎn from Taiwan
 tags: ['produit', 'gaiwan']
 description: 
     fr: >
-        Ce gaiwan en verre transparent, en forme de fleur, est un véritable bijou pour les amateurs de thé. Son design délicat et ses parois translucides permettent d’admirer la danse des feuilles lors de l’infusion.<!--more--> Léger et facile à manipuler, il ajoute une touche de poésie et d’élégance à vos moments de dégustation. 
+        Ce 蓋碗 en verre transparent, en forme de fleur, est un véritable bijou pour les amateurs de thé. Son design délicat et ses parois translucides permettent d’admirer la danse des feuilles lors de l’infusion.<!--more--> Léger et facile à manipuler, il ajoute une touche de poésie et d’élégance à vos moments de dégustation. 
     en: >
-        This transparent glass gaiwan, shaped like a flower, is a true gem for tea enthusiasts. Its delicate design and translucent walls let you admire the dance of the tea leaves during infusion.<!--more--> Lightweight and easy to handle, it adds a touch of poetry and elegance to your tea moments.
+        This transparent glass 蓋碗, shaped like a flower, is a true gem for tea enthusiasts. Its delicate design and translucent walls let you admire the dance of the tea leaves during infusion.<!--more--> Lightweight and easy to handle, it adds a touch of poetry and elegance to your tea moments.
 photos:
     - gaiwan-verre_T22-a.jpg
     - gaiwan-verre_T22-b.jpg

@@ -2,17 +2,17 @@
 layout: _layouts/product_card.njk
 id: gaiwT9
 name:
-    fr: 蓋碗 GàiWǎn (Gaiwan) 
-    en: 蓋碗 GàiWǎn (Gaiwan) 
+    fr: 蓋碗 GàiWǎn  
+    en: 蓋碗 GàiWǎn  
 mini_descr:
-    fr: gaiwan de Taïwan
-    en: gaiwan from Taiwan
+    fr: 蓋碗 GàiWǎn de Taïwan
+    en: 蓋碗 GàiWǎn from Taiwan
 tags: ['produit', 'gaiwan']
 description: 
     fr: >
-        Ce gaiwan est fabriqué en argile émaillée et est une création taïwanaise. Ses motifs linéaires en relief, associés à un bouton de couvercle en forme de triangle, lui confèrent une esthétique moderne, à la fois élégante et vivante, sans tomber dans la complexité.
+        Ce 蓋碗 est fabriqué en argile émaillée et est une création taïwanaise. Ses motifs linéaires en relief, associés à un bouton de couvercle en forme de triangle, lui confèrent une esthétique moderne, à la fois élégante et vivante, sans tomber dans la complexité.
     en: >
-        This gaiwan is made of glazed clay and is a product from Taiwan. Its embossed linear patterns, combined with a triangular lid handle, give it a modern aesthetic that is both dynamic and refined, without being overly intricate.
+        This 蓋碗 is made of glazed clay and is a product from Taiwan. Its embossed linear patterns, combined with a triangular lid handle, give it a modern aesthetic that is both dynamic and refined, without being overly intricate.
 photos:
     - gaiwan-argile-emaille_T9-a.jpg
     - gaiwan-argile-emaille_T9-b.jpg
