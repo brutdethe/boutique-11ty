@@ -10,7 +10,7 @@ mini_descr:
 tags: ['produit', 'chahai']
 description: 
     fr: >
-        Ce 茶海 en argile rouge, façonné à Taïwan, allie tradition et simplicité. Avec sa forme douce et accueillante, il accompagne naturellement vos moments de , en rendan工夫茶 GōngFūChát chaque infusion encore plus fluide et agréable.
+        Ce 茶海 en argile rouge, façonné à Taïwan, allie tradition et simplicité. Avec sa forme douce et accueillante, il accompagne naturellement vos moments de 工夫茶 GōngFūChá, en rendant chaque infusion encore plus fluide et agréable.
     en: >
         This red clay 茶海, handmade in Taiwan, combines tradition and simplicity. Its soft and inviting shape naturally complements your 工夫茶 GōngFūChá moments, making every pour smooth and enjoyable.
 photos:
