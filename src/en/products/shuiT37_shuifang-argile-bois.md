@@ -2,7 +2,7 @@
 layout: _layouts/product_card.njk
 id: shuiT37
 name:
-    fr: 水方 ShuǐFāng (bol du flot) 
+    fr: 水方 ShuǐFāng (repose-flots) 
     en: 水方 ShuǐFāng (overflow bowl)
 mini_descr:
     fr: bol du flot, fait à la main à Taïwan
