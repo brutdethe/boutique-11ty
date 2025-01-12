@@ -2,8 +2,8 @@
 layout: _layouts/product_card.njk
 id: th25
 name:
-    fr: 茶壺 CháHú (Théière) 
-    en: 茶壺 CháHú (Teapot)
+    fr: 茶壺 CháHú (théière) 
+    en: 茶壺 CháHú (teapot)
 mini_descr:
     fr: grande théière artisanale (semi-main) de Taïwan
     en: big semi-handcrafted teapot from Taiwan
