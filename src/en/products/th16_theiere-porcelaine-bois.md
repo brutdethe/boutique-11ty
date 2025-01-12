@@ -2,11 +2,11 @@
 layout: _layouts/product_card.njk
 id: th16
 name:
-    fr: 柴燒壺 CháiShāoHú (théière au Feu de Bois) 
-    en: 柴燒壺 CháiShāoHú (wood-Fired Teapot) 
+    fr: 茶壺 CháHú (théière) 
+    en: 茶壺 CháHú (teapot)  
 mini_descr:
-    fr: théière artisanale faite à la main de Taïwan
-    en: handcrafted artisan teapot from Taiwan
+    fr: théière au feu du boi, faite à la main de Taïwan
+    en: handcrafted wood-fired teapot from Taiwan
 tags: ['produit', 'chahu']
 description: 
     fr: >
