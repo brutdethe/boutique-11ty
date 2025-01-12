@@ -18,7 +18,7 @@ photos:
     - bol-ancien-bizen_J9-b.jpg
     - bol-ancien-bizen_J9-c.jpg
     - bol-ancien-bizen_J9-d.jpg
-price: 30
+price: 40
 stock: 1
 weight: 76 
 shipping_type: colis_base
