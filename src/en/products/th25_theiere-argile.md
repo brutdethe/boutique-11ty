@@ -10,9 +10,9 @@ mini_descr:
 tags: ['produit', 'chahu']
 description: 
     fr: >
-        Ce 瓜棱壺 - GuāLéngHú, façonné à la main à Taïwan en argile pourpre, reflète l’élégance de la nature et l’artisanat traditionnel. Avec sa capacité de 550 ml, il est idéal pour partager un thé dans une ambiance conviviale.<!--more-->  Sa forme en courge et ses lignes soignées en font un objet unique, à la fois pratique et plein de caractère.
+        Ce 瓜棱壺 - GuāLéngHú, façonné à la main à Taïwan en argile pourpre, reflète l’élégance de la nature et l’artisanat traditionnel. Avec sa capacité de 550 ml,<!--more--> il est idéal pour partager un thé dans une ambiance conviviale. Sa forme en courge et ses lignes soignées en font un objet unique, à la fois pratique et plein de caractère.
     en: >
-        This 瓜棱壺 - Guāsrc/products/th25_theiere-argile.mdLéngHú, handcrafted in Taiwan from purple clay, reflects the elegance of nature and traditional craftsmanship. With its 550 ml capacity, it’s perfect for sharing tea in a warm and friendly atmosphere.<!--more-->  Its gourd-like shape and refined lines make it a unique piece, both functional and full of character.
+        This 瓜棱壺 - Guāsrc/products/th25_theiere-argile.mdLéngHú, handcrafted in Taiwan from purple clay, reflects the elegance of nature and traditional craftsmanship. With its 550 ml capacity,<!--more--> it’s perfect for sharing tea in a warm and friendly atmosphere. Its gourd-like shape and refined lines make it a unique piece, both functional and full of character.
 photos:
     - theiere-argile-main_T25-a.jpg
     - theiere-argile-main_T25-b.jpg

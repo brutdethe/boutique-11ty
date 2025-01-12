@@ -10,9 +10,9 @@ mini_descr:
 tags: ['produit', 'chahu']
 description: 
     fr: >
-        Cette petite théière en porcelaine épurée, façonnée à Taïwan, séduit par sa simplicité et ses lignes arrondies. Sa surface douce et son toucher agréable en font le choix idéal pour des thés délicats comme le thé vert ou le thé blanc.<!--more--> Pratique et pleine de charme, elle ajoute une touche de sérénité à chaque moment de thé.
+        Cette petite théière en porcelaine épurée, façonnée à Taïwan, séduit par sa simplicité et ses lignes arrondies. Sa surface douce et son toucher agréable<!--more--> en font le choix idéal pour des thés délicats comme le thé vert ou le thé blanc. Pratique et pleine de charme, elle ajoute une touche de sérénité à chaque moment de thé.
     en: >
-        This little refined porcelain teapot, crafted in Taiwan, stands out with its simple and rounded design. Its smooth surface and soft touch make it perfect for delicate teas like green or white tea.<!--more--> Both practical and charming, it brings a sense of calm to every tea moment.
+        This little refined porcelain teapot, crafted in Taiwan, stands out with its simple and rounded design. Its smooth surface and soft touch<!--more--> make it perfect for delicate teas like green or white tea. Both practical and charming, it brings a sense of calm to every tea moment.
 photos:
     - theiere-porcelaine_T18-a.jpg
     - theiere-porcelaine_T18-b.jpg
