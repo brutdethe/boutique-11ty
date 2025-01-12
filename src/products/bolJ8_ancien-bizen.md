@@ -22,7 +22,7 @@ price: 30
 stock: 1
 weight: 110 
 shipping_type: colis_base
-shipping_point: 2
+shipping_point: 3
 options:
     fr:
         origine: Japon
