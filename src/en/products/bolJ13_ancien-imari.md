@@ -1,6 +1,6 @@
 ---
 layout: _layouts/product_card.njk
-id: bolJ14
+id: bolJ13
 name:
     fr: 茶杯 CháBēi (petit bol à thé) 
     en: 茶杯 CháBēi (small tea bowl)
@@ -14,23 +14,24 @@ description:
     en: >
        This antique bowl is crafted in the finest Japanese tradition. Its refined, delicate, and often asymmetrical patterns, inspired by flowers and nature,!--more--> embody the timeless elegance of the Imari-yaki style. A simple and authentic piece, perfect for enjoying a serene tea moment.
 photos:
-    - bol-ancien-imari_J14-a.jpg
-    - bol-ancien-imari_J14-b.jpg
-    - bol-ancien-imari_J14-c.jpg
-price: 25
+    - bol-ancien-imari_J13-a.jpg
+    - bol-ancien-imari_J13-b.jpg
+    - bol-ancien-imari_J13-c.jpg
+    - bol-ancien-imari_J13-d.jpg
+price: 40
 stock: 1
-weight: 120 
+weight: 100 
 shipping_type: colis_base
 shipping_point: 5
 options:
     fr:
         origine: Japon
-        dimensions: 8,4cm x 4,4cm
-        capacité: 130 ml
+        dimensions: 8,2cm x 4,4cm
+        capacité: 90 ml
     en:
         origin: Japon
-        dimensions: 8,4cm x 4,4cm
-        capacity: 130 ml
+        dimensions: 8,2cm x 4,4cm
+        capacity: 90 ml
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'
 ---
