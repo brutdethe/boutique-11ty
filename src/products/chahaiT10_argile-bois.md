@@ -2,7 +2,7 @@
 layout: _layouts/product_card.njk
 id: chahaiT10
 name:
-    fr: 茶海 CháHǎi (Verseuse de thé) 
+    fr: 茶海 CháHǎi (verseuse de thé) 
     en: 茶海 CháHǎi (tea pitcher)
 mini_descr:
     fr: verseuse en argile semi-artisanale, fabriquée à Taïwan
