@@ -5,8 +5,8 @@ name:
     fr: 茶倉 CháCāng (pot à thé) 
     en: 茶倉 CháCāng (tea jar)
 mini_descr:
-    fr: pot à thé en porcelaine, cuisson au bois, artisanal de Taïwan
-    en: Wood-fired porcelain tea jar, handcrafted in Taiwan
+    fr: pot à thé artisanal en porcelaine, cuisson au bois de Taïwan
+    en: Porcelain handcrafted tea jar, wood-fired from Taiwan
 tags: ['produit', 'chacang']
 description: 
     fr: >
