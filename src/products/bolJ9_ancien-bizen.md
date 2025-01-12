@@ -10,9 +10,9 @@ mini_descr:
 tags: ['produit', 'chabei']
 description: 
     fr: >
-       Ce bol à thé ancien en Bizen-yaki incarne l'art traditionnel japonais. Sa patine naturelle, fruit du temps et de la cuisson au feu de bois,<!--more--> lui confère un caractère unique. Un objet chargé d'histoire, idéal pour une expérience de thé empreinte d’authenticité.
+       Ce bol à thé ancien est façonné dans la pure tradition japonaise. Sa texture brute et ses teintes naturelles, nées du feu et de l’argile,<!--more--> incarnent l’âme du Bizen-yaki. Simple, authentique, parfait pour savourer un moment de thé en toute sérénité.
     en: >
-       This antique tea bowl in Bizen-yaki embodies the essence of traditional Japanese craftsmanship. Its natural patina, shaped by time and wood-fired kilns,<!--more--> gives it a unique character. A piece rich in history, perfect for an authentic tea experience.
+       This antique tea bowl is crafted in the pure Japanese tradition. Its raw texture and natural tones, born from fire and clay, embody the spirit of Bizen-yaki.<!--more--> Simple, authentic, and perfect for enjoying a serene tea moment.
 photos:
     - bol-ancien-bizen_J9-a.jpg
     - bol-ancien-bizen_J9-b.jpg
