@@ -2,8 +2,8 @@
 layout: _layouts/product_card.njk
 id: jeBolA1
 name:
-    fr: 茶杯 - CháBēi - Petit bol
-    en: 茶杯 - CháBēi - Small Bowl
+    fr: 茶杯 - CháBēi - petit bol
+    en: 茶杯 - CháBēi - small Bowl
 mini_descr:
     fr: Bol émaillé réalisé par Jé le Potier
     en: Glazed bowl made by Jé le Potier
