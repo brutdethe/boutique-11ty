@@ -29,7 +29,7 @@ options:
         capacité: 100 ml
     en:
         origin: 臺灣 - Táiwān (Taiwan)
-        dimensions: 8,3cm x 36,cm
+        dimensions: 8,3cm x 6,3cm
         capacity: 100 ml
 eleventyComputed:
     title: '{{ tags }} - {{ name[page.lang] }}'

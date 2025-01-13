@@ -1,12 +1,12 @@
 ---
 layout: _layouts/product_card.njk
-id: shuiT37fr: 水方 ShuǐFāng 
+id: shuiT37fr
+name:
+    fr: 水方 ShuǐFāng 
     en: 水方 ShuǐFāng 
 mini_descr:
     fr: ShuǐFāng fait à la main à Taïwan
     en: ShuǐFāng handmade in Taiwan
-name:
-    
 tags: ['produit', 'shuifang']
 description: 
     fr: >

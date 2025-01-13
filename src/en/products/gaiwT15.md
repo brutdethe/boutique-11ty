@@ -2,7 +2,7 @@
 layout: _layouts/product_card.njk
 id: gaiwT15
 name:
-    fr: 蓋碗 GàiWǎn  
+    fr: 蓋碗 GàiWǎn 
     en: 蓋碗 GàiWǎn  
 mini_descr:
     fr: GàiWǎn en porcelaine, cuisson au bois de Taïwan

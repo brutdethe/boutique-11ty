@@ -2,7 +2,7 @@
 layout: _layouts/product_card.njk
 id: shuiT35
 name:
-    fr: 水方 ShuǐFāng  
+    fr: 水方 ShuǐFāng 
     en: 水方 ShuǐFāng 
 mini_descr:
     fr: ShuǐFāng fait à la main à Taïwan

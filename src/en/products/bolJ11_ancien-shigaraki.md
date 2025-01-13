@@ -5,18 +5,14 @@ name:
     fr: 茶杯 CháBēi (petit bol à thé) 
     en: 茶杯 CháBēi (small tea bowl)
 mini_descr:
-    fr: bol à thé ancien, shigaraki-yaki, artisanal japonais
-    en: antique tea bowl, shifaraki-yaki, handcrafted in Japan
+    fr: bol à thé ancien, artisanal japonais
+    en: antique tea bowl, handcrafted in Japan
 tags: ['produit', 'chabei']
 description: 
     fr: >
-       Ce bol à thé ancien est façonné dans la pure tradition japonaise. Sa texture brute et ses teintes naturelles, 
-       nées du feu et de l’argile,<!--more--> incarnent l’âme du Bizen-yaki. Simple, authentique, 
-       parfait pour savourer un moment de thé en toute sérénité.
+       Ce bol à thé, façonné dans la tradition japonaise, raconte la douceur de la terre et les reflets d’un lac paisible. Avec sa texture irrégulière et ses teintes naturelles,<!--more--> il invite à ralentir et à se reconnecter à l’essentiel. Sa forme évasée apporte une touche de légèreté. Simple et plein de charme, il est idéal pour savourer un moment de thé en toute sérénité.
     en: >
-       This antique tea bowl is crafted in the pure Japanese tradition. Its raw texture and natural tones, 
-       born from fire and clay, embody the spirit of Bizen-yaki.<!--more--> Simple, 
-       authentic, and perfect for enjoying a serene tea moment.
+       This tea bowl, crafted in the Japanese tradition, reflects the softness of the earth and the peaceful shimmer of a lake. Its irregular texture and natural tones<!--more--> invite you to slow down and reconnect with what truly matters. The flared shape adds a touch of lightness. Simple and full of charm, it’s perfect for enjoying a serene tea moment.
 photos:
     - bol-ancien-shigaraki_J11-a.jpg
     - bol-ancien-shigaraki_J11-b.jpg

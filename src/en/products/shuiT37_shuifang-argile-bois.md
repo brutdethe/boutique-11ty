@@ -1,6 +1,6 @@
 ---
 layout: _layouts/product_card.njk
-id: shuiT37
+id: shuiT37fr
 name:
     fr: 水方 ShuǐFāng 
     en: 水方 ShuǐFāng 
