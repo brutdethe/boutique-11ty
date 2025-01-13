@@ -5,8 +5,8 @@ name:
     fr: 水方 ShuǐFāng 
     en: 水方 ShuǐFāng 
 mini_descr:
-    fr: fait à la main à Taïwan
-    en: handmade in Taiwan
+    fr: ShuǐFāng fait à la main à Taïwan
+    en: ShuǐFāng handmade in Taiwan
 tags: ['produit', 'shuifang']
 description: 
     fr: >
