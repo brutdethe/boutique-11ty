@@ -1,0 +1,36 @@
+---
+layout: _layouts/product_card.njk
+id: encensT52
+name:
+    fr: 降真香 JiàngZhēnXiāng 
+    en: 降真香 JiàngZhēnXiāng 
+mini_descr:
+    fr: 倒流香 - DàoLiúXiāng, encens en cascade
+    en: 倒流香 - DàoLiúXiāng, waterfall incense
+tags: ['produit', 'xiangju']
+description: 
+    fr: >
+        Le 降真香 - JiàngZhēnXiāng, de la famille des Rutacées et du genre Dalbergia, est un arbre à feuilles persistantes dont la résine aromatique se forme naturellement en réponse aux blessures (foudre, vent, insectes, broutage, entailles). Avec le temps, cette résine se solidifie en un bois rare et parfumé.<!--more--> L’île de Hainan produit le JiàngZhēnXiāng de la plus haute qualité. Selon le terroir, ses arômes varient entre notes lactées, florales (orchidée) et miellées. Apprécié pour sa fraîcheur et son parfum élégant, il est prisé en médecine traditionnelle et en art de l’encens pour purifier l’esprit et nourrir l’âme.
+    en: >
+        Le 降真香 - JiàngZhēnXiāng, from the Rutaceae family and Dalbergia genus, is an evergreen tree whose aromatic resin naturally forms in response to injuries (lightning, wind, insects, grazing, cuts). Over time, this resin solidifies into a rare and fragrant wood.<!--more--> The island of Hainan produces the highest quality JiàngZhēnXiāng. Depending on the terroir, its aromas range from milky, floral (orchid), to honeyed notes. Valued for its freshness and elegant scent, it is highly prized in traditional medicine and incense arts for purifying the mind and nurturing the soul.
+photos:
+    - encens-cass-jiang_T52-a.jpg
+price: 18
+stock: 8
+weight:  
+shipping_type: colis_base
+shipping_point: 2
+options:
+    fr:
+        origine: 臺灣 - Táiwān
+        poids: 13 g
+        volume: environ 46 tiges
+        durée: environ 32 min par tige 
+    en:
+        origin: 臺灣 - Táiwān (Taiwan) 
+        weight: 13 g
+        quantity: approximately 46 sticks
+        burn time: around 32 minutes per stick
+eleventyComputed:
+    title: '{{ tags }} - {{ name[page.lang] }}'
+---
