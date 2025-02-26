@@ -5,8 +5,8 @@ name:
     fr: 沉香 ChénXiāng 
     en: 沉香 ChénXiāng 
 mini_descr:
-    fr: 沉香 ChénXiāng, encens en cascade
-    en: 沉香 ChénXiāng, waterfall incense
+    fr: 倒流香 - DàoLiúXiāng, encens en cascade
+    en: 倒流香 - DàoLiúXiāng, waterfall incense
 tags: ['produit', 'xiangju']
 description: 
     fr: >

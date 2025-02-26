@@ -5,8 +5,8 @@ name:
     fr: 檀香 TánXiāng 
     en: 檀香 TánXiāng 
 mini_descr:
-    fr: 檀香 TánXiāng, encens en cascade
-    en: 檀香 TánXiāng, waterfall incense
+    fr: 倒流香 - DàoLiúXiāng, encens en cascade
+    en: 倒流香 - DàoLiúXiāng, waterfall incense
 tags: ['produit', 'xiangju']
 description: 
     fr: >
