@@ -28,11 +28,13 @@ options:
     fr:
         origine: 臺灣 - Táiwān
         poids: 13g
+        longeur: 10,5cm
         volume: environ 54 tiges
         durée: environ 18 min par tige 
     en:
         origin: 臺灣 - Táiwān (Taiwan) 
         weight: 13g
+        length: 10,5cm
         quantity: approximately 54 sticks
         burn time: around 18 minutes per stick
 eleventyComputed:
