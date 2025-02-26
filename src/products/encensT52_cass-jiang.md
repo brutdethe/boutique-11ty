@@ -23,12 +23,12 @@ shipping_point: 2
 options:
     fr:
         origine: 臺灣 - Táiwān
-        poids: 13 g
+        poids: 13g
         volume: environ 46 tiges
         durée: environ 32 min par tige 
     en:
         origin: 臺灣 - Táiwān (Taiwan) 
-        weight: 13 g
+        weight: 13g
         quantity: approximately 46 sticks
         burn time: around 32 minutes per stick
 eleventyComputed:
