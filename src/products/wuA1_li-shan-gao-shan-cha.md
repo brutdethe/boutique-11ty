@@ -1,4 +1,4 @@
----<!--more--> 
+---
 layout: _layouts/product_card.njk
 id: wuA1
 name:
